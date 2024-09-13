@@ -45,7 +45,7 @@ jobs:
           --additional-hooks-dir=. `
           --log-level DEBUG `
           main.py
-      
+    
     - name: Check if EXE was created
       run: |
         if (Test-Path dist/UltraBot.exe) {
@@ -62,22 +62,25 @@ jobs:
     
     - name: Create Installer
       run: |
-        echo !define APP_NAME "UltraBot" > installer.nsi
-        echo !define EXEC_NAME "UltraBot.exe" >> installer.nsi
-        echo !define VERSION "1.0.0" >> installer.nsi
-        echo !include "MUI2.nsh" >> installer.nsi
-        echo Name "${APP_NAME} ${VERSION}" >> installer.nsi
-        echo OutFile "${APP_NAME}-Setup.exe" >> installer.nsi
-        echo InstallDir "$PROGRAMFILES\${APP_NAME}" >> installer.nsi
-        echo !insertmacro MUI_PAGE_DIRECTORY >> installer.nsi
-        echo !insertmacro MUI_PAGE_INSTFILES >> installer.nsi
-        echo !insertmacro MUI_LANGUAGE "English" >> installer.nsi
-        echo Section >> installer.nsi
-        echo SetOutPath "$INSTDIR" >> installer.nsi
-        echo File "dist\${EXEC_NAME}" >> installer.nsi
-        echo CreateShortCut "$DESKTOP\${APP_NAME}.lnk" "$INSTDIR\${EXEC_NAME}" >> installer.nsi
-        echo SectionEnd >> installer.nsi
-        makensis installer.nsi
+        @'
+        !define APP_NAME "UltraBot"
+        !define EXEC_NAME "UltraBot.exe"
+        !define VERSION "1.0.0"
+        !include "MUI2.nsh"
+        Name "${APP_NAME} ${VERSION}"
+        OutFile "${APP_NAME}-Setup.exe"
+        InstallDir "$PROGRAMFILES\${APP_NAME}"
+        !insertmacro MUI_PAGE_DIRECTORY
+        !insertmacro MUI_PAGE_INSTFILES
+        !insertmacro MUI_LANGUAGE "English"
+        Section
+          SetOutPath "$INSTDIR"
+          File "dist\${EXEC_NAME}"
+          CreateShortCut "$DESKTOP\${APP_NAME}.lnk" "$INSTDIR\${EXEC_NAME}"
+        SectionEnd
+        '@ | Out-File -Encoding ASCII installer.nsi
+        
+        makensis /V4 installer.nsi
     
     - name: Upload EXE and Installer as artifacts
       uses: actions/upload-artifact@v4
