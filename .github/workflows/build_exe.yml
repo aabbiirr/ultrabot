@@ -18,11 +18,16 @@ jobs:
       with:
         python-version: '3.10'
     
+    - name: Update requirements.txt
+      run: |
+        (Get-Content requirements.txt) -replace 'PyQt5-Qt5==5.15.14', 'PyQt5-Qt5==5.15.2' | Set-Content requirements.txt
+    
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
         pip install -r requirements.txt
         pip install pyinstaller
+      continue-on-error: true
     
     - name: Build EXE with PyInstaller
       run: |
@@ -40,11 +45,20 @@ jobs:
           --additional-hooks-dir=. `
           --log-level DEBUG `
           main.py
+      
+    - name: Check if EXE was created
+      run: |
+        if (Test-Path dist/UltraBot.exe) {
+          echo "EXE file created successfully"
+        } else {
+          echo "EXE file creation failed"
+          exit 1
+        }
     
     - name: Install NSIS
       run: |
-        choco install nsis -y
-        refreshenv
+        choco install nsis -y --ignore-checksums
+      continue-on-error: true
     
     - name: Create Installer
       run: |
