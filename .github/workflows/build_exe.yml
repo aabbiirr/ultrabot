@@ -11,12 +11,12 @@ jobs:
     runs-on: windows-latest
     
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
     
     - name: Set up Python
-      uses: actions/setup-python@v4
+      uses: actions/setup-python@v5
       with:
-        python-version: '3.10'  # Specify a version compatible with your requirements
+        python-version: '3.10'
     
     - name: Install dependencies
       run: |
@@ -37,6 +37,7 @@ jobs:
           --hidden-import=requests `
           --hidden-import=dotenv `
           --hidden-import=browser_cookie3 `
+          --additional-hooks-dir=. `
           bot/main.py
     
     - name: Install NSIS
@@ -64,7 +65,7 @@ jobs:
         makensis installer.nsi
     
     - name: Upload EXE and Installer as artifacts
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: ultrabot-windows-app
         path: |
