@@ -1,4 +1,4 @@
-name: Build Python App to Windows EXE
+name: Build UltraBot to Windows EXE and Installer
 
 on:
   push:
@@ -16,7 +16,7 @@ jobs:
     - name: Set up Python
       uses: actions/setup-python@v4
       with:
-        python-version: '3.x'
+        python-version: '3.10'  # Specify a version compatible with your requirements
     
     - name: Install dependencies
       run: |
@@ -25,10 +25,48 @@ jobs:
         pip install pyinstaller
     
     - name: Build EXE with PyInstaller
-      run: pyinstaller --onefile --windowed main.py
+      run: |
+        pyinstaller --onefile --windowed --name=UltraBot `
+          --add-data "bot/automation;automation" `
+          --add-data "bot/gui;gui" `
+          --add-data "bot/utils;utils" `
+          --hidden-import=PyQt5 `
+          --hidden-import=selenium `
+          --hidden-import=webdriver_manager `
+          --hidden-import=Eel `
+          --hidden-import=requests `
+          --hidden-import=dotenv `
+          --hidden-import=browser_cookie3 `
+          bot/main.py
     
-    - name: Upload EXE as artifact
+    - name: Install NSIS
+      run: |
+        choco install nsis -y
+        refreshenv
+    
+    - name: Create Installer
+      run: |
+        echo !define APP_NAME "UltraBot" > installer.nsi
+        echo !define EXEC_NAME "UltraBot.exe" >> installer.nsi
+        echo !define VERSION "1.0.0" >> installer.nsi
+        echo !include "MUI2.nsh" >> installer.nsi
+        echo Name "${APP_NAME} ${VERSION}" >> installer.nsi
+        echo OutFile "${APP_NAME}-Setup.exe" >> installer.nsi
+        echo InstallDir "$PROGRAMFILES\${APP_NAME}" >> installer.nsi
+        echo !insertmacro MUI_PAGE_DIRECTORY >> installer.nsi
+        echo !insertmacro MUI_PAGE_INSTFILES >> installer.nsi
+        echo !insertmacro MUI_LANGUAGE "English" >> installer.nsi
+        echo Section >> installer.nsi
+        echo SetOutPath "$INSTDIR" >> installer.nsi
+        echo File "dist\${EXEC_NAME}" >> installer.nsi
+        echo CreateShortCut "$DESKTOP\${APP_NAME}.lnk" "$INSTDIR\${EXEC_NAME}" >> installer.nsi
+        echo SectionEnd >> installer.nsi
+        makensis installer.nsi
+    
+    - name: Upload EXE and Installer as artifacts
       uses: actions/upload-artifact@v3
       with:
-        name: windows-executable
-        path: dist/*.exe
+        name: ultrabot-windows-app
+        path: |
+          dist/*.exe
+          *.exe
