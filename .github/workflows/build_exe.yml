@@ -27,9 +27,9 @@ jobs:
     - name: Build EXE with PyInstaller
       run: |
         pyinstaller --onefile --windowed --name=UltraBot `
-          --add-data "bot/automation;automation" `
-          --add-data "bot/gui;gui" `
-          --add-data "bot/utils;utils" `
+          --add-data "automation;automation" `
+          --add-data "gui;gui" `
+          --add-data "utils;utils" `
           --hidden-import=PyQt5 `
           --hidden-import=selenium `
           --hidden-import=webdriver_manager `
@@ -38,7 +38,8 @@ jobs:
           --hidden-import=dotenv `
           --hidden-import=browser_cookie3 `
           --additional-hooks-dir=. `
-          bot/main.py
+          --log-level DEBUG `
+          main.py
     
     - name: Install NSIS
       run: |
