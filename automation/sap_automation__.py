@@ -70,16 +70,11 @@ class SAPBiddingAutomation:
         
     def inject_test_data(self):
         try:
-            # Sample data to inject
             sample_data = [
                 {"freight": "465", "bid_amount": ""},
                 {"freight": "500", "bid_amount": ""}
             ]
-
-            # Convert sample data to JSON string
             sample_data_json = json.dumps(sample_data)
-
-            # Inject the sample data
             script = """
             var sampleData = JSON.parse(arguments[0]);
             var table = document.querySelector('#__xmlview0--idUtclVCVendorAssignmentTable-listUl');
@@ -98,7 +93,6 @@ class SAPBiddingAutomation:
                 tr.className = 'sapMLIB sapMLIB-CTX sapMLIBShowSeparator sapMLIBTypeInactive sapMListTblRow';
                 tr.setAttribute('tabindex', '-1');
 
-                // Add placeholder cells for other columns
                 for (var i = 0; i < 13; i++) {
                     var td = document.createElement('td');
                     td.className = 'sapMListTblCell';
@@ -106,19 +100,16 @@ class SAPBiddingAutomation:
                     tr.appendChild(td);
                 }
 
-                // Add freight column
                 var freightTd = document.createElement('td');
                 freightTd.className = 'sapMListTblCell';
                 freightTd.innerHTML = `<span class="sapMText sapMTextMaxWidth sapUiSelectable">${row.freight}</span>`;
                 tr.appendChild(freightTd);
 
-                // Add bid amount column
                 var bidTd = document.createElement('td');
                 bidTd.className = 'sapMListTblCell';
                 bidTd.innerHTML = `<input type="text" value="${row.bid_amount}" disabled class="sapMInputBaseInner">`;
                 tr.appendChild(bidTd);
 
-                // Add placeholder cells for remaining columns
                 for (var i = 0; i < 9; i++) {
                     var td = document.createElement('td');
                     td.className = 'sapMListTblCell';
@@ -133,7 +124,6 @@ class SAPBiddingAutomation:
             rows_injected = self.driver.execute_script(script, sample_data_json)
             logging.info(f"Test data injection completed. Rows injected: {rows_injected}")
 
-            # Verify injection
             table = self.driver.find_element(By.ID, "__xmlview0--idUtclVCVendorAssignmentTable-listUl")
             rows = table.find_elements(By.XPATH, ".//tbody/tr")
             logging.info(f"Rows found after injection: {len(rows)}")
@@ -164,7 +154,6 @@ class SAPBiddingAutomation:
             logging.info(f"Bid input fields enabled. Total enabled inputs: {enabled_inputs}")
         except Exception as e:
             logging.error(f"Error enabling bid input fields: {str(e)}")
-
 
     def navigate_to_ebidding(self):
         try:
@@ -214,55 +203,42 @@ class SAPBiddingAutomation:
         except TimeoutException:
             logging.info("No error dialog detected")
             
-
     def select_dropdown_option(self, dropdown_id, option_text):
         try:
-            # Click to open the dropdown
             dropdown_arrow = self.wait.until(EC.element_to_be_clickable((By.ID, f"{dropdown_id}-arrow")))
             self.driver.execute_script("arguments[0].click();", dropdown_arrow)
             logging.info(f"Clicked dropdown arrow for {dropdown_id}")
 
-            # Wait for the dropdown list to appear
             dropdown_list_id = "__list0" if "Ship" in dropdown_id else "__list2"
             dropdown_list = self.wait.until(EC.visibility_of_element_located((By.ID, dropdown_list_id)))
             logging.info(f"Dropdown list visible for {dropdown_id}")
 
-            # Find all options
             options = dropdown_list.find_elements(By.TAG_NAME, "li")
             logging.info(f"Found {len(options)} options for {dropdown_id}")
 
-            # Find the option with the matching text
             target_option = next((opt for opt in options if option_text in opt.text), None)
 
             if target_option:
-                # Scroll the option into view
                 self.driver.execute_script("arguments[0].scrollIntoView(true);", target_option)
-                time.sleep(0.5)  # Short pause after scrolling
+                time.sleep(0.5)
 
-                # Try to click using different methods
                 try:
-                    # Method 1: Direct click
                     target_option.click()
                 except ElementClickInterceptedException:
                     try:
-                        # Method 2: JavaScript click
                         self.driver.execute_script("arguments[0].click();", target_option)
                     except:
-                        # Method 3: Action chains
                         ActionChains(self.driver).move_to_element(target_option).click().perform()
 
                 logging.info(f"Option '{option_text}' selected successfully for {dropdown_id}")
 
-                # Wait for the dropdown to close
                 self.wait.until(EC.invisibility_of_element_located((By.ID, dropdown_list_id)))
                 logging.info(f"Dropdown closed after selection for {dropdown_id}")
             else:
                 logging.error(f"Option '{option_text}' not found in {dropdown_id}")
-                # Capture screenshot for debugging
                 self.driver.save_screenshot(f"{dropdown_id}_selection_error.png")
         except Exception as e:
             logging.error(f"Failed to select option in {dropdown_id}: {str(e)}")
-            # Capture screenshot for debugging
             self.driver.save_screenshot(f"{dropdown_id}_selection_error.png")
 
     def select_ship_from_plant(self, plant_name="WEST BENGAL CEMENT WORKS"):
@@ -273,7 +249,7 @@ class SAPBiddingAutomation:
 
     def click_search(self):
         try:
-            self.handle_error_dialog()  # Check for error dialog before clicking search
+            self.handle_error_dialog()
             search_button = self.wait.until(EC.element_to_be_clickable((By.XPATH, "//bdi[text()='Search']")))
             search_button.click()
             logging.info("Search button clicked successfully")
@@ -292,96 +268,8 @@ class SAPBiddingAutomation:
             logging.error("Table not found or loaded within the timeout period")
             return False
 
-
-    def place_bids(self, destinations=None):
-        bids_placed = 0
-        try:
-            table = WebDriverWait(self.driver, 10).until(
-                EC.presence_of_element_located((By.ID, "__xmlview0--idUtclVCVendorAssignmentTable-listUl"))
-            )
-
-            no_data_rows = table.find_elements(By.XPATH, ".//tr[@id='__xmlview0--idUtclVCVendorAssignmentTable-nodata']")
-            if no_data_rows:
-                logging.info("No data found in the table")
-                return bids_placed
-
-            rows = table.find_elements(By.XPATH, ".//tbody/tr")
-            logging.info(f"Found {len(rows)} rows with data in the table")
-
-            for row in rows:
-                try:
-                    # Check destination if destinations are specified
-                    if destinations:
-                        destination_element = row.find_element(By.XPATH, ".//td[6]//span")  # Assuming destination is in the 6th column
-                        destination = destination_element.text.strip()
-                        if destination not in destinations:
-                            continue  # Skip this row if destination doesn't match
-
-                    freight_element = row.find_element(By.XPATH, ".//td[14]//span")
-                    freight = int(freight_element.text.strip())
-                    
-                    bid_amount = freight - 1
-                    
-                    bid_input = row.find_element(By.XPATH, ".//td[15]//input")
-                    
-                    if bid_input.is_enabled():
-                        current_value = bid_input.get_attribute('value')
-                        if current_value != str(bid_amount):
-                            bid_input.clear()
-                            bid_input.send_keys(str(bid_amount))
-                            bid_input.send_keys(Keys.ENTER)
-                            logging.info(f"Placed bid of {bid_amount} for freight {freight}")
-                            bids_placed += 1
-                        else:
-                            logging.info(f"Bid already set to {bid_amount} for freight {freight}")
-                    else:
-                        logging.info(f"Bid input field not enabled for freight {freight}")
-                
-                except StaleElementReferenceException:
-                    logging.warning("Stale element reference encountered, skipping row")
-                    continue
-                except NoSuchElementException as e:
-                    logging.error(f"Element not found in row: {str(e)}")
-                    continue
-                except Exception as e:
-                    logging.error(f"Error processing row: {str(e)}")
-                    continue
-
-            logging.info(f"Completed placing bids. Total bids placed: {bids_placed}")
-        except Exception as e:
-            logging.error(f"Error during bid placement: {str(e)}")
-        
-        return bids_placed
-    
-    def continuous_bidding(self, update_callback):
-        while True:
-            try:
-                self.place_bids()
-                update_callback("Bids placed. Waiting for 5 seconds before next attempt...")
-                time.sleep(5)
-            except Exception as e:
-                update_callback(f"Error during continuous bidding: {str(e)}")
-                time.sleep(5)
-
-    def continuous_single_depot_search_and_bid(self, depot_name):
-        while True:
-            try:
-                logging.info(f"Selecting depot: {depot_name}")
-                self.select_depot(depot_name)
-                self.click_search()
-                
-                if self.check_table_data():
-                    logging.info(f"Table data found for {depot_name}. Starting bidding process.")
-                    self.rapid_bidding()
-                else:
-                    logging.info(f"No table data found for {depot_name}. Retrying in 5 seconds.")
-                    time.sleep(5)
-            except Exception as e:
-                logging.error(f"Error during continuous search and bid for {depot_name}: {str(e)}")
-                time.sleep(5)
-
     def rapid_bidding(self):
-        max_attempts = 100  # Adjust this value as needed
+        max_attempts = 100
         attempts = 0
         
         while attempts < max_attempts:
@@ -419,53 +307,89 @@ class SAPBiddingAutomation:
                         break
                 
                 if all_bids_placed:
-                    logging.info("All bids placed successfully")
-                    return
-                
+                        logging.info("All bids placed successfully")
+                        return
+                    
             except Exception as e:
                 logging.error(f"Error during rapid bidding: {str(e)}")
+                
+                # If we reach here, not all bids were placed, so we click search and try again
+                self.click_search()
+                attempts += 1
+                time.sleep(0.5)  # Small delay to prevent overwhelming the server
             
-            # If we reach here, not all bids were placed, so we click search and try again
-            self.click_search()
-            attempts += 1
-            time.sleep(0.2)  # Small delay to prevent overwhelming the server
-        
-        logging.warning(f"Max attempts ({max_attempts}) reached without placing all bids")
+            logging.warning(f"Max attempts ({max_attempts}) reached without placing all bids")
 
+        def continuous_single_depot_search_and_bid(self, depot_name):
+            while True:
+                try:
+                    logging.info(f"Selecting depot: {depot_name}")
+                    self.select_depot(depot_name)
+                    self.click_search()
+                    
+                    if self.check_table_data():
+                        logging.info(f"Table data found for {depot_name}. Starting bidding process.")
+                        self.rapid_bidding()
+                    else:
+                        logging.info(f"No table data found for {depot_name}. Retrying in 5 seconds.")
+                        time.sleep(5)
+                except Exception as e:
+                    logging.error(f"Error during continuous search and bid for {depot_name}: {str(e)}")
+                    time.sleep(5)
 
-    def wait_for_page_load(self, timeout=30):
-        try:
-            WebDriverWait(self.driver, timeout).until(
-                lambda d: d.execute_script('return document.readyState') == 'complete'
-            )
-            WebDriverWait(self.driver, timeout).until(
-                EC.invisibility_of_element_located((By.CLASS_NAME, "sapUiLocalBusyIndicator"))
-            )
-            logging.info("Page loaded completely")
-        except TimeoutException:
-            logging.warning(f"Timeout waiting for page load after {timeout} seconds")
+        def wait_for_page_load(self, timeout=30):
+            try:
+                WebDriverWait(self.driver, timeout).until(
+                    lambda d: d.execute_script('return document.readyState') == 'complete'
+                )
+                WebDriverWait(self.driver, timeout).until(
+                    EC.invisibility_of_element_located((By.CLASS_NAME, "sapUiLocalBusyIndicator"))
+                )
+                logging.info("Page loaded completely")
+            except TimeoutException:
+                logging.warning(f"Timeout waiting for page load after {timeout} seconds")
 
-    def save_cookies(self):
-        cookies = self.driver.get_cookies()
-        with open("cookies.txt", "w") as cookie_file:
-            for cookie in cookies:
-                cookie_file.write(f"{cookie['name']}={cookie['value']}\n")
-        logging.info("Cookies saved")
+        def save_cookies(self):
+            cookies = self.driver.get_cookies()
+            with open("cookies.txt", "w") as cookie_file:
+                for cookie in cookies:
+                    cookie_file.write(f"{cookie['name']}={cookie['value']}\n")
+            logging.info("Cookies saved")
 
-    def load_cookies(self):
-        try:
-            with open("cookies.txt", "r") as cookie_file:
-                for line in cookie_file:
-                    name, value = line.strip().split("=", 1)
-                    self.driver.add_cookie({'name': name, 'value': value})
-            logging.info("Cookies loaded successfully")
-        except Exception as e:
-            logging.error(f"Failed to load cookies: {str(e)}")
+        def load_cookies(self):
+            try:
+                with open("cookies.txt", "r") as cookie_file:
+                    for line in cookie_file:
+                        name, value = line.strip().split("=", 1)
+                        self.driver.add_cookie({'name': name, 'value': value})
+                logging.info("Cookies loaded successfully")
+            except Exception as e:
+                logging.error(f"Failed to load cookies: {str(e)}")
 
-    def cookies_exist(self):
-        return os.path.exists("cookies.txt")
+        def cookies_exist(self):
+            return os.path.exists("cookies.txt")
 
-    def close(self):
-        if self.driver:
-            self.driver.quit()
-        logging.info("Browser closed.")
+        def close(self):
+            if self.driver:
+                self.driver.quit()
+            logging.info("Browser closed.")
+
+        def run_automation(self, username, password, depot_name):
+            try:
+                self.setup_driver()
+                if self.login(username, password):
+                    self.navigate_to_ebidding()
+                    self.click_show_search()
+                    self.select_ship_from_plant()
+                    self.continuous_single_depot_search_and_bid(depot_name)
+                else:
+                    logging.error("Login failed. Automation stopped.")
+            except Exception as e:
+                logging.error(f"Error during automation: {str(e)}")
+            finally:
+                self.close()
+
+    if __name__ == "__main__":
+        logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+        # automation = SAPBiddingAutomation()
+        # automation.run_automation("your_username", "your_password", "Your Depot Name")

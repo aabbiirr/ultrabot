@@ -9,12 +9,13 @@ import time
 class AutomationThread(QThread):
     update_signal = pyqtSignal(str)
 
-    def __init__(self, username, password, ship_from_plant, selected_depot=None):
+    def __init__(self, username, password, ship_from_plant, selected_depot=None, destinations=None):
         super().__init__()
         self.username = username
         self.password = password
         self.ship_from_plant = ship_from_plant
         self.selected_depot = selected_depot
+        self.destinations = destinations
         self.stop_flag = False
 
     def run(self):
@@ -53,6 +54,7 @@ class AutomationThread(QThread):
                         depot_index = (depot_index + 1) % len(depots)
 
                     self.update_signal.emit(f"Selecting Depot: {current_depot}")
+
                     automation.select_depot(current_depot)
                     
                     self.update_signal.emit("Clicking Search...")
@@ -62,15 +64,15 @@ class AutomationThread(QThread):
                         self.update_signal.emit(f"Data found for {current_depot}. Starting bidding process...")
                         bid_start_time = time.time()
                         while not self.stop_flag and (time.time() - bid_start_time) < 300:  # Bid for 5 minutes
-                            bids_placed = automation.place_bids()
+                            bids_placed = automation.place_bids(self.destinations)
                             self.update_signal.emit(f"Placed {bids_placed} bids. Waiting for 5 seconds before next attempt...")
-                            time.sleep(5)
+                            time.sleep(1)
                         self.update_signal.emit(f"Finished bidding for {current_depot}.")
                     else:
                         self.update_signal.emit(f"No data found for {current_depot}.")
                     
                     if self.selected_depot:
-                        self.update_signal.emit("Waiting 30 seconds before searching again...")
+                        self.update_signal.emit("Waiting 1 second before searching again...")
                         time.sleep(1)
                     else:
                         self.update_signal.emit(f"Moving to next depot. Next index: {depot_index}")
@@ -89,6 +91,8 @@ class AutomationThread(QThread):
 class SAPLoginGUI(QWidget):
     def __init__(self):
         super().__init__()
+        self.default_username = "2203498"  # Set your default username here
+        self.default_password = "UtclAks@2025"  # Set your default password here
         self.initUI()
 
     def initUI(self):
@@ -98,6 +102,7 @@ class SAPLoginGUI(QWidget):
         username_layout = QHBoxLayout()
         username_layout.addWidget(QLabel("Username:"))
         self.username_input = QLineEdit()
+        self.username_input.setPlaceholderText("Enter your username")
         username_layout.addWidget(self.username_input)
         main_layout.addLayout(username_layout)
 
@@ -106,6 +111,7 @@ class SAPLoginGUI(QWidget):
         password_layout.addWidget(QLabel("Password:"))
         self.password_input = QLineEdit()
         self.password_input.setEchoMode(QLineEdit.Password)
+        self.password_input.setPlaceholderText("Enter your password")
         password_layout.addWidget(self.password_input)
         main_layout.addLayout(password_layout)
 
@@ -128,6 +134,15 @@ class SAPLoginGUI(QWidget):
         depot_layout.addWidget(self.depot_combo)
         main_layout.addLayout(depot_layout)
 
+        # Add Destination input
+        destination_layout = QHBoxLayout()
+        # destination_layout.addWidget(QLabel("Destinations (comma-separated):"))
+        self.destination_input = QLineEdit()
+        self.destination_input.setPlaceholderText("Enter destinations, e.g. City1, City2, City3")
+        destination_layout.addWidget(self.destination_input)
+        main_layout.addLayout(destination_layout)
+
+
         # Start button
         self.start_button = QPushButton("Start Automation")
         self.start_button.clicked.connect(self.start_automation)
@@ -145,19 +160,20 @@ class SAPLoginGUI(QWidget):
         main_layout.addWidget(self.log_area)
 
         self.setLayout(main_layout)
-        self.setWindowTitle('SAP Bidding Automation')
+        self.setWindowTitle('SAP Automation')
         self.setGeometry(300, 300, 400, 500)
 
     def start_automation(self):
-        username = self.username_input.text()
-        password = self.password_input.text()
+        username = self.username_input.text() or self.default_username
+        password = self.password_input.text() or self.default_password
         ship_from_plant = self.ship_from_plant_combo.currentText()
         selected_depot = self.depot_combo.currentText()
+        destinations = [dest.strip() for dest in self.destination_input.text().split(',') if dest.strip()]
         
         if selected_depot == "All Depots (Rotational)":
             selected_depot = None
 
-        self.thread = AutomationThread(username, password, ship_from_plant, selected_depot)
+        self.thread = AutomationThread(username, password, ship_from_plant, selected_depot, destinations)
         self.thread.update_signal.connect(self.update_log)
         self.thread.start()
         
