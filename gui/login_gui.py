@@ -5,6 +5,8 @@ from PyQt5.QtCore import QThread, pyqtSignal
 from automation.sap_automation import SAPBiddingAutomation
 import logging
 import time
+from gui.license_manager import LicenseManager
+from PyQt5.QtWidgets import QMessageBox, QInputDialog
 
 class AutomationThread(QThread):
     update_signal = pyqtSignal(str)
@@ -54,20 +56,15 @@ class AutomationThread(QThread):
                         depot_index = (depot_index + 1) % len(depots)
 
                     self.update_signal.emit(f"Selecting Depot: {current_depot}")
-
                     automation.select_depot(current_depot)
                     
                     self.update_signal.emit("Clicking Search...")
                     automation.click_search()
                     
                     if automation.check_table_data():
-                        self.update_signal.emit(f"Data found for {current_depot}. Starting bidding process...")
-                        bid_start_time = time.time()
-                        while not self.stop_flag and (time.time() - bid_start_time) < 300:  # Bid for 5 minutes
-                            bids_placed = automation.place_bids(self.destinations)
-                            self.update_signal.emit(f"Placed {bids_placed} bids. Waiting for 5 seconds before next attempt...")
-                            time.sleep(1)
-                        self.update_signal.emit(f"Finished bidding for {current_depot}.")
+                        self.update_signal.emit(f"Data found for {current_depot}. Starting rapid bidding process...")
+                        bids_placed = automation.rapid_bidding(max_duration=300)  # 5 minutes of rapid bidding
+                        self.update_signal.emit(f"Placed {bids_placed} bids for {current_depot}.")
                     else:
                         self.update_signal.emit(f"No data found for {current_depot}.")
                     
@@ -88,12 +85,51 @@ class AutomationThread(QThread):
     def stop(self):
         self.stop_flag = True
 
+# The rest of the SAPLoginGUI class remains unchanged
+
 class SAPLoginGUI(QWidget):
     def __init__(self):
         super().__init__()
         self.default_username = "2203498"  # Set your default username here
         self.default_password = "UtclAks@2025"  # Set your default password here
+        self.license_manager = LicenseManager()
+        if not self.check_license():
+            self.terminate_program()
         self.initUI()
+
+    def check_license(self):
+        is_valid, message = self.license_manager.check_license()
+        if not is_valid:
+            return self.show_activation_dialog(message)
+        else:
+            QMessageBox.information(self, "License Status", message)
+            return True
+
+    def show_activation_dialog(self, message):
+        key, ok = QInputDialog.getText(self, "License Activation", message + "\nEnter activation key:")
+        if ok:
+            if self.license_manager.activate_license(key):
+                QMessageBox.information(self, "License Activation", "License activated successfully!")
+                return True
+            else:
+                QMessageBox.critical(self, "License Activation", "Invalid activation key. The program will now exit.")
+                return False
+        else:
+            QMessageBox.critical(self, "License Activation", "License activation cancelled. The program will now exit.")
+            return False
+
+    def terminate_program(self):
+        QMessageBox.critical(self, "Program Termination", "The program will now exit due to license issues.")
+        self.close()
+        import sys
+        sys.exit()
+
+    def start_automation(self):
+        is_valid, _ = self.license_manager.check_license()
+        if not is_valid:
+            QMessageBox.critical(self, "License Error", "Your license has expired. The program will now exit.")
+            self.terminate_program()
+
 
     def initUI(self):
         main_layout = QVBoxLayout()

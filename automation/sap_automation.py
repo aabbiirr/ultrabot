@@ -308,21 +308,32 @@ class SAPBiddingAutomation:
             rows = table.find_elements(By.XPATH, ".//tbody/tr")
             logging.info(f"Found {len(rows)} rows with data in the table")
 
+            # Enable all bid input fields
+            script = """
+            var inputs = document.querySelectorAll('input[id$="-inner"][disabled]');
+            for (var i = 0; i < inputs.length; i++) {
+                inputs[i].removeAttribute('disabled');
+                inputs[i].closest('.sapMInputBaseDisabled').classList.remove('sapMInputBaseDisabled');
+            }
+            """
+            self.driver.execute_script(script)
+            logging.info("Enabled all bid input fields")
+
             for row in rows:
                 try:
-                    # Check destination if destinations are specified
                     if destinations:
-                        destination_element = row.find_element(By.XPATH, ".//td[6]//span")  # Assuming destination is in the 6th column
+                        destination_element = row.find_element(By.XPATH, ".//td[6]//span")
                         destination = destination_element.text.strip()
                         if destination not in destinations:
-                            continue  # Skip this row if destination doesn't match
+                            logging.info(f"Skipping row for destination: {destination}")
+                            continue
 
-                    freight_element = row.find_element(By.XPATH, ".//td[14]//span")
+                    freight_element = row.find_element(By.XPATH, ".//td[contains(@headers, '__text23')]//span")
                     freight = int(freight_element.text.strip())
                     
                     bid_amount = freight - 1
                     
-                    bid_input = row.find_element(By.XPATH, ".//td[15]//input")
+                    bid_input = row.find_element(By.XPATH, ".//td[contains(@headers, '__text24')]//input")
                     
                     if bid_input.is_enabled():
                         current_value = bid_input.get_attribute('value')
@@ -335,7 +346,7 @@ class SAPBiddingAutomation:
                         else:
                             logging.info(f"Bid already set to {bid_amount} for freight {freight}")
                     else:
-                        logging.info(f"Bid input field not enabled for freight {freight}")
+                        logging.warning(f"Bid input field not enabled for freight {freight}")
                 
                 except StaleElementReferenceException:
                     logging.warning("Stale element reference encountered, skipping row")
