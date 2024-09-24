@@ -26,56 +26,106 @@ class AutomationThread(QThread):
             self.update_signal.emit("Setting up WebDriver...")
             automation.setup_driver()
             
-            self.update_signal.emit("Attempting login...")
-            login_success = automation.login(self.username, self.password)
+            # Login with retry
+            max_login_attempts = 3
+            for attempt in range(max_login_attempts):
+                self.update_signal.emit(f"Attempting login... (Attempt {attempt + 1}/{max_login_attempts})")
+                login_success = automation.login(self.username, self.password)
+                if login_success:
+                    break
+                elif attempt < max_login_attempts - 1:
+                    self.update_signal.emit("Login failed. Retrying in 5 seconds...")
+                    time.sleep(5)
             
-            if login_success:
-                self.update_signal.emit("Login successful. Navigating to eBidding page...")
-                ebidding_url = automation.navigate_to_ebidding()
-                self.update_signal.emit(f"Opened eBidding URL: {ebidding_url}")
-                
-                self.update_signal.emit("Clicking 'Show Search' button...")
-                automation.click_show_search()
-                
-                self.update_signal.emit(f"Selecting Ship From Plant: {self.ship_from_plant}")
-                automation.select_ship_from_plant(self.ship_from_plant)
-                
-                depots = ["DEOGARH", "DHANBAD", "BANKURA", "BERHAMPORE", "BURDWAN", "COSSIPORE", 
-                          "DANKUNI", "KALIGHAT", "KHARAGPUR", "KRISHNANAGAR", "SAINTHIA", "SHALIMAR", 
-                          "DIAMOND HARBOUR", "BARASAT"]
-                depot_index = 0
-                
-                while not self.stop_flag:
-                    self.update_signal.emit("Handling any error dialogs before depot selection...")
-                    automation.handle_error_dialog()
-                    
-                    if self.selected_depot:
-                        current_depot = self.selected_depot
-                    else:
-                        current_depot = depots[depot_index]
-                        depot_index = (depot_index + 1) % len(depots)
+            if not login_success:
+                self.update_signal.emit("Login failed after multiple attempts. Please check your credentials.")
+                return
 
-                    self.update_signal.emit(f"Selecting Depot: {current_depot}")
-                    automation.select_depot(current_depot)
-                    
-                    self.update_signal.emit("Clicking Search...")
-                    automation.click_search()
-                    
-                    if automation.check_table_data():
-                        self.update_signal.emit(f"Data found for {current_depot}. Starting rapid bidding process...")
-                        bids_placed = automation.rapid_bidding(max_duration=300)  # 5 minutes of rapid bidding
-                        self.update_signal.emit(f"Placed {bids_placed} bids for {current_depot}.")
+            # Navigate to eBidding page with retry
+            max_navigation_attempts = 3
+            for attempt in range(max_navigation_attempts):
+                try:
+                    self.update_signal.emit(f"Navigating to eBidding page... (Attempt {attempt + 1}/{max_navigation_attempts})")
+                    ebidding_url = automation.navigate_to_ebidding()
+                    self.update_signal.emit(f"Opened eBidding URL: {ebidding_url}")
+                    break
+                except Exception as e:
+                    if attempt < max_navigation_attempts - 1:
+                        self.update_signal.emit(f"Navigation failed. Retrying in 5 seconds... Error: {str(e)}")
+                        time.sleep(5)
                     else:
-                        self.update_signal.emit(f"No data found for {current_depot}.")
+                        self.update_signal.emit(f"Navigation failed after multiple attempts. Error: {str(e)}")
+                        return
+
+            # Handle error dialogs and click 'Show Search' button with retry
+            max_show_search_attempts = 3
+            for attempt in range(max_show_search_attempts):
+                try:
+                    self.update_signal.emit(f"Handling error dialogs and clicking 'Show Search' button... (Attempt {attempt + 1}/{max_show_search_attempts})")
                     
-                    if self.selected_depot:
-                        self.update_signal.emit("Waiting 1 second before searching again...")
-                        time.sleep(1)
+                    # Handle error dialogs
+                    max_dialog_attempts = 3
+                    for dialog_attempt in range(max_dialog_attempts):
+                        dialog_handled = automation.handle_error_dialog()
+                        if not dialog_handled:
+                            break
+                        self.update_signal.emit(f"Handled an error dialog. Checking for more... (Attempt {dialog_attempt + 1}/{max_dialog_attempts})")
+                        time.sleep(1)  # Short delay before checking for another dialog
+                    
+                    # Click 'Show Search' button
+                    automation.click_show_search()
+                    self.update_signal.emit("Successfully clicked 'Show Search' button.")
+                    break
+                except Exception as e:
+                    if attempt < max_show_search_attempts - 1:
+                        self.update_signal.emit(f"Failed to handle dialogs or click 'Show Search' button. Retrying in 5 seconds... Error: {str(e)}")
+                        time.sleep(5)
                     else:
-                        self.update_signal.emit(f"Moving to next depot. Next index: {depot_index}")
-                        time.sleep(2)  # Short delay before trying next option
-            else:
-                self.update_signal.emit("Login failed. Please check your credentials.")
+                        self.update_signal.emit(f"Failed to handle dialogs or click 'Show Search' button after multiple attempts. Error: {str(e)}")
+                        return
+
+            self.update_signal.emit(f"Selecting Ship From Plant: {self.ship_from_plant}")
+            automation.select_ship_from_plant(self.ship_from_plant)
+            
+            depots = ["DEOGARH", "DHANBAD", "BANKURA", "BERHAMPORE", "BURDWAN", "COSSIPORE", 
+                      "DANKUNI", "KALIGHAT", "KHARAGPUR", "KRISHNANAGAR", "SAINTHIA", "SHALIMAR", 
+                      "DIAMOND HARBOUR", "BARASAT"]
+            depot_index = 0
+            
+            while not self.stop_flag:
+                self.update_signal.emit("Handling any error dialogs before depot selection...")
+                automation.handle_error_dialog()
+                
+                if self.selected_depot:
+                    current_depot = self.selected_depot
+                else:
+                    current_depot = depots[depot_index]
+                    depot_index = (depot_index + 1) % len(depots)
+
+                self.update_signal.emit(f"Selecting Depot: {current_depot}")
+                automation.select_depot(current_depot)
+                
+                self.update_signal.emit("Clicking Search...")
+                automation.click_search()
+                
+                if automation.check_table_data():
+                    self.update_signal.emit(f"Data found for {current_depot}. Starting aggressive bidding process...")
+                    bids_placed, bid_details = automation.aggressive_bidding(max_duration=300, destinations=self.destinations)
+                    self.update_signal.emit(f"Bidding session completed for {current_depot}.")
+                    self.update_signal.emit(f"Total bids placed: {bids_placed}")
+                    for detail in bid_details:
+                        self.update_signal.emit(f"Freight: {detail['freight']}, Bid: {detail['bid_amount']}, Rank: {detail['rank']}")
+                    rank_1_bids = sum(1 for detail in bid_details if detail['rank'] == '01')
+                    self.update_signal.emit(f"Bids with Rank 1: {rank_1_bids}")
+                else:
+                    self.update_signal.emit(f"No data found for {current_depot}.")
+                
+                if self.selected_depot:
+                    self.update_signal.emit("Waiting 1 second before searching again...")
+                    time.sleep(1)
+                else:
+                    self.update_signal.emit(f"Moving to next depot. Next index: {depot_index}")
+                    time.sleep(2)  # Short delay before trying next option
 
         except Exception as e:
             self.update_signal.emit(f"Error: {str(e)}")
@@ -84,6 +134,10 @@ class AutomationThread(QThread):
 
     def stop(self):
         self.stop_flag = True
+
+# The rest of the SAPLoginGUI class remains unchanged
+
+# The rest of the SAPLoginGUI class remains unchanged
 
 # The rest of the SAPLoginGUI class remains unchanged
 

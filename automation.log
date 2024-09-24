@@ -23966,3 +23966,2316 @@ Stacktrace:
 2024-09-23 15:36:26,090 - INFO - No data found for KHARAGPUR.
 2024-09-23 15:36:26,091 - INFO - Moving to next depot. Next index: 9
 2024-09-23 15:36:28,094 - INFO - Automation stopped. Browser remains open.
+2024-09-24 12:32:01,236 - INFO - ====== WebDriver manager ======
+2024-09-24 12:32:01,237 - INFO - Setting up WebDriver...
+2024-09-24 12:32:01,297 - INFO - Get LATEST chromedriver version for google-chrome
+2024-09-24 12:32:01,489 - INFO - Get LATEST chromedriver version for google-chrome
+2024-09-24 12:32:01,613 - INFO - Get LATEST chromedriver version for google-chrome
+2024-09-24 12:32:01,906 - INFO - WebDriver version 128.0.6613.137 selected
+2024-09-24 12:32:01,908 - INFO - Modern chrome version https://storage.googleapis.com/chrome-for-testing-public/128.0.6613.137/linux64/chromedriver-linux64.zip
+2024-09-24 12:32:01,908 - INFO - About to download new driver from https://storage.googleapis.com/chrome-for-testing-public/128.0.6613.137/linux64/chromedriver-linux64.zip
+2024-09-24 12:32:02,193 - INFO - Driver downloading response is 200
+2024-09-24 12:32:03,191 - INFO - Get LATEST chromedriver version for google-chrome
+2024-09-24 12:32:03,436 - INFO - Driver has been saved in cache [/home/abir/.wdm/drivers/chromedriver/linux64/128.0.6613.137]
+2024-09-24 12:32:03,854 - INFO - Attempting login...
+2024-09-24 12:32:10,541 - INFO - Logged in successfully using credentials
+2024-09-24 12:32:10,563 - INFO - Cookies saved
+2024-09-24 12:32:10,564 - INFO - Login successful. Navigating to eBidding page...
+2024-09-24 12:32:15,399 - INFO - Page loaded completely
+2024-09-24 12:32:15,403 - INFO - Opened eBidding URL: https://www.eye2serve.com:9001/sap/bc/ui5_ui5/sap/zvc_vendor_app/index.html#/ebidding
+2024-09-24 12:32:20,932 - INFO - No error dialog detected
+2024-09-24 12:32:20,933 - INFO - Opened eBidding URL: https://www.eye2serve.com:9001/sap/bc/ui5_ui5/sap/zvc_vendor_app/index.html#/ebidding
+2024-09-24 12:32:20,933 - INFO - Clicking 'Show Search' button...
+2024-09-24 12:32:45,427 - ERROR - Failed to click 'Show Search' button: Message: element click intercepted: Element <bdi id="__button0-BDI-content">...</bdi> is not clickable at point (1866, 20). Other element would receive the click: <div id="sap-ui-blocklayer-popup" tabindex="0" class="sapUiBLy sapMDialogBlockLayerInit" style="z-index: 18; visibility: visible;"></div>
+  (Session info: chrome=128.0.6613.137)
+Stacktrace:
+#0 0x605d2d8aa2da <unknown>
+#1 0x605d2d578200 <unknown>
+#2 0x605d2d5ce766 <unknown>
+#3 0x605d2d5cc66d <unknown>
+#4 0x605d2d5ca107 <unknown>
+#5 0x605d2d5c8fac <unknown>
+#6 0x605d2d5bc8c6 <unknown>
+#7 0x605d2d5ec8d2 <unknown>
+#8 0x605d2d5bc279 <unknown>
+#9 0x605d2d5eca9e <unknown>
+#10 0x605d2d60adfd <unknown>
+#11 0x605d2d5ec673 <unknown>
+#12 0x605d2d5ba473 <unknown>
+#13 0x605d2d5bb47e <unknown>
+#14 0x605d2d8710db <unknown>
+#15 0x605d2d875071 <unknown>
+#16 0x605d2d85d9d5 <unknown>
+#17 0x605d2d875bf2 <unknown>
+#18 0x605d2d842b6f <unknown>
+#19 0x605d2d899248 <unknown>
+#20 0x605d2d899417 <unknown>
+#21 0x605d2d8a90cc <unknown>
+#22 0x71c6be094ac3 <unknown>
+
+2024-09-24 12:32:45,433 - INFO - Error: Message: element click intercepted: Element <bdi id="__button0-BDI-content">...</bdi> is not clickable at point (1866, 20). Other element would receive the click: <div id="sap-ui-blocklayer-popup" tabindex="0" class="sapUiBLy sapMDialogBlockLayerInit" style="z-index: 18; visibility: visible;"></div>
+  (Session info: chrome=128.0.6613.137)
+Stacktrace:
+#0 0x605d2d8aa2da <unknown>
+#1 0x605d2d578200 <unknown>
+#2 0x605d2d5ce766 <unknown>
+#3 0x605d2d5cc66d <unknown>
+#4 0x605d2d5ca107 <unknown>
+#5 0x605d2d5c8fac <unknown>
+#6 0x605d2d5bc8c6 <unknown>
+#7 0x605d2d5ec8d2 <unknown>
+#8 0x605d2d5bc279 <unknown>
+#9 0x605d2d5eca9e <unknown>
+#10 0x605d2d60adfd <unknown>
+#11 0x605d2d5ec673 <unknown>
+#12 0x605d2d5ba473 <unknown>
+#13 0x605d2d5bb47e <unknown>
+#14 0x605d2d8710db <unknown>
+#15 0x605d2d875071 <unknown>
+#16 0x605d2d85d9d5 <unknown>
+#17 0x605d2d875bf2 <unknown>
+#18 0x605d2d842b6f <unknown>
+#19 0x605d2d899248 <unknown>
+#20 0x605d2d899417 <unknown>
+#21 0x605d2d8a90cc <unknown>
+#22 0x71c6be094ac3 <unknown>
+
+2024-09-24 12:32:45,433 - INFO - Automation stopped. Browser remains open.
+2024-09-24 12:33:47,390 - INFO - ====== WebDriver manager ======
+2024-09-24 12:33:47,391 - INFO - Setting up WebDriver...
+2024-09-24 12:33:47,452 - INFO - Get LATEST chromedriver version for google-chrome
+2024-09-24 12:33:47,582 - INFO - Get LATEST chromedriver version for google-chrome
+2024-09-24 12:33:47,715 - INFO - Driver [/home/abir/.wdm/drivers/chromedriver/linux64/128.0.6613.137/chromedriver-linux64/chromedriver] found in cache
+2024-09-24 12:33:48,113 - INFO - Attempting login...
+2024-09-24 12:33:48,810 - INFO - Cookies loaded successfully
+2024-09-24 12:33:52,067 - INFO - Logged in successfully using cookies
+2024-09-24 12:33:52,068 - INFO - Login successful. Navigating to eBidding page...
+2024-09-24 12:33:55,627 - INFO - Page loaded completely
+2024-09-24 12:33:55,629 - INFO - Opened eBidding URL: https://www.eye2serve.com:9001/sap/bc/ui5_ui5/sap/zvc_vendor_app/index.html#/ebidding
+2024-09-24 12:34:01,491 - INFO - No error dialog detected
+2024-09-24 12:34:01,491 - INFO - Opened eBidding URL: https://www.eye2serve.com:9001/sap/bc/ui5_ui5/sap/zvc_vendor_app/index.html#/ebidding
+2024-09-24 12:34:01,492 - INFO - Clicking 'Show Search' button...
+2024-09-24 12:34:22,646 - ERROR - Failed to click 'Show Search' button: Message: element click intercepted: Element <bdi id="__button0-BDI-content">...</bdi> is not clickable at point (1867, 20). Other element would receive the click: <div id="sap-ui-blocklayer-popup" tabindex="0" class="sapUiBLy sapMDialogBlockLayerInit" style="z-index: 18; visibility: visible;"></div>
+  (Session info: chrome=128.0.6613.137)
+Stacktrace:
+#0 0x58c9af0c52da <unknown>
+#1 0x58c9aed93200 <unknown>
+#2 0x58c9aede9766 <unknown>
+#3 0x58c9aede766d <unknown>
+#4 0x58c9aede5107 <unknown>
+#5 0x58c9aede3fac <unknown>
+#6 0x58c9aedd78c6 <unknown>
+#7 0x58c9aee078d2 <unknown>
+#8 0x58c9aedd7279 <unknown>
+#9 0x58c9aee07a9e <unknown>
+#10 0x58c9aee25dfd <unknown>
+#11 0x58c9aee07673 <unknown>
+#12 0x58c9aedd5473 <unknown>
+#13 0x58c9aedd647e <unknown>
+#14 0x58c9af08c0db <unknown>
+#15 0x58c9af090071 <unknown>
+#16 0x58c9af0789d5 <unknown>
+#17 0x58c9af090bf2 <unknown>
+#18 0x58c9af05db6f <unknown>
+#19 0x58c9af0b4248 <unknown>
+#20 0x58c9af0b4417 <unknown>
+#21 0x58c9af0c40cc <unknown>
+#22 0x7fd571694ac3 <unknown>
+
+2024-09-24 12:34:22,652 - INFO - Error: Message: element click intercepted: Element <bdi id="__button0-BDI-content">...</bdi> is not clickable at point (1867, 20). Other element would receive the click: <div id="sap-ui-blocklayer-popup" tabindex="0" class="sapUiBLy sapMDialogBlockLayerInit" style="z-index: 18; visibility: visible;"></div>
+  (Session info: chrome=128.0.6613.137)
+Stacktrace:
+#0 0x58c9af0c52da <unknown>
+#1 0x58c9aed93200 <unknown>
+#2 0x58c9aede9766 <unknown>
+#3 0x58c9aede766d <unknown>
+#4 0x58c9aede5107 <unknown>
+#5 0x58c9aede3fac <unknown>
+#6 0x58c9aedd78c6 <unknown>
+#7 0x58c9aee078d2 <unknown>
+#8 0x58c9aedd7279 <unknown>
+#9 0x58c9aee07a9e <unknown>
+#10 0x58c9aee25dfd <unknown>
+#11 0x58c9aee07673 <unknown>
+#12 0x58c9aedd5473 <unknown>
+#13 0x58c9aedd647e <unknown>
+#14 0x58c9af08c0db <unknown>
+#15 0x58c9af090071 <unknown>
+#16 0x58c9af0789d5 <unknown>
+#17 0x58c9af090bf2 <unknown>
+#18 0x58c9af05db6f <unknown>
+#19 0x58c9af0b4248 <unknown>
+#20 0x58c9af0b4417 <unknown>
+#21 0x58c9af0c40cc <unknown>
+#22 0x7fd571694ac3 <unknown>
+
+2024-09-24 12:34:22,653 - INFO - Automation stopped. Browser remains open.
+2024-09-24 12:37:21,907 - INFO - ====== WebDriver manager ======
+2024-09-24 12:37:21,909 - INFO - Setting up WebDriver...
+2024-09-24 12:37:21,963 - INFO - Get LATEST chromedriver version for google-chrome
+2024-09-24 12:37:22,110 - INFO - Get LATEST chromedriver version for google-chrome
+2024-09-24 12:37:22,245 - INFO - Driver [/home/abir/.wdm/drivers/chromedriver/linux64/128.0.6613.137/chromedriver-linux64/chromedriver] found in cache
+2024-09-24 12:37:22,649 - INFO - Attempting login...
+2024-09-24 12:37:23,170 - INFO - Cookies loaded successfully
+2024-09-24 12:37:24,695 - INFO - Logged in successfully using cookies
+2024-09-24 12:37:24,695 - INFO - Login successful. Navigating to eBidding page...
+2024-09-24 12:37:25,973 - INFO - Page loaded completely
+2024-09-24 12:37:25,975 - INFO - Opened eBidding URL: https://www.eye2serve.com:9001/sap/bc/ui5_ui5/sap/zvc_vendor_app/index.html#/ebidding
+2024-09-24 12:37:32,880 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 12:37:32,984 - INFO - Error dialog dismissed.
+2024-09-24 12:37:33,515 - INFO - Opened eBidding URL: https://www.eye2serve.com:9001/sap/bc/ui5_ui5/sap/zvc_vendor_app/index.html#/ebidding
+2024-09-24 12:37:33,515 - INFO - Clicking 'Show Search' button...
+2024-09-24 12:37:33,827 - INFO - 'Show Search' button clicked successfully
+2024-09-24 12:37:33,828 - INFO - Selecting Ship From Plant: WEST BENGAL CEMENT WORKS
+2024-09-24 12:37:33,867 - INFO - Clicked dropdown arrow for __xmlview0--ididUtclVCShipFromPlant
+2024-09-24 12:37:33,884 - INFO - Dropdown list visible for __xmlview0--ididUtclVCShipFromPlant
+2024-09-24 12:37:33,895 - INFO - Found 1 options for __xmlview0--ididUtclVCShipFromPlant
+2024-09-24 12:37:34,455 - INFO - Option 'WEST BENGAL CEMENT WORKS' selected successfully for __xmlview0--ididUtclVCShipFromPlant
+2024-09-24 12:37:34,987 - INFO - Dropdown closed after selection for __xmlview0--ididUtclVCShipFromPlant
+2024-09-24 12:37:34,987 - INFO - Handling any error dialogs before depot selection...
+2024-09-24 12:37:40,071 - INFO - No error dialog detected
+2024-09-24 12:37:40,071 - INFO - Selecting Depot: DEOGARH
+2024-09-24 12:37:40,101 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-24 12:37:40,116 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-24 12:37:40,123 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-24 12:37:40,671 - INFO - Option 'DEOGARH' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-24 12:37:41,202 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-24 12:37:41,203 - INFO - Clicking Search...
+2024-09-24 12:37:46,406 - INFO - No error dialog detected
+2024-09-24 12:37:46,468 - INFO - Search button clicked successfully
+2024-09-24 12:37:47,531 - INFO - Page loaded completely
+2024-09-24 12:37:47,551 - INFO - Table data check: No data found
+2024-09-24 12:37:47,552 - INFO - No data found for DEOGARH.
+2024-09-24 12:37:47,552 - INFO - Moving to next depot. Next index: 1
+2024-09-24 12:37:49,555 - INFO - Handling any error dialogs before depot selection...
+2024-09-24 12:37:49,566 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 12:37:49,651 - INFO - Error dialog dismissed.
+2024-09-24 12:37:50,188 - INFO - Selecting Depot: DHANBAD
+2024-09-24 12:37:50,211 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-24 12:37:50,222 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-24 12:37:50,230 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-24 12:37:50,787 - INFO - Option 'DHANBAD' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-24 12:37:51,321 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-24 12:37:51,321 - INFO - Clicking Search...
+2024-09-24 12:37:56,529 - INFO - No error dialog detected
+2024-09-24 12:37:56,584 - INFO - Search button clicked successfully
+2024-09-24 12:37:57,647 - INFO - Page loaded completely
+2024-09-24 12:37:57,660 - INFO - Table data check: No data found
+2024-09-24 12:37:57,661 - INFO - No data found for DHANBAD.
+2024-09-24 12:37:57,661 - INFO - Moving to next depot. Next index: 2
+2024-09-24 12:37:59,664 - INFO - Handling any error dialogs before depot selection...
+2024-09-24 12:37:59,673 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 12:37:59,710 - INFO - Error dialog dismissed.
+2024-09-24 12:38:00,246 - INFO - Selecting Depot: BANKURA
+2024-09-24 12:38:00,279 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-24 12:38:00,292 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-24 12:38:00,298 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-24 12:38:00,861 - INFO - Option 'BANKURA' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-24 12:38:01,394 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-24 12:38:01,395 - INFO - Clicking Search...
+2024-09-24 12:38:13,612 - INFO - ====== WebDriver manager ======
+2024-09-24 12:38:13,613 - INFO - Setting up WebDriver...
+2024-09-24 12:38:13,674 - INFO - Get LATEST chromedriver version for google-chrome
+2024-09-24 12:38:13,811 - INFO - Get LATEST chromedriver version for google-chrome
+2024-09-24 12:38:13,934 - INFO - Driver [/home/abir/.wdm/drivers/chromedriver/linux64/128.0.6613.137/chromedriver-linux64/chromedriver] found in cache
+2024-09-24 12:38:14,341 - INFO - Attempting login...
+2024-09-24 12:38:15,229 - INFO - Cookies loaded successfully
+2024-09-24 12:38:20,797 - INFO - Logged in successfully using cookies
+2024-09-24 12:38:20,798 - INFO - Login successful. Navigating to eBidding page...
+2024-09-24 12:38:25,602 - INFO - Page loaded completely
+2024-09-24 12:38:25,604 - INFO - Opened eBidding URL: https://www.eye2serve.com:9001/sap/bc/ui5_ui5/sap/zvc_vendor_app/index.html#/ebidding
+2024-09-24 12:38:30,712 - INFO - No error dialog detected
+2024-09-24 12:38:30,713 - INFO - Opened eBidding URL: https://www.eye2serve.com:9001/sap/bc/ui5_ui5/sap/zvc_vendor_app/index.html#/ebidding
+2024-09-24 12:38:30,713 - INFO - Clicking 'Show Search' button...
+2024-09-24 12:38:45,575 - INFO - ====== WebDriver manager ======
+2024-09-24 12:38:45,576 - INFO - Setting up WebDriver...
+2024-09-24 12:38:45,633 - INFO - Get LATEST chromedriver version for google-chrome
+2024-09-24 12:38:45,852 - INFO - Get LATEST chromedriver version for google-chrome
+2024-09-24 12:38:45,968 - INFO - Driver [/home/abir/.wdm/drivers/chromedriver/linux64/128.0.6613.137/chromedriver-linux64/chromedriver] found in cache
+2024-09-24 12:38:46,382 - INFO - Attempting login...
+2024-09-24 12:38:46,942 - INFO - Cookies loaded successfully
+2024-09-24 12:38:48,435 - INFO - Logged in successfully using cookies
+2024-09-24 12:38:48,436 - INFO - Login successful. Navigating to eBidding page...
+2024-09-24 12:38:49,746 - INFO - Page loaded completely
+2024-09-24 12:38:49,748 - INFO - Opened eBidding URL: https://www.eye2serve.com:9001/sap/bc/ui5_ui5/sap/zvc_vendor_app/index.html#/ebidding
+2024-09-24 12:38:56,510 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 12:38:56,588 - INFO - Error dialog dismissed.
+2024-09-24 12:38:57,139 - INFO - Opened eBidding URL: https://www.eye2serve.com:9001/sap/bc/ui5_ui5/sap/zvc_vendor_app/index.html#/ebidding
+2024-09-24 12:38:57,140 - INFO - Clicking 'Show Search' button...
+2024-09-24 12:38:57,360 - INFO - 'Show Search' button clicked successfully
+2024-09-24 12:38:57,361 - INFO - Selecting Ship From Plant: WEST BENGAL CEMENT WORKS
+2024-09-24 12:38:57,399 - INFO - Clicked dropdown arrow for __xmlview0--ididUtclVCShipFromPlant
+2024-09-24 12:38:57,418 - INFO - Dropdown list visible for __xmlview0--ididUtclVCShipFromPlant
+2024-09-24 12:38:57,430 - INFO - Found 1 options for __xmlview0--ididUtclVCShipFromPlant
+2024-09-24 12:38:57,985 - INFO - Option 'WEST BENGAL CEMENT WORKS' selected successfully for __xmlview0--ididUtclVCShipFromPlant
+2024-09-24 12:38:58,518 - INFO - Dropdown closed after selection for __xmlview0--ididUtclVCShipFromPlant
+2024-09-24 12:38:58,519 - INFO - Handling any error dialogs before depot selection...
+2024-09-24 12:39:03,600 - INFO - No error dialog detected
+2024-09-24 12:39:03,600 - INFO - Selecting Depot: DEOGARH
+2024-09-24 12:39:03,624 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-24 12:39:03,641 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-24 12:39:03,649 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-24 12:39:04,187 - INFO - Option 'DEOGARH' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-24 12:39:04,717 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-24 12:39:04,718 - INFO - Clicking Search...
+2024-09-24 12:39:09,900 - INFO - No error dialog detected
+2024-09-24 12:39:09,976 - INFO - Search button clicked successfully
+2024-09-24 12:39:10,522 - INFO - Page loaded completely
+2024-09-24 12:39:10,534 - INFO - Table data check: No data found
+2024-09-24 12:39:10,535 - INFO - No data found for DEOGARH.
+2024-09-24 12:39:10,535 - INFO - Moving to next depot. Next index: 1
+2024-09-24 12:39:12,538 - INFO - Handling any error dialogs before depot selection...
+2024-09-24 12:39:12,551 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 12:39:12,592 - INFO - Error dialog dismissed.
+2024-09-24 12:39:13,127 - INFO - Selecting Depot: DHANBAD
+2024-09-24 12:39:13,151 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-24 12:39:13,178 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-24 12:39:13,183 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-24 12:39:13,725 - INFO - Option 'DHANBAD' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-24 12:39:14,258 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-24 12:39:14,259 - INFO - Clicking Search...
+2024-09-24 12:39:19,452 - INFO - No error dialog detected
+2024-09-24 12:39:19,508 - INFO - Search button clicked successfully
+2024-09-24 12:39:20,569 - INFO - Page loaded completely
+2024-09-24 12:39:20,588 - INFO - Table data check: No data found
+2024-09-24 12:39:20,589 - INFO - No data found for DHANBAD.
+2024-09-24 12:39:20,589 - INFO - Moving to next depot. Next index: 2
+2024-09-24 12:39:22,592 - INFO - Handling any error dialogs before depot selection...
+2024-09-24 12:39:22,605 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 12:39:22,643 - INFO - Error dialog dismissed.
+2024-09-24 12:39:23,177 - INFO - Selecting Depot: BANKURA
+2024-09-24 12:39:23,198 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-24 12:39:23,208 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-24 12:39:23,213 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-24 12:39:23,763 - INFO - Option 'BANKURA' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-24 12:39:24,291 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-24 12:39:24,291 - INFO - Clicking Search...
+2024-09-24 12:39:29,493 - INFO - No error dialog detected
+2024-09-24 12:39:29,544 - INFO - Search button clicked successfully
+2024-09-24 12:39:30,080 - INFO - Page loaded completely
+2024-09-24 12:39:30,089 - INFO - Table data check: No data found
+2024-09-24 12:39:30,089 - INFO - No data found for BANKURA.
+2024-09-24 12:39:30,089 - INFO - Moving to next depot. Next index: 3
+2024-09-24 12:39:32,092 - INFO - Handling any error dialogs before depot selection...
+2024-09-24 12:39:32,105 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 12:39:32,135 - INFO - Error dialog dismissed.
+2024-09-24 12:39:32,665 - INFO - Selecting Depot: BERHAMPORE
+2024-09-24 12:39:32,692 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-24 12:39:32,704 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-24 12:39:32,710 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-24 12:39:33,265 - INFO - Option 'BERHAMPORE' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-24 12:39:33,796 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-24 12:39:33,797 - INFO - Clicking Search...
+2024-09-24 12:39:38,971 - INFO - No error dialog detected
+2024-09-24 12:39:39,031 - INFO - Search button clicked successfully
+2024-09-24 12:39:40,096 - INFO - Page loaded completely
+2024-09-24 12:39:40,104 - INFO - Table data check: No data found
+2024-09-24 12:39:40,105 - INFO - No data found for BERHAMPORE.
+2024-09-24 12:39:40,105 - INFO - Moving to next depot. Next index: 4
+2024-09-24 12:39:42,108 - INFO - Handling any error dialogs before depot selection...
+2024-09-24 12:39:42,121 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 12:39:42,151 - INFO - Error dialog dismissed.
+2024-09-24 12:39:42,683 - INFO - Selecting Depot: BURDWAN
+2024-09-24 12:39:42,701 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-24 12:39:42,712 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-24 12:39:42,718 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-24 12:39:43,276 - INFO - Option 'BURDWAN' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-24 12:39:43,805 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-24 12:39:43,805 - INFO - Clicking Search...
+2024-09-24 12:39:48,985 - INFO - No error dialog detected
+2024-09-24 12:39:49,026 - INFO - Search button clicked successfully
+2024-09-24 12:39:50,086 - INFO - Page loaded completely
+2024-09-24 12:39:50,103 - INFO - Table data check: No data found
+2024-09-24 12:39:50,103 - INFO - No data found for BURDWAN.
+2024-09-24 12:39:50,103 - INFO - Moving to next depot. Next index: 5
+2024-09-24 12:39:52,105 - INFO - Handling any error dialogs before depot selection...
+2024-09-24 12:39:52,110 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 12:39:52,140 - INFO - Error dialog dismissed.
+2024-09-24 12:39:52,676 - INFO - Selecting Depot: COSSIPORE
+2024-09-24 12:39:52,700 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-24 12:39:52,712 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-24 12:39:52,718 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-24 12:39:53,288 - INFO - Option 'COSSIPORE' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-24 12:39:53,831 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-24 12:39:53,832 - INFO - Clicking Search...
+2024-09-24 12:39:59,026 - INFO - No error dialog detected
+2024-09-24 12:39:59,081 - INFO - Search button clicked successfully
+2024-09-24 12:40:00,147 - INFO - Page loaded completely
+2024-09-24 12:40:00,163 - INFO - Table data check: No data found
+2024-09-24 12:40:00,163 - INFO - No data found for COSSIPORE.
+2024-09-24 12:40:00,163 - INFO - Moving to next depot. Next index: 6
+2024-09-24 12:40:02,166 - INFO - Handling any error dialogs before depot selection...
+2024-09-24 12:40:02,179 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 12:40:02,218 - INFO - Error dialog dismissed.
+2024-09-24 12:40:02,752 - INFO - Selecting Depot: DANKUNI
+2024-09-24 12:40:02,777 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-24 12:40:02,787 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-24 12:40:02,794 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-24 12:40:03,362 - INFO - Option 'DANKUNI' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-24 12:40:03,892 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-24 12:40:03,892 - INFO - Clicking Search...
+2024-09-24 12:40:09,079 - INFO - No error dialog detected
+2024-09-24 12:40:09,131 - INFO - Search button clicked successfully
+2024-09-24 12:40:10,191 - INFO - Page loaded completely
+2024-09-24 12:40:10,201 - INFO - Table data check: No data found
+2024-09-24 12:40:10,202 - INFO - No data found for DANKUNI.
+2024-09-24 12:40:10,202 - INFO - Moving to next depot. Next index: 7
+2024-09-24 12:40:12,204 - INFO - Handling any error dialogs before depot selection...
+2024-09-24 12:40:12,216 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 12:40:12,246 - INFO - Error dialog dismissed.
+2024-09-24 12:40:12,783 - INFO - Selecting Depot: KALIGHAT
+2024-09-24 12:40:12,810 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-24 12:40:12,823 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-24 12:40:12,828 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-24 12:40:13,426 - INFO - Option 'KALIGHAT' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-24 12:40:13,960 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-24 12:40:13,960 - INFO - Clicking Search...
+2024-09-24 12:40:19,159 - INFO - No error dialog detected
+2024-09-24 12:40:19,213 - INFO - Search button clicked successfully
+2024-09-24 12:40:19,757 - INFO - Page loaded completely
+2024-09-24 12:40:19,767 - INFO - Table data check: No data found
+2024-09-24 12:40:19,767 - INFO - No data found for KALIGHAT.
+2024-09-24 12:40:19,768 - INFO - Moving to next depot. Next index: 8
+2024-09-24 12:40:21,771 - INFO - Handling any error dialogs before depot selection...
+2024-09-24 12:40:21,784 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 12:40:21,822 - INFO - Error dialog dismissed.
+2024-09-24 12:40:22,363 - INFO - Selecting Depot: KHARAGPUR
+2024-09-24 12:40:22,387 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-24 12:40:22,405 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-24 12:40:22,414 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-24 12:40:23,003 - INFO - Option 'KHARAGPUR' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-24 12:40:23,542 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-24 12:40:23,544 - INFO - Clicking Search...
+2024-09-24 12:40:28,728 - INFO - No error dialog detected
+2024-09-24 12:40:28,776 - INFO - Search button clicked successfully
+2024-09-24 12:40:29,313 - INFO - Page loaded completely
+2024-09-24 12:40:29,321 - INFO - Table data check: No data found
+2024-09-24 12:40:29,321 - INFO - No data found for KHARAGPUR.
+2024-09-24 12:40:29,322 - INFO - Moving to next depot. Next index: 9
+2024-09-24 12:40:31,325 - INFO - Handling any error dialogs before depot selection...
+2024-09-24 12:40:31,338 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 12:40:31,368 - INFO - Error dialog dismissed.
+2024-09-24 12:40:31,900 - INFO - Selecting Depot: KRISHNANAGAR
+2024-09-24 12:40:31,928 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-24 12:40:31,940 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-24 12:40:31,945 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-24 12:40:32,545 - INFO - Option 'KRISHNANAGAR' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-24 12:40:33,072 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-24 12:40:33,073 - INFO - Clicking Search...
+2024-09-24 12:40:38,237 - INFO - No error dialog detected
+2024-09-24 12:40:38,289 - INFO - Search button clicked successfully
+2024-09-24 12:40:38,832 - INFO - Page loaded completely
+2024-09-24 12:40:38,840 - INFO - Table data check: No data found
+2024-09-24 12:40:38,841 - INFO - No data found for KRISHNANAGAR.
+2024-09-24 12:40:38,841 - INFO - Moving to next depot. Next index: 10
+2024-09-24 12:40:40,844 - INFO - Handling any error dialogs before depot selection...
+2024-09-24 12:40:40,856 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 12:40:40,886 - INFO - Error dialog dismissed.
+2024-09-24 12:40:41,420 - INFO - Selecting Depot: SAINTHIA
+2024-09-24 12:40:41,447 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-24 12:40:41,456 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-24 12:40:41,462 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-24 12:40:42,054 - INFO - Option 'SAINTHIA' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-24 12:40:42,583 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-24 12:40:42,584 - INFO - Clicking Search...
+2024-09-24 12:40:47,758 - INFO - No error dialog detected
+2024-09-24 12:40:47,823 - INFO - Search button clicked successfully
+2024-09-24 12:40:48,884 - INFO - Page loaded completely
+2024-09-24 12:40:48,900 - INFO - Table data check: No data found
+2024-09-24 12:40:48,900 - INFO - No data found for SAINTHIA.
+2024-09-24 12:40:48,901 - INFO - Moving to next depot. Next index: 11
+2024-09-24 12:40:50,904 - INFO - Handling any error dialogs before depot selection...
+2024-09-24 12:40:50,917 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 12:40:50,953 - INFO - Error dialog dismissed.
+2024-09-24 12:40:51,501 - INFO - Selecting Depot: SHALIMAR
+2024-09-24 12:40:51,523 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-24 12:40:51,536 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-24 12:40:51,541 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-24 12:40:52,134 - INFO - Option 'SHALIMAR' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-24 12:40:52,667 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-24 12:40:52,668 - INFO - Clicking Search...
+2024-09-24 12:40:57,870 - INFO - No error dialog detected
+2024-09-24 12:40:57,922 - INFO - Search button clicked successfully
+2024-09-24 12:40:58,467 - INFO - Page loaded completely
+2024-09-24 12:40:58,478 - INFO - Table data check: No data found
+2024-09-24 12:40:58,478 - INFO - No data found for SHALIMAR.
+2024-09-24 12:40:58,478 - INFO - Moving to next depot. Next index: 12
+2024-09-24 12:41:00,481 - INFO - Handling any error dialogs before depot selection...
+2024-09-24 12:41:00,494 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 12:41:00,525 - INFO - Error dialog dismissed.
+2024-09-24 12:41:01,056 - INFO - Selecting Depot: DIAMOND HARBOUR
+2024-09-24 12:41:01,079 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-24 12:41:01,091 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-24 12:41:01,097 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-24 12:41:01,698 - INFO - Option 'DIAMOND HARBOUR' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-24 12:41:02,229 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-24 12:41:02,230 - INFO - Clicking Search...
+2024-09-24 12:41:07,428 - INFO - No error dialog detected
+2024-09-24 12:41:07,481 - INFO - Search button clicked successfully
+2024-09-24 12:41:09,058 - INFO - Page loaded completely
+2024-09-24 12:41:09,092 - INFO - Table data check: Data found
+2024-09-24 12:41:09,094 - INFO - Data found for DIAMOND HARBOUR. Starting rapid bidding process...
+2024-09-24 12:41:09,094 - INFO - Error: SAPBiddingAutomation.rapid_bidding() got an unexpected keyword argument 'max_duration'
+2024-09-24 12:41:09,095 - INFO - Automation stopped. Browser remains open.
+2024-09-24 12:45:44,354 - INFO - ====== WebDriver manager ======
+2024-09-24 12:45:44,355 - INFO - Setting up WebDriver...
+2024-09-24 12:45:44,415 - INFO - Get LATEST chromedriver version for google-chrome
+2024-09-24 12:45:44,551 - INFO - Get LATEST chromedriver version for google-chrome
+2024-09-24 12:45:44,669 - INFO - Driver [/home/abir/.wdm/drivers/chromedriver/linux64/128.0.6613.137/chromedriver-linux64/chromedriver] found in cache
+2024-09-24 12:45:45,097 - INFO - Attempting login...
+2024-09-24 12:45:45,616 - INFO - Cookies loaded successfully
+2024-09-24 12:45:47,089 - INFO - Logged in successfully using cookies
+2024-09-24 12:45:47,090 - INFO - Login successful. Navigating to eBidding page...
+2024-09-24 12:45:49,117 - INFO - Page loaded completely
+2024-09-24 12:45:49,119 - INFO - Opened eBidding URL: https://www.eye2serve.com:9001/sap/bc/ui5_ui5/sap/zvc_vendor_app/index.html#/ebidding
+2024-09-24 12:45:56,913 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 12:45:56,982 - INFO - Error dialog dismissed.
+2024-09-24 12:45:57,512 - INFO - Opened eBidding URL: https://www.eye2serve.com:9001/sap/bc/ui5_ui5/sap/zvc_vendor_app/index.html#/ebidding
+2024-09-24 12:45:57,512 - INFO - Clicking 'Show Search' button...
+2024-09-24 12:45:57,939 - INFO - 'Show Search' button clicked successfully
+2024-09-24 12:45:57,940 - INFO - Selecting Ship From Plant: WEST BENGAL CEMENT WORKS
+2024-09-24 12:45:57,979 - INFO - Clicked dropdown arrow for __xmlview0--ididUtclVCShipFromPlant
+2024-09-24 12:45:57,993 - INFO - Dropdown list visible for __xmlview0--ididUtclVCShipFromPlant
+2024-09-24 12:45:58,004 - INFO - Found 1 options for __xmlview0--ididUtclVCShipFromPlant
+2024-09-24 12:45:58,562 - INFO - Option 'WEST BENGAL CEMENT WORKS' selected successfully for __xmlview0--ididUtclVCShipFromPlant
+2024-09-24 12:45:59,097 - INFO - Dropdown closed after selection for __xmlview0--ididUtclVCShipFromPlant
+2024-09-24 12:45:59,098 - INFO - Handling any error dialogs before depot selection...
+2024-09-24 12:46:04,192 - INFO - No error dialog detected
+2024-09-24 12:46:04,192 - INFO - Selecting Depot: DEOGARH
+2024-09-24 12:46:04,237 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-24 12:46:04,287 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-24 12:46:04,294 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-24 12:46:04,839 - INFO - Option 'DEOGARH' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-24 12:46:05,368 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-24 12:46:05,369 - INFO - Clicking Search...
+2024-09-24 12:46:10,549 - INFO - No error dialog detected
+2024-09-24 12:46:10,610 - INFO - Search button clicked successfully
+2024-09-24 12:46:11,673 - INFO - Page loaded completely
+2024-09-24 12:46:11,686 - INFO - Table data check: No data found
+2024-09-24 12:46:11,686 - INFO - No data found for DEOGARH.
+2024-09-24 12:46:11,686 - INFO - Moving to next depot. Next index: 1
+2024-09-24 12:46:13,689 - INFO - Handling any error dialogs before depot selection...
+2024-09-24 12:46:13,699 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 12:46:13,733 - INFO - Error dialog dismissed.
+2024-09-24 12:46:14,270 - INFO - Selecting Depot: DHANBAD
+2024-09-24 12:46:14,312 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-24 12:46:14,330 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-24 12:46:14,337 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-24 12:46:14,889 - INFO - Option 'DHANBAD' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-24 12:46:15,423 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-24 12:46:15,424 - INFO - Clicking Search...
+2024-09-24 12:46:20,636 - INFO - No error dialog detected
+2024-09-24 12:46:20,690 - INFO - Search button clicked successfully
+2024-09-24 12:46:21,228 - INFO - Page loaded completely
+2024-09-24 12:46:21,235 - INFO - Table data check: No data found
+2024-09-24 12:46:21,235 - INFO - No data found for DHANBAD.
+2024-09-24 12:46:21,235 - INFO - Moving to next depot. Next index: 2
+2024-09-24 12:46:23,239 - INFO - Handling any error dialogs before depot selection...
+2024-09-24 12:46:23,252 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 12:46:23,290 - INFO - Error dialog dismissed.
+2024-09-24 12:46:23,828 - INFO - Selecting Depot: BANKURA
+2024-09-24 12:46:23,853 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-24 12:46:23,866 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-24 12:46:23,872 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-24 12:46:24,437 - INFO - Option 'BANKURA' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-24 12:46:24,975 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-24 12:46:24,976 - INFO - Clicking Search...
+2024-09-24 12:46:30,169 - INFO - No error dialog detected
+2024-09-24 12:46:30,220 - INFO - Search button clicked successfully
+2024-09-24 12:46:31,307 - INFO - Page loaded completely
+2024-09-24 12:46:31,317 - INFO - Table data check: No data found
+2024-09-24 12:46:31,317 - INFO - No data found for BANKURA.
+2024-09-24 12:46:31,317 - INFO - Moving to next depot. Next index: 3
+2024-09-24 12:46:33,320 - INFO - Handling any error dialogs before depot selection...
+2024-09-24 12:46:33,331 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 12:46:33,361 - INFO - Error dialog dismissed.
+2024-09-24 12:46:33,899 - INFO - Selecting Depot: BERHAMPORE
+2024-09-24 12:46:33,927 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-24 12:46:33,938 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-24 12:46:33,944 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-24 12:46:34,506 - INFO - Option 'BERHAMPORE' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-24 12:46:35,041 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-24 12:46:35,042 - INFO - Clicking Search...
+2024-09-24 12:46:40,237 - INFO - No error dialog detected
+2024-09-24 12:46:40,286 - INFO - Search button clicked successfully
+2024-09-24 12:46:41,368 - INFO - Page loaded completely
+2024-09-24 12:46:41,384 - INFO - Table data check: No data found
+2024-09-24 12:46:41,385 - INFO - No data found for BERHAMPORE.
+2024-09-24 12:46:41,385 - INFO - Moving to next depot. Next index: 4
+2024-09-24 12:46:43,388 - INFO - Handling any error dialogs before depot selection...
+2024-09-24 12:46:43,399 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 12:46:43,442 - INFO - Error dialog dismissed.
+2024-09-24 12:46:43,976 - INFO - Selecting Depot: BURDWAN
+2024-09-24 12:46:43,999 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-24 12:46:44,010 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-24 12:46:44,019 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-24 12:46:44,598 - INFO - Option 'BURDWAN' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-24 12:46:45,135 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-24 12:46:45,136 - INFO - Clicking Search...
+2024-09-24 12:46:50,296 - INFO - No error dialog detected
+2024-09-24 12:46:50,351 - INFO - Search button clicked successfully
+2024-09-24 12:46:51,934 - INFO - Page loaded completely
+2024-09-24 12:46:51,956 - INFO - Table data check: Data found
+2024-09-24 12:46:51,957 - INFO - Data found for BURDWAN. Starting rapid bidding process...
+2024-09-24 12:46:52,138 - INFO - Placed bid of 321 for freight 322
+2024-09-24 12:46:52,139 - INFO - All bids placed successfully
+2024-09-24 12:46:52,140 - INFO - Placed 1 bids for BURDWAN.
+2024-09-24 12:46:52,140 - INFO - Moving to next depot. Next index: 5
+2024-09-24 12:46:54,142 - INFO - Handling any error dialogs before depot selection...
+2024-09-24 12:46:54,155 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 12:46:54,187 - INFO - Error dialog dismissed.
+2024-09-24 12:46:54,719 - INFO - Selecting Depot: COSSIPORE
+2024-09-24 12:46:54,743 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-24 12:46:54,758 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-24 12:46:54,764 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-24 12:46:55,343 - INFO - Option 'COSSIPORE' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-24 12:46:55,886 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-24 12:46:55,888 - INFO - Clicking Search...
+2024-09-24 12:47:01,095 - INFO - No error dialog detected
+2024-09-24 12:47:01,150 - INFO - Search button clicked successfully
+2024-09-24 12:47:08,469 - INFO - Page loaded completely
+2024-09-24 12:47:08,477 - INFO - Table data check: No data found
+2024-09-24 12:47:08,477 - INFO - No data found for COSSIPORE.
+2024-09-24 12:47:08,477 - INFO - Moving to next depot. Next index: 6
+2024-09-24 12:47:10,481 - INFO - Handling any error dialogs before depot selection...
+2024-09-24 12:47:10,493 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 12:47:10,530 - INFO - Error dialog dismissed.
+2024-09-24 12:47:11,065 - INFO - Selecting Depot: DANKUNI
+2024-09-24 12:47:11,088 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-24 12:47:11,101 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-24 12:47:11,108 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-24 12:47:11,677 - INFO - Option 'DANKUNI' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-24 12:47:12,210 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-24 12:47:12,211 - INFO - Clicking Search...
+2024-09-24 12:47:17,415 - INFO - No error dialog detected
+2024-09-24 12:47:17,471 - INFO - Search button clicked successfully
+2024-09-24 12:47:24,288 - INFO - Page loaded completely
+2024-09-24 12:47:24,306 - INFO - Table data check: No data found
+2024-09-24 12:47:24,306 - INFO - No data found for DANKUNI.
+2024-09-24 12:47:24,306 - INFO - Moving to next depot. Next index: 7
+2024-09-24 12:47:26,309 - INFO - Handling any error dialogs before depot selection...
+2024-09-24 12:47:26,321 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 12:47:26,351 - INFO - Error dialog dismissed.
+2024-09-24 12:47:26,885 - INFO - Selecting Depot: KALIGHAT
+2024-09-24 12:47:26,911 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-24 12:47:26,924 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-24 12:47:26,930 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-24 12:47:27,505 - INFO - Option 'KALIGHAT' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-24 12:47:28,035 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-24 12:47:28,036 - INFO - Clicking Search...
+2024-09-24 12:47:33,244 - INFO - No error dialog detected
+2024-09-24 12:47:33,295 - INFO - Search button clicked successfully
+2024-09-24 12:47:34,868 - INFO - Page loaded completely
+2024-09-24 12:47:34,887 - INFO - Table data check: No data found
+2024-09-24 12:47:34,888 - INFO - No data found for KALIGHAT.
+2024-09-24 12:47:34,888 - INFO - Moving to next depot. Next index: 8
+2024-09-24 12:47:36,891 - INFO - Handling any error dialogs before depot selection...
+2024-09-24 12:47:36,904 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 12:47:36,940 - INFO - Error dialog dismissed.
+2024-09-24 12:47:37,476 - INFO - Selecting Depot: KHARAGPUR
+2024-09-24 12:47:37,496 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-24 12:47:37,506 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-24 12:47:37,515 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-24 12:47:38,102 - INFO - Option 'KHARAGPUR' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-24 12:47:38,635 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-24 12:47:38,635 - INFO - Clicking Search...
+2024-09-24 12:47:43,844 - INFO - No error dialog detected
+2024-09-24 12:47:43,896 - INFO - Search button clicked successfully
+2024-09-24 13:05:02,125 - INFO - ====== WebDriver manager ======
+2024-09-24 13:05:02,127 - INFO - Setting up WebDriver...
+2024-09-24 13:05:02,188 - INFO - Get LATEST chromedriver version for google-chrome
+2024-09-24 13:05:02,318 - INFO - Get LATEST chromedriver version for google-chrome
+2024-09-24 13:05:02,443 - INFO - Driver [/home/abir/.wdm/drivers/chromedriver/linux64/128.0.6613.137/chromedriver-linux64/chromedriver] found in cache
+2024-09-24 13:05:02,893 - INFO - Attempting login...
+2024-09-24 13:05:03,962 - INFO - Cookies loaded successfully
+2024-09-24 13:05:09,765 - INFO - Logged in successfully using cookies
+2024-09-24 13:05:09,766 - INFO - Login successful. Navigating to eBidding page...
+2024-09-24 13:05:13,328 - INFO - Page loaded completely
+2024-09-24 13:05:13,330 - INFO - Opened eBidding URL: https://www.eye2serve.com:9001/sap/bc/ui5_ui5/sap/zvc_vendor_app/index.html#/ebidding
+2024-09-24 13:05:18,338 - INFO - No error dialog detected
+2024-09-24 13:05:18,340 - INFO - Opened eBidding URL: https://www.eye2serve.com:9001/sap/bc/ui5_ui5/sap/zvc_vendor_app/index.html#/ebidding
+2024-09-24 13:05:18,340 - INFO - Clicking 'Show Search' button...
+2024-09-24 13:05:33,903 - ERROR - Failed to click 'Show Search' button: Message: element click intercepted: Element <bdi id="__button0-BDI-content">...</bdi> is not clickable at point (1867, 20). Other element would receive the click: <div id="sap-ui-blocklayer-popup" tabindex="0" class="sapUiBLy sapMDialogBlockLayerInit" style="z-index: 8; visibility: visible; display: block;"></div>
+  (Session info: chrome=128.0.6613.137)
+Stacktrace:
+#0 0x5807c0baa2da <unknown>
+#1 0x5807c0878200 <unknown>
+#2 0x5807c08ce766 <unknown>
+#3 0x5807c08cc66d <unknown>
+#4 0x5807c08ca107 <unknown>
+#5 0x5807c08c8fac <unknown>
+#6 0x5807c08bc8c6 <unknown>
+#7 0x5807c08ec8d2 <unknown>
+#8 0x5807c08bc279 <unknown>
+#9 0x5807c08eca9e <unknown>
+#10 0x5807c090adfd <unknown>
+#11 0x5807c08ec673 <unknown>
+#12 0x5807c08ba473 <unknown>
+#13 0x5807c08bb47e <unknown>
+#14 0x5807c0b710db <unknown>
+#15 0x5807c0b75071 <unknown>
+#16 0x5807c0b5d9d5 <unknown>
+#17 0x5807c0b75bf2 <unknown>
+#18 0x5807c0b42b6f <unknown>
+#19 0x5807c0b99248 <unknown>
+#20 0x5807c0b99417 <unknown>
+#21 0x5807c0ba90cc <unknown>
+#22 0x7aa087694ac3 <unknown>
+
+2024-09-24 13:05:33,905 - INFO - Error: Message: element click intercepted: Element <bdi id="__button0-BDI-content">...</bdi> is not clickable at point (1867, 20). Other element would receive the click: <div id="sap-ui-blocklayer-popup" tabindex="0" class="sapUiBLy sapMDialogBlockLayerInit" style="z-index: 8; visibility: visible; display: block;"></div>
+  (Session info: chrome=128.0.6613.137)
+Stacktrace:
+#0 0x5807c0baa2da <unknown>
+#1 0x5807c0878200 <unknown>
+#2 0x5807c08ce766 <unknown>
+#3 0x5807c08cc66d <unknown>
+#4 0x5807c08ca107 <unknown>
+#5 0x5807c08c8fac <unknown>
+#6 0x5807c08bc8c6 <unknown>
+#7 0x5807c08ec8d2 <unknown>
+#8 0x5807c08bc279 <unknown>
+#9 0x5807c08eca9e <unknown>
+#10 0x5807c090adfd <unknown>
+#11 0x5807c08ec673 <unknown>
+#12 0x5807c08ba473 <unknown>
+#13 0x5807c08bb47e <unknown>
+#14 0x5807c0b710db <unknown>
+#15 0x5807c0b75071 <unknown>
+#16 0x5807c0b5d9d5 <unknown>
+#17 0x5807c0b75bf2 <unknown>
+#18 0x5807c0b42b6f <unknown>
+#19 0x5807c0b99248 <unknown>
+#20 0x5807c0b99417 <unknown>
+#21 0x5807c0ba90cc <unknown>
+#22 0x7aa087694ac3 <unknown>
+
+2024-09-24 13:05:33,906 - INFO - Automation stopped. Browser remains open.
+2024-09-24 13:09:05,116 - INFO - ====== WebDriver manager ======
+2024-09-24 13:09:05,117 - INFO - Setting up WebDriver...
+2024-09-24 13:09:05,202 - INFO - Get LATEST chromedriver version for google-chrome
+2024-09-24 13:09:05,352 - INFO - Get LATEST chromedriver version for google-chrome
+2024-09-24 13:09:05,484 - INFO - Driver [/home/abir/.wdm/drivers/chromedriver/linux64/128.0.6613.137/chromedriver-linux64/chromedriver] found in cache
+2024-09-24 13:09:06,128 - INFO - Attempting login... (Attempt 1/3)
+2024-09-24 13:09:07,123 - INFO - Cookies loaded successfully
+2024-09-24 13:09:09,401 - INFO - Logged in successfully using cookies
+2024-09-24 13:09:09,403 - INFO - Navigating to eBidding page... (Attempt 1/3)
+2024-09-24 13:09:14,830 - INFO - Page loaded completely
+2024-09-24 13:09:14,833 - INFO - Opened eBidding URL: https://www.eye2serve.com:9001/sap/bc/ui5_ui5/sap/zvc_vendor_app/index.html#/ebidding
+2024-09-24 13:09:19,938 - INFO - No error dialog detected
+2024-09-24 13:09:19,938 - INFO - Opened eBidding URL: https://www.eye2serve.com:9001/sap/bc/ui5_ui5/sap/zvc_vendor_app/index.html#/ebidding
+2024-09-24 13:09:19,939 - INFO - Clicking 'Show Search' button... (Attempt 1/3)
+2024-09-24 13:09:37,111 - ERROR - Failed to click 'Show Search' button: Message: element click intercepted: Element <bdi id="__button0-BDI-content">...</bdi> is not clickable at point (1867, 20). Other element would receive the click: <div id="sap-ui-blocklayer-popup" tabindex="0" class="sapUiBLy sapMDialogBlockLayerInit" style="z-index: 8; visibility: visible; display: block;"></div>
+  (Session info: chrome=128.0.6613.137)
+Stacktrace:
+#0 0x5f7363ccd2da <unknown>
+#1 0x5f736399b200 <unknown>
+#2 0x5f73639f1766 <unknown>
+#3 0x5f73639ef66d <unknown>
+#4 0x5f73639ed107 <unknown>
+#5 0x5f73639ebfac <unknown>
+#6 0x5f73639df8c6 <unknown>
+#7 0x5f7363a0f8d2 <unknown>
+#8 0x5f73639df279 <unknown>
+#9 0x5f7363a0fa9e <unknown>
+#10 0x5f7363a2ddfd <unknown>
+#11 0x5f7363a0f673 <unknown>
+#12 0x5f73639dd473 <unknown>
+#13 0x5f73639de47e <unknown>
+#14 0x5f7363c940db <unknown>
+#15 0x5f7363c98071 <unknown>
+#16 0x5f7363c809d5 <unknown>
+#17 0x5f7363c98bf2 <unknown>
+#18 0x5f7363c65b6f <unknown>
+#19 0x5f7363cbc248 <unknown>
+#20 0x5f7363cbc417 <unknown>
+#21 0x5f7363ccc0cc <unknown>
+#22 0x764b7a494ac3 <unknown>
+
+2024-09-24 13:09:37,115 - INFO - Failed to click 'Show Search' button. Retrying in 5 seconds... Error: Message: element click intercepted: Element <bdi id="__button0-BDI-content">...</bdi> is not clickable at point (1867, 20). Other element would receive the click: <div id="sap-ui-blocklayer-popup" tabindex="0" class="sapUiBLy sapMDialogBlockLayerInit" style="z-index: 8; visibility: visible; display: block;"></div>
+  (Session info: chrome=128.0.6613.137)
+Stacktrace:
+#0 0x5f7363ccd2da <unknown>
+#1 0x5f736399b200 <unknown>
+#2 0x5f73639f1766 <unknown>
+#3 0x5f73639ef66d <unknown>
+#4 0x5f73639ed107 <unknown>
+#5 0x5f73639ebfac <unknown>
+#6 0x5f73639df8c6 <unknown>
+#7 0x5f7363a0f8d2 <unknown>
+#8 0x5f73639df279 <unknown>
+#9 0x5f7363a0fa9e <unknown>
+#10 0x5f7363a2ddfd <unknown>
+#11 0x5f7363a0f673 <unknown>
+#12 0x5f73639dd473 <unknown>
+#13 0x5f73639de47e <unknown>
+#14 0x5f7363c940db <unknown>
+#15 0x5f7363c98071 <unknown>
+#16 0x5f7363c809d5 <unknown>
+#17 0x5f7363c98bf2 <unknown>
+#18 0x5f7363c65b6f <unknown>
+#19 0x5f7363cbc248 <unknown>
+#20 0x5f7363cbc417 <unknown>
+#21 0x5f7363ccc0cc <unknown>
+#22 0x764b7a494ac3 <unknown>
+
+2024-09-24 13:09:42,113 - INFO - Clicking 'Show Search' button... (Attempt 2/3)
+2024-09-24 13:09:43,206 - ERROR - Failed to click 'Show Search' button: Message: element click intercepted: Element <bdi id="__button0-BDI-content">...</bdi> is not clickable at point (1867, 20). Other element would receive the click: <div id="sap-ui-blocklayer-popup" tabindex="0" class="sapUiBLy sapMDialogBlockLayerInit" style="z-index: 8; visibility: visible; display: block;"></div>
+  (Session info: chrome=128.0.6613.137)
+Stacktrace:
+#0 0x5f7363ccd2da <unknown>
+#1 0x5f736399b200 <unknown>
+#2 0x5f73639f1766 <unknown>
+#3 0x5f73639ef66d <unknown>
+#4 0x5f73639ed107 <unknown>
+#5 0x5f73639ebfac <unknown>
+#6 0x5f73639df8c6 <unknown>
+#7 0x5f7363a0f8d2 <unknown>
+#8 0x5f73639df279 <unknown>
+#9 0x5f7363a0fa9e <unknown>
+#10 0x5f7363a2ddfd <unknown>
+#11 0x5f7363a0f673 <unknown>
+#12 0x5f73639dd473 <unknown>
+#13 0x5f73639de47e <unknown>
+#14 0x5f7363c940db <unknown>
+#15 0x5f7363c98071 <unknown>
+#16 0x5f7363c809d5 <unknown>
+#17 0x5f7363c98bf2 <unknown>
+#18 0x5f7363c65b6f <unknown>
+#19 0x5f7363cbc248 <unknown>
+#20 0x5f7363cbc417 <unknown>
+#21 0x5f7363ccc0cc <unknown>
+#22 0x764b7a494ac3 <unknown>
+
+2024-09-24 13:09:43,208 - INFO - Failed to click 'Show Search' button. Retrying in 5 seconds... Error: Message: element click intercepted: Element <bdi id="__button0-BDI-content">...</bdi> is not clickable at point (1867, 20). Other element would receive the click: <div id="sap-ui-blocklayer-popup" tabindex="0" class="sapUiBLy sapMDialogBlockLayerInit" style="z-index: 8; visibility: visible; display: block;"></div>
+  (Session info: chrome=128.0.6613.137)
+Stacktrace:
+#0 0x5f7363ccd2da <unknown>
+#1 0x5f736399b200 <unknown>
+#2 0x5f73639f1766 <unknown>
+#3 0x5f73639ef66d <unknown>
+#4 0x5f73639ed107 <unknown>
+#5 0x5f73639ebfac <unknown>
+#6 0x5f73639df8c6 <unknown>
+#7 0x5f7363a0f8d2 <unknown>
+#8 0x5f73639df279 <unknown>
+#9 0x5f7363a0fa9e <unknown>
+#10 0x5f7363a2ddfd <unknown>
+#11 0x5f7363a0f673 <unknown>
+#12 0x5f73639dd473 <unknown>
+#13 0x5f73639de47e <unknown>
+#14 0x5f7363c940db <unknown>
+#15 0x5f7363c98071 <unknown>
+#16 0x5f7363c809d5 <unknown>
+#17 0x5f7363c98bf2 <unknown>
+#18 0x5f7363c65b6f <unknown>
+#19 0x5f7363cbc248 <unknown>
+#20 0x5f7363cbc417 <unknown>
+#21 0x5f7363ccc0cc <unknown>
+#22 0x764b7a494ac3 <unknown>
+
+2024-09-24 13:09:48,213 - INFO - Clicking 'Show Search' button... (Attempt 3/3)
+2024-09-24 13:09:49,267 - ERROR - Failed to click 'Show Search' button: Message: element click intercepted: Element <bdi id="__button0-BDI-content">...</bdi> is not clickable at point (1867, 20). Other element would receive the click: <div id="sap-ui-blocklayer-popup" tabindex="0" class="sapUiBLy sapMDialogBlockLayerInit" style="z-index: 8; visibility: visible; display: block;"></div>
+  (Session info: chrome=128.0.6613.137)
+Stacktrace:
+#0 0x5f7363ccd2da <unknown>
+#1 0x5f736399b200 <unknown>
+#2 0x5f73639f1766 <unknown>
+#3 0x5f73639ef66d <unknown>
+#4 0x5f73639ed107 <unknown>
+#5 0x5f73639ebfac <unknown>
+#6 0x5f73639df8c6 <unknown>
+#7 0x5f7363a0f8d2 <unknown>
+#8 0x5f73639df279 <unknown>
+#9 0x5f7363a0fa9e <unknown>
+#10 0x5f7363a2ddfd <unknown>
+#11 0x5f7363a0f673 <unknown>
+#12 0x5f73639dd473 <unknown>
+#13 0x5f73639de47e <unknown>
+#14 0x5f7363c940db <unknown>
+#15 0x5f7363c98071 <unknown>
+#16 0x5f7363c809d5 <unknown>
+#17 0x5f7363c98bf2 <unknown>
+#18 0x5f7363c65b6f <unknown>
+#19 0x5f7363cbc248 <unknown>
+#20 0x5f7363cbc417 <unknown>
+#21 0x5f7363ccc0cc <unknown>
+#22 0x764b7a494ac3 <unknown>
+
+2024-09-24 13:09:49,270 - INFO - Failed to click 'Show Search' button after multiple attempts. Error: Message: element click intercepted: Element <bdi id="__button0-BDI-content">...</bdi> is not clickable at point (1867, 20). Other element would receive the click: <div id="sap-ui-blocklayer-popup" tabindex="0" class="sapUiBLy sapMDialogBlockLayerInit" style="z-index: 8; visibility: visible; display: block;"></div>
+  (Session info: chrome=128.0.6613.137)
+Stacktrace:
+#0 0x5f7363ccd2da <unknown>
+#1 0x5f736399b200 <unknown>
+#2 0x5f73639f1766 <unknown>
+#3 0x5f73639ef66d <unknown>
+#4 0x5f73639ed107 <unknown>
+#5 0x5f73639ebfac <unknown>
+#6 0x5f73639df8c6 <unknown>
+#7 0x5f7363a0f8d2 <unknown>
+#8 0x5f73639df279 <unknown>
+#9 0x5f7363a0fa9e <unknown>
+#10 0x5f7363a2ddfd <unknown>
+#11 0x5f7363a0f673 <unknown>
+#12 0x5f73639dd473 <unknown>
+#13 0x5f73639de47e <unknown>
+#14 0x5f7363c940db <unknown>
+#15 0x5f7363c98071 <unknown>
+#16 0x5f7363c809d5 <unknown>
+#17 0x5f7363c98bf2 <unknown>
+#18 0x5f7363c65b6f <unknown>
+#19 0x5f7363cbc248 <unknown>
+#20 0x5f7363cbc417 <unknown>
+#21 0x5f7363ccc0cc <unknown>
+#22 0x764b7a494ac3 <unknown>
+
+2024-09-24 13:09:49,271 - INFO - Automation stopped. Browser remains open.
+2024-09-24 13:11:33,058 - INFO - ====== WebDriver manager ======
+2024-09-24 13:11:33,060 - INFO - Setting up WebDriver...
+2024-09-24 13:11:33,121 - INFO - Get LATEST chromedriver version for google-chrome
+2024-09-24 13:11:33,253 - INFO - Get LATEST chromedriver version for google-chrome
+2024-09-24 13:11:33,376 - INFO - Driver [/home/abir/.wdm/drivers/chromedriver/linux64/128.0.6613.137/chromedriver-linux64/chromedriver] found in cache
+2024-09-24 13:11:33,810 - INFO - Attempting login... (Attempt 1/3)
+2024-09-24 13:11:34,357 - INFO - Cookies loaded successfully
+2024-09-24 13:11:38,913 - INFO - Logged in successfully using cookies
+2024-09-24 13:11:38,913 - INFO - Navigating to eBidding page... (Attempt 1/3)
+2024-09-24 13:11:43,056 - INFO - Page loaded completely
+2024-09-24 13:11:43,058 - INFO - Opened eBidding URL: https://www.eye2serve.com:9001/sap/bc/ui5_ui5/sap/zvc_vendor_app/index.html#/ebidding
+2024-09-24 13:11:50,500 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:11:50,565 - INFO - Error dialog dismissed.
+2024-09-24 13:11:51,119 - INFO - Opened eBidding URL: https://www.eye2serve.com:9001/sap/bc/ui5_ui5/sap/zvc_vendor_app/index.html#/ebidding
+2024-09-24 13:11:51,119 - INFO - Handling error dialogs and clicking 'Show Search' button... (Attempt 1/3)
+2024-09-24 13:11:56,610 - INFO - No error dialog detected
+2024-09-24 13:11:57,240 - INFO - 'Show Search' button clicked successfully
+2024-09-24 13:11:57,241 - INFO - Successfully clicked 'Show Search' button.
+2024-09-24 13:11:57,241 - INFO - Selecting Ship From Plant: WEST BENGAL CEMENT WORKS
+2024-09-24 13:11:57,290 - INFO - Clicked dropdown arrow for __xmlview0--ididUtclVCShipFromPlant
+2024-09-24 13:11:57,313 - INFO - Dropdown list visible for __xmlview0--ididUtclVCShipFromPlant
+2024-09-24 13:11:57,326 - INFO - Found 1 options for __xmlview0--ididUtclVCShipFromPlant
+2024-09-24 13:11:57,886 - INFO - Option 'WEST BENGAL CEMENT WORKS' selected successfully for __xmlview0--ididUtclVCShipFromPlant
+2024-09-24 13:11:58,407 - INFO - Dropdown closed after selection for __xmlview0--ididUtclVCShipFromPlant
+2024-09-24 13:11:58,408 - INFO - Handling any error dialogs before depot selection...
+2024-09-24 13:12:03,583 - INFO - No error dialog detected
+2024-09-24 13:12:03,584 - INFO - Selecting Depot: DEOGARH
+2024-09-24 13:12:03,622 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-24 13:12:03,640 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-24 13:12:03,648 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-24 13:12:04,190 - INFO - Option 'DEOGARH' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-24 13:12:04,730 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-24 13:12:04,731 - INFO - Clicking Search...
+2024-09-24 13:12:09,926 - INFO - No error dialog detected
+2024-09-24 13:12:09,988 - INFO - Search button clicked successfully
+2024-09-24 13:12:11,057 - INFO - Page loaded completely
+2024-09-24 13:12:11,071 - INFO - Table data check: No data found
+2024-09-24 13:12:11,071 - INFO - No data found for DEOGARH.
+2024-09-24 13:12:11,071 - INFO - Moving to next depot. Next index: 1
+2024-09-24 13:12:13,074 - INFO - Handling any error dialogs before depot selection...
+2024-09-24 13:12:13,087 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:12:13,123 - INFO - Error dialog dismissed.
+2024-09-24 13:12:13,658 - INFO - Selecting Depot: DHANBAD
+2024-09-24 13:12:13,679 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-24 13:12:13,693 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-24 13:12:13,699 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-24 13:12:14,247 - INFO - Option 'DHANBAD' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-24 13:12:14,781 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-24 13:12:14,781 - INFO - Clicking Search...
+2024-09-24 13:12:19,984 - INFO - No error dialog detected
+2024-09-24 13:12:20,040 - INFO - Search button clicked successfully
+2024-09-24 13:12:20,580 - INFO - Page loaded completely
+2024-09-24 13:12:20,590 - INFO - Table data check: No data found
+2024-09-24 13:12:20,590 - INFO - No data found for DHANBAD.
+2024-09-24 13:12:20,590 - INFO - Moving to next depot. Next index: 2
+2024-09-24 13:12:22,593 - INFO - Handling any error dialogs before depot selection...
+2024-09-24 13:12:22,605 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:12:22,638 - INFO - Error dialog dismissed.
+2024-09-24 13:12:23,176 - INFO - Selecting Depot: BANKURA
+2024-09-24 13:12:23,201 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-24 13:12:23,213 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-24 13:12:23,220 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-24 13:12:23,780 - INFO - Option 'BANKURA' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-24 13:12:24,311 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-24 13:12:24,313 - INFO - Clicking Search...
+2024-09-24 13:12:29,519 - INFO - No error dialog detected
+2024-09-24 13:12:30,009 - INFO - Search button clicked successfully
+2024-09-24 13:12:30,553 - INFO - Page loaded completely
+2024-09-24 13:12:30,562 - INFO - Table data check: No data found
+2024-09-24 13:12:30,563 - INFO - No data found for BANKURA.
+2024-09-24 13:12:30,563 - INFO - Moving to next depot. Next index: 3
+2024-09-24 13:12:32,566 - INFO - Handling any error dialogs before depot selection...
+2024-09-24 13:12:32,578 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:12:32,608 - INFO - Error dialog dismissed.
+2024-09-24 13:12:33,138 - INFO - Selecting Depot: BERHAMPORE
+2024-09-24 13:12:33,158 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-24 13:12:33,194 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-24 13:12:33,199 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-24 13:12:33,755 - INFO - Option 'BERHAMPORE' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-24 13:12:34,292 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-24 13:12:34,292 - INFO - Clicking Search...
+2024-09-24 13:12:39,470 - INFO - No error dialog detected
+2024-09-24 13:12:39,513 - INFO - Search button clicked successfully
+2024-09-24 13:12:40,575 - INFO - Page loaded completely
+2024-09-24 13:12:40,586 - INFO - Table data check: No data found
+2024-09-24 13:12:40,587 - INFO - No data found for BERHAMPORE.
+2024-09-24 13:12:40,587 - INFO - Moving to next depot. Next index: 4
+2024-09-24 13:12:42,590 - INFO - Handling any error dialogs before depot selection...
+2024-09-24 13:12:42,603 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:12:42,635 - INFO - Error dialog dismissed.
+2024-09-24 13:12:43,171 - INFO - Selecting Depot: BURDWAN
+2024-09-24 13:12:43,195 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-24 13:12:43,205 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-24 13:12:43,211 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-24 13:12:43,780 - INFO - Option 'BURDWAN' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-24 13:12:44,314 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-24 13:12:44,315 - INFO - Clicking Search...
+2024-09-24 13:12:49,510 - INFO - No error dialog detected
+2024-09-24 13:12:49,608 - INFO - Search button clicked successfully
+2024-09-24 13:12:50,691 - INFO - Page loaded completely
+2024-09-24 13:12:50,700 - INFO - Table data check: No data found
+2024-09-24 13:12:50,701 - INFO - No data found for BURDWAN.
+2024-09-24 13:12:50,701 - INFO - Moving to next depot. Next index: 5
+2024-09-24 13:12:52,703 - INFO - Handling any error dialogs before depot selection...
+2024-09-24 13:12:52,711 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:12:52,741 - INFO - Error dialog dismissed.
+2024-09-24 13:12:53,278 - INFO - Selecting Depot: COSSIPORE
+2024-09-24 13:12:53,305 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-24 13:12:53,318 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-24 13:12:53,326 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-24 13:12:53,894 - INFO - Option 'COSSIPORE' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-24 13:12:54,428 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-24 13:12:54,428 - INFO - Clicking Search...
+2024-09-24 13:12:59,627 - INFO - No error dialog detected
+2024-09-24 13:12:59,682 - INFO - Search button clicked successfully
+2024-09-24 13:13:00,741 - INFO - Page loaded completely
+2024-09-24 13:13:00,749 - INFO - Table data check: No data found
+2024-09-24 13:13:00,750 - INFO - No data found for COSSIPORE.
+2024-09-24 13:13:00,750 - INFO - Moving to next depot. Next index: 6
+2024-09-24 13:13:02,753 - INFO - Handling any error dialogs before depot selection...
+2024-09-24 13:13:02,766 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:13:02,802 - INFO - Error dialog dismissed.
+2024-09-24 13:13:03,341 - INFO - Selecting Depot: DANKUNI
+2024-09-24 13:13:03,370 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-24 13:13:03,384 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-24 13:13:03,390 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-24 13:13:03,969 - INFO - Option 'DANKUNI' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-24 13:13:04,512 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-24 13:13:04,513 - INFO - Clicking Search...
+2024-09-24 13:13:09,704 - INFO - No error dialog detected
+2024-09-24 13:13:09,756 - INFO - Search button clicked successfully
+2024-09-24 13:13:10,821 - INFO - Page loaded completely
+2024-09-24 13:13:10,828 - INFO - Table data check: No data found
+2024-09-24 13:13:10,828 - INFO - No data found for DANKUNI.
+2024-09-24 13:13:10,829 - INFO - Moving to next depot. Next index: 7
+2024-09-24 13:13:12,832 - INFO - Handling any error dialogs before depot selection...
+2024-09-24 13:13:12,844 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:13:12,876 - INFO - Error dialog dismissed.
+2024-09-24 13:13:13,416 - INFO - Selecting Depot: KALIGHAT
+2024-09-24 13:13:13,440 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-24 13:13:13,455 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-24 13:13:13,461 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-24 13:13:14,040 - INFO - Option 'KALIGHAT' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-24 13:13:14,573 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-24 13:13:14,574 - INFO - Clicking Search...
+2024-09-24 13:13:19,772 - INFO - No error dialog detected
+2024-09-24 13:13:19,822 - INFO - Search button clicked successfully
+2024-09-24 13:13:20,887 - INFO - Page loaded completely
+2024-09-24 13:13:20,901 - INFO - Table data check: No data found
+2024-09-24 13:13:20,901 - INFO - No data found for KALIGHAT.
+2024-09-24 13:13:20,901 - INFO - Moving to next depot. Next index: 8
+2024-09-24 13:13:22,905 - INFO - Handling any error dialogs before depot selection...
+2024-09-24 13:13:22,918 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:13:22,954 - INFO - Error dialog dismissed.
+2024-09-24 13:13:23,489 - INFO - Selecting Depot: KHARAGPUR
+2024-09-24 13:13:23,514 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-24 13:13:23,528 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-24 13:13:23,534 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-24 13:13:24,123 - INFO - Option 'KHARAGPUR' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-24 13:13:24,662 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-24 13:13:24,663 - INFO - Clicking Search...
+2024-09-24 13:13:29,861 - INFO - No error dialog detected
+2024-09-24 13:13:29,915 - INFO - Search button clicked successfully
+2024-09-24 13:13:30,977 - INFO - Page loaded completely
+2024-09-24 13:13:30,997 - INFO - Table data check: No data found
+2024-09-24 13:13:30,998 - INFO - No data found for KHARAGPUR.
+2024-09-24 13:13:30,998 - INFO - Moving to next depot. Next index: 9
+2024-09-24 13:13:33,001 - INFO - Handling any error dialogs before depot selection...
+2024-09-24 13:13:33,013 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:13:33,044 - INFO - Error dialog dismissed.
+2024-09-24 13:13:33,577 - INFO - Selecting Depot: KRISHNANAGAR
+2024-09-24 13:13:33,600 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-24 13:13:33,610 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-24 13:13:33,620 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-24 13:13:34,209 - INFO - Option 'KRISHNANAGAR' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-24 13:13:34,743 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-24 13:13:34,744 - INFO - Clicking Search...
+2024-09-24 13:13:39,926 - INFO - No error dialog detected
+2024-09-24 13:13:39,976 - INFO - Search button clicked successfully
+2024-09-24 13:13:41,041 - INFO - Page loaded completely
+2024-09-24 13:13:41,050 - INFO - Table data check: No data found
+2024-09-24 13:13:41,050 - INFO - No data found for KRISHNANAGAR.
+2024-09-24 13:13:41,051 - INFO - Moving to next depot. Next index: 10
+2024-09-24 13:13:43,053 - INFO - Handling any error dialogs before depot selection...
+2024-09-24 13:13:43,066 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:13:43,097 - INFO - Error dialog dismissed.
+2024-09-24 13:13:43,636 - INFO - Selecting Depot: SAINTHIA
+2024-09-24 13:13:43,663 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-24 13:13:43,678 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-24 13:13:43,691 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-24 13:13:44,288 - INFO - Option 'SAINTHIA' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-24 13:13:44,819 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-24 13:13:44,820 - INFO - Clicking Search...
+2024-09-24 13:13:50,016 - INFO - No error dialog detected
+2024-09-24 13:13:50,066 - INFO - Search button clicked successfully
+2024-09-24 13:13:51,129 - INFO - Page loaded completely
+2024-09-24 13:13:51,145 - INFO - Table data check: No data found
+2024-09-24 13:13:51,146 - INFO - No data found for SAINTHIA.
+2024-09-24 13:13:51,146 - INFO - Moving to next depot. Next index: 11
+2024-09-24 13:13:53,148 - INFO - Handling any error dialogs before depot selection...
+2024-09-24 13:13:53,161 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:13:53,190 - INFO - Error dialog dismissed.
+2024-09-24 13:13:53,727 - INFO - Selecting Depot: SHALIMAR
+2024-09-24 13:13:53,755 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-24 13:13:53,769 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-24 13:13:53,774 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-24 13:13:54,374 - INFO - Option 'SHALIMAR' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-24 13:13:54,907 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-24 13:13:54,908 - INFO - Clicking Search...
+2024-09-24 13:14:00,110 - INFO - No error dialog detected
+2024-09-24 13:14:00,161 - INFO - Search button clicked successfully
+2024-09-24 13:14:00,711 - INFO - Page loaded completely
+2024-09-24 13:14:00,720 - INFO - Table data check: No data found
+2024-09-24 13:14:00,720 - INFO - No data found for SHALIMAR.
+2024-09-24 13:14:00,720 - INFO - Moving to next depot. Next index: 12
+2024-09-24 13:14:02,723 - INFO - Handling any error dialogs before depot selection...
+2024-09-24 13:14:02,736 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:14:02,778 - INFO - Error dialog dismissed.
+2024-09-24 13:14:03,322 - INFO - Selecting Depot: DIAMOND HARBOUR
+2024-09-24 13:14:03,350 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-24 13:14:03,362 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-24 13:14:03,368 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-24 13:14:03,975 - INFO - Option 'DIAMOND HARBOUR' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-24 13:14:04,510 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-24 13:14:04,511 - INFO - Clicking Search...
+2024-09-24 13:14:09,706 - INFO - No error dialog detected
+2024-09-24 13:14:09,758 - INFO - Search button clicked successfully
+2024-09-24 13:14:10,816 - INFO - Page loaded completely
+2024-09-24 13:14:10,825 - INFO - Table data check: Data found
+2024-09-24 13:14:10,825 - INFO - Data found for DIAMOND HARBOUR. Starting aggressive bidding process...
+2024-09-24 13:14:10,964 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:14:10,995 - INFO - Error dialog dismissed.
+2024-09-24 13:14:11,572 - INFO - Search button clicked successfully
+2024-09-24 13:14:13,163 - INFO - Page loaded completely
+2024-09-24 13:14:13,281 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:14:13,335 - INFO - Error dialog dismissed.
+2024-09-24 13:14:13,921 - INFO - Search button clicked successfully
+2024-09-24 13:14:15,517 - INFO - Page loaded completely
+2024-09-24 13:14:15,637 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:14:15,681 - INFO - Error dialog dismissed.
+2024-09-24 13:14:16,265 - INFO - Search button clicked successfully
+2024-09-24 13:14:17,337 - INFO - Page loaded completely
+2024-09-24 13:14:17,460 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:14:17,500 - INFO - Error dialog dismissed.
+2024-09-24 13:14:18,079 - INFO - Search button clicked successfully
+2024-09-24 13:14:19,157 - INFO - Page loaded completely
+2024-09-24 13:14:19,276 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:14:19,308 - INFO - Error dialog dismissed.
+2024-09-24 13:14:19,887 - INFO - Search button clicked successfully
+2024-09-24 13:14:20,936 - INFO - Page loaded completely
+2024-09-24 13:14:21,056 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:14:21,087 - INFO - Error dialog dismissed.
+2024-09-24 13:14:21,668 - INFO - Search button clicked successfully
+2024-09-24 13:14:22,735 - INFO - Page loaded completely
+2024-09-24 13:14:22,856 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:14:22,887 - INFO - Error dialog dismissed.
+2024-09-24 13:14:23,469 - INFO - Search button clicked successfully
+2024-09-24 13:14:25,051 - INFO - Page loaded completely
+2024-09-24 13:14:25,178 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:14:25,215 - INFO - Error dialog dismissed.
+2024-09-24 13:14:25,794 - INFO - Search button clicked successfully
+2024-09-24 13:14:26,859 - INFO - Page loaded completely
+2024-09-24 13:14:27,003 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:14:27,033 - INFO - Error dialog dismissed.
+2024-09-24 13:14:27,611 - INFO - Search button clicked successfully
+2024-09-24 13:14:29,191 - INFO - Page loaded completely
+2024-09-24 13:14:29,310 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:14:29,348 - INFO - Error dialog dismissed.
+2024-09-24 13:14:29,928 - INFO - Search button clicked successfully
+2024-09-24 13:14:30,993 - INFO - Page loaded completely
+2024-09-24 13:14:31,137 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:14:31,169 - INFO - Error dialog dismissed.
+2024-09-24 13:14:31,753 - INFO - Search button clicked successfully
+2024-09-24 13:14:33,335 - INFO - Page loaded completely
+2024-09-24 13:14:33,453 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:14:33,488 - INFO - Error dialog dismissed.
+2024-09-24 13:14:34,072 - INFO - Search button clicked successfully
+2024-09-24 13:14:35,128 - INFO - Page loaded completely
+2024-09-24 13:14:35,252 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:14:35,296 - INFO - Error dialog dismissed.
+2024-09-24 13:14:35,896 - INFO - Search button clicked successfully
+2024-09-24 13:14:37,476 - INFO - Page loaded completely
+2024-09-24 13:14:37,602 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:14:37,641 - INFO - Error dialog dismissed.
+2024-09-24 13:14:38,228 - INFO - Search button clicked successfully
+2024-09-24 13:14:39,283 - INFO - Page loaded completely
+2024-09-24 13:14:39,400 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:14:39,430 - INFO - Error dialog dismissed.
+2024-09-24 13:14:40,012 - INFO - Search button clicked successfully
+2024-09-24 13:14:41,603 - INFO - Page loaded completely
+2024-09-24 13:14:41,725 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:14:41,761 - INFO - Error dialog dismissed.
+2024-09-24 13:14:42,352 - INFO - Search button clicked successfully
+2024-09-24 13:14:43,417 - INFO - Page loaded completely
+2024-09-24 13:14:43,548 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:14:43,576 - INFO - Error dialog dismissed.
+2024-09-24 13:14:44,158 - INFO - Search button clicked successfully
+2024-09-24 13:14:45,219 - INFO - Page loaded completely
+2024-09-24 13:14:45,342 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:14:45,379 - INFO - Error dialog dismissed.
+2024-09-24 13:14:45,969 - INFO - Search button clicked successfully
+2024-09-24 13:14:47,559 - INFO - Page loaded completely
+2024-09-24 13:14:47,678 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:14:47,710 - INFO - Error dialog dismissed.
+2024-09-24 13:14:48,288 - INFO - Search button clicked successfully
+2024-09-24 13:14:49,876 - INFO - Page loaded completely
+2024-09-24 13:14:49,992 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:14:50,022 - INFO - Error dialog dismissed.
+2024-09-24 13:14:50,607 - INFO - Search button clicked successfully
+2024-09-24 13:14:51,687 - INFO - Page loaded completely
+2024-09-24 13:14:51,804 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:14:51,839 - INFO - Error dialog dismissed.
+2024-09-24 13:14:52,412 - INFO - Search button clicked successfully
+2024-09-24 13:14:54,002 - INFO - Page loaded completely
+2024-09-24 13:14:54,119 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:14:54,156 - INFO - Error dialog dismissed.
+2024-09-24 13:14:54,735 - INFO - Search button clicked successfully
+2024-09-24 13:14:55,794 - INFO - Page loaded completely
+2024-09-24 13:14:55,917 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:14:55,947 - INFO - Error dialog dismissed.
+2024-09-24 13:14:56,542 - INFO - Search button clicked successfully
+2024-09-24 13:14:58,120 - INFO - Page loaded completely
+2024-09-24 13:14:58,237 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:14:58,269 - INFO - Error dialog dismissed.
+2024-09-24 13:14:58,850 - INFO - Search button clicked successfully
+2024-09-24 13:15:00,441 - INFO - Page loaded completely
+2024-09-24 13:15:00,572 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:15:00,611 - INFO - Error dialog dismissed.
+2024-09-24 13:15:01,198 - INFO - Search button clicked successfully
+2024-09-24 13:15:02,258 - INFO - Page loaded completely
+2024-09-24 13:15:02,390 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:15:02,422 - INFO - Error dialog dismissed.
+2024-09-24 13:15:02,996 - INFO - Search button clicked successfully
+2024-09-24 13:15:04,066 - INFO - Page loaded completely
+2024-09-24 13:15:04,187 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:15:04,222 - INFO - Error dialog dismissed.
+2024-09-24 13:15:04,808 - INFO - Search button clicked successfully
+2024-09-24 13:15:06,925 - INFO - Page loaded completely
+2024-09-24 13:15:07,051 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:15:07,082 - INFO - Error dialog dismissed.
+2024-09-24 13:15:07,661 - INFO - Search button clicked successfully
+2024-09-24 13:15:09,249 - INFO - Page loaded completely
+2024-09-24 13:15:09,364 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:15:09,396 - INFO - Error dialog dismissed.
+2024-09-24 13:15:09,975 - INFO - Search button clicked successfully
+2024-09-24 13:15:11,037 - INFO - Page loaded completely
+2024-09-24 13:15:11,157 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:15:11,197 - INFO - Error dialog dismissed.
+2024-09-24 13:15:11,780 - INFO - Search button clicked successfully
+2024-09-24 13:15:13,367 - INFO - Page loaded completely
+2024-09-24 13:15:13,487 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:15:13,519 - INFO - Error dialog dismissed.
+2024-09-24 13:15:14,096 - INFO - Search button clicked successfully
+2024-09-24 13:15:15,176 - INFO - Page loaded completely
+2024-09-24 13:15:15,298 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:15:15,334 - INFO - Error dialog dismissed.
+2024-09-24 13:15:15,909 - INFO - Search button clicked successfully
+2024-09-24 13:15:16,971 - INFO - Page loaded completely
+2024-09-24 13:15:17,106 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:15:17,152 - INFO - Error dialog dismissed.
+2024-09-24 13:15:17,725 - INFO - Search button clicked successfully
+2024-09-24 13:15:18,791 - INFO - Page loaded completely
+2024-09-24 13:15:18,925 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:15:18,968 - INFO - Error dialog dismissed.
+2024-09-24 13:15:19,545 - INFO - Search button clicked successfully
+2024-09-24 13:15:35,270 - INFO - Page loaded completely
+2024-09-24 13:15:35,391 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:15:35,447 - INFO - Error dialog dismissed.
+2024-09-24 13:15:36,019 - INFO - Search button clicked successfully
+2024-09-24 13:15:49,067 - INFO - Page loaded completely
+2024-09-24 13:15:49,186 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:15:49,218 - INFO - Error dialog dismissed.
+2024-09-24 13:15:49,809 - INFO - Search button clicked successfully
+2024-09-24 13:15:50,881 - INFO - Page loaded completely
+2024-09-24 13:15:51,006 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:15:51,043 - INFO - Error dialog dismissed.
+2024-09-24 13:15:51,638 - INFO - Search button clicked successfully
+2024-09-24 13:15:53,221 - INFO - Page loaded completely
+2024-09-24 13:15:53,338 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:15:53,367 - INFO - Error dialog dismissed.
+2024-09-24 13:15:53,955 - INFO - Search button clicked successfully
+2024-09-24 13:15:55,544 - INFO - Page loaded completely
+2024-09-24 13:15:55,671 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:15:55,711 - INFO - Error dialog dismissed.
+2024-09-24 13:15:56,291 - INFO - Search button clicked successfully
+2024-09-24 13:15:57,878 - INFO - Page loaded completely
+2024-09-24 13:15:58,004 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:15:58,043 - INFO - Error dialog dismissed.
+2024-09-24 13:15:58,624 - INFO - Search button clicked successfully
+2024-09-24 13:15:59,702 - INFO - Page loaded completely
+2024-09-24 13:15:59,824 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:15:59,863 - INFO - Error dialog dismissed.
+2024-09-24 13:16:00,442 - INFO - Search button clicked successfully
+2024-09-24 13:16:02,106 - INFO - Page loaded completely
+2024-09-24 13:16:02,431 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:16:02,469 - INFO - Error dialog dismissed.
+2024-09-24 13:16:03,051 - INFO - Search button clicked successfully
+2024-09-24 13:16:04,112 - INFO - Page loaded completely
+2024-09-24 13:16:04,229 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:16:04,263 - INFO - Error dialog dismissed.
+2024-09-24 13:16:04,849 - INFO - Search button clicked successfully
+2024-09-24 13:16:06,437 - INFO - Page loaded completely
+2024-09-24 13:16:06,559 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:16:06,600 - INFO - Error dialog dismissed.
+2024-09-24 13:16:07,175 - INFO - Search button clicked successfully
+2024-09-24 13:16:08,223 - INFO - Page loaded completely
+2024-09-24 13:16:08,342 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:16:08,372 - INFO - Error dialog dismissed.
+2024-09-24 13:16:08,967 - INFO - Search button clicked successfully
+2024-09-24 13:16:10,043 - INFO - Page loaded completely
+2024-09-24 13:16:10,166 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:16:10,203 - INFO - Error dialog dismissed.
+2024-09-24 13:16:10,782 - INFO - Search button clicked successfully
+2024-09-24 13:16:11,844 - INFO - Page loaded completely
+2024-09-24 13:16:11,981 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:16:12,010 - INFO - Error dialog dismissed.
+2024-09-24 13:16:12,595 - INFO - Search button clicked successfully
+2024-09-24 13:16:14,186 - INFO - Page loaded completely
+2024-09-24 13:16:14,307 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:16:14,337 - INFO - Error dialog dismissed.
+2024-09-24 13:16:14,919 - INFO - Search button clicked successfully
+2024-09-24 13:16:15,983 - INFO - Page loaded completely
+2024-09-24 13:16:16,101 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:16:16,132 - INFO - Error dialog dismissed.
+2024-09-24 13:16:16,703 - INFO - Search button clicked successfully
+2024-09-24 13:16:17,771 - INFO - Page loaded completely
+2024-09-24 13:16:17,903 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:16:17,939 - INFO - Error dialog dismissed.
+2024-09-24 13:16:18,526 - INFO - Search button clicked successfully
+2024-09-24 13:16:20,114 - INFO - Page loaded completely
+2024-09-24 13:16:20,236 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:16:20,270 - INFO - Error dialog dismissed.
+2024-09-24 13:16:20,856 - INFO - Search button clicked successfully
+2024-09-24 13:16:23,320 - INFO - Page loaded completely
+2024-09-24 13:16:25,013 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:16:25,093 - INFO - Error dialog dismissed.
+2024-09-24 13:16:25,679 - INFO - Search button clicked successfully
+2024-09-24 13:16:26,739 - INFO - Page loaded completely
+2024-09-24 13:16:26,849 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:16:26,890 - INFO - Error dialog dismissed.
+2024-09-24 13:16:27,466 - INFO - Search button clicked successfully
+2024-09-24 13:16:28,517 - INFO - Page loaded completely
+2024-09-24 13:16:28,634 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:16:28,668 - INFO - Error dialog dismissed.
+2024-09-24 13:16:29,247 - INFO - Search button clicked successfully
+2024-09-24 13:16:30,329 - INFO - Page loaded completely
+2024-09-24 13:16:30,450 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:16:30,487 - INFO - Error dialog dismissed.
+2024-09-24 13:16:31,078 - INFO - Search button clicked successfully
+2024-09-24 13:16:32,142 - INFO - Page loaded completely
+2024-09-24 13:16:32,272 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:16:32,309 - INFO - Error dialog dismissed.
+2024-09-24 13:16:32,898 - INFO - Search button clicked successfully
+2024-09-24 13:16:33,960 - INFO - Page loaded completely
+2024-09-24 13:16:34,077 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:16:34,108 - INFO - Error dialog dismissed.
+2024-09-24 13:16:34,690 - INFO - Search button clicked successfully
+2024-09-24 13:16:36,279 - INFO - Page loaded completely
+2024-09-24 13:16:36,410 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:16:36,449 - INFO - Error dialog dismissed.
+2024-09-24 13:16:37,023 - INFO - Search button clicked successfully
+2024-09-24 13:16:38,084 - INFO - Page loaded completely
+2024-09-24 13:16:38,206 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:16:38,247 - INFO - Error dialog dismissed.
+2024-09-24 13:16:38,838 - INFO - Search button clicked successfully
+2024-09-24 13:16:40,418 - INFO - Page loaded completely
+2024-09-24 13:16:40,542 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:16:40,586 - INFO - Error dialog dismissed.
+2024-09-24 13:16:41,167 - INFO - Search button clicked successfully
+2024-09-24 13:16:42,757 - INFO - Page loaded completely
+2024-09-24 13:16:42,877 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:16:42,914 - INFO - Error dialog dismissed.
+2024-09-24 13:16:43,499 - INFO - Search button clicked successfully
+2024-09-24 13:16:44,571 - INFO - Page loaded completely
+2024-09-24 13:16:44,692 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:16:44,730 - INFO - Error dialog dismissed.
+2024-09-24 13:16:45,293 - INFO - Search button clicked successfully
+2024-09-24 13:16:46,372 - INFO - Page loaded completely
+2024-09-24 13:16:46,492 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:16:46,536 - INFO - Error dialog dismissed.
+2024-09-24 13:16:47,114 - INFO - Search button clicked successfully
+2024-09-24 13:16:48,700 - INFO - Page loaded completely
+2024-09-24 13:16:48,818 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:16:48,847 - INFO - Error dialog dismissed.
+2024-09-24 13:16:49,420 - INFO - Search button clicked successfully
+2024-09-24 13:17:01,239 - INFO - Page loaded completely
+2024-09-24 13:17:02,250 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:17:02,289 - INFO - Error dialog dismissed.
+2024-09-24 13:17:02,890 - INFO - Search button clicked successfully
+2024-09-24 13:17:04,161 - INFO - Page loaded completely
+2024-09-24 13:17:04,278 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:17:04,314 - INFO - Error dialog dismissed.
+2024-09-24 13:17:04,890 - INFO - Search button clicked successfully
+2024-09-24 13:17:05,972 - INFO - Page loaded completely
+2024-09-24 13:17:06,093 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:17:06,132 - INFO - Error dialog dismissed.
+2024-09-24 13:17:06,712 - INFO - Search button clicked successfully
+2024-09-24 13:17:08,291 - INFO - Page loaded completely
+2024-09-24 13:17:08,418 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:17:08,456 - INFO - Error dialog dismissed.
+2024-09-24 13:17:09,041 - INFO - Search button clicked successfully
+2024-09-24 13:17:10,354 - INFO - Page loaded completely
+2024-09-24 13:17:10,518 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:17:10,553 - INFO - Error dialog dismissed.
+2024-09-24 13:17:11,128 - INFO - Search button clicked successfully
+2024-09-24 13:17:12,187 - INFO - Page loaded completely
+2024-09-24 13:17:12,305 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:17:12,335 - INFO - Error dialog dismissed.
+2024-09-24 13:17:12,917 - INFO - Search button clicked successfully
+2024-09-24 13:17:14,510 - INFO - Page loaded completely
+2024-09-24 13:17:14,637 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:17:14,671 - INFO - Error dialog dismissed.
+2024-09-24 13:17:15,259 - INFO - Search button clicked successfully
+2024-09-24 13:17:16,496 - INFO - Page loaded completely
+2024-09-24 13:17:16,616 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:17:16,653 - INFO - Error dialog dismissed.
+2024-09-24 13:17:17,242 - INFO - Search button clicked successfully
+2024-09-24 13:17:18,826 - INFO - Page loaded completely
+2024-09-24 13:17:18,945 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:17:18,982 - INFO - Error dialog dismissed.
+2024-09-24 13:17:19,562 - INFO - Search button clicked successfully
+2024-09-24 13:17:21,147 - INFO - Page loaded completely
+2024-09-24 13:17:21,272 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:17:21,302 - INFO - Error dialog dismissed.
+2024-09-24 13:17:21,877 - INFO - Search button clicked successfully
+2024-09-24 13:17:23,991 - INFO - Page loaded completely
+2024-09-24 13:17:24,119 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:17:24,150 - INFO - Error dialog dismissed.
+2024-09-24 13:17:24,723 - INFO - Search button clicked successfully
+2024-09-24 13:17:26,297 - INFO - Page loaded completely
+2024-09-24 13:17:26,416 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:17:26,455 - INFO - Error dialog dismissed.
+2024-09-24 13:17:27,039 - INFO - Search button clicked successfully
+2024-09-24 13:17:28,627 - INFO - Page loaded completely
+2024-09-24 13:17:28,749 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:17:28,789 - INFO - Error dialog dismissed.
+2024-09-24 13:17:29,374 - INFO - Search button clicked successfully
+2024-09-24 13:17:32,183 - INFO - Page loaded completely
+2024-09-24 13:17:33,610 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:17:33,649 - INFO - Error dialog dismissed.
+2024-09-24 13:17:34,220 - INFO - Search button clicked successfully
+2024-09-24 13:17:35,280 - INFO - Page loaded completely
+2024-09-24 13:17:35,413 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:17:35,451 - INFO - Error dialog dismissed.
+2024-09-24 13:17:36,029 - INFO - Search button clicked successfully
+2024-09-24 13:17:37,619 - INFO - Page loaded completely
+2024-09-24 13:17:37,735 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:17:37,769 - INFO - Error dialog dismissed.
+2024-09-24 13:17:38,341 - INFO - Search button clicked successfully
+2024-09-24 13:17:39,919 - INFO - Page loaded completely
+2024-09-24 13:17:40,044 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:17:40,074 - INFO - Error dialog dismissed.
+2024-09-24 13:17:40,651 - INFO - Search button clicked successfully
+2024-09-24 13:17:42,243 - INFO - Page loaded completely
+2024-09-24 13:17:42,366 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:17:42,405 - INFO - Error dialog dismissed.
+2024-09-24 13:17:42,980 - INFO - Search button clicked successfully
+2024-09-24 13:17:44,052 - INFO - Page loaded completely
+2024-09-24 13:17:44,170 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:17:44,203 - INFO - Error dialog dismissed.
+2024-09-24 13:17:44,778 - INFO - Search button clicked successfully
+2024-09-24 13:17:46,408 - INFO - Page loaded completely
+2024-09-24 13:17:47,031 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:17:47,287 - INFO - Error dialog dismissed.
+2024-09-24 13:17:48,268 - INFO - Search button clicked successfully
+2024-09-24 13:17:50,145 - INFO - Page loaded completely
+2024-09-24 13:17:50,265 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:17:50,303 - INFO - Error dialog dismissed.
+2024-09-24 13:17:51,951 - INFO - Search button clicked successfully
+2024-09-24 13:17:55,030 - INFO - Page loaded completely
+2024-09-24 13:17:55,169 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:17:55,199 - INFO - Error dialog dismissed.
+2024-09-24 13:17:55,822 - INFO - Search button clicked successfully
+2024-09-24 13:17:56,885 - INFO - Page loaded completely
+2024-09-24 13:17:57,003 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:17:57,042 - INFO - Error dialog dismissed.
+2024-09-24 13:17:57,718 - INFO - Search button clicked successfully
+2024-09-24 13:17:58,763 - INFO - Page loaded completely
+2024-09-24 13:17:58,883 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:17:58,918 - INFO - Error dialog dismissed.
+2024-09-24 13:17:59,491 - INFO - Search button clicked successfully
+2024-09-24 13:18:01,066 - INFO - Page loaded completely
+2024-09-24 13:18:01,190 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:18:01,220 - INFO - Error dialog dismissed.
+2024-09-24 13:18:01,803 - INFO - Search button clicked successfully
+2024-09-24 13:18:03,390 - INFO - Page loaded completely
+2024-09-24 13:18:03,533 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:18:03,584 - INFO - Error dialog dismissed.
+2024-09-24 13:18:04,172 - INFO - Search button clicked successfully
+2024-09-24 13:18:05,761 - INFO - Page loaded completely
+2024-09-24 13:18:05,878 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:18:05,907 - INFO - Error dialog dismissed.
+2024-09-24 13:18:06,493 - INFO - Search button clicked successfully
+2024-09-24 13:18:08,168 - INFO - Page loaded completely
+2024-09-24 13:18:09,189 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:18:09,707 - INFO - Error dialog dismissed.
+2024-09-24 13:18:11,114 - INFO - Search button clicked successfully
+2024-09-24 13:18:12,442 - INFO - Page loaded completely
+2024-09-24 13:18:12,559 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:18:12,588 - INFO - Error dialog dismissed.
+2024-09-24 13:18:13,170 - INFO - Search button clicked successfully
+2024-09-24 13:18:14,754 - INFO - Page loaded completely
+2024-09-24 13:18:14,871 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:18:14,906 - INFO - Error dialog dismissed.
+2024-09-24 13:18:15,486 - INFO - Search button clicked successfully
+2024-09-24 13:18:17,177 - INFO - Page loaded completely
+2024-09-24 13:18:17,803 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:18:17,841 - INFO - Error dialog dismissed.
+2024-09-24 13:18:18,424 - INFO - Search button clicked successfully
+2024-09-24 13:18:20,013 - INFO - Page loaded completely
+2024-09-24 13:18:20,131 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:18:20,161 - INFO - Error dialog dismissed.
+2024-09-24 13:18:20,739 - INFO - Search button clicked successfully
+2024-09-24 13:18:21,815 - INFO - Page loaded completely
+2024-09-24 13:18:21,934 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:18:21,972 - INFO - Error dialog dismissed.
+2024-09-24 13:18:22,555 - INFO - Search button clicked successfully
+2024-09-24 13:18:24,327 - INFO - Page loaded completely
+2024-09-24 13:18:26,041 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:18:26,894 - INFO - Error dialog dismissed.
+2024-09-24 13:18:28,315 - INFO - Search button clicked successfully
+2024-09-24 13:18:30,198 - INFO - Page loaded completely
+2024-09-24 13:18:30,318 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:18:30,350 - INFO - Error dialog dismissed.
+2024-09-24 13:18:30,934 - INFO - Search button clicked successfully
+2024-09-24 13:18:32,520 - INFO - Page loaded completely
+2024-09-24 13:18:32,643 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:18:32,681 - INFO - Error dialog dismissed.
+2024-09-24 13:18:33,256 - INFO - Search button clicked successfully
+2024-09-24 13:18:34,325 - INFO - Page loaded completely
+2024-09-24 13:18:34,445 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:18:34,484 - INFO - Error dialog dismissed.
+2024-09-24 13:18:36,264 - INFO - Search button clicked successfully
+2024-09-24 13:18:38,968 - INFO - Page loaded completely
+2024-09-24 13:18:39,122 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:18:39,160 - INFO - Error dialog dismissed.
+2024-09-24 13:18:39,739 - INFO - Search button clicked successfully
+2024-09-24 13:18:40,803 - INFO - Page loaded completely
+2024-09-24 13:18:40,920 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:18:40,956 - INFO - Error dialog dismissed.
+2024-09-24 13:18:41,531 - INFO - Search button clicked successfully
+2024-09-24 13:18:43,120 - INFO - Page loaded completely
+2024-09-24 13:18:43,295 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:18:43,331 - INFO - Error dialog dismissed.
+2024-09-24 13:18:43,918 - INFO - Search button clicked successfully
+2024-09-24 13:18:45,493 - INFO - Page loaded completely
+2024-09-24 13:18:45,609 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:18:45,646 - INFO - Error dialog dismissed.
+2024-09-24 13:18:46,228 - INFO - Search button clicked successfully
+2024-09-24 13:18:47,889 - INFO - Page loaded completely
+2024-09-24 13:18:48,007 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:18:48,040 - INFO - Error dialog dismissed.
+2024-09-24 13:18:48,620 - INFO - Search button clicked successfully
+2024-09-24 13:18:49,694 - INFO - Page loaded completely
+2024-09-24 13:18:49,813 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:18:49,847 - INFO - Error dialog dismissed.
+2024-09-24 13:18:50,426 - INFO - Search button clicked successfully
+2024-09-24 13:18:51,491 - INFO - Page loaded completely
+2024-09-24 13:18:51,630 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:18:51,671 - INFO - Error dialog dismissed.
+2024-09-24 13:18:52,254 - INFO - Search button clicked successfully
+2024-09-24 13:18:53,837 - INFO - Page loaded completely
+2024-09-24 13:18:53,973 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:18:54,003 - INFO - Error dialog dismissed.
+2024-09-24 13:18:54,589 - INFO - Search button clicked successfully
+2024-09-24 13:18:56,176 - INFO - Page loaded completely
+2024-09-24 13:18:56,296 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:18:56,327 - INFO - Error dialog dismissed.
+2024-09-24 13:18:56,908 - INFO - Search button clicked successfully
+2024-09-24 13:18:57,968 - INFO - Page loaded completely
+2024-09-24 13:18:58,085 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:18:58,123 - INFO - Error dialog dismissed.
+2024-09-24 13:18:58,704 - INFO - Search button clicked successfully
+2024-09-24 13:19:00,288 - INFO - Page loaded completely
+2024-09-24 13:19:00,407 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:19:00,439 - INFO - Error dialog dismissed.
+2024-09-24 13:19:01,015 - INFO - Search button clicked successfully
+2024-09-24 13:19:02,603 - INFO - Page loaded completely
+2024-09-24 13:19:02,728 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:19:02,758 - INFO - Error dialog dismissed.
+2024-09-24 13:19:03,340 - INFO - Search button clicked successfully
+2024-09-24 13:19:04,910 - INFO - Page loaded completely
+2024-09-24 13:19:05,027 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:19:05,058 - INFO - Error dialog dismissed.
+2024-09-24 13:19:05,634 - INFO - Search button clicked successfully
+2024-09-24 13:19:07,268 - INFO - Page loaded completely
+2024-09-24 13:19:07,873 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:19:08,128 - INFO - Error dialog dismissed.
+2024-09-24 13:19:09,139 - INFO - Search button clicked successfully
+2024-09-24 13:19:10,226 - INFO - Page loaded completely
+2024-09-24 13:19:10,363 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:19:10,400 - INFO - Error dialog dismissed.
+2024-09-24 13:19:10,985 - INFO - Search button clicked successfully
+2024-09-24 13:19:12,769 - INFO - Page loaded completely
+2024-09-24 13:19:12,769 - INFO - Aggressive bidding completed. Total bids placed: 0
+2024-09-24 13:19:12,770 - INFO - Bidding session completed for DIAMOND HARBOUR.
+2024-09-24 13:19:12,770 - INFO - Total bids placed: 0
+2024-09-24 13:19:12,771 - INFO - Bids with Rank 1: 0
+2024-09-24 13:19:12,771 - INFO - Moving to next depot. Next index: 13
+2024-09-24 13:19:14,773 - INFO - Handling any error dialogs before depot selection...
+2024-09-24 13:19:14,786 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:19:14,817 - INFO - Error dialog dismissed.
+2024-09-24 13:19:15,353 - INFO - Selecting Depot: BARASAT
+2024-09-24 13:19:15,380 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-24 13:19:15,394 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-24 13:19:15,405 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-24 13:19:16,012 - INFO - Option 'BARASAT' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-24 13:19:16,543 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-24 13:19:16,544 - INFO - Clicking Search...
+2024-09-24 13:19:21,749 - INFO - No error dialog detected
+2024-09-24 13:19:21,799 - INFO - Search button clicked successfully
+2024-09-24 13:19:22,863 - INFO - Page loaded completely
+2024-09-24 13:19:22,882 - INFO - Table data check: No data found
+2024-09-24 13:19:22,882 - INFO - No data found for BARASAT.
+2024-09-24 13:19:22,882 - INFO - Moving to next depot. Next index: 0
+2024-09-24 13:19:24,885 - INFO - Handling any error dialogs before depot selection...
+2024-09-24 13:19:24,893 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:19:24,926 - INFO - Error dialog dismissed.
+2024-09-24 13:19:25,463 - INFO - Selecting Depot: DEOGARH
+2024-09-24 13:19:25,501 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-24 13:19:25,515 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-24 13:19:25,526 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-24 13:19:26,085 - INFO - Option 'DEOGARH' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-24 13:19:26,618 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-24 13:19:26,618 - INFO - Clicking Search...
+2024-09-24 13:19:31,785 - INFO - No error dialog detected
+2024-09-24 13:19:32,784 - INFO - Search button clicked successfully
+2024-09-24 13:19:33,875 - INFO - Page loaded completely
+2024-09-24 13:19:34,076 - INFO - Table data check: No data found
+2024-09-24 13:19:34,082 - INFO - No data found for DEOGARH.
+2024-09-24 13:19:34,086 - INFO - Moving to next depot. Next index: 1
+2024-09-24 13:19:36,082 - INFO - Handling any error dialogs before depot selection...
+2024-09-24 13:19:36,094 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:19:36,130 - INFO - Error dialog dismissed.
+2024-09-24 13:19:36,664 - INFO - Selecting Depot: DHANBAD
+2024-09-24 13:19:36,690 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-24 13:19:36,702 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-24 13:19:36,708 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-24 13:19:37,262 - INFO - Option 'DHANBAD' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-24 13:19:37,794 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-24 13:19:37,795 - INFO - Clicking Search...
+2024-09-24 13:19:42,990 - INFO - No error dialog detected
+2024-09-24 13:19:43,050 - INFO - Search button clicked successfully
+2024-09-24 13:19:44,110 - INFO - Page loaded completely
+2024-09-24 13:19:44,121 - INFO - Table data check: No data found
+2024-09-24 13:19:44,121 - INFO - No data found for DHANBAD.
+2024-09-24 13:19:44,121 - INFO - Moving to next depot. Next index: 2
+2024-09-24 13:19:46,124 - INFO - Handling any error dialogs before depot selection...
+2024-09-24 13:19:46,137 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:19:46,169 - INFO - Error dialog dismissed.
+2024-09-24 13:19:46,705 - INFO - Selecting Depot: BANKURA
+2024-09-24 13:19:46,727 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-24 13:19:46,742 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-24 13:19:46,750 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-24 13:19:47,320 - INFO - Option 'BANKURA' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-24 13:19:47,857 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-24 13:19:47,858 - INFO - Clicking Search...
+2024-09-24 13:19:53,189 - INFO - No error dialog detected
+2024-09-24 13:19:53,241 - INFO - Search button clicked successfully
+2024-09-24 13:19:54,306 - INFO - Page loaded completely
+2024-09-24 13:19:54,323 - INFO - Table data check: No data found
+2024-09-24 13:19:54,323 - INFO - No data found for BANKURA.
+2024-09-24 13:19:54,323 - INFO - Moving to next depot. Next index: 3
+2024-09-24 13:19:56,327 - INFO - Handling any error dialogs before depot selection...
+2024-09-24 13:19:56,333 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:19:56,375 - INFO - Error dialog dismissed.
+2024-09-24 13:19:56,902 - INFO - Selecting Depot: BERHAMPORE
+2024-09-24 13:19:56,931 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-24 13:19:56,948 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-24 13:19:56,955 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-24 13:19:57,516 - INFO - Option 'BERHAMPORE' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-24 13:19:58,043 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-24 13:19:58,043 - INFO - Clicking Search...
+2024-09-24 13:20:03,329 - INFO - No error dialog detected
+2024-09-24 13:20:03,451 - INFO - Search button clicked successfully
+2024-09-24 13:20:04,509 - INFO - Page loaded completely
+2024-09-24 13:20:04,520 - INFO - Table data check: No data found
+2024-09-24 13:20:04,520 - INFO - No data found for BERHAMPORE.
+2024-09-24 13:20:04,520 - INFO - Moving to next depot. Next index: 4
+2024-09-24 13:20:06,523 - INFO - Handling any error dialogs before depot selection...
+2024-09-24 13:20:06,536 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:20:06,570 - INFO - Error dialog dismissed.
+2024-09-24 13:20:07,105 - INFO - Selecting Depot: BURDWAN
+2024-09-24 13:20:07,129 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-24 13:20:07,150 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-24 13:20:07,165 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-24 13:20:07,731 - INFO - Option 'BURDWAN' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-24 13:20:08,434 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-24 13:20:08,444 - INFO - Clicking Search...
+2024-09-24 13:20:13,698 - INFO - No error dialog detected
+2024-09-24 13:20:13,749 - INFO - Search button clicked successfully
+2024-09-24 13:20:14,802 - INFO - Page loaded completely
+2024-09-24 13:20:14,818 - INFO - Table data check: No data found
+2024-09-24 13:20:14,818 - INFO - No data found for BURDWAN.
+2024-09-24 13:20:14,818 - INFO - Moving to next depot. Next index: 5
+2024-09-24 13:20:16,821 - INFO - Handling any error dialogs before depot selection...
+2024-09-24 13:20:16,833 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:20:16,864 - INFO - Error dialog dismissed.
+2024-09-24 13:20:17,401 - INFO - Selecting Depot: COSSIPORE
+2024-09-24 13:20:17,423 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-24 13:20:17,434 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-24 13:20:17,441 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-24 13:20:18,006 - INFO - Option 'COSSIPORE' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-24 13:20:18,535 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-24 13:20:18,536 - INFO - Clicking Search...
+2024-09-24 13:20:23,731 - INFO - No error dialog detected
+2024-09-24 13:20:23,782 - INFO - Search button clicked successfully
+2024-09-24 13:20:24,843 - INFO - Page loaded completely
+2024-09-24 13:20:24,853 - INFO - Table data check: No data found
+2024-09-24 13:20:24,854 - INFO - No data found for COSSIPORE.
+2024-09-24 13:20:24,854 - INFO - Moving to next depot. Next index: 6
+2024-09-24 13:20:26,856 - INFO - Handling any error dialogs before depot selection...
+2024-09-24 13:20:26,869 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:20:26,903 - INFO - Error dialog dismissed.
+2024-09-24 13:20:27,432 - INFO - Selecting Depot: DANKUNI
+2024-09-24 13:20:27,464 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-24 13:20:27,499 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-24 13:20:27,505 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-24 13:20:28,089 - INFO - Option 'DANKUNI' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-24 13:20:28,625 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-24 13:20:28,627 - INFO - Clicking Search...
+2024-09-24 13:20:33,815 - INFO - No error dialog detected
+2024-09-24 13:20:33,873 - INFO - Search button clicked successfully
+2024-09-24 13:20:35,447 - INFO - Page loaded completely
+2024-09-24 13:20:35,454 - INFO - Table data check: No data found
+2024-09-24 13:20:35,454 - INFO - No data found for DANKUNI.
+2024-09-24 13:20:35,454 - INFO - Moving to next depot. Next index: 7
+2024-09-24 13:20:37,457 - INFO - Handling any error dialogs before depot selection...
+2024-09-24 13:20:37,469 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:20:37,503 - INFO - Error dialog dismissed.
+2024-09-24 13:20:38,040 - INFO - Selecting Depot: KALIGHAT
+2024-09-24 13:20:38,070 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-24 13:20:38,080 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-24 13:20:38,089 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-24 13:20:38,674 - INFO - Option 'KALIGHAT' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-24 13:20:39,212 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-24 13:20:39,213 - INFO - Clicking Search...
+2024-09-24 13:20:44,418 - INFO - No error dialog detected
+2024-09-24 13:20:44,469 - INFO - Search button clicked successfully
+2024-09-24 13:20:45,009 - INFO - Page loaded completely
+2024-09-24 13:20:45,017 - INFO - Table data check: No data found
+2024-09-24 13:20:45,017 - INFO - No data found for KALIGHAT.
+2024-09-24 13:20:45,017 - INFO - Moving to next depot. Next index: 8
+2024-09-24 13:20:56,611 - INFO - ====== WebDriver manager ======
+2024-09-24 13:20:56,613 - INFO - Setting up WebDriver...
+2024-09-24 13:20:56,670 - INFO - Get LATEST chromedriver version for google-chrome
+2024-09-24 13:20:56,844 - INFO - Get LATEST chromedriver version for google-chrome
+2024-09-24 13:20:56,972 - INFO - Driver [/home/abir/.wdm/drivers/chromedriver/linux64/128.0.6613.137/chromedriver-linux64/chromedriver] found in cache
+2024-09-24 13:20:57,426 - INFO - Attempting login... (Attempt 1/3)
+2024-09-24 13:20:58,955 - INFO - Cookies loaded successfully
+2024-09-24 13:21:01,829 - INFO - Logged in successfully using cookies
+2024-09-24 13:21:01,831 - INFO - Navigating to eBidding page... (Attempt 1/3)
+2024-09-24 13:21:04,630 - INFO - Page loaded completely
+2024-09-24 13:21:04,632 - INFO - Opened eBidding URL: https://www.eye2serve.com:9001/sap/bc/ui5_ui5/sap/zvc_vendor_app/index.html#/ebidding
+2024-09-24 13:21:10,372 - INFO - No error dialog detected
+2024-09-24 13:21:10,372 - INFO - Opened eBidding URL: https://www.eye2serve.com:9001/sap/bc/ui5_ui5/sap/zvc_vendor_app/index.html#/ebidding
+2024-09-24 13:21:10,373 - INFO - Handling error dialogs and clicking 'Show Search' button... (Attempt 1/3)
+2024-09-24 13:21:31,387 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:21:31,450 - INFO - Error dialog dismissed.
+2024-09-24 13:21:33,049 - ERROR - Failed to click 'Show Search' button: Message: element click intercepted: Element <bdi id="__button0-BDI-content">...</bdi> is not clickable at point (1867, 20). Other element would receive the click: <div id="sap-ui-blocklayer-popup" tabindex="0" class="sapUiBLy sapMDialogBlockLayerInit" style="z-index: 18; visibility: visible;"></div>
+  (Session info: chrome=128.0.6613.137)
+Stacktrace:
+#0 0x56c751a102da <unknown>
+#1 0x56c7516de200 <unknown>
+#2 0x56c751734766 <unknown>
+#3 0x56c75173266d <unknown>
+#4 0x56c751730107 <unknown>
+#5 0x56c75172efac <unknown>
+#6 0x56c7517228c6 <unknown>
+#7 0x56c7517528d2 <unknown>
+#8 0x56c751722279 <unknown>
+#9 0x56c751752a9e <unknown>
+#10 0x56c751770dfd <unknown>
+#11 0x56c751752673 <unknown>
+#12 0x56c751720473 <unknown>
+#13 0x56c75172147e <unknown>
+#14 0x56c7519d70db <unknown>
+#15 0x56c7519db071 <unknown>
+#16 0x56c7519c39d5 <unknown>
+#17 0x56c7519dbbf2 <unknown>
+#18 0x56c7519a8b6f <unknown>
+#19 0x56c7519ff248 <unknown>
+#20 0x56c7519ff417 <unknown>
+#21 0x56c751a0f0cc <unknown>
+#22 0x7739df094ac3 <unknown>
+
+2024-09-24 13:21:33,054 - INFO - Failed to handle dialogs or click 'Show Search' button. Retrying in 5 seconds... Error: Message: element click intercepted: Element <bdi id="__button0-BDI-content">...</bdi> is not clickable at point (1867, 20). Other element would receive the click: <div id="sap-ui-blocklayer-popup" tabindex="0" class="sapUiBLy sapMDialogBlockLayerInit" style="z-index: 18; visibility: visible;"></div>
+  (Session info: chrome=128.0.6613.137)
+Stacktrace:
+#0 0x56c751a102da <unknown>
+#1 0x56c7516de200 <unknown>
+#2 0x56c751734766 <unknown>
+#3 0x56c75173266d <unknown>
+#4 0x56c751730107 <unknown>
+#5 0x56c75172efac <unknown>
+#6 0x56c7517228c6 <unknown>
+#7 0x56c7517528d2 <unknown>
+#8 0x56c751722279 <unknown>
+#9 0x56c751752a9e <unknown>
+#10 0x56c751770dfd <unknown>
+#11 0x56c751752673 <unknown>
+#12 0x56c751720473 <unknown>
+#13 0x56c75172147e <unknown>
+#14 0x56c7519d70db <unknown>
+#15 0x56c7519db071 <unknown>
+#16 0x56c7519c39d5 <unknown>
+#17 0x56c7519dbbf2 <unknown>
+#18 0x56c7519a8b6f <unknown>
+#19 0x56c7519ff248 <unknown>
+#20 0x56c7519ff417 <unknown>
+#21 0x56c751a0f0cc <unknown>
+#22 0x7739df094ac3 <unknown>
+
+2024-09-24 13:21:38,056 - INFO - Handling error dialogs and clicking 'Show Search' button... (Attempt 2/3)
+2024-09-24 13:21:43,274 - INFO - No error dialog detected
+2024-09-24 13:21:43,350 - INFO - 'Show Search' button clicked successfully
+2024-09-24 13:21:43,350 - INFO - Successfully clicked 'Show Search' button.
+2024-09-24 13:21:43,351 - INFO - Selecting Ship From Plant: WEST BENGAL CEMENT WORKS
+2024-09-24 13:21:43,390 - INFO - Clicked dropdown arrow for __xmlview0--ididUtclVCShipFromPlant
+2024-09-24 13:21:43,404 - INFO - Dropdown list visible for __xmlview0--ididUtclVCShipFromPlant
+2024-09-24 13:21:43,413 - INFO - Found 1 options for __xmlview0--ididUtclVCShipFromPlant
+2024-09-24 13:21:43,966 - INFO - Option 'WEST BENGAL CEMENT WORKS' selected successfully for __xmlview0--ididUtclVCShipFromPlant
+2024-09-24 13:21:44,503 - INFO - Dropdown closed after selection for __xmlview0--ididUtclVCShipFromPlant
+2024-09-24 13:21:44,504 - INFO - Handling any error dialogs before depot selection...
+2024-09-24 13:21:49,699 - INFO - No error dialog detected
+2024-09-24 13:21:49,701 - INFO - Selecting Depot: DEOGARH
+2024-09-24 13:21:49,747 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-24 13:21:49,762 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-24 13:21:49,768 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-24 13:21:50,321 - INFO - Option 'DEOGARH' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-24 13:21:50,859 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-24 13:21:50,860 - INFO - Clicking Search...
+2024-09-24 13:21:56,051 - INFO - No error dialog detected
+2024-09-24 13:21:56,127 - INFO - Search button clicked successfully
+2024-09-24 13:21:57,712 - INFO - Page loaded completely
+2024-09-24 13:21:57,730 - INFO - Table data check: No data found
+2024-09-24 13:21:57,730 - INFO - No data found for DEOGARH.
+2024-09-24 13:21:57,730 - INFO - Moving to next depot. Next index: 1
+2024-09-24 13:21:59,734 - INFO - Handling any error dialogs before depot selection...
+2024-09-24 13:21:59,746 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:21:59,786 - INFO - Error dialog dismissed.
+2024-09-24 13:22:00,323 - INFO - Selecting Depot: DHANBAD
+2024-09-24 13:22:00,346 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-24 13:22:00,358 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-24 13:22:00,366 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-24 13:22:00,918 - INFO - Option 'DHANBAD' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-24 13:22:01,455 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-24 13:22:01,456 - INFO - Clicking Search...
+2024-09-24 13:22:06,665 - INFO - No error dialog detected
+2024-09-24 13:22:06,722 - INFO - Search button clicked successfully
+2024-09-24 13:22:08,303 - INFO - Page loaded completely
+2024-09-24 13:22:08,313 - INFO - Table data check: No data found
+2024-09-24 13:22:08,314 - INFO - No data found for DHANBAD.
+2024-09-24 13:22:08,314 - INFO - Moving to next depot. Next index: 2
+2024-09-24 13:22:10,317 - INFO - Handling any error dialogs before depot selection...
+2024-09-24 13:22:10,329 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:22:10,361 - INFO - Error dialog dismissed.
+2024-09-24 13:22:10,898 - INFO - Selecting Depot: BANKURA
+2024-09-24 13:22:10,923 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-24 13:22:10,939 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-24 13:22:10,944 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-24 13:22:11,519 - INFO - Option 'BANKURA' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-24 13:22:12,056 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-24 13:22:12,057 - INFO - Clicking Search...
+2024-09-24 13:22:17,255 - INFO - No error dialog detected
+2024-09-24 13:22:17,304 - INFO - Search button clicked successfully
+2024-09-24 13:22:18,368 - INFO - Page loaded completely
+2024-09-24 13:22:18,386 - INFO - Table data check: No data found
+2024-09-24 13:22:18,387 - INFO - No data found for BANKURA.
+2024-09-24 13:22:18,387 - INFO - Moving to next depot. Next index: 3
+2024-09-24 13:22:20,390 - INFO - Handling any error dialogs before depot selection...
+2024-09-24 13:22:20,403 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:22:20,435 - INFO - Error dialog dismissed.
+2024-09-24 13:22:20,967 - INFO - Selecting Depot: BERHAMPORE
+2024-09-24 13:22:20,995 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-24 13:22:21,006 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-24 13:22:21,013 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-24 13:22:21,572 - INFO - Option 'BERHAMPORE' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-24 13:22:22,103 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-24 13:22:22,105 - INFO - Clicking Search...
+2024-09-24 13:22:27,301 - INFO - No error dialog detected
+2024-09-24 13:22:27,353 - INFO - Search button clicked successfully
+2024-09-24 13:22:27,892 - INFO - Page loaded completely
+2024-09-24 13:22:27,900 - INFO - Table data check: No data found
+2024-09-24 13:22:27,901 - INFO - No data found for BERHAMPORE.
+2024-09-24 13:22:27,901 - INFO - Moving to next depot. Next index: 4
+2024-09-24 13:22:29,904 - INFO - Handling any error dialogs before depot selection...
+2024-09-24 13:22:29,917 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:22:29,954 - INFO - Error dialog dismissed.
+2024-09-24 13:22:30,492 - INFO - Selecting Depot: BURDWAN
+2024-09-24 13:22:30,515 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-24 13:22:30,526 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-24 13:22:30,534 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-24 13:22:31,104 - INFO - Option 'BURDWAN' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-24 13:22:31,641 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-24 13:22:31,643 - INFO - Clicking Search...
+2024-09-24 13:22:36,849 - INFO - No error dialog detected
+2024-09-24 13:22:36,900 - INFO - Search button clicked successfully
+2024-09-24 13:22:37,966 - INFO - Page loaded completely
+2024-09-24 13:22:37,984 - INFO - Table data check: No data found
+2024-09-24 13:22:37,984 - INFO - No data found for BURDWAN.
+2024-09-24 13:22:37,984 - INFO - Moving to next depot. Next index: 5
+2024-09-24 13:22:39,987 - INFO - Handling any error dialogs before depot selection...
+2024-09-24 13:22:40,000 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:22:40,032 - INFO - Error dialog dismissed.
+2024-09-24 13:22:40,570 - INFO - Selecting Depot: COSSIPORE
+2024-09-24 13:22:40,596 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-24 13:22:40,610 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-24 13:22:40,615 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-24 13:22:41,179 - INFO - Option 'COSSIPORE' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-24 13:22:41,716 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-24 13:22:41,717 - INFO - Clicking Search...
+2024-09-24 13:22:46,905 - INFO - No error dialog detected
+2024-09-24 13:22:46,960 - INFO - Search button clicked successfully
+2024-09-24 13:22:48,022 - INFO - Page loaded completely
+2024-09-24 13:22:48,032 - INFO - Table data check: No data found
+2024-09-24 13:22:48,032 - INFO - No data found for COSSIPORE.
+2024-09-24 13:22:48,032 - INFO - Moving to next depot. Next index: 6
+2024-09-24 13:22:50,035 - INFO - Handling any error dialogs before depot selection...
+2024-09-24 13:22:50,048 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:22:50,077 - INFO - Error dialog dismissed.
+2024-09-24 13:22:50,612 - INFO - Selecting Depot: DANKUNI
+2024-09-24 13:22:50,636 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-24 13:22:50,661 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-24 13:22:50,669 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-24 13:22:51,236 - INFO - Option 'DANKUNI' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-24 13:22:51,773 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-24 13:22:51,774 - INFO - Clicking Search...
+2024-09-24 13:22:56,966 - INFO - No error dialog detected
+2024-09-24 13:22:57,017 - INFO - Search button clicked successfully
+2024-09-24 13:22:58,083 - INFO - Page loaded completely
+2024-09-24 13:22:58,103 - INFO - Table data check: No data found
+2024-09-24 13:22:58,103 - INFO - No data found for DANKUNI.
+2024-09-24 13:22:58,103 - INFO - Moving to next depot. Next index: 7
+2024-09-24 13:23:00,107 - INFO - Handling any error dialogs before depot selection...
+2024-09-24 13:23:00,118 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:23:00,149 - INFO - Error dialog dismissed.
+2024-09-24 13:23:00,685 - INFO - Selecting Depot: KALIGHAT
+2024-09-24 13:23:00,711 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-24 13:23:00,725 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-24 13:23:00,730 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-24 13:23:01,309 - INFO - Option 'KALIGHAT' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-24 13:23:01,842 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-24 13:23:01,843 - INFO - Clicking Search...
+2024-09-24 13:23:07,029 - INFO - No error dialog detected
+2024-09-24 13:23:07,078 - INFO - Search button clicked successfully
+2024-09-24 13:23:08,135 - INFO - Page loaded completely
+2024-09-24 13:23:08,143 - INFO - Table data check: No data found
+2024-09-24 13:23:08,143 - INFO - No data found for KALIGHAT.
+2024-09-24 13:23:08,144 - INFO - Moving to next depot. Next index: 8
+2024-09-24 13:23:10,147 - INFO - Handling any error dialogs before depot selection...
+2024-09-24 13:23:10,160 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:23:10,202 - INFO - Error dialog dismissed.
+2024-09-24 13:23:10,749 - INFO - Selecting Depot: KHARAGPUR
+2024-09-24 13:23:10,778 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-24 13:23:10,789 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-24 13:23:10,798 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-24 13:23:11,381 - INFO - Option 'KHARAGPUR' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-24 13:23:11,918 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-24 13:23:11,920 - INFO - Clicking Search...
+2024-09-24 13:23:17,123 - INFO - No error dialog detected
+2024-09-24 13:23:17,180 - INFO - Search button clicked successfully
+2024-09-24 13:23:18,243 - INFO - Page loaded completely
+2024-09-24 13:23:18,260 - INFO - Table data check: No data found
+2024-09-24 13:23:18,261 - INFO - No data found for KHARAGPUR.
+2024-09-24 13:23:18,261 - INFO - Moving to next depot. Next index: 9
+2024-09-24 13:23:20,263 - INFO - Handling any error dialogs before depot selection...
+2024-09-24 13:23:20,275 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:23:20,307 - INFO - Error dialog dismissed.
+2024-09-24 13:23:20,842 - INFO - Selecting Depot: KRISHNANAGAR
+2024-09-24 13:23:20,873 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-24 13:23:20,883 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-24 13:23:20,890 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-24 13:23:21,473 - INFO - Option 'KRISHNANAGAR' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-24 13:23:22,007 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-24 13:23:22,008 - INFO - Clicking Search...
+2024-09-24 13:23:27,199 - INFO - No error dialog detected
+2024-09-24 13:23:27,261 - INFO - Search button clicked successfully
+2024-09-24 13:23:27,814 - INFO - Page loaded completely
+2024-09-24 13:23:27,823 - INFO - Table data check: No data found
+2024-09-24 13:23:27,824 - INFO - No data found for KRISHNANAGAR.
+2024-09-24 13:23:27,824 - INFO - Moving to next depot. Next index: 10
+2024-09-24 13:23:29,827 - INFO - Handling any error dialogs before depot selection...
+2024-09-24 13:23:29,840 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:23:29,872 - INFO - Error dialog dismissed.
+2024-09-24 13:23:30,408 - INFO - Selecting Depot: SAINTHIA
+2024-09-24 13:23:30,435 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-24 13:23:30,449 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-24 13:23:30,455 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-24 13:23:31,049 - INFO - Option 'SAINTHIA' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-24 13:23:31,582 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-24 13:23:31,583 - INFO - Clicking Search...
+2024-09-24 13:23:36,777 - INFO - No error dialog detected
+2024-09-24 13:23:36,826 - INFO - Search button clicked successfully
+2024-09-24 13:23:38,931 - INFO - Page loaded completely
+2024-09-24 13:23:38,940 - INFO - Table data check: No data found
+2024-09-24 13:23:38,940 - INFO - No data found for SAINTHIA.
+2024-09-24 13:23:38,940 - INFO - Moving to next depot. Next index: 11
+2024-09-24 13:23:40,943 - INFO - Handling any error dialogs before depot selection...
+2024-09-24 13:23:40,954 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:23:40,996 - INFO - Error dialog dismissed.
+2024-09-24 13:23:41,529 - INFO - Selecting Depot: SHALIMAR
+2024-09-24 13:23:41,554 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-24 13:23:41,567 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-24 13:23:41,574 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-24 13:23:42,183 - INFO - Option 'SHALIMAR' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-24 13:23:42,711 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-24 13:23:42,712 - INFO - Clicking Search...
+2024-09-24 13:23:47,894 - INFO - No error dialog detected
+2024-09-24 13:23:47,944 - INFO - Search button clicked successfully
+2024-09-24 13:23:50,047 - INFO - Page loaded completely
+2024-09-24 13:23:50,064 - INFO - Table data check: No data found
+2024-09-24 13:23:50,065 - INFO - No data found for SHALIMAR.
+2024-09-24 13:23:50,065 - INFO - Moving to next depot. Next index: 12
+2024-09-24 13:23:52,067 - INFO - Handling any error dialogs before depot selection...
+2024-09-24 13:23:52,079 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:23:52,111 - INFO - Error dialog dismissed.
+2024-09-24 13:23:52,649 - INFO - Selecting Depot: DIAMOND HARBOUR
+2024-09-24 13:23:52,673 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-24 13:23:52,684 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-24 13:23:52,694 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-24 13:23:53,302 - INFO - Option 'DIAMOND HARBOUR' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-24 13:23:53,831 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-24 13:23:53,832 - INFO - Clicking Search...
+2024-09-24 13:23:59,079 - INFO - No error dialog detected
+2024-09-24 13:23:59,176 - INFO - Search button clicked successfully
+2024-09-24 13:24:03,965 - INFO - Page loaded completely
+2024-09-24 13:24:03,981 - INFO - Table data check: Data found
+2024-09-24 13:24:03,982 - INFO - Data found for DIAMOND HARBOUR. Starting aggressive bidding process...
+2024-09-24 13:24:04,116 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:24:04,156 - INFO - Error dialog dismissed.
+2024-09-24 13:24:04,773 - INFO - Search button clicked successfully
+2024-09-24 13:24:07,397 - INFO - Page loaded completely
+2024-09-24 13:24:07,516 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:24:07,548 - INFO - Error dialog dismissed.
+2024-09-24 13:24:08,127 - INFO - Search button clicked successfully
+2024-09-24 13:24:10,237 - INFO - Page loaded completely
+2024-09-24 13:24:10,360 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:24:10,391 - INFO - Error dialog dismissed.
+2024-09-24 13:24:10,971 - INFO - Search button clicked successfully
+2024-09-24 13:24:12,031 - INFO - Page loaded completely
+2024-09-24 13:24:12,155 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:24:12,187 - INFO - Error dialog dismissed.
+2024-09-24 13:24:12,771 - INFO - Search button clicked successfully
+2024-09-24 13:24:14,354 - INFO - Page loaded completely
+2024-09-24 13:24:14,470 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:24:14,508 - INFO - Error dialog dismissed.
+2024-09-24 13:24:15,089 - INFO - Search button clicked successfully
+2024-09-24 13:24:16,684 - INFO - Page loaded completely
+2024-09-24 13:24:16,803 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:24:16,842 - INFO - Error dialog dismissed.
+2024-09-24 13:24:17,426 - INFO - Search button clicked successfully
+2024-09-24 13:24:19,008 - INFO - Page loaded completely
+2024-09-24 13:24:19,124 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:24:19,157 - INFO - Error dialog dismissed.
+2024-09-24 13:24:19,732 - INFO - Search button clicked successfully
+2024-09-24 13:24:21,313 - INFO - Page loaded completely
+2024-09-24 13:24:21,436 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:24:21,473 - INFO - Error dialog dismissed.
+2024-09-24 13:24:22,056 - INFO - Search button clicked successfully
+2024-09-24 13:24:24,209 - INFO - Page loaded completely
+2024-09-24 13:24:24,336 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:24:24,368 - INFO - Error dialog dismissed.
+2024-09-24 13:24:24,952 - INFO - Search button clicked successfully
+2024-09-24 13:24:26,009 - INFO - Page loaded completely
+2024-09-24 13:24:26,142 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:24:26,177 - INFO - Error dialog dismissed.
+2024-09-24 13:24:26,762 - INFO - Search button clicked successfully
+2024-09-24 13:24:27,830 - INFO - Page loaded completely
+2024-09-24 13:24:27,954 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:24:27,985 - INFO - Error dialog dismissed.
+2024-09-24 13:24:28,570 - INFO - Search button clicked successfully
+2024-09-24 13:24:29,638 - INFO - Page loaded completely
+2024-09-24 13:24:29,759 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:24:29,791 - INFO - Error dialog dismissed.
+2024-09-24 13:24:30,368 - INFO - Search button clicked successfully
+2024-09-24 13:24:31,428 - INFO - Page loaded completely
+2024-09-24 13:24:31,554 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:24:31,589 - INFO - Error dialog dismissed.
+2024-09-24 13:24:32,188 - INFO - Search button clicked successfully
+2024-09-24 13:24:33,769 - INFO - Page loaded completely
+2024-09-24 13:24:33,896 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:24:33,928 - INFO - Error dialog dismissed.
+2024-09-24 13:24:34,513 - INFO - Search button clicked successfully
+2024-09-24 13:24:36,083 - INFO - Page loaded completely
+2024-09-24 13:24:36,205 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:24:36,242 - INFO - Error dialog dismissed.
+2024-09-24 13:24:36,826 - INFO - Search button clicked successfully
+2024-09-24 13:24:38,403 - INFO - Page loaded completely
+2024-09-24 13:24:38,524 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:24:38,554 - INFO - Error dialog dismissed.
+2024-09-24 13:24:39,133 - INFO - Search button clicked successfully
+2024-09-24 13:24:40,720 - INFO - Page loaded completely
+2024-09-24 13:24:40,843 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:24:40,875 - INFO - Error dialog dismissed.
+2024-09-24 13:24:41,460 - INFO - Search button clicked successfully
+2024-09-24 13:24:43,031 - INFO - Page loaded completely
+2024-09-24 13:24:43,155 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:24:43,195 - INFO - Error dialog dismissed.
+2024-09-24 13:24:43,790 - INFO - Search button clicked successfully
+2024-09-24 13:24:45,373 - INFO - Page loaded completely
+2024-09-24 13:24:45,492 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:24:45,530 - INFO - Error dialog dismissed.
+2024-09-24 13:24:46,120 - INFO - Search button clicked successfully
+2024-09-24 13:24:47,695 - INFO - Page loaded completely
+2024-09-24 13:24:47,814 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:24:47,849 - INFO - Error dialog dismissed.
+2024-09-24 13:24:48,436 - INFO - Search button clicked successfully
+2024-09-24 13:24:50,011 - INFO - Page loaded completely
+2024-09-24 13:24:50,145 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:24:50,176 - INFO - Error dialog dismissed.
+2024-09-24 13:24:50,761 - INFO - Search button clicked successfully
+2024-09-24 13:24:51,822 - INFO - Page loaded completely
+2024-09-24 13:24:51,940 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:24:51,972 - INFO - Error dialog dismissed.
+2024-09-24 13:24:52,552 - INFO - Search button clicked successfully
+2024-09-24 13:24:54,179 - INFO - Page loaded completely
+2024-09-24 13:24:54,296 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:24:54,334 - INFO - Error dialog dismissed.
+2024-09-24 13:24:54,911 - INFO - Search button clicked successfully
+2024-09-24 13:24:56,492 - INFO - Page loaded completely
+2024-09-24 13:24:56,625 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:24:56,656 - INFO - Error dialog dismissed.
+2024-09-24 13:24:57,247 - INFO - Search button clicked successfully
+2024-09-24 13:24:59,351 - INFO - Page loaded completely
+2024-09-24 13:24:59,474 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:24:59,509 - INFO - Error dialog dismissed.
+2024-09-24 13:25:00,092 - INFO - Search button clicked successfully
+2024-09-24 13:25:01,148 - INFO - Page loaded completely
+2024-09-24 13:25:01,309 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:25:01,346 - INFO - Error dialog dismissed.
+2024-09-24 13:25:01,939 - INFO - Search button clicked successfully
+2024-09-24 13:25:04,576 - INFO - Page loaded completely
+2024-09-24 13:25:04,698 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:25:04,732 - INFO - Error dialog dismissed.
+2024-09-24 13:25:05,326 - INFO - Search button clicked successfully
+2024-09-24 13:25:07,426 - INFO - Page loaded completely
+2024-09-24 13:25:07,561 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:25:07,594 - INFO - Error dialog dismissed.
+2024-09-24 13:25:08,172 - INFO - Search button clicked successfully
+2024-09-24 13:25:09,235 - INFO - Page loaded completely
+2024-09-24 13:25:09,354 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:25:09,387 - INFO - Error dialog dismissed.
+2024-09-24 13:25:09,995 - INFO - Search button clicked successfully
+2024-09-24 13:25:11,598 - INFO - Page loaded completely
+2024-09-24 13:25:11,725 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:25:11,761 - INFO - Error dialog dismissed.
+2024-09-24 13:25:12,350 - INFO - Search button clicked successfully
+2024-09-24 13:25:15,227 - INFO - Page loaded completely
+2024-09-24 13:25:16,959 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:25:17,216 - INFO - Error dialog dismissed.
+2024-09-24 13:25:17,824 - INFO - Search button clicked successfully
+2024-09-24 13:25:19,395 - INFO - Page loaded completely
+2024-09-24 13:25:19,514 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:25:19,547 - INFO - Error dialog dismissed.
+2024-09-24 13:25:20,127 - INFO - Search button clicked successfully
+2024-09-24 13:25:21,734 - INFO - Page loaded completely
+2024-09-24 13:25:21,855 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:25:21,893 - INFO - Error dialog dismissed.
+2024-09-24 13:25:22,473 - INFO - Search button clicked successfully
+2024-09-24 13:25:35,039 - INFO - Page loaded completely
+2024-09-24 13:25:35,168 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:25:35,207 - INFO - Error dialog dismissed.
+2024-09-24 13:25:35,810 - INFO - Search button clicked successfully
+2024-09-24 13:25:37,512 - INFO - Page loaded completely
+2024-09-24 13:25:38,942 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:25:39,790 - INFO - Error dialog dismissed.
+2024-09-24 13:25:41,168 - INFO - Search button clicked successfully
+2024-09-24 13:25:42,240 - INFO - Page loaded completely
+2024-09-24 13:25:42,370 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:25:42,400 - INFO - Error dialog dismissed.
+2024-09-24 13:25:42,993 - INFO - Search button clicked successfully
+2024-09-24 13:25:43,734 - INFO - Page loaded completely
+2024-09-24 13:25:43,949 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:25:43,985 - INFO - Error dialog dismissed.
+2024-09-24 13:25:44,575 - INFO - Search button clicked successfully
+2024-09-24 13:25:45,890 - INFO - Page loaded completely
+2024-09-24 13:25:46,780 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:25:46,836 - INFO - Error dialog dismissed.
+2024-09-24 13:25:47,413 - INFO - Search button clicked successfully
+2024-09-24 13:25:48,474 - INFO - Page loaded completely
+2024-09-24 13:25:48,554 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:25:48,592 - INFO - Error dialog dismissed.
+2024-09-24 13:25:49,167 - INFO - Search button clicked successfully
+2024-09-24 13:25:50,230 - INFO - Page loaded completely
+2024-09-24 13:25:50,314 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:25:50,348 - INFO - Error dialog dismissed.
+2024-09-24 13:25:50,923 - INFO - Search button clicked successfully
+2024-09-24 13:25:52,154 - INFO - Page loaded completely
+2024-09-24 13:25:52,714 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:25:53,549 - INFO - Error dialog dismissed.
+2024-09-24 13:25:54,782 - INFO - Search button clicked successfully
+2024-09-24 13:25:56,942 - INFO - Page loaded completely
+2024-09-24 13:25:57,022 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:25:57,052 - INFO - Error dialog dismissed.
+2024-09-24 13:25:57,632 - INFO - Search button clicked successfully
+2024-09-24 13:25:59,218 - INFO - Page loaded completely
+2024-09-24 13:25:59,306 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:25:59,346 - INFO - Error dialog dismissed.
+2024-09-24 13:25:59,930 - INFO - Search button clicked successfully
+2024-09-24 13:26:00,682 - INFO - Page loaded completely
+2024-09-24 13:26:01,255 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:26:01,975 - INFO - Error dialog dismissed.
+2024-09-24 13:26:03,229 - INFO - Search button clicked successfully
+2024-09-24 13:26:04,016 - INFO - Page loaded completely
+2024-09-24 13:26:04,095 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:26:04,126 - INFO - Error dialog dismissed.
+2024-09-24 13:26:04,714 - INFO - Search button clicked successfully
+2024-09-24 13:26:05,776 - INFO - Page loaded completely
+2024-09-24 13:26:05,860 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:26:05,898 - INFO - Error dialog dismissed.
+2024-09-24 13:26:06,485 - INFO - Search button clicked successfully
+2024-09-24 13:26:07,991 - INFO - Page loaded completely
+2024-09-24 13:26:08,547 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:26:09,261 - INFO - Error dialog dismissed.
+2024-09-24 13:26:10,527 - INFO - Search button clicked successfully
+2024-09-24 13:26:12,079 - INFO - Page loaded completely
+2024-09-24 13:26:12,160 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:26:12,191 - INFO - Error dialog dismissed.
+2024-09-24 13:26:13,928 - INFO - Search button clicked successfully
+2024-09-24 13:26:15,128 - INFO - Page loaded completely
+2024-09-24 13:26:15,692 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:26:16,433 - INFO - Error dialog dismissed.
+2024-09-24 13:26:17,380 - INFO - Search button clicked successfully
+2024-09-24 13:26:18,456 - INFO - Page loaded completely
+2024-09-24 13:26:18,540 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:26:18,570 - INFO - Error dialog dismissed.
+2024-09-24 13:26:19,149 - INFO - Search button clicked successfully
+2024-09-24 13:26:20,728 - INFO - Page loaded completely
+2024-09-24 13:26:20,814 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:26:20,851 - INFO - Error dialog dismissed.
+2024-09-24 13:26:21,428 - INFO - Search button clicked successfully
+2024-09-24 13:26:22,499 - INFO - Page loaded completely
+2024-09-24 13:26:22,580 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:26:22,618 - INFO - Error dialog dismissed.
+2024-09-24 13:26:23,194 - INFO - Search button clicked successfully
+2024-09-24 13:26:23,733 - INFO - Page loaded completely
+2024-09-24 13:26:23,812 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:26:23,925 - INFO - Error dialog dismissed.
+2024-09-24 13:26:24,512 - INFO - Search button clicked successfully
+2024-09-24 13:26:25,047 - INFO - Page loaded completely
+2024-09-24 13:26:25,126 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:26:25,164 - INFO - Error dialog dismissed.
+2024-09-24 13:26:25,746 - INFO - Search button clicked successfully
+2024-09-24 13:26:26,809 - INFO - Page loaded completely
+2024-09-24 13:26:26,891 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:26:26,923 - INFO - Error dialog dismissed.
+2024-09-24 13:26:27,502 - INFO - Search button clicked successfully
+2024-09-24 13:26:28,570 - INFO - Page loaded completely
+2024-09-24 13:26:28,656 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:26:28,691 - INFO - Error dialog dismissed.
+2024-09-24 13:26:29,270 - INFO - Search button clicked successfully
+2024-09-24 13:26:30,339 - INFO - Page loaded completely
+2024-09-24 13:26:30,420 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:26:30,451 - INFO - Error dialog dismissed.
+2024-09-24 13:26:31,031 - INFO - Search button clicked successfully
+2024-09-24 13:26:32,612 - INFO - Page loaded completely
+2024-09-24 13:26:32,697 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:26:32,725 - INFO - Error dialog dismissed.
+2024-09-24 13:26:33,304 - INFO - Search button clicked successfully
+2024-09-24 13:26:35,411 - INFO - Page loaded completely
+2024-09-24 13:26:35,497 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:26:35,533 - INFO - Error dialog dismissed.
+2024-09-24 13:26:36,111 - INFO - Search button clicked successfully
+2024-09-24 13:26:37,174 - INFO - Page loaded completely
+2024-09-24 13:26:37,253 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:26:37,291 - INFO - Error dialog dismissed.
+2024-09-24 13:26:37,878 - INFO - Search button clicked successfully
+2024-09-24 13:26:38,945 - INFO - Page loaded completely
+2024-09-24 13:26:39,031 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:26:39,068 - INFO - Error dialog dismissed.
+2024-09-24 13:26:39,655 - INFO - Search button clicked successfully
+2024-09-24 13:46:49,302 - INFO - ====== WebDriver manager ======
+2024-09-24 13:46:49,302 - INFO - Setting up WebDriver...
+2024-09-24 13:46:49,364 - INFO - Get LATEST chromedriver version for google-chrome
+2024-09-24 13:46:49,543 - INFO - Get LATEST chromedriver version for google-chrome
+2024-09-24 13:46:49,671 - INFO - Driver [/home/abir/.wdm/drivers/chromedriver/linux64/128.0.6613.137/chromedriver-linux64/chromedriver] found in cache
+2024-09-24 13:46:50,109 - INFO - Attempting login... (Attempt 1/3)
+2024-09-24 13:46:50,641 - INFO - Cookies loaded successfully
+2024-09-24 13:46:52,235 - INFO - Logged in successfully using cookies
+2024-09-24 13:46:52,236 - INFO - Navigating to eBidding page... (Attempt 1/3)
+2024-09-24 13:46:53,791 - INFO - Page loaded completely
+2024-09-24 13:46:53,795 - INFO - Opened eBidding URL: https://www.eye2serve.com:9001/sap/bc/ui5_ui5/sap/zvc_vendor_app/index.html#/ebidding
+2024-09-24 13:47:02,579 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-24 13:47:02,646 - INFO - Error dialog dismissed.
+2024-09-24 13:47:03,187 - INFO - Opened eBidding URL: https://www.eye2serve.com:9001/sap/bc/ui5_ui5/sap/zvc_vendor_app/index.html#/ebidding
+2024-09-24 13:47:03,188 - INFO - Handling error dialogs and clicking 'Show Search' button... (Attempt 1/3)
+2024-09-24 13:47:08,306 - INFO - No error dialog detected
+2024-09-24 13:47:08,473 - INFO - 'Show Search' button clicked successfully
+2024-09-24 13:47:08,473 - INFO - Successfully clicked 'Show Search' button.
+2024-09-24 13:47:08,474 - INFO - Selecting Ship From Plant: WEST BENGAL CEMENT WORKS
+2024-09-24 13:47:08,519 - INFO - Clicked dropdown arrow for __xmlview0--ididUtclVCShipFromPlant
+2024-09-24 13:47:08,536 - INFO - Dropdown list visible for __xmlview0--ididUtclVCShipFromPlant
+2024-09-24 13:47:08,551 - INFO - Found 1 options for __xmlview0--ididUtclVCShipFromPlant
+2024-09-24 13:47:09,112 - INFO - Option 'WEST BENGAL CEMENT WORKS' selected successfully for __xmlview0--ididUtclVCShipFromPlant
+2024-09-24 13:47:09,637 - INFO - Dropdown closed after selection for __xmlview0--ididUtclVCShipFromPlant
+2024-09-24 13:47:09,638 - INFO - Handling any error dialogs before depot selection...
+2024-09-24 13:47:14,807 - INFO - No error dialog detected
+2024-09-24 13:47:14,809 - INFO - Selecting Depot: DEOGARH
+2024-09-24 13:47:14,839 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-24 13:47:14,854 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-24 13:47:14,861 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-24 13:47:15,414 - INFO - Option 'DEOGARH' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-24 13:47:15,953 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-24 13:47:15,954 - INFO - Clicking Search...
+2024-09-24 13:47:18,038 - ERROR - Failed to click Search button: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=128.0.6613.137)
+Stacktrace:
+#0 0x58f09f8e42da <unknown>
+#1 0x58f09f5b2200 <unknown>
+#2 0x58f09f587a1f <unknown>
+#3 0x58f09f62eeed <unknown>
+#4 0x58f09f6446a9 <unknown>
+#5 0x58f09f626673 <unknown>
+#6 0x58f09f5f4473 <unknown>
+#7 0x58f09f5f547e <unknown>
+#8 0x58f09f8ab0db <unknown>
+#9 0x58f09f8af071 <unknown>
+#10 0x58f09f8979d5 <unknown>
+#11 0x58f09f8afbf2 <unknown>
+#12 0x58f09f87cb6f <unknown>
+#13 0x58f09f8d3248 <unknown>
+#14 0x58f09f8d3417 <unknown>
+#15 0x58f09f8e30cc <unknown>
+#16 0x7a64bce94ac3 <unknown>
+
+2024-09-24 13:47:18,048 - INFO - Error: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=128.0.6613.137)
+Stacktrace:
+#0 0x58f09f8e42da <unknown>
+#1 0x58f09f5b2200 <unknown>
+#2 0x58f09f587a1f <unknown>
+#3 0x58f09f62eeed <unknown>
+#4 0x58f09f6446a9 <unknown>
+#5 0x58f09f626673 <unknown>
+#6 0x58f09f5f4473 <unknown>
+#7 0x58f09f5f547e <unknown>
+#8 0x58f09f8ab0db <unknown>
+#9 0x58f09f8af071 <unknown>
+#10 0x58f09f8979d5 <unknown>
+#11 0x58f09f8afbf2 <unknown>
+#12 0x58f09f87cb6f <unknown>
+#13 0x58f09f8d3248 <unknown>
+#14 0x58f09f8d3417 <unknown>
+#15 0x58f09f8e30cc <unknown>
+#16 0x7a64bce94ac3 <unknown>
+
+2024-09-24 13:47:18,048 - INFO - Automation stopped. Browser remains open.

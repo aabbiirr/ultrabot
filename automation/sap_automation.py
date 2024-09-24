@@ -292,77 +292,90 @@ class SAPBiddingAutomation:
             logging.error("Table not found or loaded within the timeout period")
             return False
 
-
-    def place_bids(self, destinations=None):
+    def aggressive_bidding(self, max_duration=300, destinations=None):
+        start_time = time.time()
         bids_placed = 0
-        try:
-            table = WebDriverWait(self.driver, 10).until(
-                EC.presence_of_element_located((By.ID, "__xmlview0--idUtclVCVendorAssignmentTable-listUl"))
-            )
-
-            no_data_rows = table.find_elements(By.XPATH, ".//tr[@id='__xmlview0--idUtclVCVendorAssignmentTable-nodata']")
-            if no_data_rows:
-                logging.info("No data found in the table")
-                return bids_placed
-
-            rows = table.find_elements(By.XPATH, ".//tbody/tr")
-            logging.info(f"Found {len(rows)} rows with data in the table")
-
-            # Enable all bid input fields
-            script = """
-            var inputs = document.querySelectorAll('input[id$="-inner"][disabled]');
-            for (var i = 0; i < inputs.length; i++) {
-                inputs[i].removeAttribute('disabled');
-                inputs[i].closest('.sapMInputBaseDisabled').classList.remove('sapMInputBaseDisabled');
-            }
-            """
-            self.driver.execute_script(script)
-            logging.info("Enabled all bid input fields")
-
-            for row in rows:
-                try:
-                    if destinations:
-                        destination_element = row.find_element(By.XPATH, ".//td[6]//span")
-                        destination = destination_element.text.strip()
-                        if destination not in destinations:
-                            logging.info(f"Skipping row for destination: {destination}")
-                            continue
-
-                    freight_element = row.find_element(By.XPATH, ".//td[contains(@headers, '__text23')]//span")
-                    freight = int(freight_element.text.strip())
-                    
-                    bid_amount = freight - 1
-                    
-                    bid_input = row.find_element(By.XPATH, ".//td[contains(@headers, '__text24')]//input")
-                    
-                    if bid_input.is_enabled():
-                        current_value = bid_input.get_attribute('value')
-                        if current_value != str(bid_amount):
-                            bid_input.clear()
-                            bid_input.send_keys(str(bid_amount))
-                            bid_input.send_keys(Keys.ENTER)
-                            logging.info(f"Placed bid of {bid_amount} for freight {freight}")
-                            bids_placed += 1
-                        else:
-                            logging.info(f"Bid already set to {bid_amount} for freight {freight}")
-                    else:
-                        logging.warning(f"Bid input field not enabled for freight {freight}")
-                
-                except StaleElementReferenceException:
-                    logging.warning("Stale element reference encountered, skipping row")
-                    continue
-                except NoSuchElementException as e:
-                    logging.error(f"Element not found in row: {str(e)}")
-                    continue
-                except Exception as e:
-                    logging.error(f"Error processing row: {str(e)}")
-                    continue
-
-            logging.info(f"Completed placing bids. Total bids placed: {bids_placed}")
-        except Exception as e:
-            logging.error(f"Error during bid placement: {str(e)}")
+        bid_details = []
         
-        return bids_placed
+        while time.time() - start_time < max_duration:
+            try:
+                table = WebDriverWait(self.driver, 1).until(
+                    EC.presence_of_element_located((By.ID, "__xmlview0--idUtclVCVendorAssignmentTable-listUl"))
+                )
+                rows = table.find_elements(By.XPATH, ".//tbody/tr")
+                
+                for row in rows:
+                    try:
+                        if destinations:
+                            destination_element = row.find_element(By.XPATH, ".//td[6]//span")
+                            destination = destination_element.text.strip()
+                            if destination not in destinations:
+                                continue
+
+                        freight_element = row.find_element(By.XPATH, ".//td[contains(@headers, '__text23')]//span")
+                        bid_input = row.find_element(By.XPATH, ".//td[contains(@headers, '__text24')]//input[@class='sapMInputBaseInner']")
+                        bid_rank_element = row.find_element(By.XPATH, ".//td[contains(@headers, '__text26')]//span")
+                        
+                        freight = int(freight_element.text.strip())
+                        current_bid_amount = int(bid_input.get_attribute('value') or 0)
+                        new_bid_amount = max(current_bid_amount, freight - 1)
+                        
+                        if not bid_input.get_attribute('disabled'):
+                            bid_input.clear()
+                            bid_input.send_keys(str(new_bid_amount))
+                            bid_input.send_keys(Keys.ENTER)
+                            
+                            time.sleep(0.1)
+                            
+                            bid_rank = bid_rank_element.text.strip()
+                            bid_details.append({
+                                'freight': freight,
+                                'bid_amount': new_bid_amount,
+                                'rank': bid_rank
+                            })
+                            
+                            if bid_rank == "01":
+                                logging.info(f"Achieved rank 1 with bid of {new_bid_amount} for freight {freight}")
+                                bids_placed += 1
+                            elif bid_rank:
+                                while bid_rank != "01" and new_bid_amount > freight - 1:
+                                    new_bid_amount -= 1
+                                    bid_input.clear()
+                                    bid_input.send_keys(str(new_bid_amount))
+                                    bid_input.send_keys(Keys.ENTER)
+                                    time.sleep(0.1)
+                                    bid_rank = bid_rank_element.text.strip()
+                                    bid_details[-1] = {
+                                        'freight': freight,
+                                        'bid_amount': new_bid_amount,
+                                        'rank': bid_rank
+                                    }
+                                if bid_rank == "01":
+                                    logging.info(f"Achieved rank 1 with bid of {new_bid_amount} for freight {freight}")
+                                    bids_placed += 1
+                                else:
+                                    logging.info(f"Could not achieve rank 1. Final bid: {new_bid_amount}, Rank: {bid_rank}")
+                    
+                    except (StaleElementReferenceException, NoSuchElementException):
+                        continue
+                    except Exception as e:
+                        logging.error(f"Error processing row: {str(e)}")
+                
+                time.sleep(0.05)
+                
+            except Exception as e:
+                logging.error(f"Error during aggressive bidding: {str(e)}")
+            
+            self.click_search()
+        
+        logging.info(f"Aggressive bidding completed. Total bids placed: {bids_placed}")
+        return bids_placed, bid_details
+
+    def place_bids(self, destinations=None, max_duration=300):
+        return self.aggressive_bidding(max_duration, destinations)
+
+    def rapid_bidding(self, max_duration=300):
+        return self.aggressive_bidding(max_duration)
     
     def continuous_bidding(self, update_callback):
         while True:
@@ -383,66 +396,14 @@ class SAPBiddingAutomation:
                 
                 if self.check_table_data():
                     logging.info(f"Table data found for {depot_name}. Starting bidding process.")
-                    self.rapid_bidding()
+                    bids_placed = self.rapid_bidding(max_duration=300)  # 5 minutes of rapid bidding
+                    logging.info(f"Placed {bids_placed} bids for {depot_name}.")
                 else:
                     logging.info(f"No table data found for {depot_name}. Retrying in 5 seconds.")
                     time.sleep(5)
             except Exception as e:
                 logging.error(f"Error during continuous search and bid for {depot_name}: {str(e)}")
                 time.sleep(5)
-
-    def rapid_bidding(self):
-        max_attempts = 100  # Adjust this value as needed
-        attempts = 0
-        
-        while attempts < max_attempts:
-            try:
-                table = WebDriverWait(self.driver, 2).until(
-                    EC.presence_of_element_located((By.ID, "__xmlview0--idUtclVCVendorAssignmentTable-listUl"))
-                )
-                rows = table.find_elements(By.XPATH, ".//tbody/tr")
-                
-                all_bids_placed = True
-                for row in rows:
-                    try:
-                        freight_element = row.find_element(By.XPATH, ".//td[contains(@headers, '__text23')]//span")
-                        bid_input = row.find_element(By.XPATH, ".//td[contains(@headers, '__text24')]//input")
-                        
-                        if bid_input.is_enabled():
-                            freight = int(freight_element.text.strip())
-                            bid_amount = freight - 1
-                            
-                            current_value = bid_input.get_attribute('value')
-                            if current_value != str(bid_amount):
-                                bid_input.clear()
-                                bid_input.send_keys(str(bid_amount))
-                                bid_input.send_keys(Keys.ENTER)
-                                logging.info(f"Placed bid of {bid_amount} for freight {freight}")
-                        else:
-                            all_bids_placed = False
-                            break
-                    except (StaleElementReferenceException, NoSuchElementException):
-                        all_bids_placed = False
-                        break
-                    except Exception as e:
-                        logging.error(f"Error processing row: {str(e)}")
-                        all_bids_placed = False
-                        break
-                
-                if all_bids_placed:
-                    logging.info("All bids placed successfully")
-                    return
-                
-            except Exception as e:
-                logging.error(f"Error during rapid bidding: {str(e)}")
-            
-            # If we reach here, not all bids were placed, so we click search and try again
-            self.click_search()
-            attempts += 1
-            time.sleep(0.2)  # Small delay to prevent overwhelming the server
-        
-        logging.warning(f"Max attempts ({max_attempts}) reached without placing all bids")
-
 
     def wait_for_page_load(self, timeout=30):
         try:
