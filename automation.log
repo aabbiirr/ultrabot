@@ -28011,3 +28011,65 @@ Stacktrace:
 2024-09-25 09:31:24,091 - INFO - Clicking Search...
 2024-09-25 09:31:29,283 - INFO - No error dialog detected
 2024-09-25 09:31:29,334 - INFO - Search button clicked successfully
+2024-09-25 09:45:37,931 - INFO - ====== WebDriver manager ======
+2024-09-25 09:45:37,932 - INFO - Setting up WebDriver...
+2024-09-25 09:45:37,988 - INFO - Get LATEST chromedriver version for google-chrome
+2024-09-25 09:45:38,167 - INFO - Get LATEST chromedriver version for google-chrome
+2024-09-25 09:45:38,287 - INFO - Driver [/home/abir/.wdm/drivers/chromedriver/linux64/128.0.6613.137/chromedriver-linux64/chromedriver] found in cache
+2024-09-25 09:45:38,719 - INFO - Attempting login... (Attempt 1/3)
+2024-09-25 09:45:39,225 - INFO - Cookies loaded successfully
+2024-09-25 09:45:40,858 - INFO - Logged in successfully using cookies
+2024-09-25 09:45:40,859 - INFO - Navigating to eBidding page... (Attempt 1/3)
+2024-09-25 09:45:42,327 - INFO - Page loaded completely
+2024-09-25 09:45:42,329 - INFO - Opened eBidding URL: https://www.eye2serve.com:9001/sap/bc/ui5_ui5/sap/zvc_vendor_app/index.html#/ebidding
+2024-09-25 09:45:49,512 - INFO - No error dialog detected
+2024-09-25 09:45:49,516 - INFO - Opened eBidding URL: https://www.eye2serve.com:9001/sap/bc/ui5_ui5/sap/zvc_vendor_app/index.html#/ebidding
+2024-09-25 09:45:49,516 - INFO - Handling error dialogs and clicking 'Show Search' button... (Attempt 1/3)
+2024-09-25 09:45:54,661 - INFO - No error dialog detected
+2024-09-25 09:45:54,747 - INFO - 'Show Search' button clicked successfully
+2024-09-25 09:45:54,748 - INFO - Successfully clicked 'Show Search' button.
+2024-09-25 09:45:54,749 - INFO - Selecting Ship From Plant: WEST BENGAL CEMENT WORKS
+2024-09-25 09:45:54,798 - INFO - Clicked dropdown arrow for __xmlview0--ididUtclVCShipFromPlant
+2024-09-25 09:45:54,816 - INFO - Dropdown list visible for __xmlview0--ididUtclVCShipFromPlant
+2024-09-25 09:45:54,827 - INFO - Found 1 options for __xmlview0--ididUtclVCShipFromPlant
+2024-09-25 09:45:55,394 - INFO - Option 'WEST BENGAL CEMENT WORKS' selected successfully for __xmlview0--ididUtclVCShipFromPlant
+2024-09-25 09:45:55,920 - INFO - Dropdown closed after selection for __xmlview0--ididUtclVCShipFromPlant
+2024-09-25 09:45:55,921 - INFO - Handling any error dialogs before depot selection...
+2024-09-25 09:46:01,042 - INFO - No error dialog detected
+2024-09-25 09:46:01,043 - INFO - Selecting Depot: DEOGARH
+2024-09-25 09:46:01,080 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-25 09:46:01,091 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-25 09:46:01,096 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-25 09:46:01,634 - INFO - Option 'DEOGARH' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-25 09:46:02,165 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-25 09:46:02,166 - INFO - Clicking Search...
+2024-09-25 09:46:07,360 - INFO - No error dialog detected
+2024-09-25 09:46:07,417 - INFO - Search button clicked successfully
+2024-09-25 09:46:08,473 - INFO - Page loaded completely
+2024-09-25 09:46:08,506 - INFO - Table data check: No data found
+2024-09-25 09:46:08,507 - INFO - No data found for DEOGARH.
+2024-09-25 09:46:08,507 - INFO - Moving to next depot. Next index: 1
+2024-09-25 09:46:10,510 - INFO - Handling any error dialogs before depot selection...
+2024-09-25 09:46:14,170 - INFO - Error: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=128.0.6613.137)
+Stacktrace:
+#0 0x57e7203992da <unknown>
+#1 0x57e720067200 <unknown>
+#2 0x57e72003ca1f <unknown>
+#3 0x57e7200e3eed <unknown>
+#4 0x57e7200f96a9 <unknown>
+#5 0x57e7200db673 <unknown>
+#6 0x57e7200a9473 <unknown>
+#7 0x57e7200aa47e <unknown>
+#8 0x57e7203600db <unknown>
+#9 0x57e720364071 <unknown>
+#10 0x57e72034c9d5 <unknown>
+#11 0x57e720364bf2 <unknown>
+#12 0x57e720331b6f <unknown>
+#13 0x57e720388248 <unknown>
+#14 0x57e720388417 <unknown>
+#15 0x57e7203980cc <unknown>
+#16 0x7f7648094ac3 <unknown>
+
+2024-09-25 09:46:14,170 - INFO - Automation stopped. Browser remains open.

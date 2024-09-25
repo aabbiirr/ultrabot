@@ -11,7 +11,7 @@ from PyQt5.QtWidgets import QMessageBox, QInputDialog
 class AutomationThread(QThread):
     update_signal = pyqtSignal(str)
 
-    def __init__(self, username, password, ship_from_plant, selected_depot=None, destinations=None, bidding_strategy="Aggressive1"):
+    def __init__(self, username, password, ship_from_plant, selected_depot=None, destinations=None, bidding_strategy="Aggressive1kml,"):
         super().__init__()
         self.username = username
         self.password = password
@@ -127,7 +127,7 @@ class AutomationThread(QThread):
                         bids_placed, bid_details = automation.aggressive_bidding(max_duration=300, destinations=self.destinations)
                     elif self.bidding_strategy == "Aggressive2":
                         bids_placed, bid_details = automation.aggressive_bidding2(max_duration=300, destinations=self.destinations)
-                    else:  # Rapid
+                    else:  # No rank
                         bids_placed, bid_details = automation.aggressive_bidding3(max_duration=300, destinations=self.destinations)
                     
                     self.update_signal.emit(f"Bidding session completed for {current_depot}.")
@@ -138,7 +138,7 @@ class AutomationThread(QThread):
                         else:
                             self.update_signal.emit(f"Freight: {detail['freight']}, Bid: {detail['bid_amount']}")
                     
-                    if self.bidding_strategy == "Aggressive (with rank)":
+                    if self.bidding_strategy == "Aggressive1" or self.bidding_strategy == "Aggressive2":
                         rank_1_bids = sum(1 for detail in bid_details if detail['rank'] == '01')
                         self.update_signal.emit(f"Bids with Rank 1: {rank_1_bids}")
                 else:
