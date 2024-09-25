@@ -371,6 +371,181 @@ class SAPBiddingAutomation:
         logging.info(f"Aggressive bidding completed. Total bids placed: {bids_placed}")
         return bids_placed, bid_details
 
+    def aggressive_bidding2(self, max_duration=300, destinations=None):
+        start_time = time.time()
+        bids_placed = 0
+        bid_details = []
+        
+        while time.time() - start_time < max_duration:
+            try:
+                table = WebDriverWait(self.driver, 1).until(
+                    EC.presence_of_element_located((By.ID, "__xmlview0--idUtclVCVendorAssignmentTable-listUl"))
+                )
+                rows = table.find_elements(By.XPATH, ".//tbody/tr")
+                
+                for row in rows:
+                    try:
+                        if destinations:
+                            destination_element = row.find_element(By.XPATH, ".//td[6]//span")
+                            destination = destination_element.text.strip()
+                            if destination not in destinations:
+                                continue
+
+                        freight_element = row.find_element(By.XPATH, ".//td[contains(@headers, '__text23')]//span")
+                        bid_input = row.find_element(By.XPATH, ".//td[contains(@headers, '__text24')]//input[@class='sapMInputBaseInner']")
+                        bid_rank_element = row.find_element(By.XPATH, ".//td[contains(@headers, '__text26')]//span")
+                        
+                        freight = int(freight_element.text.strip())
+                        current_bid_amount = int(bid_input.get_attribute('value') or 0)
+                        new_bid_amount = max(current_bid_amount, freight - 1)
+                        
+                        if not bid_input.get_attribute('disabled'):
+                            bid_input.clear()
+                            bid_input.send_keys(str(new_bid_amount))
+                            
+                            # Use JavaScript to trigger Enter key event
+                            self.driver.execute_script("""
+                                var event = new KeyboardEvent('keydown', {
+                                    'key': 'Enter',
+                                    'code': 'Enter',
+                                    'which': 13,
+                                    'keyCode': 13,
+                                    'bubbles': true
+                                });
+                                arguments[0].dispatchEvent(event);
+                            """, bid_input)
+                            
+                            time.sleep(0.1)
+                            
+                            bid_rank = bid_rank_element.text.strip()
+                            bid_details.append({
+                                'freight': freight,
+                                'bid_amount': new_bid_amount,
+                                'rank': bid_rank
+                            })
+                            
+                            if bid_rank == "01":
+                                logging.info(f"Achieved rank 1 with bid of {new_bid_amount} for freight {freight}")
+                                bids_placed += 1
+                            elif bid_rank:
+                                while bid_rank != "01" and new_bid_amount > freight - 1:
+                                    new_bid_amount -= 1
+                                    bid_input.clear()
+                                    bid_input.send_keys(str(new_bid_amount))
+                                    
+                                    # Use JavaScript to trigger Enter key event again
+                                    self.driver.execute_script("""
+                                        var event = new KeyboardEvent('keydown', {
+                                            'key': 'Enter',
+                                            'code': 'Enter',
+                                            'which': 13,
+                                            'keyCode': 13,
+                                            'bubbles': true
+                                        });
+                                        arguments[0].dispatchEvent(event);
+                                    """, bid_input)
+                                    
+                                    time.sleep(0.1)
+                                    bid_rank = bid_rank_element.text.strip()
+                                    bid_details[-1] = {
+                                        'freight': freight,
+                                        'bid_amount': new_bid_amount,
+                                        'rank': bid_rank
+                                    }
+                                if bid_rank == "01":
+                                    logging.info(f"Achieved rank 1 with bid of {new_bid_amount} for freight {freight}")
+                                    bids_placed += 1
+                                else:
+                                    logging.info(f"Could not achieve rank 1. Final bid: {new_bid_amount}, Rank: {bid_rank}")
+                    
+                    except (StaleElementReferenceException, NoSuchElementException):
+                        continue
+                    except Exception as e:
+                        logging.error(f"Error processing row: {str(e)}")
+                
+                time.sleep(0.05)
+                
+            except Exception as e:
+                logging.error(f"Error during aggressive bidding: {str(e)}")
+            
+            self.click_search()
+        
+        logging.info(f"Aggressive bidding completed. Total bids placed: {bids_placed}")
+        return bids_placed, bid_details
+
+    def aggressive_bidding3(self, max_duration=300, destinations=None):
+        start_time = time.time()
+        bids_placed = 0
+        bid_details = []
+        
+        while time.time() - start_time < max_duration:
+            try:
+                table = WebDriverWait(self.driver, 1).until(
+                    EC.presence_of_element_located((By.ID, "__xmlview0--idUtclVCVendorAssignmentTable-listUl"))
+                )
+                rows = table.find_elements(By.XPATH, ".//tbody/tr")
+                
+                for row in rows:
+                    try:
+                        if destinations:
+                            destination_element = row.find_element(By.XPATH, ".//td[6]//span")
+                            destination = destination_element.text.strip()
+                            if destination not in destinations:
+                                continue
+
+                        freight_element = row.find_element(By.XPATH, ".//td[contains(@headers, '__text23')]//span")
+                        bid_input = row.find_element(By.XPATH, ".//td[contains(@headers, '__text24')]//input[@class='sapMInputBaseInner']")
+                        
+                        freight = int(freight_element.text.strip())
+                        new_bid_amount = freight - 1
+                        
+                        if not bid_input.get_attribute('disabled'):
+                            current_value = bid_input.get_attribute('value')
+                            if current_value != str(new_bid_amount):
+                                bid_input.clear()
+                                bid_input.send_keys(str(new_bid_amount))
+                                
+                                # Use JavaScript to trigger Enter key event
+                                self.driver.execute_script("""
+                                    var event = new KeyboardEvent('keydown', {
+                                        'key': 'Enter',
+                                        'code': 'Enter',
+                                        'which': 13,
+                                        'keyCode': 13,
+                                        'bubbles': true
+                                    });
+                                    arguments[0].dispatchEvent(event);
+                                """, bid_input)
+                                
+                                time.sleep(0.1)
+                                
+                                bid_details.append({
+                                    'freight': freight,
+                                    'bid_amount': new_bid_amount
+                                })
+                                
+                                logging.info(f"Placed bid of {new_bid_amount} for freight {freight}")
+                                bids_placed += 1
+                            else:
+                                logging.info(f"Bid already set to {new_bid_amount} for freight {freight}")
+                        else:
+                            logging.info(f"Bid input field not enabled for freight {freight}")
+                    
+                    except (StaleElementReferenceException, NoSuchElementException):
+                        continue
+                    except Exception as e:
+                        logging.error(f"Error processing row: {str(e)}")
+                
+                time.sleep(0.05)
+                
+            except Exception as e:
+                logging.error(f"Error during aggressive bidding: {str(e)}")
+            
+            self.click_search()
+        
+        logging.info(f"Aggressive bidding completed. Total bids placed: {bids_placed}")
+        return bids_placed, bid_details
+    
     def place_bids(self, destinations=None, max_duration=300):
         return self.aggressive_bidding(max_duration, destinations)
 

@@ -6,7 +6,7 @@ import datetime
 class LicenseManager:
     def __init__(self):
         self.license_file = 'license.json'
-        self.trial_days = 3
+        self.trial_days = 5
         self.github_raw_url = "https://raw.githubusercontent.com/aabbiirr/c/refs/heads/main/valid_keys.json"
 
     def check_license(self):

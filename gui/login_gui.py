@@ -11,13 +11,14 @@ from PyQt5.QtWidgets import QMessageBox, QInputDialog
 class AutomationThread(QThread):
     update_signal = pyqtSignal(str)
 
-    def __init__(self, username, password, ship_from_plant, selected_depot=None, destinations=None):
+    def __init__(self, username, password, ship_from_plant, selected_depot=None, destinations=None, bidding_strategy="Aggressive1"):
         super().__init__()
         self.username = username
         self.password = password
         self.ship_from_plant = ship_from_plant
         self.selected_depot = selected_depot
         self.destinations = destinations
+        self.bidding_strategy = bidding_strategy
         self.stop_flag = False
 
     def run(self):
@@ -108,15 +109,38 @@ class AutomationThread(QThread):
                 self.update_signal.emit("Clicking Search...")
                 automation.click_search()
                 
+                # if automation.check_table_data():
+                #     self.update_signal.emit(f"Data found for {current_depot}. Starting aggressive bidding process...")
+                #     bids_placed, bid_details = automation.aggressive_bidding(max_duration=300, destinations=self.destinations)
+                #     self.update_signal.emit(f"Bidding session completed for {current_depot}.")
+                #     self.update_signal.emit(f"Total bids placed: {bids_placed}")
+                #     for detail in bid_details:
+                #         self.update_signal.emit(f"Freight: {detail['freight']}, Bid: {detail['bid_amount']}, Rank: {detail['rank']}")
+                #     rank_1_bids = sum(1 for detail in bid_details if detail['rank'] == '01')
+                #     self.update_signal.emit(f"Bids with Rank 1: {rank_1_bids}")
+                # else:
+                #     self.update_signal.emit(f"No data found for {current_depot}.")
+
                 if automation.check_table_data():
-                    self.update_signal.emit(f"Data found for {current_depot}. Starting aggressive bidding process...")
-                    bids_placed, bid_details = automation.aggressive_bidding(max_duration=300, destinations=self.destinations)
+                    self.update_signal.emit(f"Data found for {current_depot}. Starting {self.bidding_strategy} bidding process...")
+                    if self.bidding_strategy == "Aggressive1":
+                        bids_placed, bid_details = automation.aggressive_bidding(max_duration=300, destinations=self.destinations)
+                    elif self.bidding_strategy == "Aggressive2":
+                        bids_placed, bid_details = automation.aggressive_bidding2(max_duration=300, destinations=self.destinations)
+                    else:  # Rapid
+                        bids_placed, bid_details = automation.aggressive_bidding3(max_duration=300, destinations=self.destinations)
+                    
                     self.update_signal.emit(f"Bidding session completed for {current_depot}.")
                     self.update_signal.emit(f"Total bids placed: {bids_placed}")
                     for detail in bid_details:
-                        self.update_signal.emit(f"Freight: {detail['freight']}, Bid: {detail['bid_amount']}, Rank: {detail['rank']}")
-                    rank_1_bids = sum(1 for detail in bid_details if detail['rank'] == '01')
-                    self.update_signal.emit(f"Bids with Rank 1: {rank_1_bids}")
+                        if 'rank' in detail:
+                            self.update_signal.emit(f"Freight: {detail['freight']}, Bid: {detail['bid_amount']}, Rank: {detail['rank']}")
+                        else:
+                            self.update_signal.emit(f"Freight: {detail['freight']}, Bid: {detail['bid_amount']}")
+                    
+                    if self.bidding_strategy == "Aggressive (with rank)":
+                        rank_1_bids = sum(1 for detail in bid_details if detail['rank'] == '01')
+                        self.update_signal.emit(f"Bids with Rank 1: {rank_1_bids}")
                 else:
                     self.update_signal.emit(f"No data found for {current_depot}.")
                 
@@ -232,6 +256,12 @@ class SAPLoginGUI(QWidget):
         destination_layout.addWidget(self.destination_input)
         main_layout.addLayout(destination_layout)
 
+        strategy_layout = QHBoxLayout()
+        strategy_layout.addWidget(QLabel("Bidding Strategy:"))
+        self.strategy_combo = QComboBox()
+        self.strategy_combo.addItems(["Aggressive1", "Aggressive2", "Aggressive3"])
+        strategy_layout.addWidget(self.strategy_combo)
+        main_layout.addLayout(strategy_layout)
 
         # Start button
         self.start_button = QPushButton("Start Automation")
@@ -259,11 +289,12 @@ class SAPLoginGUI(QWidget):
         ship_from_plant = self.ship_from_plant_combo.currentText()
         selected_depot = self.depot_combo.currentText()
         destinations = [dest.strip() for dest in self.destination_input.text().split(',') if dest.strip()]
+        bidding_strategy = self.strategy_combo.currentText()
         
         if selected_depot == "All Depots (Rotational)":
             selected_depot = None
 
-        self.thread = AutomationThread(username, password, ship_from_plant, selected_depot, destinations)
+        self.thread = AutomationThread(username, password, ship_from_plant, selected_depot, destinations, bidding_strategy)
         self.thread.update_signal.connect(self.update_log)
         self.thread.start()
         

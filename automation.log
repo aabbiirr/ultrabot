@@ -26279,3 +26279,1735 @@ Stacktrace:
 #16 0x7a64bce94ac3 <unknown>
 
 2024-09-24 13:47:18,048 - INFO - Automation stopped. Browser remains open.
+2024-09-25 08:54:24,286 - INFO - ====== WebDriver manager ======
+2024-09-25 08:54:24,287 - INFO - Setting up WebDriver...
+2024-09-25 08:54:24,348 - INFO - Get LATEST chromedriver version for google-chrome
+2024-09-25 08:54:24,529 - INFO - Get LATEST chromedriver version for google-chrome
+2024-09-25 08:54:24,657 - INFO - Get LATEST chromedriver version for google-chrome
+2024-09-25 08:54:24,949 - INFO - WebDriver version 128.0.6613.137 selected
+2024-09-25 08:54:24,950 - INFO - Modern chrome version https://storage.googleapis.com/chrome-for-testing-public/128.0.6613.137/linux64/chromedriver-linux64.zip
+2024-09-25 08:54:24,950 - INFO - About to download new driver from https://storage.googleapis.com/chrome-for-testing-public/128.0.6613.137/linux64/chromedriver-linux64.zip
+2024-09-25 08:54:25,238 - INFO - Driver downloading response is 200
+2024-09-25 08:54:26,183 - INFO - Get LATEST chromedriver version for google-chrome
+2024-09-25 08:54:26,442 - INFO - Driver has been saved in cache [/home/abir/.wdm/drivers/chromedriver/linux64/128.0.6613.137]
+2024-09-25 08:54:26,856 - INFO - Attempting login... (Attempt 1/3)
+2024-09-25 08:54:29,471 - INFO - Logged in successfully using credentials
+2024-09-25 08:54:29,477 - INFO - Cookies saved
+2024-09-25 08:54:29,477 - INFO - Navigating to eBidding page... (Attempt 1/3)
+2024-09-25 08:54:30,777 - INFO - Page loaded completely
+2024-09-25 08:54:30,781 - INFO - Opened eBidding URL: https://www.eye2serve.com:9001/sap/bc/ui5_ui5/sap/zvc_vendor_app/index.html#/ebidding
+2024-09-25 08:54:37,986 - INFO - No error dialog detected
+2024-09-25 08:54:37,987 - INFO - Opened eBidding URL: https://www.eye2serve.com:9001/sap/bc/ui5_ui5/sap/zvc_vendor_app/index.html#/ebidding
+2024-09-25 08:54:37,988 - INFO - Handling error dialogs and clicking 'Show Search' button... (Attempt 1/3)
+2024-09-25 08:54:43,180 - INFO - No error dialog detected
+2024-09-25 08:54:43,261 - INFO - 'Show Search' button clicked successfully
+2024-09-25 08:54:43,262 - INFO - Successfully clicked 'Show Search' button.
+2024-09-25 08:54:43,262 - INFO - Selecting Ship From Plant: WEST BENGAL CEMENT WORKS
+2024-09-25 08:54:43,304 - INFO - Clicked dropdown arrow for __xmlview0--ididUtclVCShipFromPlant
+2024-09-25 08:54:43,320 - INFO - Dropdown list visible for __xmlview0--ididUtclVCShipFromPlant
+2024-09-25 08:54:43,334 - INFO - Found 1 options for __xmlview0--ididUtclVCShipFromPlant
+2024-09-25 08:54:43,911 - INFO - Option 'WEST BENGAL CEMENT WORKS' selected successfully for __xmlview0--ididUtclVCShipFromPlant
+2024-09-25 08:54:44,439 - INFO - Dropdown closed after selection for __xmlview0--ididUtclVCShipFromPlant
+2024-09-25 08:54:44,441 - INFO - Handling any error dialogs before depot selection...
+2024-09-25 08:54:49,519 - INFO - No error dialog detected
+2024-09-25 08:54:49,520 - INFO - Selecting Depot: DEOGARH
+2024-09-25 08:54:49,546 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-25 08:54:49,563 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-25 08:54:49,571 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-25 08:54:50,122 - INFO - Option 'DEOGARH' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-25 08:54:50,650 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-25 08:54:50,651 - INFO - Clicking Search...
+2024-09-25 08:54:55,836 - INFO - No error dialog detected
+2024-09-25 08:54:55,893 - INFO - Search button clicked successfully
+2024-09-25 08:54:56,434 - INFO - Page loaded completely
+2024-09-25 08:54:56,448 - INFO - Table data check: No data found
+2024-09-25 08:54:56,448 - INFO - No data found for DEOGARH.
+2024-09-25 08:54:56,448 - INFO - Moving to next depot. Next index: 1
+2024-09-25 08:54:58,451 - INFO - Handling any error dialogs before depot selection...
+2024-09-25 08:55:03,670 - INFO - No error dialog detected
+2024-09-25 08:55:03,671 - INFO - Selecting Depot: DHANBAD
+2024-09-25 08:55:03,710 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-25 08:55:03,722 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-25 08:55:03,728 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-25 08:55:04,280 - INFO - Option 'DHANBAD' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-25 08:55:04,814 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-25 08:55:04,815 - INFO - Clicking Search...
+2024-09-25 08:55:10,010 - INFO - No error dialog detected
+2024-09-25 08:55:10,055 - INFO - Search button clicked successfully
+2024-09-25 08:55:10,596 - INFO - Page loaded completely
+2024-09-25 08:55:10,603 - INFO - Table data check: No data found
+2024-09-25 08:55:10,603 - INFO - No data found for DHANBAD.
+2024-09-25 08:55:10,604 - INFO - Moving to next depot. Next index: 2
+2024-09-25 08:55:12,607 - INFO - Handling any error dialogs before depot selection...
+2024-09-25 08:55:17,807 - INFO - No error dialog detected
+2024-09-25 08:55:17,808 - INFO - Selecting Depot: BANKURA
+2024-09-25 08:55:17,838 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-25 08:55:17,849 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-25 08:55:17,858 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-25 08:55:18,419 - INFO - Option 'BANKURA' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-25 08:55:18,953 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-25 08:55:18,953 - INFO - Clicking Search...
+2024-09-25 08:55:24,156 - INFO - No error dialog detected
+2024-09-25 08:55:24,204 - INFO - Search button clicked successfully
+2024-09-25 08:55:33,623 - INFO - Page loaded completely
+2024-09-25 08:55:33,637 - INFO - Table data check: No data found
+2024-09-25 08:55:33,637 - INFO - No data found for BANKURA.
+2024-09-25 08:55:33,638 - INFO - Moving to next depot. Next index: 3
+2024-09-25 08:55:35,640 - INFO - Handling any error dialogs before depot selection...
+2024-09-25 08:55:40,847 - INFO - No error dialog detected
+2024-09-25 08:55:40,849 - INFO - Selecting Depot: BERHAMPORE
+2024-09-25 08:55:40,881 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-25 08:55:40,894 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-25 08:55:40,902 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-25 08:55:41,469 - INFO - Option 'BERHAMPORE' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-25 08:55:42,000 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-25 08:55:42,001 - INFO - Clicking Search...
+2024-09-25 08:55:47,211 - INFO - No error dialog detected
+2024-09-25 08:55:47,258 - INFO - Search button clicked successfully
+2024-09-25 08:55:48,323 - INFO - Page loaded completely
+2024-09-25 08:55:48,334 - INFO - Table data check: No data found
+2024-09-25 08:55:48,335 - INFO - No data found for BERHAMPORE.
+2024-09-25 08:55:48,335 - INFO - Moving to next depot. Next index: 4
+2024-09-25 08:55:50,338 - INFO - Handling any error dialogs before depot selection...
+2024-09-25 08:55:55,552 - INFO - No error dialog detected
+2024-09-25 08:55:55,554 - INFO - Selecting Depot: BURDWAN
+2024-09-25 08:55:55,584 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-25 08:55:55,597 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-25 08:55:55,603 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-25 08:55:56,190 - INFO - Option 'BURDWAN' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-25 08:55:56,723 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-25 08:55:56,723 - INFO - Clicking Search...
+2024-09-25 08:56:01,910 - INFO - No error dialog detected
+2024-09-25 08:56:01,950 - INFO - Search button clicked successfully
+2024-09-25 08:56:02,493 - INFO - Page loaded completely
+2024-09-25 08:56:02,502 - INFO - Table data check: No data found
+2024-09-25 08:56:02,503 - INFO - No data found for BURDWAN.
+2024-09-25 08:56:02,503 - INFO - Moving to next depot. Next index: 5
+2024-09-25 08:56:04,505 - INFO - Handling any error dialogs before depot selection...
+2024-09-25 08:56:09,726 - INFO - No error dialog detected
+2024-09-25 08:56:09,728 - INFO - Selecting Depot: COSSIPORE
+2024-09-25 08:56:09,759 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-25 08:56:09,772 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-25 08:56:09,779 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-25 08:56:10,355 - INFO - Option 'COSSIPORE' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-25 08:56:10,889 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-25 08:56:10,889 - INFO - Clicking Search...
+2024-09-25 08:56:16,090 - INFO - No error dialog detected
+2024-09-25 08:56:16,135 - INFO - Search button clicked successfully
+2024-09-25 08:56:19,297 - INFO - Page loaded completely
+2024-09-25 08:56:19,308 - INFO - Table data check: No data found
+2024-09-25 08:56:19,308 - INFO - No data found for COSSIPORE.
+2024-09-25 08:56:19,308 - INFO - Moving to next depot. Next index: 6
+2024-09-25 08:56:21,311 - INFO - Handling any error dialogs before depot selection...
+2024-09-25 08:56:26,512 - INFO - No error dialog detected
+2024-09-25 08:56:26,544 - INFO - Selecting Depot: DANKUNI
+2024-09-25 08:56:26,587 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-25 08:56:26,606 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-25 08:56:26,613 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-25 08:56:27,189 - INFO - Option 'DANKUNI' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-25 08:56:27,724 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-25 08:56:27,724 - INFO - Clicking Search...
+2024-09-25 08:56:32,914 - INFO - No error dialog detected
+2024-09-25 08:56:32,958 - INFO - Search button clicked successfully
+2024-09-25 08:56:33,495 - INFO - Page loaded completely
+2024-09-25 08:56:33,502 - INFO - Table data check: No data found
+2024-09-25 08:56:33,502 - INFO - No data found for DANKUNI.
+2024-09-25 08:56:33,502 - INFO - Moving to next depot. Next index: 7
+2024-09-25 08:56:35,506 - INFO - Handling any error dialogs before depot selection...
+2024-09-25 08:56:40,724 - INFO - No error dialog detected
+2024-09-25 08:56:40,726 - INFO - Selecting Depot: KALIGHAT
+2024-09-25 08:56:40,766 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-25 08:56:40,779 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-25 08:56:40,786 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-25 08:56:41,370 - INFO - Option 'KALIGHAT' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-25 08:56:41,907 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-25 08:56:41,909 - INFO - Clicking Search...
+2024-09-25 08:56:47,108 - INFO - No error dialog detected
+2024-09-25 08:56:47,159 - INFO - Search button clicked successfully
+2024-09-25 08:56:47,700 - INFO - Page loaded completely
+2024-09-25 08:56:47,707 - INFO - Table data check: No data found
+2024-09-25 08:56:47,708 - INFO - No data found for KALIGHAT.
+2024-09-25 08:56:47,708 - INFO - Moving to next depot. Next index: 8
+2024-09-25 08:56:49,711 - INFO - Handling any error dialogs before depot selection...
+2024-09-25 08:56:54,928 - INFO - No error dialog detected
+2024-09-25 08:56:54,930 - INFO - Selecting Depot: KHARAGPUR
+2024-09-25 08:56:55,003 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-25 08:56:55,023 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-25 08:56:55,029 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-25 08:56:55,615 - INFO - Option 'KHARAGPUR' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-25 08:56:56,147 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-25 08:56:56,147 - INFO - Clicking Search...
+2024-09-25 08:57:01,347 - INFO - No error dialog detected
+2024-09-25 08:57:01,397 - INFO - Search button clicked successfully
+2024-09-25 08:57:01,940 - INFO - Page loaded completely
+2024-09-25 08:57:01,948 - INFO - Table data check: No data found
+2024-09-25 08:57:01,949 - INFO - No data found for KHARAGPUR.
+2024-09-25 08:57:01,949 - INFO - Moving to next depot. Next index: 9
+2024-09-25 08:57:03,952 - INFO - Handling any error dialogs before depot selection...
+2024-09-25 08:57:09,166 - INFO - No error dialog detected
+2024-09-25 08:57:09,167 - INFO - Selecting Depot: KRISHNANAGAR
+2024-09-25 08:57:09,196 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-25 08:57:09,209 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-25 08:57:09,215 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-25 08:57:09,808 - INFO - Option 'KRISHNANAGAR' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-25 08:57:10,345 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-25 08:57:10,346 - INFO - Clicking Search...
+2024-09-25 08:57:15,544 - INFO - No error dialog detected
+2024-09-25 08:57:15,590 - INFO - Search button clicked successfully
+2024-09-25 08:57:16,128 - INFO - Page loaded completely
+2024-09-25 08:57:16,135 - INFO - Table data check: No data found
+2024-09-25 08:57:16,136 - INFO - No data found for KRISHNANAGAR.
+2024-09-25 08:57:16,136 - INFO - Moving to next depot. Next index: 10
+2024-09-25 08:57:18,139 - INFO - Handling any error dialogs before depot selection...
+2024-09-25 08:57:23,355 - INFO - No error dialog detected
+2024-09-25 08:57:23,357 - INFO - Selecting Depot: SAINTHIA
+2024-09-25 08:57:23,396 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-25 08:57:23,416 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-25 08:57:23,424 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-25 08:57:24,017 - INFO - Option 'SAINTHIA' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-25 08:57:24,552 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-25 08:57:24,559 - INFO - Clicking Search...
+2024-09-25 08:57:29,773 - INFO - No error dialog detected
+2024-09-25 08:57:29,821 - INFO - Search button clicked successfully
+2024-09-25 08:57:30,359 - INFO - Page loaded completely
+2024-09-25 08:57:30,367 - INFO - Table data check: No data found
+2024-09-25 08:57:30,367 - INFO - No data found for SAINTHIA.
+2024-09-25 08:57:30,367 - INFO - Moving to next depot. Next index: 11
+2024-09-25 08:57:32,370 - INFO - Handling any error dialogs before depot selection...
+2024-09-25 08:57:37,580 - INFO - No error dialog detected
+2024-09-25 08:57:37,582 - INFO - Selecting Depot: SHALIMAR
+2024-09-25 08:57:37,612 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-25 08:57:37,625 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-25 08:57:37,630 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-25 08:57:38,232 - INFO - Option 'SHALIMAR' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-25 08:57:38,763 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-25 08:57:38,764 - INFO - Clicking Search...
+2024-09-25 08:57:43,964 - INFO - No error dialog detected
+2024-09-25 08:57:44,011 - INFO - Search button clicked successfully
+2024-09-25 08:57:45,077 - INFO - Page loaded completely
+2024-09-25 08:57:45,086 - INFO - Table data check: No data found
+2024-09-25 08:57:45,086 - INFO - No data found for SHALIMAR.
+2024-09-25 08:57:45,086 - INFO - Moving to next depot. Next index: 12
+2024-09-25 08:57:47,089 - INFO - Handling any error dialogs before depot selection...
+2024-09-25 08:57:52,298 - INFO - No error dialog detected
+2024-09-25 08:57:52,299 - INFO - Selecting Depot: DIAMOND HARBOUR
+2024-09-25 08:57:52,330 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-25 08:57:52,345 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-25 08:57:52,350 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-25 08:57:52,960 - INFO - Option 'DIAMOND HARBOUR' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-25 08:57:53,493 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-25 08:57:53,494 - INFO - Clicking Search...
+2024-09-25 08:57:58,691 - INFO - No error dialog detected
+2024-09-25 08:57:58,739 - INFO - Search button clicked successfully
+2024-09-25 08:57:59,279 - INFO - Page loaded completely
+2024-09-25 08:57:59,286 - INFO - Table data check: No data found
+2024-09-25 08:57:59,287 - INFO - No data found for DIAMOND HARBOUR.
+2024-09-25 08:57:59,287 - INFO - Moving to next depot. Next index: 13
+2024-09-25 08:58:01,290 - INFO - Handling any error dialogs before depot selection...
+2024-09-25 08:58:06,496 - INFO - No error dialog detected
+2024-09-25 08:58:06,497 - INFO - Selecting Depot: BARASAT
+2024-09-25 08:58:06,528 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-25 08:58:06,541 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-25 08:58:06,548 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-25 08:58:07,188 - INFO - Option 'BARASAT' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-25 08:58:07,728 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-25 08:58:07,728 - INFO - Clicking Search...
+2024-09-25 08:58:12,929 - INFO - No error dialog detected
+2024-09-25 08:58:12,976 - INFO - Search button clicked successfully
+2024-09-25 08:58:13,529 - INFO - Page loaded completely
+2024-09-25 08:58:13,537 - INFO - Table data check: No data found
+2024-09-25 08:58:13,537 - INFO - No data found for BARASAT.
+2024-09-25 08:58:13,537 - INFO - Moving to next depot. Next index: 0
+2024-09-25 08:58:15,540 - INFO - Handling any error dialogs before depot selection...
+2024-09-25 08:58:20,740 - INFO - No error dialog detected
+2024-09-25 08:58:20,742 - INFO - Selecting Depot: DEOGARH
+2024-09-25 08:58:20,773 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-25 08:58:20,787 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-25 08:58:20,793 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-25 08:58:21,340 - INFO - Option 'DEOGARH' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-25 08:58:21,870 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-25 08:58:21,871 - INFO - Clicking Search...
+2024-09-25 08:58:27,063 - INFO - No error dialog detected
+2024-09-25 08:58:27,108 - INFO - Search button clicked successfully
+2024-09-25 08:58:27,651 - INFO - Page loaded completely
+2024-09-25 08:58:27,660 - INFO - Table data check: No data found
+2024-09-25 08:58:27,660 - INFO - No data found for DEOGARH.
+2024-09-25 08:58:27,660 - INFO - Moving to next depot. Next index: 1
+2024-09-25 08:58:29,663 - INFO - Handling any error dialogs before depot selection...
+2024-09-25 08:58:34,878 - INFO - No error dialog detected
+2024-09-25 08:58:34,880 - INFO - Selecting Depot: DHANBAD
+2024-09-25 08:58:34,909 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-25 08:58:34,921 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-25 08:58:34,926 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-25 08:58:35,478 - INFO - Option 'DHANBAD' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-25 08:58:36,012 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-25 08:58:36,013 - INFO - Clicking Search...
+2024-09-25 08:58:41,214 - INFO - No error dialog detected
+2024-09-25 08:58:41,266 - INFO - Search button clicked successfully
+2024-09-25 08:58:41,811 - INFO - Page loaded completely
+2024-09-25 08:58:41,821 - INFO - Table data check: No data found
+2024-09-25 08:58:41,821 - INFO - No data found for DHANBAD.
+2024-09-25 08:58:41,821 - INFO - Moving to next depot. Next index: 2
+2024-09-25 08:58:43,824 - INFO - Handling any error dialogs before depot selection...
+2024-09-25 08:58:49,045 - INFO - No error dialog detected
+2024-09-25 08:58:49,047 - INFO - Selecting Depot: BANKURA
+2024-09-25 08:58:49,076 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-25 08:58:49,091 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-25 08:58:49,096 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-25 08:58:49,653 - INFO - Option 'BANKURA' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-25 08:58:50,183 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-25 08:58:50,184 - INFO - Clicking Search...
+2024-09-25 08:58:55,377 - INFO - No error dialog detected
+2024-09-25 08:58:55,421 - INFO - Search button clicked successfully
+2024-09-25 08:58:55,968 - INFO - Page loaded completely
+2024-09-25 08:58:55,985 - INFO - Table data check: No data found
+2024-09-25 08:58:55,985 - INFO - No data found for BANKURA.
+2024-09-25 08:58:55,986 - INFO - Moving to next depot. Next index: 3
+2024-09-25 08:58:57,989 - INFO - Handling any error dialogs before depot selection...
+2024-09-25 08:59:03,210 - INFO - No error dialog detected
+2024-09-25 08:59:03,212 - INFO - Selecting Depot: BERHAMPORE
+2024-09-25 08:59:03,241 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-25 08:59:03,256 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-25 08:59:03,262 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-25 08:59:03,825 - INFO - Option 'BERHAMPORE' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-25 08:59:04,355 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-25 08:59:04,356 - INFO - Clicking Search...
+2024-09-25 08:59:09,553 - INFO - No error dialog detected
+2024-09-25 08:59:09,598 - INFO - Search button clicked successfully
+2024-09-25 08:59:10,137 - INFO - Page loaded completely
+2024-09-25 08:59:10,145 - INFO - Table data check: No data found
+2024-09-25 08:59:10,145 - INFO - No data found for BERHAMPORE.
+2024-09-25 08:59:10,145 - INFO - Moving to next depot. Next index: 4
+2024-09-25 08:59:12,148 - INFO - Handling any error dialogs before depot selection...
+2024-09-25 08:59:17,361 - INFO - No error dialog detected
+2024-09-25 08:59:17,362 - INFO - Selecting Depot: BURDWAN
+2024-09-25 08:59:17,400 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-25 08:59:17,413 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-25 08:59:17,418 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-25 08:59:17,986 - INFO - Option 'BURDWAN' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-25 08:59:18,519 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-25 08:59:18,520 - INFO - Clicking Search...
+2024-09-25 08:59:23,718 - INFO - No error dialog detected
+2024-09-25 08:59:23,761 - INFO - Search button clicked successfully
+2024-09-25 08:59:24,302 - INFO - Page loaded completely
+2024-09-25 08:59:24,312 - INFO - Table data check: No data found
+2024-09-25 08:59:24,313 - INFO - No data found for BURDWAN.
+2024-09-25 08:59:24,313 - INFO - Moving to next depot. Next index: 5
+2024-09-25 08:59:26,315 - INFO - Handling any error dialogs before depot selection...
+2024-09-25 08:59:31,527 - INFO - No error dialog detected
+2024-09-25 08:59:31,528 - INFO - Selecting Depot: COSSIPORE
+2024-09-25 08:59:31,557 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-25 08:59:31,571 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-25 08:59:31,577 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-25 08:59:32,150 - INFO - Option 'COSSIPORE' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-25 08:59:32,680 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-25 08:59:32,681 - INFO - Clicking Search...
+2024-09-25 08:59:37,880 - INFO - No error dialog detected
+2024-09-25 08:59:37,925 - INFO - Search button clicked successfully
+2024-09-25 08:59:38,986 - INFO - Page loaded completely
+2024-09-25 08:59:38,996 - INFO - Table data check: No data found
+2024-09-25 08:59:38,996 - INFO - No data found for COSSIPORE.
+2024-09-25 08:59:38,996 - INFO - Moving to next depot. Next index: 6
+2024-09-25 08:59:40,999 - INFO - Handling any error dialogs before depot selection...
+2024-09-25 08:59:46,214 - INFO - No error dialog detected
+2024-09-25 08:59:46,215 - INFO - Selecting Depot: DANKUNI
+2024-09-25 08:59:46,244 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-25 08:59:46,258 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-25 08:59:46,266 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-25 08:59:46,846 - INFO - Option 'DANKUNI' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-25 08:59:47,379 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-25 08:59:47,379 - INFO - Clicking Search...
+2024-09-25 08:59:52,576 - INFO - No error dialog detected
+2024-09-25 08:59:52,622 - INFO - Search button clicked successfully
+2024-09-25 08:59:53,159 - INFO - Page loaded completely
+2024-09-25 08:59:53,169 - INFO - Table data check: No data found
+2024-09-25 08:59:53,169 - INFO - No data found for DANKUNI.
+2024-09-25 08:59:53,170 - INFO - Moving to next depot. Next index: 7
+2024-09-25 08:59:55,172 - INFO - Handling any error dialogs before depot selection...
+2024-09-25 09:00:00,366 - INFO - No error dialog detected
+2024-09-25 09:00:00,367 - INFO - Selecting Depot: KALIGHAT
+2024-09-25 09:00:00,399 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-25 09:00:00,411 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-25 09:00:00,417 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-25 09:00:00,999 - INFO - Option 'KALIGHAT' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-25 09:00:01,536 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-25 09:00:01,536 - INFO - Clicking Search...
+2024-09-25 09:00:06,724 - INFO - No error dialog detected
+2024-09-25 09:00:06,769 - INFO - Search button clicked successfully
+2024-09-25 09:00:07,827 - INFO - Page loaded completely
+2024-09-25 09:00:07,836 - INFO - Table data check: No data found
+2024-09-25 09:00:07,836 - INFO - No data found for KALIGHAT.
+2024-09-25 09:00:07,837 - INFO - Moving to next depot. Next index: 8
+2024-09-25 09:00:09,840 - INFO - Handling any error dialogs before depot selection...
+2024-09-25 09:00:15,062 - INFO - No error dialog detected
+2024-09-25 09:00:15,064 - INFO - Selecting Depot: KHARAGPUR
+2024-09-25 09:00:15,094 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-25 09:00:15,108 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-25 09:00:15,114 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-25 09:00:15,706 - INFO - Option 'KHARAGPUR' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-25 09:00:16,237 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-25 09:00:16,238 - INFO - Clicking Search...
+2024-09-25 09:00:21,434 - INFO - No error dialog detected
+2024-09-25 09:00:21,484 - INFO - Search button clicked successfully
+2024-09-25 09:00:22,546 - INFO - Page loaded completely
+2024-09-25 09:00:22,563 - INFO - Table data check: No data found
+2024-09-25 09:00:22,564 - INFO - No data found for KHARAGPUR.
+2024-09-25 09:00:22,564 - INFO - Moving to next depot. Next index: 9
+2024-09-25 09:00:24,567 - INFO - Handling any error dialogs before depot selection...
+2024-09-25 09:00:29,776 - INFO - No error dialog detected
+2024-09-25 09:00:29,777 - INFO - Selecting Depot: KRISHNANAGAR
+2024-09-25 09:00:29,842 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-25 09:00:29,854 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-25 09:00:29,861 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-25 09:00:30,456 - INFO - Option 'KRISHNANAGAR' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-25 09:00:30,988 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-25 09:00:30,989 - INFO - Clicking Search...
+2024-09-25 09:00:36,181 - INFO - No error dialog detected
+2024-09-25 09:00:36,228 - INFO - Search button clicked successfully
+2024-09-25 09:00:37,291 - INFO - Page loaded completely
+2024-09-25 09:00:37,306 - INFO - Table data check: No data found
+2024-09-25 09:00:37,307 - INFO - No data found for KRISHNANAGAR.
+2024-09-25 09:00:37,307 - INFO - Moving to next depot. Next index: 10
+2024-09-25 09:00:39,310 - INFO - Handling any error dialogs before depot selection...
+2024-09-25 09:00:44,531 - INFO - No error dialog detected
+2024-09-25 09:00:44,533 - INFO - Selecting Depot: SAINTHIA
+2024-09-25 09:00:44,554 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-25 09:00:44,570 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-25 09:00:44,575 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-25 09:00:45,168 - INFO - Option 'SAINTHIA' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-25 09:00:45,699 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-25 09:00:45,700 - INFO - Clicking Search...
+2024-09-25 09:00:50,890 - INFO - No error dialog detected
+2024-09-25 09:00:50,934 - INFO - Search button clicked successfully
+2024-09-25 09:00:51,475 - INFO - Page loaded completely
+2024-09-25 09:00:51,483 - INFO - Table data check: No data found
+2024-09-25 09:00:51,484 - INFO - No data found for SAINTHIA.
+2024-09-25 09:00:51,484 - INFO - Moving to next depot. Next index: 11
+2024-09-25 09:00:53,487 - INFO - Handling any error dialogs before depot selection...
+2024-09-25 09:00:58,699 - INFO - No error dialog detected
+2024-09-25 09:00:58,701 - INFO - Selecting Depot: SHALIMAR
+2024-09-25 09:00:58,730 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-25 09:00:58,745 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-25 09:00:58,751 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-25 09:00:59,352 - INFO - Option 'SHALIMAR' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-25 09:00:59,886 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-25 09:00:59,887 - INFO - Clicking Search...
+2024-09-25 09:01:05,081 - INFO - No error dialog detected
+2024-09-25 09:01:05,138 - INFO - Search button clicked successfully
+2024-09-25 09:01:06,213 - INFO - Page loaded completely
+2024-09-25 09:01:06,233 - INFO - Table data check: No data found
+2024-09-25 09:01:06,234 - INFO - No data found for SHALIMAR.
+2024-09-25 09:01:06,235 - INFO - Moving to next depot. Next index: 12
+2024-09-25 09:01:08,237 - INFO - Handling any error dialogs before depot selection...
+2024-09-25 09:01:13,446 - INFO - No error dialog detected
+2024-09-25 09:01:13,448 - INFO - Selecting Depot: DIAMOND HARBOUR
+2024-09-25 09:01:13,476 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-25 09:01:13,488 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-25 09:01:13,495 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-25 09:01:14,099 - INFO - Option 'DIAMOND HARBOUR' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-25 09:01:14,632 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-25 09:01:14,633 - INFO - Clicking Search...
+2024-09-25 09:01:19,837 - INFO - No error dialog detected
+2024-09-25 09:01:19,881 - INFO - Search button clicked successfully
+2024-09-25 09:01:20,943 - INFO - Page loaded completely
+2024-09-25 09:01:20,958 - INFO - Table data check: No data found
+2024-09-25 09:01:20,988 - INFO - No data found for DIAMOND HARBOUR.
+2024-09-25 09:01:20,989 - INFO - Moving to next depot. Next index: 13
+2024-09-25 09:01:22,991 - INFO - Handling any error dialogs before depot selection...
+2024-09-25 09:01:28,200 - INFO - No error dialog detected
+2024-09-25 09:01:28,202 - INFO - Selecting Depot: BARASAT
+2024-09-25 09:01:28,236 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-25 09:01:28,249 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-25 09:01:28,254 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-25 09:01:28,865 - INFO - Option 'BARASAT' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-25 09:01:29,400 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-25 09:01:29,401 - INFO - Clicking Search...
+2024-09-25 09:01:34,605 - INFO - No error dialog detected
+2024-09-25 09:01:34,657 - INFO - Search button clicked successfully
+2024-09-25 09:01:35,721 - INFO - Page loaded completely
+2024-09-25 09:01:35,732 - INFO - Table data check: No data found
+2024-09-25 09:01:35,732 - INFO - No data found for BARASAT.
+2024-09-25 09:01:35,733 - INFO - Moving to next depot. Next index: 0
+2024-09-25 09:01:37,736 - INFO - Handling any error dialogs before depot selection...
+2024-09-25 09:01:42,934 - INFO - No error dialog detected
+2024-09-25 09:01:42,936 - INFO - Selecting Depot: DEOGARH
+2024-09-25 09:01:42,967 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-25 09:01:42,980 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-25 09:01:42,987 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-25 09:01:43,539 - INFO - Option 'DEOGARH' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-25 09:01:44,075 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-25 09:01:44,076 - INFO - Clicking Search...
+2024-09-25 09:01:49,302 - INFO - No error dialog detected
+2024-09-25 09:01:49,348 - INFO - Search button clicked successfully
+2024-09-25 09:01:49,885 - INFO - Page loaded completely
+2024-09-25 09:01:49,893 - INFO - Table data check: No data found
+2024-09-25 09:01:49,893 - INFO - No data found for DEOGARH.
+2024-09-25 09:01:49,893 - INFO - Moving to next depot. Next index: 1
+2024-09-25 09:01:51,895 - INFO - Handling any error dialogs before depot selection...
+2024-09-25 09:01:57,110 - INFO - No error dialog detected
+2024-09-25 09:01:57,111 - INFO - Selecting Depot: DHANBAD
+2024-09-25 09:01:57,140 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-25 09:01:57,156 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-25 09:01:57,161 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-25 09:01:57,711 - INFO - Option 'DHANBAD' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-25 09:01:58,248 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-25 09:01:58,249 - INFO - Clicking Search...
+2024-09-25 09:02:03,468 - INFO - No error dialog detected
+2024-09-25 09:02:03,521 - INFO - Search button clicked successfully
+2024-09-25 09:02:04,059 - INFO - Page loaded completely
+2024-09-25 09:02:04,066 - INFO - Table data check: No data found
+2024-09-25 09:02:04,067 - INFO - No data found for DHANBAD.
+2024-09-25 09:02:04,067 - INFO - Moving to next depot. Next index: 2
+2024-09-25 09:02:06,070 - INFO - Handling any error dialogs before depot selection...
+2024-09-25 09:02:11,273 - INFO - No error dialog detected
+2024-09-25 09:02:11,275 - INFO - Selecting Depot: BANKURA
+2024-09-25 09:02:11,305 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-25 09:02:11,316 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-25 09:02:11,321 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-25 09:02:11,882 - INFO - Option 'BANKURA' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-25 09:02:12,417 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-25 09:02:12,419 - INFO - Clicking Search...
+2024-09-25 09:02:17,616 - INFO - No error dialog detected
+2024-09-25 09:02:17,664 - INFO - Search button clicked successfully
+2024-09-25 09:02:18,201 - INFO - Page loaded completely
+2024-09-25 09:02:18,209 - INFO - Table data check: No data found
+2024-09-25 09:02:18,209 - INFO - No data found for BANKURA.
+2024-09-25 09:02:18,209 - INFO - Moving to next depot. Next index: 3
+2024-09-25 09:02:20,213 - INFO - Handling any error dialogs before depot selection...
+2024-09-25 09:02:25,421 - INFO - No error dialog detected
+2024-09-25 09:02:25,422 - INFO - Selecting Depot: BERHAMPORE
+2024-09-25 09:02:25,457 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-25 09:02:25,469 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-25 09:02:25,473 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-25 09:02:26,035 - INFO - Option 'BERHAMPORE' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-25 09:02:26,568 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-25 09:02:26,569 - INFO - Clicking Search...
+2024-09-25 09:02:31,770 - INFO - No error dialog detected
+2024-09-25 09:02:31,822 - INFO - Search button clicked successfully
+2024-09-25 09:02:32,907 - INFO - Page loaded completely
+2024-09-25 09:02:32,924 - INFO - Table data check: No data found
+2024-09-25 09:02:32,924 - INFO - No data found for BERHAMPORE.
+2024-09-25 09:02:32,925 - INFO - Moving to next depot. Next index: 4
+2024-09-25 09:02:34,928 - INFO - Handling any error dialogs before depot selection...
+2024-09-25 09:02:40,131 - INFO - No error dialog detected
+2024-09-25 09:02:40,133 - INFO - Selecting Depot: BURDWAN
+2024-09-25 09:02:40,165 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-25 09:02:40,176 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-25 09:02:40,182 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-25 09:02:40,747 - INFO - Option 'BURDWAN' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-25 09:02:41,280 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-25 09:02:41,280 - INFO - Clicking Search...
+2024-09-25 09:02:46,478 - INFO - No error dialog detected
+2024-09-25 09:02:46,524 - INFO - Search button clicked successfully
+2024-09-25 09:02:47,588 - INFO - Page loaded completely
+2024-09-25 09:02:47,603 - INFO - Table data check: No data found
+2024-09-25 09:02:47,633 - INFO - No data found for BURDWAN.
+2024-09-25 09:02:47,633 - INFO - Moving to next depot. Next index: 5
+2024-09-25 09:02:49,636 - INFO - Handling any error dialogs before depot selection...
+2024-09-25 09:02:54,846 - INFO - No error dialog detected
+2024-09-25 09:02:54,848 - INFO - Selecting Depot: COSSIPORE
+2024-09-25 09:02:54,884 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-25 09:02:54,896 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-25 09:02:54,902 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-25 09:02:55,474 - INFO - Option 'COSSIPORE' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-25 09:02:56,009 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-25 09:02:56,011 - INFO - Clicking Search...
+2024-09-25 09:03:01,209 - INFO - No error dialog detected
+2024-09-25 09:03:01,261 - INFO - Search button clicked successfully
+2024-09-25 09:03:01,816 - INFO - Page loaded completely
+2024-09-25 09:03:01,825 - INFO - Table data check: No data found
+2024-09-25 09:03:01,825 - INFO - No data found for COSSIPORE.
+2024-09-25 09:03:01,826 - INFO - Moving to next depot. Next index: 6
+2024-09-25 09:03:03,828 - INFO - Handling any error dialogs before depot selection...
+2024-09-25 09:03:09,043 - INFO - No error dialog detected
+2024-09-25 09:03:09,045 - INFO - Selecting Depot: DANKUNI
+2024-09-25 09:03:09,082 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-25 09:03:09,096 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-25 09:03:09,101 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-25 09:03:09,679 - INFO - Option 'DANKUNI' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-25 09:03:10,212 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-25 09:03:10,213 - INFO - Clicking Search...
+2024-09-25 09:03:15,410 - INFO - No error dialog detected
+2024-09-25 09:03:15,457 - INFO - Search button clicked successfully
+2024-09-25 09:03:16,522 - INFO - Page loaded completely
+2024-09-25 09:03:16,539 - INFO - Table data check: No data found
+2024-09-25 09:03:16,539 - INFO - No data found for DANKUNI.
+2024-09-25 09:03:16,539 - INFO - Moving to next depot. Next index: 7
+2024-09-25 09:03:18,542 - INFO - Handling any error dialogs before depot selection...
+2024-09-25 09:03:23,744 - INFO - No error dialog detected
+2024-09-25 09:03:23,745 - INFO - Selecting Depot: KALIGHAT
+2024-09-25 09:03:23,774 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-25 09:03:23,787 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-25 09:03:23,793 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-25 09:03:24,385 - INFO - Option 'KALIGHAT' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-25 09:03:24,917 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-25 09:03:24,918 - INFO - Clicking Search...
+2024-09-25 09:03:30,127 - INFO - No error dialog detected
+2024-09-25 09:03:30,181 - INFO - Search button clicked successfully
+2024-09-25 09:03:31,256 - INFO - Page loaded completely
+2024-09-25 09:03:31,266 - INFO - Table data check: No data found
+2024-09-25 09:03:31,267 - INFO - No data found for KALIGHAT.
+2024-09-25 09:03:31,267 - INFO - Moving to next depot. Next index: 8
+2024-09-25 09:03:33,269 - INFO - Handling any error dialogs before depot selection...
+2024-09-25 09:03:38,462 - INFO - No error dialog detected
+2024-09-25 09:03:38,464 - INFO - Selecting Depot: KHARAGPUR
+2024-09-25 09:03:38,499 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-25 09:03:38,511 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-25 09:03:38,519 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-25 09:03:39,106 - INFO - Option 'KHARAGPUR' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-25 09:03:39,642 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-25 09:03:39,642 - INFO - Clicking Search...
+2024-09-25 09:03:44,852 - INFO - No error dialog detected
+2024-09-25 09:03:44,901 - INFO - Search button clicked successfully
+2024-09-25 09:03:45,966 - INFO - Page loaded completely
+2024-09-25 09:03:45,974 - INFO - Table data check: No data found
+2024-09-25 09:03:46,011 - INFO - No data found for KHARAGPUR.
+2024-09-25 09:03:46,011 - INFO - Moving to next depot. Next index: 9
+2024-09-25 09:03:48,014 - INFO - Handling any error dialogs before depot selection...
+2024-09-25 09:03:53,211 - INFO - No error dialog detected
+2024-09-25 09:03:53,213 - INFO - Selecting Depot: KRISHNANAGAR
+2024-09-25 09:03:53,244 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-25 09:03:53,259 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-25 09:03:53,265 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-25 09:03:53,851 - INFO - Option 'KRISHNANAGAR' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-25 09:03:54,386 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-25 09:03:54,387 - INFO - Clicking Search...
+2024-09-25 09:03:59,603 - INFO - No error dialog detected
+2024-09-25 09:03:59,658 - INFO - Search button clicked successfully
+2024-09-25 09:04:00,211 - INFO - Page loaded completely
+2024-09-25 09:04:00,219 - INFO - Table data check: No data found
+2024-09-25 09:04:00,219 - INFO - No data found for KRISHNANAGAR.
+2024-09-25 09:04:00,220 - INFO - Moving to next depot. Next index: 10
+2024-09-25 09:04:02,223 - INFO - Handling any error dialogs before depot selection...
+2024-09-25 09:04:07,436 - INFO - No error dialog detected
+2024-09-25 09:04:07,438 - INFO - Selecting Depot: SAINTHIA
+2024-09-25 09:04:07,470 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-25 09:04:07,484 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-25 09:04:07,489 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-25 09:04:08,082 - INFO - Option 'SAINTHIA' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-25 09:04:08,614 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-25 09:04:08,615 - INFO - Clicking Search...
+2024-09-25 09:04:13,817 - INFO - No error dialog detected
+2024-09-25 09:04:13,863 - INFO - Search button clicked successfully
+2024-09-25 09:04:14,927 - INFO - Page loaded completely
+2024-09-25 09:04:14,937 - INFO - Table data check: No data found
+2024-09-25 09:04:14,938 - INFO - No data found for SAINTHIA.
+2024-09-25 09:04:14,938 - INFO - Moving to next depot. Next index: 11
+2024-09-25 09:04:16,941 - INFO - Handling any error dialogs before depot selection...
+2024-09-25 09:04:22,162 - INFO - No error dialog detected
+2024-09-25 09:04:22,164 - INFO - Selecting Depot: SHALIMAR
+2024-09-25 09:04:22,193 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-25 09:04:22,206 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-25 09:04:22,211 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-25 09:04:22,820 - INFO - Option 'SHALIMAR' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-25 09:04:23,355 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-25 09:04:23,356 - INFO - Clicking Search...
+2024-09-25 09:04:28,567 - INFO - No error dialog detected
+2024-09-25 09:04:28,614 - INFO - Search button clicked successfully
+2024-09-25 09:04:29,151 - INFO - Page loaded completely
+2024-09-25 09:04:29,159 - INFO - Table data check: No data found
+2024-09-25 09:04:29,159 - INFO - No data found for SHALIMAR.
+2024-09-25 09:04:29,159 - INFO - Moving to next depot. Next index: 12
+2024-09-25 09:04:31,163 - INFO - Handling any error dialogs before depot selection...
+2024-09-25 09:04:36,374 - INFO - No error dialog detected
+2024-09-25 09:04:36,376 - INFO - Selecting Depot: DIAMOND HARBOUR
+2024-09-25 09:04:36,405 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-25 09:04:36,419 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-25 09:04:36,427 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-25 09:04:37,025 - INFO - Option 'DIAMOND HARBOUR' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-25 09:04:37,555 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-25 09:04:37,555 - INFO - Clicking Search...
+2024-09-25 09:04:42,752 - INFO - No error dialog detected
+2024-09-25 09:04:42,799 - INFO - Search button clicked successfully
+2024-09-25 09:04:43,864 - INFO - Page loaded completely
+2024-09-25 09:04:43,877 - INFO - Table data check: No data found
+2024-09-25 09:04:43,877 - INFO - No data found for DIAMOND HARBOUR.
+2024-09-25 09:04:43,877 - INFO - Moving to next depot. Next index: 13
+2024-09-25 09:04:45,880 - INFO - Handling any error dialogs before depot selection...
+2024-09-25 09:04:51,100 - INFO - No error dialog detected
+2024-09-25 09:04:51,101 - INFO - Selecting Depot: BARASAT
+2024-09-25 09:04:51,132 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-25 09:04:51,148 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-25 09:04:51,153 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-25 09:04:51,771 - INFO - Option 'BARASAT' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-25 09:04:52,302 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-25 09:04:52,303 - INFO - Clicking Search...
+2024-09-25 09:04:57,506 - INFO - No error dialog detected
+2024-09-25 09:04:57,556 - INFO - Search button clicked successfully
+2024-09-25 09:04:58,607 - INFO - Page loaded completely
+2024-09-25 09:04:58,617 - INFO - Table data check: No data found
+2024-09-25 09:04:58,618 - INFO - No data found for BARASAT.
+2024-09-25 09:04:58,618 - INFO - Moving to next depot. Next index: 0
+2024-09-25 09:05:00,621 - INFO - Handling any error dialogs before depot selection...
+2024-09-25 09:05:05,829 - INFO - No error dialog detected
+2024-09-25 09:05:05,831 - INFO - Selecting Depot: DEOGARH
+2024-09-25 09:05:05,860 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-25 09:05:05,872 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-25 09:05:05,878 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-25 09:05:06,419 - INFO - Option 'DEOGARH' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-25 09:05:06,951 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-25 09:05:06,952 - INFO - Clicking Search...
+2024-09-25 09:05:12,158 - INFO - No error dialog detected
+2024-09-25 09:05:12,206 - INFO - Search button clicked successfully
+2024-09-25 09:05:13,274 - INFO - Page loaded completely
+2024-09-25 09:05:13,286 - INFO - Table data check: No data found
+2024-09-25 09:05:13,286 - INFO - No data found for DEOGARH.
+2024-09-25 09:05:13,286 - INFO - Moving to next depot. Next index: 1
+2024-09-25 09:05:15,289 - INFO - Handling any error dialogs before depot selection...
+2024-09-25 09:05:20,500 - INFO - No error dialog detected
+2024-09-25 09:05:20,502 - INFO - Selecting Depot: DHANBAD
+2024-09-25 09:05:20,531 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-25 09:05:20,541 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-25 09:05:20,547 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-25 09:05:21,116 - INFO - Option 'DHANBAD' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-25 09:05:21,657 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-25 09:05:21,658 - INFO - Clicking Search...
+2024-09-25 09:05:26,859 - INFO - No error dialog detected
+2024-09-25 09:05:26,907 - INFO - Search button clicked successfully
+2024-09-25 09:05:27,968 - INFO - Page loaded completely
+2024-09-25 09:05:27,983 - INFO - Table data check: No data found
+2024-09-25 09:05:27,983 - INFO - No data found for DHANBAD.
+2024-09-25 09:05:27,983 - INFO - Moving to next depot. Next index: 2
+2024-09-25 09:05:29,987 - INFO - Handling any error dialogs before depot selection...
+2024-09-25 09:05:35,199 - INFO - No error dialog detected
+2024-09-25 09:05:35,200 - INFO - Selecting Depot: BANKURA
+2024-09-25 09:05:35,232 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-25 09:05:35,244 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-25 09:05:35,250 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-25 09:05:35,807 - INFO - Option 'BANKURA' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-25 09:05:36,336 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-25 09:05:36,336 - INFO - Clicking Search...
+2024-09-25 09:05:41,537 - INFO - No error dialog detected
+2024-09-25 09:05:41,588 - INFO - Search button clicked successfully
+2024-09-25 09:05:42,128 - INFO - Page loaded completely
+2024-09-25 09:05:42,135 - INFO - Table data check: No data found
+2024-09-25 09:05:42,135 - INFO - No data found for BANKURA.
+2024-09-25 09:05:42,136 - INFO - Moving to next depot. Next index: 3
+2024-09-25 09:05:44,139 - INFO - Handling any error dialogs before depot selection...
+2024-09-25 09:05:49,347 - INFO - No error dialog detected
+2024-09-25 09:05:49,348 - INFO - Selecting Depot: BERHAMPORE
+2024-09-25 09:05:49,379 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-25 09:05:49,394 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-25 09:05:49,399 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-25 09:05:49,958 - INFO - Option 'BERHAMPORE' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-25 09:05:50,503 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-25 09:05:50,504 - INFO - Clicking Search...
+2024-09-25 09:05:55,704 - INFO - No error dialog detected
+2024-09-25 09:05:55,756 - INFO - Search button clicked successfully
+2024-09-25 09:05:56,296 - INFO - Page loaded completely
+2024-09-25 09:05:56,303 - INFO - Table data check: No data found
+2024-09-25 09:05:56,303 - INFO - No data found for BERHAMPORE.
+2024-09-25 09:05:56,303 - INFO - Moving to next depot. Next index: 4
+2024-09-25 09:05:58,307 - INFO - Handling any error dialogs before depot selection...
+2024-09-25 09:06:03,518 - INFO - No error dialog detected
+2024-09-25 09:06:03,520 - INFO - Selecting Depot: BURDWAN
+2024-09-25 09:06:03,554 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-25 09:06:03,567 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-25 09:06:03,572 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-25 09:06:04,134 - INFO - Option 'BURDWAN' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-25 09:06:04,670 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-25 09:06:04,672 - INFO - Clicking Search...
+2024-09-25 09:06:09,879 - INFO - No error dialog detected
+2024-09-25 09:06:09,924 - INFO - Search button clicked successfully
+2024-09-25 09:06:10,994 - INFO - Page loaded completely
+2024-09-25 09:06:11,005 - INFO - Table data check: No data found
+2024-09-25 09:06:11,005 - INFO - No data found for BURDWAN.
+2024-09-25 09:06:11,006 - INFO - Moving to next depot. Next index: 5
+2024-09-25 09:06:13,008 - INFO - Handling any error dialogs before depot selection...
+2024-09-25 09:06:18,214 - INFO - No error dialog detected
+2024-09-25 09:06:18,215 - INFO - Selecting Depot: COSSIPORE
+2024-09-25 09:06:18,251 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-25 09:06:18,267 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-25 09:06:18,273 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-25 09:06:18,840 - INFO - Option 'COSSIPORE' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-25 09:06:19,395 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-25 09:06:19,397 - INFO - Clicking Search...
+2024-09-25 09:06:24,587 - INFO - No error dialog detected
+2024-09-25 09:06:24,634 - INFO - Search button clicked successfully
+2024-09-25 09:06:25,705 - INFO - Page loaded completely
+2024-09-25 09:06:25,722 - INFO - Table data check: No data found
+2024-09-25 09:06:25,723 - INFO - No data found for COSSIPORE.
+2024-09-25 09:06:25,723 - INFO - Moving to next depot. Next index: 6
+2024-09-25 09:06:27,726 - INFO - Handling any error dialogs before depot selection...
+2024-09-25 09:06:32,931 - INFO - No error dialog detected
+2024-09-25 09:06:32,933 - INFO - Selecting Depot: DANKUNI
+2024-09-25 09:06:32,961 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-25 09:06:32,973 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-25 09:06:32,978 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-25 09:06:33,548 - INFO - Option 'DANKUNI' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-25 09:06:34,078 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-25 09:06:34,079 - INFO - Clicking Search...
+2024-09-25 09:06:39,296 - INFO - No error dialog detected
+2024-09-25 09:06:39,341 - INFO - Search button clicked successfully
+2024-09-25 09:06:40,400 - INFO - Page loaded completely
+2024-09-25 09:06:40,411 - INFO - Table data check: No data found
+2024-09-25 09:06:40,411 - INFO - No data found for DANKUNI.
+2024-09-25 09:06:40,411 - INFO - Moving to next depot. Next index: 7
+2024-09-25 09:06:42,415 - INFO - Handling any error dialogs before depot selection...
+2024-09-25 09:06:47,621 - INFO - No error dialog detected
+2024-09-25 09:06:47,623 - INFO - Selecting Depot: KALIGHAT
+2024-09-25 09:06:47,652 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-25 09:06:47,665 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-25 09:06:47,673 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-25 09:06:48,253 - INFO - Option 'KALIGHAT' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-25 09:06:48,797 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-25 09:06:48,799 - INFO - Clicking Search...
+2024-09-25 09:06:54,006 - INFO - No error dialog detected
+2024-09-25 09:06:54,048 - INFO - Search button clicked successfully
+2024-09-25 09:06:54,589 - INFO - Page loaded completely
+2024-09-25 09:06:54,598 - INFO - Table data check: No data found
+2024-09-25 09:06:54,599 - INFO - No data found for KALIGHAT.
+2024-09-25 09:06:54,599 - INFO - Moving to next depot. Next index: 8
+2024-09-25 09:06:56,602 - INFO - Handling any error dialogs before depot selection...
+2024-09-25 09:07:01,791 - INFO - No error dialog detected
+2024-09-25 09:07:01,792 - INFO - Selecting Depot: KHARAGPUR
+2024-09-25 09:07:01,823 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-25 09:07:01,834 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-25 09:07:01,842 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-25 09:07:02,424 - INFO - Option 'KHARAGPUR' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-25 09:07:02,954 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-25 09:07:02,955 - INFO - Clicking Search...
+2024-09-25 09:07:08,153 - INFO - No error dialog detected
+2024-09-25 09:07:08,200 - INFO - Search button clicked successfully
+2024-09-25 09:07:09,262 - INFO - Page loaded completely
+2024-09-25 09:07:09,278 - INFO - Table data check: No data found
+2024-09-25 09:07:09,278 - INFO - No data found for KHARAGPUR.
+2024-09-25 09:07:09,279 - INFO - Moving to next depot. Next index: 9
+2024-09-25 09:07:11,282 - INFO - Handling any error dialogs before depot selection...
+2024-09-25 09:07:16,500 - INFO - No error dialog detected
+2024-09-25 09:07:16,502 - INFO - Selecting Depot: KRISHNANAGAR
+2024-09-25 09:07:16,533 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-25 09:07:16,549 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-25 09:07:16,554 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-25 09:07:17,151 - INFO - Option 'KRISHNANAGAR' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-25 09:07:17,682 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-25 09:07:17,683 - INFO - Clicking Search...
+2024-09-25 09:07:22,871 - INFO - No error dialog detected
+2024-09-25 09:07:22,915 - INFO - Search button clicked successfully
+2024-09-25 09:07:23,977 - INFO - Page loaded completely
+2024-09-25 09:07:23,994 - INFO - Table data check: No data found
+2024-09-25 09:07:23,995 - INFO - No data found for KRISHNANAGAR.
+2024-09-25 09:07:23,995 - INFO - Moving to next depot. Next index: 10
+2024-09-25 09:07:25,998 - INFO - Handling any error dialogs before depot selection...
+2024-09-25 09:07:31,218 - INFO - No error dialog detected
+2024-09-25 09:07:31,219 - INFO - Selecting Depot: SAINTHIA
+2024-09-25 09:07:31,248 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-25 09:07:31,260 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-25 09:07:31,268 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-25 09:07:31,853 - INFO - Option 'SAINTHIA' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-25 09:07:32,385 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-25 09:07:32,387 - INFO - Clicking Search...
+2024-09-25 09:07:37,586 - INFO - No error dialog detected
+2024-09-25 09:07:37,633 - INFO - Search button clicked successfully
+2024-09-25 09:07:38,697 - INFO - Page loaded completely
+2024-09-25 09:07:38,707 - INFO - Table data check: No data found
+2024-09-25 09:07:38,708 - INFO - No data found for SAINTHIA.
+2024-09-25 09:07:38,708 - INFO - Moving to next depot. Next index: 11
+2024-09-25 09:07:40,711 - INFO - Handling any error dialogs before depot selection...
+2024-09-25 09:07:45,923 - INFO - No error dialog detected
+2024-09-25 09:07:45,924 - INFO - Selecting Depot: SHALIMAR
+2024-09-25 09:07:45,957 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-25 09:07:45,973 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-25 09:07:45,978 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-25 09:07:46,573 - INFO - Option 'SHALIMAR' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-25 09:07:47,104 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-25 09:07:47,104 - INFO - Clicking Search...
+2024-09-25 09:07:52,310 - INFO - No error dialog detected
+2024-09-25 09:07:52,357 - INFO - Search button clicked successfully
+2024-09-25 09:07:52,904 - INFO - Page loaded completely
+2024-09-25 09:07:52,916 - INFO - Table data check: No data found
+2024-09-25 09:07:52,917 - INFO - No data found for SHALIMAR.
+2024-09-25 09:07:52,917 - INFO - Moving to next depot. Next index: 12
+2024-09-25 09:07:54,919 - INFO - Handling any error dialogs before depot selection...
+2024-09-25 09:08:00,128 - INFO - No error dialog detected
+2024-09-25 09:08:00,130 - INFO - Selecting Depot: DIAMOND HARBOUR
+2024-09-25 09:08:00,161 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-25 09:08:00,178 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-25 09:08:00,183 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-25 09:08:00,779 - INFO - Option 'DIAMOND HARBOUR' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-25 09:08:01,312 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-25 09:08:01,313 - INFO - Clicking Search...
+2024-09-25 09:08:06,510 - INFO - No error dialog detected
+2024-09-25 09:08:06,561 - INFO - Search button clicked successfully
+2024-09-25 09:08:07,102 - INFO - Page loaded completely
+2024-09-25 09:08:07,109 - INFO - Table data check: No data found
+2024-09-25 09:08:07,109 - INFO - No data found for DIAMOND HARBOUR.
+2024-09-25 09:08:07,109 - INFO - Moving to next depot. Next index: 13
+2024-09-25 09:08:09,113 - INFO - Handling any error dialogs before depot selection...
+2024-09-25 09:08:14,366 - INFO - No error dialog detected
+2024-09-25 09:08:14,368 - INFO - Selecting Depot: BARASAT
+2024-09-25 09:08:14,399 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-25 09:08:14,412 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-25 09:08:14,418 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-25 09:08:15,024 - INFO - Option 'BARASAT' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-25 09:08:15,552 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-25 09:08:15,552 - INFO - Clicking Search...
+2024-09-25 09:08:20,753 - INFO - No error dialog detected
+2024-09-25 09:08:20,799 - INFO - Search button clicked successfully
+2024-09-25 09:08:21,862 - INFO - Page loaded completely
+2024-09-25 09:08:21,872 - INFO - Table data check: No data found
+2024-09-25 09:08:21,872 - INFO - No data found for BARASAT.
+2024-09-25 09:08:21,872 - INFO - Moving to next depot. Next index: 0
+2024-09-25 09:08:23,874 - INFO - Handling any error dialogs before depot selection...
+2024-09-25 09:08:29,089 - INFO - No error dialog detected
+2024-09-25 09:08:29,090 - INFO - Selecting Depot: DEOGARH
+2024-09-25 09:08:29,119 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-25 09:08:29,135 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-25 09:08:29,140 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-25 09:08:29,680 - INFO - Option 'DEOGARH' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-25 09:08:30,210 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-25 09:08:30,211 - INFO - Clicking Search...
+2024-09-25 09:08:35,423 - INFO - No error dialog detected
+2024-09-25 09:08:35,474 - INFO - Search button clicked successfully
+2024-09-25 09:08:36,026 - INFO - Page loaded completely
+2024-09-25 09:08:36,033 - INFO - Table data check: No data found
+2024-09-25 09:08:36,033 - INFO - No data found for DEOGARH.
+2024-09-25 09:08:36,033 - INFO - Moving to next depot. Next index: 1
+2024-09-25 09:08:38,037 - INFO - Handling any error dialogs before depot selection...
+2024-09-25 09:08:43,249 - INFO - No error dialog detected
+2024-09-25 09:08:43,251 - INFO - Selecting Depot: DHANBAD
+2024-09-25 09:08:43,280 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-25 09:08:43,293 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-25 09:08:43,299 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-25 09:08:43,844 - INFO - Option 'DHANBAD' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-25 09:08:44,375 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-25 09:08:44,376 - INFO - Clicking Search...
+2024-09-25 09:08:49,568 - INFO - No error dialog detected
+2024-09-25 09:08:49,614 - INFO - Search button clicked successfully
+2024-09-25 09:08:50,674 - INFO - Page loaded completely
+2024-09-25 09:08:50,688 - INFO - Table data check: No data found
+2024-09-25 09:08:50,688 - INFO - No data found for DHANBAD.
+2024-09-25 09:08:50,688 - INFO - Moving to next depot. Next index: 2
+2024-09-25 09:08:52,692 - INFO - Handling any error dialogs before depot selection...
+2024-09-25 09:08:57,905 - INFO - No error dialog detected
+2024-09-25 09:08:57,907 - INFO - Selecting Depot: BANKURA
+2024-09-25 09:08:57,936 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-25 09:08:57,948 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-25 09:08:57,954 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-25 09:08:58,507 - INFO - Option 'BANKURA' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-25 09:08:59,038 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-25 09:08:59,038 - INFO - Clicking Search...
+2024-09-25 09:09:04,232 - INFO - No error dialog detected
+2024-09-25 09:09:04,278 - INFO - Search button clicked successfully
+2024-09-25 09:09:04,819 - INFO - Page loaded completely
+2024-09-25 09:09:04,832 - INFO - Table data check: No data found
+2024-09-25 09:09:04,833 - INFO - No data found for BANKURA.
+2024-09-25 09:09:04,833 - INFO - Moving to next depot. Next index: 3
+2024-09-25 09:09:06,835 - INFO - Handling any error dialogs before depot selection...
+2024-09-25 09:09:12,052 - INFO - No error dialog detected
+2024-09-25 09:09:12,054 - INFO - Selecting Depot: BERHAMPORE
+2024-09-25 09:09:12,077 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-25 09:09:12,089 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-25 09:09:12,100 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-25 09:09:12,657 - INFO - Option 'BERHAMPORE' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-25 09:09:13,190 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-25 09:09:13,191 - INFO - Clicking Search...
+2024-09-25 09:09:18,385 - INFO - No error dialog detected
+2024-09-25 09:09:18,434 - INFO - Search button clicked successfully
+2024-09-25 09:09:19,499 - INFO - Page loaded completely
+2024-09-25 09:09:19,518 - INFO - Table data check: No data found
+2024-09-25 09:09:19,518 - INFO - No data found for BERHAMPORE.
+2024-09-25 09:09:19,518 - INFO - Moving to next depot. Next index: 4
+2024-09-25 09:09:21,521 - INFO - Handling any error dialogs before depot selection...
+2024-09-25 09:09:26,733 - INFO - No error dialog detected
+2024-09-25 09:09:26,735 - INFO - Selecting Depot: BURDWAN
+2024-09-25 09:09:26,764 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-25 09:09:26,777 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-25 09:09:26,786 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-25 09:09:27,351 - INFO - Option 'BURDWAN' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-25 09:09:27,880 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-25 09:09:27,881 - INFO - Clicking Search...
+2024-09-25 09:09:33,086 - INFO - No error dialog detected
+2024-09-25 09:09:33,144 - INFO - Search button clicked successfully
+2024-09-25 09:09:33,695 - INFO - Page loaded completely
+2024-09-25 09:09:33,703 - INFO - Table data check: No data found
+2024-09-25 09:09:33,704 - INFO - No data found for BURDWAN.
+2024-09-25 09:09:33,704 - INFO - Moving to next depot. Next index: 5
+2024-09-25 09:09:35,708 - INFO - Automation stopped. Browser remains open.
+2024-09-25 09:23:15,561 - INFO - ====== WebDriver manager ======
+2024-09-25 09:23:15,563 - INFO - Setting up WebDriver...
+2024-09-25 09:23:15,622 - INFO - Get LATEST chromedriver version for google-chrome
+2024-09-25 09:23:15,776 - INFO - Get LATEST chromedriver version for google-chrome
+2024-09-25 09:23:15,897 - INFO - Driver [/home/abir/.wdm/drivers/chromedriver/linux64/128.0.6613.137/chromedriver-linux64/chromedriver] found in cache
+2024-09-25 09:23:16,324 - INFO - Attempting login... (Attempt 1/3)
+2024-09-25 09:23:16,814 - INFO - Cookies loaded successfully
+2024-09-25 09:23:18,378 - INFO - Logged in successfully using cookies
+2024-09-25 09:23:18,379 - INFO - Navigating to eBidding page... (Attempt 1/3)
+2024-09-25 09:23:19,669 - INFO - Page loaded completely
+2024-09-25 09:23:19,672 - INFO - Opened eBidding URL: https://www.eye2serve.com:9001/sap/bc/ui5_ui5/sap/zvc_vendor_app/index.html#/ebidding
+2024-09-25 09:23:26,008 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-25 09:23:26,774 - INFO - Error dialog dismissed.
+2024-09-25 09:23:27,309 - INFO - Opened eBidding URL: https://www.eye2serve.com:9001/sap/bc/ui5_ui5/sap/zvc_vendor_app/index.html#/ebidding
+2024-09-25 09:23:27,310 - INFO - Handling error dialogs and clicking 'Show Search' button... (Attempt 1/3)
+2024-09-25 09:23:32,405 - INFO - No error dialog detected
+2024-09-25 09:23:32,493 - INFO - 'Show Search' button clicked successfully
+2024-09-25 09:23:32,494 - INFO - Successfully clicked 'Show Search' button.
+2024-09-25 09:23:32,495 - INFO - Selecting Ship From Plant: WEST BENGAL CEMENT WORKS
+2024-09-25 09:23:32,549 - INFO - Clicked dropdown arrow for __xmlview0--ididUtclVCShipFromPlant
+2024-09-25 09:23:32,576 - INFO - Dropdown list visible for __xmlview0--ididUtclVCShipFromPlant
+2024-09-25 09:23:32,592 - INFO - Found 1 options for __xmlview0--ididUtclVCShipFromPlant
+2024-09-25 09:23:33,156 - INFO - Option 'WEST BENGAL CEMENT WORKS' selected successfully for __xmlview0--ididUtclVCShipFromPlant
+2024-09-25 09:23:33,690 - INFO - Dropdown closed after selection for __xmlview0--ididUtclVCShipFromPlant
+2024-09-25 09:23:33,691 - INFO - Handling any error dialogs before depot selection...
+2024-09-25 09:23:38,855 - INFO - No error dialog detected
+2024-09-25 09:23:38,857 - INFO - Selecting Depot: DEOGARH
+2024-09-25 09:23:38,892 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-25 09:23:38,907 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-25 09:23:38,915 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-25 09:23:39,455 - INFO - Option 'DEOGARH' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-25 09:23:39,989 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-25 09:23:39,990 - INFO - Clicking Search...
+2024-09-25 09:23:45,185 - INFO - No error dialog detected
+2024-09-25 09:23:45,261 - INFO - Search button clicked successfully
+2024-09-25 09:23:45,805 - INFO - Page loaded completely
+2024-09-25 09:23:45,817 - INFO - Table data check: No data found
+2024-09-25 09:23:45,818 - INFO - No data found for DEOGARH.
+2024-09-25 09:23:45,818 - INFO - Moving to next depot. Next index: 1
+2024-09-25 09:23:47,820 - INFO - Handling any error dialogs before depot selection...
+2024-09-25 09:23:47,827 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-25 09:23:47,866 - INFO - Error dialog dismissed.
+2024-09-25 09:23:48,403 - INFO - Selecting Depot: DHANBAD
+2024-09-25 09:23:48,427 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-25 09:23:48,442 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-25 09:23:48,449 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-25 09:23:48,991 - INFO - Option 'DHANBAD' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-25 09:23:49,522 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-25 09:23:49,523 - INFO - Clicking Search...
+2024-09-25 09:23:54,714 - INFO - No error dialog detected
+2024-09-25 09:23:54,769 - INFO - Search button clicked successfully
+2024-09-25 09:23:55,309 - INFO - Page loaded completely
+2024-09-25 09:23:55,317 - INFO - Table data check: No data found
+2024-09-25 09:23:55,317 - INFO - No data found for DHANBAD.
+2024-09-25 09:23:55,318 - INFO - Moving to next depot. Next index: 2
+2024-09-25 09:23:57,321 - INFO - Handling any error dialogs before depot selection...
+2024-09-25 09:23:57,333 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-25 09:23:57,366 - INFO - Error dialog dismissed.
+2024-09-25 09:23:57,903 - INFO - Selecting Depot: BANKURA
+2024-09-25 09:23:57,925 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-25 09:23:57,937 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-25 09:23:57,945 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-25 09:23:58,494 - INFO - Option 'BANKURA' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-25 09:23:59,028 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-25 09:23:59,028 - INFO - Clicking Search...
+2024-09-25 09:24:04,232 - INFO - No error dialog detected
+2024-09-25 09:24:04,290 - INFO - Search button clicked successfully
+2024-09-25 09:24:04,840 - INFO - Page loaded completely
+2024-09-25 09:24:04,848 - INFO - Table data check: No data found
+2024-09-25 09:24:04,848 - INFO - No data found for BANKURA.
+2024-09-25 09:24:04,849 - INFO - Moving to next depot. Next index: 3
+2024-09-25 09:24:06,851 - INFO - Handling any error dialogs before depot selection...
+2024-09-25 09:24:06,860 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-25 09:24:06,916 - INFO - Error dialog dismissed.
+2024-09-25 09:24:07,461 - INFO - Selecting Depot: BERHAMPORE
+2024-09-25 09:24:07,483 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-25 09:24:07,495 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-25 09:24:07,502 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-25 09:24:08,061 - INFO - Option 'BERHAMPORE' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-25 09:24:08,589 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-25 09:24:08,590 - INFO - Clicking Search...
+2024-09-25 09:24:13,780 - INFO - No error dialog detected
+2024-09-25 09:24:13,833 - INFO - Search button clicked successfully
+2024-09-25 09:24:14,895 - INFO - Page loaded completely
+2024-09-25 09:24:14,907 - INFO - Table data check: No data found
+2024-09-25 09:24:14,907 - INFO - No data found for BERHAMPORE.
+2024-09-25 09:24:14,907 - INFO - Moving to next depot. Next index: 4
+2024-09-25 09:24:16,910 - INFO - Handling any error dialogs before depot selection...
+2024-09-25 09:24:16,918 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-25 09:24:16,949 - INFO - Error dialog dismissed.
+2024-09-25 09:24:17,469 - INFO - Selecting Depot: BURDWAN
+2024-09-25 09:24:17,491 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-25 09:24:17,507 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-25 09:24:17,513 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-25 09:24:18,073 - INFO - Option 'BURDWAN' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-25 09:24:18,604 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-25 09:24:18,604 - INFO - Clicking Search...
+2024-09-25 09:24:23,811 - INFO - No error dialog detected
+2024-09-25 09:24:23,873 - INFO - Search button clicked successfully
+2024-09-25 09:24:24,422 - INFO - Page loaded completely
+2024-09-25 09:24:24,429 - INFO - Table data check: No data found
+2024-09-25 09:24:24,430 - INFO - No data found for BURDWAN.
+2024-09-25 09:24:24,430 - INFO - Moving to next depot. Next index: 5
+2024-09-25 09:24:26,433 - INFO - Handling any error dialogs before depot selection...
+2024-09-25 09:24:26,445 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-25 09:24:26,479 - INFO - Error dialog dismissed.
+2024-09-25 09:24:27,018 - INFO - Selecting Depot: COSSIPORE
+2024-09-25 09:24:27,049 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-25 09:24:27,062 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-25 09:24:27,068 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-25 09:24:27,635 - INFO - Option 'COSSIPORE' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-25 09:24:28,165 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-25 09:24:28,165 - INFO - Clicking Search...
+2024-09-25 09:24:33,373 - INFO - No error dialog detected
+2024-09-25 09:24:33,432 - INFO - Search button clicked successfully
+2024-09-25 09:24:34,490 - INFO - Page loaded completely
+2024-09-25 09:24:34,509 - INFO - Table data check: No data found
+2024-09-25 09:24:34,509 - INFO - No data found for COSSIPORE.
+2024-09-25 09:24:34,509 - INFO - Moving to next depot. Next index: 6
+2024-09-25 09:24:36,512 - INFO - Handling any error dialogs before depot selection...
+2024-09-25 09:24:36,526 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-25 09:24:36,565 - INFO - Error dialog dismissed.
+2024-09-25 09:24:37,104 - INFO - Selecting Depot: DANKUNI
+2024-09-25 09:24:37,124 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-25 09:24:37,135 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-25 09:24:37,141 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-25 09:24:37,710 - INFO - Option 'DANKUNI' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-25 09:24:38,265 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-25 09:24:38,266 - INFO - Clicking Search...
+2024-09-25 09:24:43,474 - INFO - No error dialog detected
+2024-09-25 09:24:43,530 - INFO - Search button clicked successfully
+2024-09-25 09:24:44,593 - INFO - Page loaded completely
+2024-09-25 09:24:44,609 - INFO - Table data check: No data found
+2024-09-25 09:24:44,610 - INFO - No data found for DANKUNI.
+2024-09-25 09:24:44,610 - INFO - Moving to next depot. Next index: 7
+2024-09-25 09:24:46,613 - INFO - Handling any error dialogs before depot selection...
+2024-09-25 09:24:46,625 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-25 09:24:46,657 - INFO - Error dialog dismissed.
+2024-09-25 09:24:47,195 - INFO - Selecting Depot: KALIGHAT
+2024-09-25 09:24:47,225 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-25 09:24:47,238 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-25 09:24:47,243 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-25 09:24:47,820 - INFO - Option 'KALIGHAT' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-25 09:24:48,353 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-25 09:24:48,353 - INFO - Clicking Search...
+2024-09-25 09:24:53,546 - INFO - No error dialog detected
+2024-09-25 09:24:53,602 - INFO - Search button clicked successfully
+2024-09-25 09:24:54,140 - INFO - Page loaded completely
+2024-09-25 09:24:54,148 - INFO - Table data check: No data found
+2024-09-25 09:24:54,148 - INFO - No data found for KALIGHAT.
+2024-09-25 09:24:54,148 - INFO - Moving to next depot. Next index: 8
+2024-09-25 09:24:56,151 - INFO - Handling any error dialogs before depot selection...
+2024-09-25 09:24:56,163 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-25 09:24:56,201 - INFO - Error dialog dismissed.
+2024-09-25 09:24:56,737 - INFO - Selecting Depot: KHARAGPUR
+2024-09-25 09:24:56,765 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-25 09:24:56,778 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-25 09:24:56,783 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-25 09:24:57,383 - INFO - Option 'KHARAGPUR' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-25 09:24:57,918 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-25 09:24:57,919 - INFO - Clicking Search...
+2024-09-25 09:25:03,120 - INFO - No error dialog detected
+2024-09-25 09:25:03,173 - INFO - Search button clicked successfully
+2024-09-25 09:25:04,227 - INFO - Page loaded completely
+2024-09-25 09:25:04,237 - INFO - Table data check: No data found
+2024-09-25 09:25:04,237 - INFO - No data found for KHARAGPUR.
+2024-09-25 09:25:04,237 - INFO - Moving to next depot. Next index: 9
+2024-09-25 09:25:06,239 - INFO - Handling any error dialogs before depot selection...
+2024-09-25 09:25:06,253 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-25 09:25:06,287 - INFO - Error dialog dismissed.
+2024-09-25 09:25:06,824 - INFO - Selecting Depot: KRISHNANAGAR
+2024-09-25 09:25:06,853 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-25 09:25:06,866 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-25 09:25:06,871 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-25 09:25:07,462 - INFO - Option 'KRISHNANAGAR' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-25 09:25:07,995 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-25 09:25:07,995 - INFO - Clicking Search...
+2024-09-25 09:25:13,194 - INFO - No error dialog detected
+2024-09-25 09:25:13,246 - INFO - Search button clicked successfully
+2024-09-25 09:25:15,349 - INFO - Page loaded completely
+2024-09-25 09:25:15,360 - INFO - Table data check: No data found
+2024-09-25 09:25:15,360 - INFO - No data found for KRISHNANAGAR.
+2024-09-25 09:25:15,360 - INFO - Moving to next depot. Next index: 10
+2024-09-25 09:25:17,362 - INFO - Handling any error dialogs before depot selection...
+2024-09-25 09:25:17,375 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-25 09:25:17,415 - INFO - Error dialog dismissed.
+2024-09-25 09:25:17,950 - INFO - Selecting Depot: SAINTHIA
+2024-09-25 09:25:17,973 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-25 09:25:17,999 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-25 09:25:18,004 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-25 09:25:18,593 - INFO - Option 'SAINTHIA' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-25 09:25:19,110 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-25 09:25:19,111 - INFO - Clicking Search...
+2024-09-25 09:25:24,314 - INFO - No error dialog detected
+2024-09-25 09:25:24,369 - INFO - Search button clicked successfully
+2024-09-25 09:25:24,908 - INFO - Page loaded completely
+2024-09-25 09:25:24,916 - INFO - Table data check: No data found
+2024-09-25 09:25:24,917 - INFO - No data found for SAINTHIA.
+2024-09-25 09:25:24,917 - INFO - Moving to next depot. Next index: 11
+2024-09-25 09:25:26,920 - INFO - Handling any error dialogs before depot selection...
+2024-09-25 09:25:26,931 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-25 09:25:26,974 - INFO - Error dialog dismissed.
+2024-09-25 09:25:27,509 - INFO - Selecting Depot: SHALIMAR
+2024-09-25 09:25:27,542 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-25 09:25:27,552 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-25 09:25:27,558 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-25 09:25:28,154 - INFO - Option 'SHALIMAR' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-25 09:25:28,686 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-25 09:25:28,686 - INFO - Clicking Search...
+2024-09-25 09:25:33,891 - INFO - No error dialog detected
+2024-09-25 09:25:33,943 - INFO - Search button clicked successfully
+2024-09-25 09:25:34,482 - INFO - Page loaded completely
+2024-09-25 09:25:34,492 - INFO - Table data check: No data found
+2024-09-25 09:25:34,492 - INFO - No data found for SHALIMAR.
+2024-09-25 09:25:34,492 - INFO - Moving to next depot. Next index: 12
+2024-09-25 09:25:36,494 - INFO - Handling any error dialogs before depot selection...
+2024-09-25 09:25:36,508 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-25 09:25:36,539 - INFO - Error dialog dismissed.
+2024-09-25 09:25:37,072 - INFO - Selecting Depot: DIAMOND HARBOUR
+2024-09-25 09:25:37,095 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-25 09:25:37,104 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-25 09:25:37,112 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-25 09:25:37,707 - INFO - Option 'DIAMOND HARBOUR' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-25 09:25:38,235 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-25 09:25:38,235 - INFO - Clicking Search...
+2024-09-25 09:25:43,432 - INFO - No error dialog detected
+2024-09-25 09:25:43,485 - INFO - Search button clicked successfully
+2024-09-25 09:25:44,538 - INFO - Page loaded completely
+2024-09-25 09:25:44,551 - INFO - Table data check: No data found
+2024-09-25 09:25:44,551 - INFO - No data found for DIAMOND HARBOUR.
+2024-09-25 09:25:44,551 - INFO - Moving to next depot. Next index: 13
+2024-09-25 09:25:46,554 - INFO - Handling any error dialogs before depot selection...
+2024-09-25 09:25:46,567 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-25 09:25:46,600 - INFO - Error dialog dismissed.
+2024-09-25 09:25:47,133 - INFO - Selecting Depot: BARASAT
+2024-09-25 09:25:47,161 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-25 09:25:47,180 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-25 09:25:47,185 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-25 09:25:47,790 - INFO - Option 'BARASAT' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-25 09:25:48,323 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-25 09:25:48,323 - INFO - Clicking Search...
+2024-09-25 09:25:53,524 - INFO - No error dialog detected
+2024-09-25 09:25:53,578 - INFO - Search button clicked successfully
+2024-09-25 09:25:54,117 - INFO - Page loaded completely
+2024-09-25 09:25:54,125 - INFO - Table data check: No data found
+2024-09-25 09:25:54,126 - INFO - No data found for BARASAT.
+2024-09-25 09:25:54,126 - INFO - Moving to next depot. Next index: 0
+2024-09-25 09:25:56,129 - INFO - Handling any error dialogs before depot selection...
+2024-09-25 09:25:56,142 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-25 09:25:56,183 - INFO - Error dialog dismissed.
+2024-09-25 09:25:56,721 - INFO - Selecting Depot: DEOGARH
+2024-09-25 09:25:56,746 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-25 09:25:56,758 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-25 09:25:56,764 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-25 09:25:57,305 - INFO - Option 'DEOGARH' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-25 09:25:57,836 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-25 09:25:57,837 - INFO - Clicking Search...
+2024-09-25 09:26:03,029 - INFO - No error dialog detected
+2024-09-25 09:26:03,083 - INFO - Search button clicked successfully
+2024-09-25 09:26:04,145 - INFO - Page loaded completely
+2024-09-25 09:26:04,162 - INFO - Table data check: No data found
+2024-09-25 09:26:04,163 - INFO - No data found for DEOGARH.
+2024-09-25 09:26:04,163 - INFO - Moving to next depot. Next index: 1
+2024-09-25 09:26:06,166 - INFO - Handling any error dialogs before depot selection...
+2024-09-25 09:26:06,177 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-25 09:26:06,216 - INFO - Error dialog dismissed.
+2024-09-25 09:26:06,753 - INFO - Selecting Depot: DHANBAD
+2024-09-25 09:26:06,776 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-25 09:26:06,788 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-25 09:26:06,794 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-25 09:26:07,339 - INFO - Option 'DHANBAD' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-25 09:26:07,873 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-25 09:26:07,875 - INFO - Clicking Search...
+2024-09-25 09:26:13,069 - INFO - No error dialog detected
+2024-09-25 09:26:13,136 - INFO - Search button clicked successfully
+2024-09-25 09:26:14,200 - INFO - Page loaded completely
+2024-09-25 09:26:14,215 - INFO - Table data check: No data found
+2024-09-25 09:26:14,215 - INFO - No data found for DHANBAD.
+2024-09-25 09:26:14,215 - INFO - Moving to next depot. Next index: 2
+2024-09-25 09:26:16,218 - INFO - Handling any error dialogs before depot selection...
+2024-09-25 09:26:16,231 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-25 09:26:16,263 - INFO - Error dialog dismissed.
+2024-09-25 09:26:16,798 - INFO - Selecting Depot: BANKURA
+2024-09-25 09:26:16,820 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-25 09:26:16,830 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-25 09:26:16,839 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-25 09:26:17,394 - INFO - Option 'BANKURA' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-25 09:26:17,926 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-25 09:26:17,926 - INFO - Clicking Search...
+2024-09-25 09:26:23,118 - INFO - No error dialog detected
+2024-09-25 09:26:23,176 - INFO - Search button clicked successfully
+2024-09-25 09:26:24,239 - INFO - Page loaded completely
+2024-09-25 09:26:24,249 - INFO - Table data check: No data found
+2024-09-25 09:26:24,250 - INFO - No data found for BANKURA.
+2024-09-25 09:26:24,250 - INFO - Moving to next depot. Next index: 3
+2024-09-25 09:26:26,252 - INFO - Handling any error dialogs before depot selection...
+2024-09-25 09:26:26,265 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-25 09:26:26,300 - INFO - Error dialog dismissed.
+2024-09-25 09:26:26,837 - INFO - Selecting Depot: BERHAMPORE
+2024-09-25 09:26:26,864 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-25 09:26:26,878 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-25 09:26:26,883 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-25 09:26:27,442 - INFO - Option 'BERHAMPORE' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-25 09:26:27,975 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-25 09:26:27,975 - INFO - Clicking Search...
+2024-09-25 09:26:33,166 - INFO - No error dialog detected
+2024-09-25 09:26:33,227 - INFO - Search button clicked successfully
+2024-09-25 09:26:33,782 - INFO - Page loaded completely
+2024-09-25 09:26:33,793 - INFO - Table data check: No data found
+2024-09-25 09:26:33,793 - INFO - No data found for BERHAMPORE.
+2024-09-25 09:26:33,793 - INFO - Moving to next depot. Next index: 4
+2024-09-25 09:26:35,797 - INFO - Handling any error dialogs before depot selection...
+2024-09-25 09:26:35,809 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-25 09:26:35,851 - INFO - Error dialog dismissed.
+2024-09-25 09:26:36,391 - INFO - Selecting Depot: BURDWAN
+2024-09-25 09:26:36,425 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-25 09:26:36,439 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-25 09:26:36,444 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-25 09:26:37,005 - INFO - Option 'BURDWAN' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-25 09:26:37,541 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-25 09:26:37,543 - INFO - Clicking Search...
+2024-09-25 09:26:42,735 - INFO - No error dialog detected
+2024-09-25 09:26:42,790 - INFO - Search button clicked successfully
+2024-09-25 09:26:43,327 - INFO - Page loaded completely
+2024-09-25 09:26:43,335 - INFO - Table data check: No data found
+2024-09-25 09:26:43,335 - INFO - No data found for BURDWAN.
+2024-09-25 09:26:43,335 - INFO - Moving to next depot. Next index: 5
+2024-09-25 09:26:45,338 - INFO - Handling any error dialogs before depot selection...
+2024-09-25 09:26:45,351 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-25 09:26:45,384 - INFO - Error dialog dismissed.
+2024-09-25 09:26:45,918 - INFO - Selecting Depot: COSSIPORE
+2024-09-25 09:26:45,944 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-25 09:26:45,958 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-25 09:26:45,963 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-25 09:26:46,522 - INFO - Option 'COSSIPORE' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-25 09:26:47,052 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-25 09:26:47,053 - INFO - Clicking Search...
+2024-09-25 09:26:52,264 - INFO - No error dialog detected
+2024-09-25 09:26:52,318 - INFO - Search button clicked successfully
+2024-09-25 09:26:52,873 - INFO - Page loaded completely
+2024-09-25 09:26:52,881 - INFO - Table data check: No data found
+2024-09-25 09:26:52,881 - INFO - No data found for COSSIPORE.
+2024-09-25 09:26:52,881 - INFO - Moving to next depot. Next index: 6
+2024-09-25 09:26:54,883 - INFO - Handling any error dialogs before depot selection...
+2024-09-25 09:26:54,896 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-25 09:26:54,936 - INFO - Error dialog dismissed.
+2024-09-25 09:26:55,476 - INFO - Selecting Depot: DANKUNI
+2024-09-25 09:26:55,498 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-25 09:26:55,509 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-25 09:26:55,516 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-25 09:26:56,106 - INFO - Option 'DANKUNI' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-25 09:26:56,646 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-25 09:26:56,647 - INFO - Clicking Search...
+2024-09-25 09:27:01,848 - INFO - No error dialog detected
+2024-09-25 09:27:01,899 - INFO - Search button clicked successfully
+2024-09-25 09:27:02,437 - INFO - Page loaded completely
+2024-09-25 09:27:02,445 - INFO - Table data check: No data found
+2024-09-25 09:27:02,445 - INFO - No data found for DANKUNI.
+2024-09-25 09:27:02,445 - INFO - Moving to next depot. Next index: 7
+2024-09-25 09:27:04,448 - INFO - Handling any error dialogs before depot selection...
+2024-09-25 09:27:04,461 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-25 09:27:04,490 - INFO - Error dialog dismissed.
+2024-09-25 09:27:05,026 - INFO - Selecting Depot: KALIGHAT
+2024-09-25 09:27:05,046 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-25 09:27:05,059 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-25 09:27:05,064 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-25 09:27:05,637 - INFO - Option 'KALIGHAT' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-25 09:27:06,177 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-25 09:27:06,178 - INFO - Clicking Search...
+2024-09-25 09:27:11,378 - INFO - No error dialog detected
+2024-09-25 09:27:11,429 - INFO - Search button clicked successfully
+2024-09-25 09:27:12,494 - INFO - Page loaded completely
+2024-09-25 09:27:12,510 - INFO - Table data check: No data found
+2024-09-25 09:27:12,510 - INFO - No data found for KALIGHAT.
+2024-09-25 09:27:12,511 - INFO - Moving to next depot. Next index: 8
+2024-09-25 09:27:14,514 - INFO - Handling any error dialogs before depot selection...
+2024-09-25 09:27:14,526 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-25 09:27:14,565 - INFO - Error dialog dismissed.
+2024-09-25 09:27:15,104 - INFO - Selecting Depot: KHARAGPUR
+2024-09-25 09:27:15,133 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-25 09:27:15,144 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-25 09:27:15,149 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-25 09:27:15,726 - INFO - Option 'KHARAGPUR' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-25 09:27:16,257 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-25 09:27:16,257 - INFO - Clicking Search...
+2024-09-25 09:27:21,451 - INFO - No error dialog detected
+2024-09-25 09:27:21,507 - INFO - Search button clicked successfully
+2024-09-25 09:27:22,044 - INFO - Page loaded completely
+2024-09-25 09:27:22,052 - INFO - Table data check: No data found
+2024-09-25 09:27:22,053 - INFO - No data found for KHARAGPUR.
+2024-09-25 09:27:22,053 - INFO - Moving to next depot. Next index: 9
+2024-09-25 09:27:24,056 - INFO - Handling any error dialogs before depot selection...
+2024-09-25 09:27:24,068 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-25 09:27:24,106 - INFO - Error dialog dismissed.
+2024-09-25 09:27:24,643 - INFO - Selecting Depot: KRISHNANAGAR
+2024-09-25 09:27:24,670 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-25 09:27:24,684 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-25 09:27:24,689 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-25 09:27:25,284 - INFO - Option 'KRISHNANAGAR' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-25 09:27:25,822 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-25 09:27:25,822 - INFO - Clicking Search...
+2024-09-25 09:27:31,027 - INFO - No error dialog detected
+2024-09-25 09:27:31,084 - INFO - Search button clicked successfully
+2024-09-25 09:27:32,143 - INFO - Page loaded completely
+2024-09-25 09:27:32,156 - INFO - Table data check: No data found
+2024-09-25 09:27:32,157 - INFO - No data found for KRISHNANAGAR.
+2024-09-25 09:27:32,157 - INFO - Moving to next depot. Next index: 10
+2024-09-25 09:27:34,159 - INFO - Handling any error dialogs before depot selection...
+2024-09-25 09:27:34,172 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-25 09:27:34,210 - INFO - Error dialog dismissed.
+2024-09-25 09:27:34,750 - INFO - Selecting Depot: SAINTHIA
+2024-09-25 09:27:34,775 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-25 09:27:34,783 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-25 09:27:34,791 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-25 09:27:35,391 - INFO - Option 'SAINTHIA' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-25 09:27:35,920 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-25 09:27:35,921 - INFO - Clicking Search...
+2024-09-25 09:27:41,117 - INFO - No error dialog detected
+2024-09-25 09:27:41,169 - INFO - Search button clicked successfully
+2024-09-25 09:27:42,231 - INFO - Page loaded completely
+2024-09-25 09:27:42,242 - INFO - Table data check: No data found
+2024-09-25 09:27:42,242 - INFO - No data found for SAINTHIA.
+2024-09-25 09:27:42,243 - INFO - Moving to next depot. Next index: 11
+2024-09-25 09:27:44,246 - INFO - Handling any error dialogs before depot selection...
+2024-09-25 09:27:44,259 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-25 09:27:44,290 - INFO - Error dialog dismissed.
+2024-09-25 09:27:44,822 - INFO - Selecting Depot: SHALIMAR
+2024-09-25 09:27:44,841 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-25 09:27:44,851 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-25 09:27:44,857 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-25 09:27:45,461 - INFO - Option 'SHALIMAR' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-25 09:27:45,991 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-25 09:27:45,991 - INFO - Clicking Search...
+2024-09-25 09:27:51,213 - INFO - No error dialog detected
+2024-09-25 09:27:51,263 - INFO - Search button clicked successfully
+2024-09-25 09:27:51,802 - INFO - Page loaded completely
+2024-09-25 09:27:51,809 - INFO - Table data check: No data found
+2024-09-25 09:27:51,810 - INFO - No data found for SHALIMAR.
+2024-09-25 09:27:51,810 - INFO - Moving to next depot. Next index: 12
+2024-09-25 09:27:53,813 - INFO - Handling any error dialogs before depot selection...
+2024-09-25 09:27:53,826 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-25 09:27:53,864 - INFO - Error dialog dismissed.
+2024-09-25 09:27:54,395 - INFO - Selecting Depot: DIAMOND HARBOUR
+2024-09-25 09:27:54,415 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-25 09:27:54,426 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-25 09:27:54,433 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-25 09:27:55,035 - INFO - Option 'DIAMOND HARBOUR' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-25 09:27:55,566 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-25 09:27:55,566 - INFO - Clicking Search...
+2024-09-25 09:28:00,768 - INFO - No error dialog detected
+2024-09-25 09:28:00,821 - INFO - Search button clicked successfully
+2024-09-25 09:28:01,359 - INFO - Page loaded completely
+2024-09-25 09:28:01,366 - INFO - Table data check: No data found
+2024-09-25 09:28:01,367 - INFO - No data found for DIAMOND HARBOUR.
+2024-09-25 09:28:01,367 - INFO - Moving to next depot. Next index: 13
+2024-09-25 09:28:03,370 - INFO - Handling any error dialogs before depot selection...
+2024-09-25 09:28:03,382 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-25 09:28:03,414 - INFO - Error dialog dismissed.
+2024-09-25 09:28:03,945 - INFO - Selecting Depot: BARASAT
+2024-09-25 09:28:03,971 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-25 09:28:03,982 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-25 09:28:03,986 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-25 09:28:04,597 - INFO - Option 'BARASAT' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-25 09:28:05,131 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-25 09:28:05,132 - INFO - Clicking Search...
+2024-09-25 09:28:10,334 - INFO - No error dialog detected
+2024-09-25 09:28:10,385 - INFO - Search button clicked successfully
+2024-09-25 09:28:10,924 - INFO - Page loaded completely
+2024-09-25 09:28:10,931 - INFO - Table data check: No data found
+2024-09-25 09:28:10,931 - INFO - No data found for BARASAT.
+2024-09-25 09:28:10,932 - INFO - Moving to next depot. Next index: 0
+2024-09-25 09:28:12,935 - INFO - Handling any error dialogs before depot selection...
+2024-09-25 09:28:12,947 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-25 09:28:12,977 - INFO - Error dialog dismissed.
+2024-09-25 09:28:13,513 - INFO - Selecting Depot: DEOGARH
+2024-09-25 09:28:13,535 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-25 09:28:13,546 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-25 09:28:13,552 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-25 09:28:14,092 - INFO - Option 'DEOGARH' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-25 09:28:14,622 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-25 09:28:14,623 - INFO - Clicking Search...
+2024-09-25 09:28:19,810 - INFO - No error dialog detected
+2024-09-25 09:28:19,861 - INFO - Search button clicked successfully
+2024-09-25 09:28:20,400 - INFO - Page loaded completely
+2024-09-25 09:28:20,409 - INFO - Table data check: No data found
+2024-09-25 09:28:20,410 - INFO - No data found for DEOGARH.
+2024-09-25 09:28:20,410 - INFO - Moving to next depot. Next index: 1
+2024-09-25 09:28:22,413 - INFO - Handling any error dialogs before depot selection...
+2024-09-25 09:28:22,425 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-25 09:28:22,464 - INFO - Error dialog dismissed.
+2024-09-25 09:28:22,999 - INFO - Selecting Depot: DHANBAD
+2024-09-25 09:28:23,018 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-25 09:28:23,032 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-25 09:28:23,038 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-25 09:28:23,582 - INFO - Option 'DHANBAD' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-25 09:28:24,123 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-25 09:28:24,124 - INFO - Clicking Search...
+2024-09-25 09:28:29,325 - INFO - No error dialog detected
+2024-09-25 09:28:29,378 - INFO - Search button clicked successfully
+2024-09-25 09:28:29,916 - INFO - Page loaded completely
+2024-09-25 09:28:29,924 - INFO - Table data check: No data found
+2024-09-25 09:28:29,924 - INFO - No data found for DHANBAD.
+2024-09-25 09:28:29,924 - INFO - Moving to next depot. Next index: 2
+2024-09-25 09:28:31,927 - INFO - Handling any error dialogs before depot selection...
+2024-09-25 09:28:31,940 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-25 09:28:31,972 - INFO - Error dialog dismissed.
+2024-09-25 09:28:32,510 - INFO - Selecting Depot: BANKURA
+2024-09-25 09:28:32,531 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-25 09:28:32,543 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-25 09:28:32,550 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-25 09:28:33,102 - INFO - Option 'BANKURA' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-25 09:28:33,633 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-25 09:28:33,634 - INFO - Clicking Search...
+2024-09-25 09:28:38,840 - INFO - No error dialog detected
+2024-09-25 09:28:38,892 - INFO - Search button clicked successfully
+2024-09-25 09:28:39,429 - INFO - Page loaded completely
+2024-09-25 09:28:39,437 - INFO - Table data check: No data found
+2024-09-25 09:28:39,438 - INFO - No data found for BANKURA.
+2024-09-25 09:28:39,438 - INFO - Moving to next depot. Next index: 3
+2024-09-25 09:28:41,441 - INFO - Handling any error dialogs before depot selection...
+2024-09-25 09:28:41,454 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-25 09:28:41,485 - INFO - Error dialog dismissed.
+2024-09-25 09:28:42,016 - INFO - Selecting Depot: BERHAMPORE
+2024-09-25 09:28:42,034 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-25 09:28:42,044 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-25 09:28:42,049 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-25 09:28:42,606 - INFO - Option 'BERHAMPORE' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-25 09:28:43,151 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-25 09:28:43,151 - INFO - Clicking Search...
+2024-09-25 09:28:48,344 - INFO - No error dialog detected
+2024-09-25 09:28:48,400 - INFO - Search button clicked successfully
+2024-09-25 09:28:49,462 - INFO - Page loaded completely
+2024-09-25 09:28:49,480 - INFO - Table data check: No data found
+2024-09-25 09:28:49,480 - INFO - No data found for BERHAMPORE.
+2024-09-25 09:28:49,480 - INFO - Moving to next depot. Next index: 4
+2024-09-25 09:28:51,484 - INFO - Handling any error dialogs before depot selection...
+2024-09-25 09:28:51,496 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-25 09:28:51,525 - INFO - Error dialog dismissed.
+2024-09-25 09:28:52,055 - INFO - Selecting Depot: BURDWAN
+2024-09-25 09:28:52,074 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-25 09:28:52,083 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-25 09:28:52,089 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-25 09:28:52,649 - INFO - Option 'BURDWAN' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-25 09:28:53,177 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-25 09:28:53,178 - INFO - Clicking Search...
+2024-09-25 09:28:58,379 - INFO - No error dialog detected
+2024-09-25 09:28:58,430 - INFO - Search button clicked successfully
+2024-09-25 09:28:59,491 - INFO - Page loaded completely
+2024-09-25 09:28:59,507 - INFO - Table data check: No data found
+2024-09-25 09:28:59,507 - INFO - No data found for BURDWAN.
+2024-09-25 09:28:59,507 - INFO - Moving to next depot. Next index: 5
+2024-09-25 09:29:01,511 - INFO - Handling any error dialogs before depot selection...
+2024-09-25 09:29:01,523 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-25 09:29:01,554 - INFO - Error dialog dismissed.
+2024-09-25 09:29:02,088 - INFO - Selecting Depot: COSSIPORE
+2024-09-25 09:29:02,109 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-25 09:29:02,123 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-25 09:29:02,128 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-25 09:29:02,690 - INFO - Option 'COSSIPORE' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-25 09:29:03,228 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-25 09:29:03,229 - INFO - Clicking Search...
+2024-09-25 09:29:08,420 - INFO - No error dialog detected
+2024-09-25 09:29:08,474 - INFO - Search button clicked successfully
+2024-09-25 09:29:09,013 - INFO - Page loaded completely
+2024-09-25 09:29:09,021 - INFO - Table data check: No data found
+2024-09-25 09:29:09,021 - INFO - No data found for COSSIPORE.
+2024-09-25 09:29:09,022 - INFO - Moving to next depot. Next index: 6
+2024-09-25 09:29:11,025 - INFO - Handling any error dialogs before depot selection...
+2024-09-25 09:29:11,036 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-25 09:29:11,071 - INFO - Error dialog dismissed.
+2024-09-25 09:29:11,606 - INFO - Selecting Depot: DANKUNI
+2024-09-25 09:29:11,629 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-25 09:29:11,645 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-25 09:29:11,650 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-25 09:29:12,223 - INFO - Option 'DANKUNI' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-25 09:29:12,754 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-25 09:29:12,755 - INFO - Clicking Search...
+2024-09-25 09:29:17,953 - INFO - No error dialog detected
+2024-09-25 09:29:18,004 - INFO - Search button clicked successfully
+2024-09-25 09:29:19,063 - INFO - Page loaded completely
+2024-09-25 09:29:19,073 - INFO - Table data check: No data found
+2024-09-25 09:29:19,074 - INFO - No data found for DANKUNI.
+2024-09-25 09:29:19,074 - INFO - Moving to next depot. Next index: 7
+2024-09-25 09:29:21,077 - INFO - Handling any error dialogs before depot selection...
+2024-09-25 09:29:21,091 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-25 09:29:21,121 - INFO - Error dialog dismissed.
+2024-09-25 09:29:21,658 - INFO - Selecting Depot: KALIGHAT
+2024-09-25 09:29:21,682 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-25 09:29:21,692 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-25 09:29:21,699 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-25 09:29:22,272 - INFO - Option 'KALIGHAT' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-25 09:29:22,803 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-25 09:29:22,804 - INFO - Clicking Search...
+2024-09-25 09:29:28,004 - INFO - No error dialog detected
+2024-09-25 09:29:28,055 - INFO - Search button clicked successfully
+2024-09-25 09:29:29,112 - INFO - Page loaded completely
+2024-09-25 09:29:29,121 - INFO - Table data check: No data found
+2024-09-25 09:29:29,121 - INFO - No data found for KALIGHAT.
+2024-09-25 09:29:29,121 - INFO - Moving to next depot. Next index: 8
+2024-09-25 09:29:31,124 - INFO - Handling any error dialogs before depot selection...
+2024-09-25 09:29:31,137 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-25 09:29:31,167 - INFO - Error dialog dismissed.
+2024-09-25 09:29:31,700 - INFO - Selecting Depot: KHARAGPUR
+2024-09-25 09:29:31,728 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-25 09:29:31,739 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-25 09:29:31,745 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-25 09:29:32,322 - INFO - Option 'KHARAGPUR' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-25 09:29:32,857 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-25 09:29:32,858 - INFO - Clicking Search...
+2024-09-25 09:29:38,068 - INFO - No error dialog detected
+2024-09-25 09:29:38,124 - INFO - Search button clicked successfully
+2024-09-25 09:29:38,661 - INFO - Page loaded completely
+2024-09-25 09:29:38,670 - INFO - Table data check: No data found
+2024-09-25 09:29:38,670 - INFO - No data found for KHARAGPUR.
+2024-09-25 09:29:38,671 - INFO - Moving to next depot. Next index: 9
+2024-09-25 09:29:40,674 - INFO - Handling any error dialogs before depot selection...
+2024-09-25 09:29:40,688 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-25 09:29:40,721 - INFO - Error dialog dismissed.
+2024-09-25 09:29:41,255 - INFO - Selecting Depot: KRISHNANAGAR
+2024-09-25 09:29:41,274 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-25 09:29:41,287 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-25 09:29:41,292 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-25 09:29:41,882 - INFO - Option 'KRISHNANAGAR' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-25 09:29:42,427 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-25 09:29:42,429 - INFO - Clicking Search...
+2024-09-25 09:29:47,624 - INFO - No error dialog detected
+2024-09-25 09:29:47,676 - INFO - Search button clicked successfully
+2024-09-25 09:29:48,743 - INFO - Page loaded completely
+2024-09-25 09:29:48,760 - INFO - Table data check: No data found
+2024-09-25 09:29:48,760 - INFO - No data found for KRISHNANAGAR.
+2024-09-25 09:29:48,760 - INFO - Moving to next depot. Next index: 10
+2024-09-25 09:29:50,763 - INFO - Handling any error dialogs before depot selection...
+2024-09-25 09:29:50,775 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-25 09:29:50,808 - INFO - Error dialog dismissed.
+2024-09-25 09:29:51,343 - INFO - Selecting Depot: SAINTHIA
+2024-09-25 09:29:51,364 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-25 09:29:51,378 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-25 09:29:51,384 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-25 09:29:51,981 - INFO - Option 'SAINTHIA' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-25 09:29:52,515 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-25 09:29:52,516 - INFO - Clicking Search...
+2024-09-25 09:29:57,717 - INFO - No error dialog detected
+2024-09-25 09:29:57,766 - INFO - Search button clicked successfully
+2024-09-25 09:29:58,832 - INFO - Page loaded completely
+2024-09-25 09:29:58,841 - INFO - Table data check: No data found
+2024-09-25 09:29:58,841 - INFO - No data found for SAINTHIA.
+2024-09-25 09:29:58,841 - INFO - Moving to next depot. Next index: 11
+2024-09-25 09:30:00,844 - INFO - Handling any error dialogs before depot selection...
+2024-09-25 09:30:00,857 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-25 09:30:00,887 - INFO - Error dialog dismissed.
+2024-09-25 09:30:01,425 - INFO - Selecting Depot: SHALIMAR
+2024-09-25 09:30:01,447 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-25 09:30:01,458 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-25 09:30:01,465 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-25 09:30:02,069 - INFO - Option 'SHALIMAR' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-25 09:30:02,600 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-25 09:30:02,601 - INFO - Clicking Search...
+2024-09-25 09:30:07,806 - INFO - No error dialog detected
+2024-09-25 09:30:07,859 - INFO - Search button clicked successfully
+2024-09-25 09:30:08,402 - INFO - Page loaded completely
+2024-09-25 09:30:08,409 - INFO - Table data check: No data found
+2024-09-25 09:30:08,409 - INFO - No data found for SHALIMAR.
+2024-09-25 09:30:08,409 - INFO - Moving to next depot. Next index: 12
+2024-09-25 09:30:10,413 - INFO - Handling any error dialogs before depot selection...
+2024-09-25 09:30:10,425 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-25 09:30:10,456 - INFO - Error dialog dismissed.
+2024-09-25 09:30:10,991 - INFO - Selecting Depot: DIAMOND HARBOUR
+2024-09-25 09:30:11,018 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-25 09:30:11,029 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-25 09:30:11,036 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-25 09:30:11,636 - INFO - Option 'DIAMOND HARBOUR' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-25 09:30:12,156 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-25 09:30:12,157 - INFO - Clicking Search...
+2024-09-25 09:30:17,344 - INFO - No error dialog detected
+2024-09-25 09:30:17,396 - INFO - Search button clicked successfully
+2024-09-25 09:30:18,460 - INFO - Page loaded completely
+2024-09-25 09:30:18,471 - INFO - Table data check: No data found
+2024-09-25 09:30:18,471 - INFO - No data found for DIAMOND HARBOUR.
+2024-09-25 09:30:18,472 - INFO - Moving to next depot. Next index: 13
+2024-09-25 09:30:20,475 - INFO - Handling any error dialogs before depot selection...
+2024-09-25 09:30:20,488 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-25 09:30:20,520 - INFO - Error dialog dismissed.
+2024-09-25 09:30:21,055 - INFO - Selecting Depot: BARASAT
+2024-09-25 09:30:21,076 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-25 09:30:21,087 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-25 09:30:21,094 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-25 09:30:21,710 - INFO - Option 'BARASAT' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-25 09:30:22,240 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-25 09:30:22,240 - INFO - Clicking Search...
+2024-09-25 09:30:27,440 - INFO - No error dialog detected
+2024-09-25 09:30:27,494 - INFO - Search button clicked successfully
+2024-09-25 09:30:28,551 - INFO - Page loaded completely
+2024-09-25 09:30:28,560 - INFO - Table data check: No data found
+2024-09-25 09:30:28,560 - INFO - No data found for BARASAT.
+2024-09-25 09:30:28,560 - INFO - Moving to next depot. Next index: 0
+2024-09-25 09:30:30,563 - INFO - Handling any error dialogs before depot selection...
+2024-09-25 09:30:30,576 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-25 09:30:30,608 - INFO - Error dialog dismissed.
+2024-09-25 09:30:31,144 - INFO - Selecting Depot: DEOGARH
+2024-09-25 09:30:31,165 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-25 09:30:31,176 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-25 09:30:31,183 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-25 09:30:31,722 - INFO - Option 'DEOGARH' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-25 09:30:32,256 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-25 09:30:32,258 - INFO - Clicking Search...
+2024-09-25 09:30:37,451 - INFO - No error dialog detected
+2024-09-25 09:30:37,502 - INFO - Search button clicked successfully
+2024-09-25 09:30:41,188 - INFO - Page loaded completely
+2024-09-25 09:30:41,207 - INFO - Table data check: No data found
+2024-09-25 09:30:41,207 - INFO - No data found for DEOGARH.
+2024-09-25 09:30:41,208 - INFO - Moving to next depot. Next index: 1
+2024-09-25 09:30:43,211 - INFO - Handling any error dialogs before depot selection...
+2024-09-25 09:30:43,223 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-25 09:30:43,267 - INFO - Error dialog dismissed.
+2024-09-25 09:30:43,822 - INFO - Selecting Depot: DHANBAD
+2024-09-25 09:30:43,849 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-25 09:30:43,861 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-25 09:30:43,866 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-25 09:30:44,410 - INFO - Option 'DHANBAD' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-25 09:30:44,941 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-25 09:30:44,941 - INFO - Clicking Search...
+2024-09-25 09:30:50,123 - INFO - No error dialog detected
+2024-09-25 09:30:50,171 - INFO - Search button clicked successfully
+2024-09-25 09:30:51,232 - INFO - Page loaded completely
+2024-09-25 09:30:51,250 - INFO - Table data check: No data found
+2024-09-25 09:30:51,250 - INFO - No data found for DHANBAD.
+2024-09-25 09:30:51,251 - INFO - Moving to next depot. Next index: 2
+2024-09-25 09:30:53,254 - INFO - Handling any error dialogs before depot selection...
+2024-09-25 09:30:53,266 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-25 09:30:53,304 - INFO - Error dialog dismissed.
+2024-09-25 09:30:53,843 - INFO - Selecting Depot: BANKURA
+2024-09-25 09:30:53,867 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-25 09:30:53,881 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-25 09:30:53,886 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-25 09:30:54,437 - INFO - Option 'BANKURA' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-25 09:30:54,968 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-25 09:30:54,969 - INFO - Clicking Search...
+2024-09-25 09:31:00,166 - INFO - No error dialog detected
+2024-09-25 09:31:00,219 - INFO - Search button clicked successfully
+2024-09-25 09:31:00,753 - INFO - Page loaded completely
+2024-09-25 09:31:00,761 - INFO - Table data check: No data found
+2024-09-25 09:31:00,761 - INFO - No data found for BANKURA.
+2024-09-25 09:31:00,761 - INFO - Moving to next depot. Next index: 3
+2024-09-25 09:31:02,765 - INFO - Handling any error dialogs before depot selection...
+2024-09-25 09:31:02,776 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-25 09:31:02,823 - INFO - Error dialog dismissed.
+2024-09-25 09:31:03,368 - INFO - Selecting Depot: BERHAMPORE
+2024-09-25 09:31:03,395 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-25 09:31:03,408 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-25 09:31:03,413 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-25 09:31:03,982 - INFO - Option 'BERHAMPORE' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-25 09:31:04,513 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-25 09:31:04,514 - INFO - Clicking Search...
+2024-09-25 09:31:09,703 - INFO - No error dialog detected
+2024-09-25 09:31:09,753 - INFO - Search button clicked successfully
+2024-09-25 09:31:10,810 - INFO - Page loaded completely
+2024-09-25 09:31:10,819 - INFO - Table data check: No data found
+2024-09-25 09:31:10,820 - INFO - No data found for BERHAMPORE.
+2024-09-25 09:31:10,820 - INFO - Moving to next depot. Next index: 4
+2024-09-25 09:31:12,823 - INFO - Handling any error dialogs before depot selection...
+2024-09-25 09:31:12,836 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-25 09:31:12,876 - INFO - Error dialog dismissed.
+2024-09-25 09:31:13,412 - INFO - Selecting Depot: BURDWAN
+2024-09-25 09:31:13,440 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-25 09:31:13,449 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-25 09:31:13,454 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-25 09:31:14,015 - INFO - Option 'BURDWAN' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-25 09:31:14,549 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-25 09:31:14,549 - INFO - Clicking Search...
+2024-09-25 09:31:19,756 - INFO - No error dialog detected
+2024-09-25 09:31:19,807 - INFO - Search button clicked successfully
+2024-09-25 09:31:20,339 - INFO - Page loaded completely
+2024-09-25 09:31:20,347 - INFO - Table data check: No data found
+2024-09-25 09:31:20,348 - INFO - No data found for BURDWAN.
+2024-09-25 09:31:20,348 - INFO - Moving to next depot. Next index: 5
+2024-09-25 09:31:22,351 - INFO - Handling any error dialogs before depot selection...
+2024-09-25 09:31:22,364 - INFO - Error dialog detected. Attempting to dismiss it.
+2024-09-25 09:31:22,410 - INFO - Error dialog dismissed.
+2024-09-25 09:31:22,950 - INFO - Selecting Depot: COSSIPORE
+2024-09-25 09:31:22,973 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-25 09:31:22,987 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-25 09:31:22,992 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-25 09:31:23,559 - INFO - Option 'COSSIPORE' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-25 09:31:24,091 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-25 09:31:24,091 - INFO - Clicking Search...
+2024-09-25 09:31:29,283 - INFO - No error dialog detected
+2024-09-25 09:31:29,334 - INFO - Search button clicked successfully
