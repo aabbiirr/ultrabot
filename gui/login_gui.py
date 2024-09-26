@@ -121,7 +121,7 @@ class AutomationThread(QThread):
                 #     self.update_signal.emit(f"Bids with Rank 1: {rank_1_bids}")
                 # else:
                 #     self.update_signal.emit(f"No data found for {current_depot}.")
-
+                self.update_signal.emit(f"Rapidity {self.rapidity}.")
                 if automation.check_table_data():
                     self.update_signal.emit(f"Data found for {current_depot}. Starting {self.bidding_strategy} bidding process...")
                     if self.bidding_strategy == "Aggressive1":
@@ -130,6 +130,10 @@ class AutomationThread(QThread):
                         bids_placed, bid_details = automation.aggressive_bidding2(max_duration=300, destinations=self.destinations)
                     elif self.bidding_strategy == "Ultra Rapid":
                         bids_placed, bid_details = automation.start_ultra_rapid_bidding(max_duration=300, destinations=self.destinations, rapidity=self.rapidity)                    
+                    elif self.bidding_strategy == "AggressiveWithSave":
+                        bids_placed, bid_details = automation.aggressive_bidding_with_save(max_duration=300, destinations=self.destinations, rapidity=self.rapidity)
+                    elif self.bidding_strategy == "Aggressive4":
+                        bids_placed, bid_details = automation.aggressive_bidding4(max_duration=300, destinations=self.destinations, rapidity=self.rapidity)
                     else:  # No rank
                         bids_placed, bid_details = automation.aggressive_bidding3(max_duration=300, destinations=self.destinations)
                     
@@ -162,11 +166,7 @@ class AutomationThread(QThread):
     def stop(self):
         self.stop_flag = True
 
-# The rest of the SAPLoginGUI class remains unchanged
 
-# The rest of the SAPLoginGUI class remains unchanged
-
-# The rest of the SAPLoginGUI class remains unchanged
 
 class SAPLoginGUI(QWidget):
     def __init__(self):
@@ -263,7 +263,7 @@ class SAPLoginGUI(QWidget):
         strategy_layout = QHBoxLayout()
         strategy_layout.addWidget(QLabel("Bidding Strategy:"))
         self.strategy_combo = QComboBox()
-        self.strategy_combo.addItems(["Aggressive1", "Aggressive2", "Ultra Rapid", "Aggressive3"])
+        self.strategy_combo.addItems(["Aggressive1", "Aggressive2", "Aggressive3", "Aggressive4", "AggressiveWithSave", "Ultra Rapid"])
         strategy_layout.addWidget(self.strategy_combo)
         main_layout.addLayout(strategy_layout)
 
