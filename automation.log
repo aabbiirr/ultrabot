@@ -28073,3 +28073,84 @@ Stacktrace:
 #16 0x7f7648094ac3 <unknown>
 
 2024-09-25 09:46:14,170 - INFO - Automation stopped. Browser remains open.
+2024-09-26 09:47:55,884 - INFO - ====== WebDriver manager ======
+2024-09-26 09:47:55,885 - INFO - Setting up WebDriver...
+2024-09-26 09:47:55,946 - INFO - Get LATEST chromedriver version for google-chrome
+2024-09-26 09:47:56,107 - INFO - Get LATEST chromedriver version for google-chrome
+2024-09-26 09:47:56,230 - INFO - Get LATEST chromedriver version for google-chrome
+2024-09-26 09:47:56,530 - INFO - WebDriver version 128.0.6613.137 selected
+2024-09-26 09:47:56,532 - INFO - Modern chrome version https://storage.googleapis.com/chrome-for-testing-public/128.0.6613.137/linux64/chromedriver-linux64.zip
+2024-09-26 09:47:56,534 - INFO - About to download new driver from https://storage.googleapis.com/chrome-for-testing-public/128.0.6613.137/linux64/chromedriver-linux64.zip
+2024-09-26 09:47:56,815 - INFO - Driver downloading response is 200
+2024-09-26 09:47:58,623 - INFO - Get LATEST chromedriver version for google-chrome
+2024-09-26 09:47:58,890 - INFO - Driver has been saved in cache [/home/abir/.wdm/drivers/chromedriver/linux64/128.0.6613.137]
+2024-09-26 09:47:59,318 - INFO - Attempting login... (Attempt 1/3)
+2024-09-26 09:47:59,877 - INFO - Cookies loaded successfully
+2024-09-26 09:48:12,897 - INFO - Logged in successfully using credentials
+2024-09-26 09:48:12,904 - INFO - Cookies saved
+2024-09-26 09:48:12,904 - INFO - Navigating to eBidding page... (Attempt 1/3)
+2024-09-26 09:48:15,826 - INFO - Page loaded completely
+2024-09-26 09:48:15,830 - INFO - Opened eBidding URL: https://www.eye2serve.com:9001/sap/bc/ui5_ui5/sap/zvc_vendor_app/index.html#/ebidding
+2024-09-26 09:48:26,030 - INFO - No error dialog detected
+2024-09-26 09:48:26,031 - INFO - Opened eBidding URL: https://www.eye2serve.com:9001/sap/bc/ui5_ui5/sap/zvc_vendor_app/index.html#/ebidding
+2024-09-26 09:48:26,032 - INFO - Handling error dialogs and clicking 'Show Search' button... (Attempt 1/3)
+2024-09-26 09:48:31,247 - INFO - No error dialog detected
+2024-09-26 09:48:31,331 - INFO - 'Show Search' button clicked successfully
+2024-09-26 09:48:31,332 - INFO - Successfully clicked 'Show Search' button.
+2024-09-26 09:48:31,333 - INFO - Selecting Ship From Plant: WEST BENGAL CEMENT WORKS
+2024-09-26 09:48:31,375 - INFO - Clicked dropdown arrow for __xmlview0--ididUtclVCShipFromPlant
+2024-09-26 09:48:31,390 - INFO - Dropdown list visible for __xmlview0--ididUtclVCShipFromPlant
+2024-09-26 09:48:31,400 - INFO - Found 1 options for __xmlview0--ididUtclVCShipFromPlant
+2024-09-26 09:48:31,957 - INFO - Option 'WEST BENGAL CEMENT WORKS' selected successfully for __xmlview0--ididUtclVCShipFromPlant
+2024-09-26 09:48:32,484 - INFO - Dropdown closed after selection for __xmlview0--ididUtclVCShipFromPlant
+2024-09-26 09:48:32,485 - INFO - Handling any error dialogs before depot selection...
+2024-09-26 09:48:37,708 - INFO - No error dialog detected
+2024-09-26 09:48:37,709 - INFO - Selecting Depot: DEOGARH
+2024-09-26 09:48:37,750 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-26 09:48:37,764 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-26 09:48:37,771 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-26 09:48:38,326 - INFO - Option 'DEOGARH' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-26 09:48:38,862 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-26 09:48:38,862 - INFO - Clicking Search...
+2024-09-26 09:48:44,054 - INFO - No error dialog detected
+2024-09-26 09:48:44,113 - INFO - Search button clicked successfully
+2024-09-26 09:48:44,657 - INFO - Page loaded completely
+2024-09-26 09:48:44,669 - INFO - Table data check: No data found
+2024-09-26 09:48:44,670 - INFO - No data found for DEOGARH.
+2024-09-26 09:48:44,670 - INFO - Moving to next depot. Next index: 1
+2024-09-26 09:48:46,673 - INFO - Handling any error dialogs before depot selection...
+2024-09-26 09:48:51,883 - INFO - No error dialog detected
+2024-09-26 09:48:51,884 - INFO - Selecting Depot: DHANBAD
+2024-09-26 09:48:51,915 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-26 09:48:51,926 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-26 09:48:51,931 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-26 09:48:52,494 - INFO - Option 'DHANBAD' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-26 09:48:53,029 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-26 09:48:53,030 - INFO - Clicking Search...
+2024-09-26 09:48:58,244 - INFO - No error dialog detected
+2024-09-26 09:48:58,304 - INFO - Search button clicked successfully
+2024-09-26 09:48:59,376 - INFO - Page loaded completely
+2024-09-26 09:48:59,386 - INFO - Table data check: No data found
+2024-09-26 09:48:59,386 - INFO - No data found for DHANBAD.
+2024-09-26 09:48:59,386 - INFO - Moving to next depot. Next index: 2
+2024-09-26 09:49:01,389 - INFO - Handling any error dialogs before depot selection...
+2024-09-26 09:49:06,585 - INFO - No error dialog detected
+2024-09-26 09:49:06,586 - INFO - Selecting Depot: BANKURA
+2024-09-26 09:49:06,617 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-26 09:49:06,630 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-26 09:49:06,635 - INFO - Found 14 options for __xmlview0--idUtclVCDepot
+2024-09-26 09:49:07,198 - INFO - Option 'BANKURA' selected successfully for __xmlview0--idUtclVCDepot
+2024-09-26 09:49:07,735 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot
+2024-09-26 09:49:07,737 - INFO - Clicking Search...
+2024-09-26 09:49:12,937 - INFO - No error dialog detected
+2024-09-26 09:49:12,984 - INFO - Search button clicked successfully
+2024-09-26 09:49:14,035 - INFO - Page loaded completely
+2024-09-26 09:49:14,053 - INFO - Table data check: No data found
+2024-09-26 09:49:14,053 - INFO - No data found for BANKURA.
+2024-09-26 09:49:14,054 - INFO - Moving to next depot. Next index: 3
+2024-09-26 09:49:16,056 - INFO - Handling any error dialogs before depot selection...
+2024-09-26 09:49:21,279 - INFO - No error dialog detected
+2024-09-26 09:49:21,280 - INFO - Selecting Depot: BERHAMPORE
+2024-09-26 09:49:21,314 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot
+2024-09-26 09:49:21,328 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot
+2024-09-26 09:49:21,334 - INFO - Found 14 options for __xmlview0--idUtclVCDepot

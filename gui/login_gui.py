@@ -1,6 +1,6 @@
 # File: gui/login_gui.py
 
-from PyQt5.QtWidgets import QWidget, QVBoxLayout, QHBoxLayout, QLabel, QLineEdit, QPushButton, QTextEdit, QComboBox
+from PyQt5.QtWidgets import QWidget, QVBoxLayout, QHBoxLayout, QLabel, QLineEdit, QPushButton, QTextEdit, QComboBox, QDoubleSpinBox
 from PyQt5.QtCore import QThread, pyqtSignal
 from automation.sap_automation import SAPBiddingAutomation
 import logging
@@ -11,7 +11,7 @@ from PyQt5.QtWidgets import QMessageBox, QInputDialog
 class AutomationThread(QThread):
     update_signal = pyqtSignal(str)
 
-    def __init__(self, username, password, ship_from_plant, selected_depot=None, destinations=None, bidding_strategy="Aggressive1kml,"):
+    def __init__(self, username, password, ship_from_plant, selected_depot=None, destinations=None, bidding_strategy="Aggressive1",  rapidity=0.1):
         super().__init__()
         self.username = username
         self.password = password
@@ -19,6 +19,7 @@ class AutomationThread(QThread):
         self.selected_depot = selected_depot
         self.destinations = destinations
         self.bidding_strategy = bidding_strategy
+        self.rapidity = rapidity
         self.stop_flag = False
 
     def run(self):
@@ -127,6 +128,8 @@ class AutomationThread(QThread):
                         bids_placed, bid_details = automation.aggressive_bidding(max_duration=300, destinations=self.destinations)
                     elif self.bidding_strategy == "Aggressive2":
                         bids_placed, bid_details = automation.aggressive_bidding2(max_duration=300, destinations=self.destinations)
+                    elif self.bidding_strategy == "Ultra Rapid":
+                        bids_placed, bid_details = automation.start_ultra_rapid_bidding(max_duration=300, destinations=self.destinations, rapidity=self.rapidity)                    
                     else:  # No rank
                         bids_placed, bid_details = automation.aggressive_bidding3(max_duration=300, destinations=self.destinations)
                     
@@ -256,12 +259,23 @@ class SAPLoginGUI(QWidget):
         destination_layout.addWidget(self.destination_input)
         main_layout.addLayout(destination_layout)
 
+        # Update Bidding Strategy dropdown
         strategy_layout = QHBoxLayout()
         strategy_layout.addWidget(QLabel("Bidding Strategy:"))
         self.strategy_combo = QComboBox()
-        self.strategy_combo.addItems(["Aggressive1", "Aggressive2", "Aggressive3"])
+        self.strategy_combo.addItems(["Aggressive1", "Aggressive2", "Ultra Rapid", "Aggressive3"])
         strategy_layout.addWidget(self.strategy_combo)
         main_layout.addLayout(strategy_layout)
+
+         # Add Rapidity input
+        rapidity_layout = QHBoxLayout()
+        rapidity_layout.addWidget(QLabel("Bidding Rapidity (seconds):"))
+        self.rapidity_input = QDoubleSpinBox()
+        self.rapidity_input.setDecimals(9)  # Allow up to nanosecond precision
+        self.rapidity_input.setRange(0.000000001, 1.0)  # From 1 nanosecond to 1 second
+        self.rapidity_input.setValue(0.1)  # Default value of 100 milliseconds
+        rapidity_layout.addWidget(self.rapidity_input)
+        main_layout.addLayout(rapidity_layout)
 
         # Start button
         self.start_button = QPushButton("Start Automation")
@@ -290,11 +304,12 @@ class SAPLoginGUI(QWidget):
         selected_depot = self.depot_combo.currentText()
         destinations = [dest.strip() for dest in self.destination_input.text().split(',') if dest.strip()]
         bidding_strategy = self.strategy_combo.currentText()
+        rapidity = self.rapidity_input.value()
         
         if selected_depot == "All Depots (Rotational)":
             selected_depot = None
 
-        self.thread = AutomationThread(username, password, ship_from_plant, selected_depot, destinations, bidding_strategy)
+        self.thread = AutomationThread(username, password, ship_from_plant, selected_depot, destinations, bidding_strategy, rapidity)
         self.thread.update_signal.connect(self.update_log)
         self.thread.start()
         

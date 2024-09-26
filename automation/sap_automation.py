@@ -14,6 +14,7 @@ from selenium.common.exceptions import TimeoutException, NoSuchElementException,
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.common.keys import Keys
+import asyncio
 
 class SAPBiddingAutomation:
     def __init__(self):
@@ -292,7 +293,7 @@ class SAPBiddingAutomation:
             logging.error("Table not found or loaded within the timeout period")
             return False
 
-    def aggressive_bidding(self, max_duration=300, destinations=None):
+    def aggressive_bidding(self, max_duration=300, destinations=None, rapidity=0.1):
         start_time = time.time()
         bids_placed = 0
         bid_details = []
@@ -325,7 +326,7 @@ class SAPBiddingAutomation:
                             bid_input.send_keys(str(new_bid_amount))
                             bid_input.send_keys(Keys.ENTER)
                             
-                            time.sleep(0.1)
+                            time.sleep(rapidity)
                             
                             bid_rank = bid_rank_element.text.strip()
                             bid_details.append({
@@ -343,7 +344,7 @@ class SAPBiddingAutomation:
                                     bid_input.clear()
                                     bid_input.send_keys(str(new_bid_amount))
                                     bid_input.send_keys(Keys.ENTER)
-                                    time.sleep(0.1)
+                                    time.sleep(rapidity)
                                     bid_rank = bid_rank_element.text.strip()
                                     bid_details[-1] = {
                                         'freight': freight,
@@ -361,7 +362,7 @@ class SAPBiddingAutomation:
                     except Exception as e:
                         logging.error(f"Error processing row: {str(e)}")
                 
-                time.sleep(0.05)
+                time.sleep(rapidity)
                 
             except Exception as e:
                 logging.error(f"Error during aggressive bidding: {str(e)}")
@@ -371,7 +372,7 @@ class SAPBiddingAutomation:
         logging.info(f"Aggressive bidding completed. Total bids placed: {bids_placed}")
         return bids_placed, bid_details
 
-    def aggressive_bidding2(self, max_duration=300, destinations=None):
+    def aggressive_bidding2(self, max_duration=300, destinations=None, rapidity=0.1):
         start_time = time.time()
         bids_placed = 0
         bid_details = []
@@ -415,7 +416,7 @@ class SAPBiddingAutomation:
                                 arguments[0].dispatchEvent(event);
                             """, bid_input)
                             
-                            time.sleep(0.1)
+                            time.sleep(rapidity)
                             
                             bid_rank = bid_rank_element.text.strip()
                             bid_details.append({
@@ -445,7 +446,7 @@ class SAPBiddingAutomation:
                                         arguments[0].dispatchEvent(event);
                                     """, bid_input)
                                     
-                                    time.sleep(0.1)
+                                    time.sleep(rapidity)
                                     bid_rank = bid_rank_element.text.strip()
                                     bid_details[-1] = {
                                         'freight': freight,
@@ -463,7 +464,7 @@ class SAPBiddingAutomation:
                     except Exception as e:
                         logging.error(f"Error processing row: {str(e)}")
                 
-                time.sleep(0.05)
+                time.sleep(rapidity)
                 
             except Exception as e:
                 logging.error(f"Error during aggressive bidding: {str(e)}")
@@ -473,7 +474,7 @@ class SAPBiddingAutomation:
         logging.info(f"Aggressive bidding completed. Total bids placed: {bids_placed}")
         return bids_placed, bid_details
 
-    def aggressive_bidding3(self, max_duration=300, destinations=None):
+    def aggressive_bidding3(self, max_duration=300, destinations=None, rapidity=0.1):
         start_time = time.time()
         bids_placed = 0
         bid_details = []
@@ -517,7 +518,7 @@ class SAPBiddingAutomation:
                                     arguments[0].dispatchEvent(event);
                                 """, bid_input)
                                 
-                                time.sleep(0.1)
+                                time.sleep(rapidity)
                                 
                                 bid_details.append({
                                     'freight': freight,
@@ -536,7 +537,7 @@ class SAPBiddingAutomation:
                     except Exception as e:
                         logging.error(f"Error processing row: {str(e)}")
                 
-                time.sleep(0.05)
+                time.sleep(rapidity)
                 
             except Exception as e:
                 logging.error(f"Error during aggressive bidding: {str(e)}")
@@ -551,6 +552,113 @@ class SAPBiddingAutomation:
 
     def rapid_bidding(self, max_duration=300):
         return self.aggressive_bidding(max_duration)
+    
+    async def ultra_rapid_bidding(self, max_duration=300, destinations=None, rapidity=0.000000001):
+        start_time = time.time()
+        bids_placed = 0
+        bid_details = []
+        
+        while time.time() - start_time < max_duration:
+            try:
+                # Use JavaScript to get table data for faster access
+                table_data = self.driver.execute_script("""
+                    var table = document.getElementById('__xmlview0--idUtclVCVendorAssignmentTable-listUl');
+                    var rows = table.getElementsByTagName('tbody')[0].getElementsByTagName('tr');
+                    var data = [];
+                    for (var i = 0; i < rows.length; i++) {
+                        var cells = rows[i].getElementsByTagName('td');
+                        data.push({
+                            destination: cells[5].textContent.trim(),
+                            freight: parseInt(cells[13].textContent.trim()),
+                            bidInput: cells[14].getElementsByTagName('input')[0],
+                            rankElement: cells[15].getElementsByTagName('span')[0]
+                        });
+                    }
+                    return data;
+                """)
+                
+                for row in table_data:
+                    try:
+                        if destinations and row['destination'] not in destinations:
+                            continue
+
+                        freight = row['freight']
+                        bid_input = row['bidInput']
+                        current_bid_amount = int(self.driver.execute_script("return arguments[0].value;", bid_input) or 0)
+                        new_bid_amount = max(current_bid_amount, freight - 1)
+                        
+                        if not self.driver.execute_script("return arguments[0].disabled;", bid_input):
+                            # Use JavaScript to set the bid amount and trigger the change event
+                            self.driver.execute_script("""
+                                arguments[0].value = arguments[1];
+                                arguments[0].dispatchEvent(new Event('change', { bubbles: true }));
+                                var event = new KeyboardEvent('keydown', {
+                                    'key': 'Enter',
+                                    'code': 'Enter',
+                                    'which': 13,
+                                    'keyCode': 13,
+                                    'bubbles': true
+                                });
+                                arguments[0].dispatchEvent(event);
+                            """, bid_input, str(new_bid_amount))
+                            
+                            await asyncio.sleep(rapidity)
+                            
+                            bid_rank = self.driver.execute_script("return arguments[0].textContent.trim();", row['rankElement'])
+                            bid_details.append({
+                                'freight': freight,
+                                'bid_amount': new_bid_amount,
+                                'rank': bid_rank
+                            })
+                            
+                            if bid_rank == "01":
+                                logging.info(f"Achieved rank 1 with bid of {new_bid_amount} for freight {freight}")
+                                bids_placed += 1
+                            elif bid_rank:
+                                while bid_rank != "01" and new_bid_amount > freight - 1:
+                                    new_bid_amount -= 1
+                                    self.driver.execute_script("""
+                                        arguments[0].value = arguments[1];
+                                        arguments[0].dispatchEvent(new Event('change', { bubbles: true }));
+                                        var event = new KeyboardEvent('keydown', {
+                                            'key': 'Enter',
+                                            'code': 'Enter',
+                                            'which': 13,
+                                            'keyCode': 13,
+                                            'bubbles': true
+                                        });
+                                        arguments[0].dispatchEvent(event);
+                                    """, bid_input, str(new_bid_amount))
+                                    
+                                    await asyncio.sleep(rapidity)
+                                    bid_rank = self.driver.execute_script("return arguments[0].textContent.trim();", row['rankElement'])
+                                    bid_details[-1] = {
+                                        'freight': freight,
+                                        'bid_amount': new_bid_amount,
+                                        'rank': bid_rank
+                                    }
+                                if bid_rank == "01":
+                                    logging.info(f"Achieved rank 1 with bid of {new_bid_amount} for freight {freight}")
+                                    bids_placed += 1
+                                else:
+                                    logging.info(f"Could not achieve rank 1. Final bid: {new_bid_amount}, Rank: {bid_rank}")
+                    
+                    except Exception as e:
+                        logging.error(f"Error processing row: {str(e)}")
+                
+                await asyncio.sleep(rapidity)
+                
+            except Exception as e:
+                logging.error(f"Error during ultra rapid bidding: {str(e)}")
+            
+            self.click_search()
+        
+        logging.info(f"Ultra rapid bidding completed. Total bids placed: {bids_placed}")
+        return bids_placed, bid_details
+
+    def start_ultra_rapid_bidding(self, max_duration=300, destinations=None, rapidity=0.000000001):
+        loop = asyncio.get_event_loop()
+        return loop.run_until_complete(self.ultra_rapid_bidding(max_duration, destinations, rapidity))
     
     def continuous_bidding(self, update_callback):
         while True:
