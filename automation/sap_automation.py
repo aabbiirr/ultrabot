@@ -1,5 +1,3 @@
-# File: automation/sap_automation.py
-
 import logging
 import time
 import os
@@ -17,290 +15,398 @@ from selenium.webdriver.common.keys import Keys
 import asyncio
 
 class SAPBiddingAutomation:
-    def __init__(self):
-        self.driver = None
-        self.wait = None
+    def __init__(self, num_drivers=1):
+        self.drivers = []
+        self.waits = []
+        self.num_drivers = num_drivers
 
-    def setup_driver(self):
+    def setup_drivers(self):
         chrome_options = Options()
-        chrome_options.add_argument("--start-maximized")
+        chrome_options.add_argument("--headless")
+        chrome_options.add_argument("--disable-gpu")
+        chrome_options.add_argument("--no-sandbox")
+        chrome_options.add_argument("--disable-dev-shm-usage")
+        # chrome_options.add_argument("--start-maximized")
         chrome_options.add_argument("--disable-blink-features=AutomationControlled")
         chrome_options.add_experimental_option("excludeSwitches", ["enable-automation"])
         chrome_options.add_experimental_option('useAutomationExtension', False)
         service = Service(ChromeDriverManager().install())
-        self.driver = webdriver.Chrome(service=service, options=chrome_options)
-        self.wait = WebDriverWait(self.driver, 10)
 
-    def login(self, username, password):
-        self.driver.get("https://www.eye2serve.com:9001/sap/bc/ui5_ui5/ui2/ushell/shells/abap/FioriLaunchpad.html")
+        for _ in range(self.num_drivers):
+            driver = webdriver.Chrome(service=service, options=chrome_options)
+            wait = WebDriverWait(driver, 1)
+            self.drivers.append(driver)
+            self.waits.append(wait)
+
+        logging.info(f"Set up {self.num_drivers} drivers")
+
+    def login_all(self, username, password):
+        for i, driver in enumerate(self.drivers):
+            if (not self.login(driver, self.waits[i], username, password)):
+                return False
+        return True
+
+    def login(self, driver, wait, username, password):
+        driver.get("https://www.eye2serve.com:9001/sap/bc/ui5_ui5/ui2/ushell/shells/abap/FioriLaunchpad.html")
         
         if self.cookies_exist():
-            self.load_cookies()
-            self.driver.refresh()
-            if self.is_logged_in():
-                logging.info("Logged in successfully using cookies")
+            self.load_cookies(driver)
+            driver.refresh()
+            if self.is_logged_in(driver, wait):
+                logging.info(f"Driver {id(driver)} logged in successfully using cookies")
                 return True
         
         try:
-            username_field = self.wait.until(EC.presence_of_element_located((By.ID, "USERNAME_FIELD-inner")))
-            password_field = self.wait.until(EC.presence_of_element_located((By.ID, "PASSWORD_FIELD-inner")))
+            username_field = wait.until(EC.presence_of_element_located((By.ID, "USERNAME_FIELD-inner")))
+            password_field = wait.until(EC.presence_of_element_located((By.ID, "PASSWORD_FIELD-inner")))
             
             username_field.send_keys(username)
             password_field.send_keys(password)
             
-            login_button = self.wait.until(EC.element_to_be_clickable((By.ID, "LOGIN_LINK")))
+            login_button = wait.until(EC.element_to_be_clickable((By.ID, "LOGIN_LINK")))
             login_button.click()
             
-            if self.is_logged_in():
-                logging.info("Logged in successfully using credentials")
-                self.save_cookies()
+            if self.is_logged_in(driver, wait):
+                logging.info(f"Driver {id(driver)} logged in successfully using credentials")
+                self.save_cookies(driver)
                 return True
             else:
-                logging.error("Login failed")
+                logging.error(f"Login failed for driver {id(driver)}")
                 return False
         except Exception as e:
-            logging.error(f"Login error: {str(e)}")
+            logging.error(f"Login error for driver {id(driver)}: {str(e)}")
             return False
 
-    def is_logged_in(self):
+    def is_logged_in(self, driver, wait):
         try:
-            self.wait.until(EC.presence_of_element_located((By.XPATH, "//a[@href='/sap/bc/ui5_ui5/sap/zvc_vendor_app/index.html#/ebidding']")))
+            wait.until(EC.presence_of_element_located((By.XPATH, "//a[@href='/sap/bc/ui5_ui5/sap/zvc_vendor_app/index.html#/ebidding']")))
             return True
         except:
             return False
-        
-    def inject_test_data(self):
+
+    def navigate_to_ebidding_all(self):
+        for i, driver in enumerate(self.drivers):
+            self.navigate_to_ebidding(driver, self.waits[i])
+
+    def navigate_to_ebidding(self, driver, wait):
         try:
-            # Sample data to inject
-            sample_data = [
-                {"freight": "465", "bid_amount": ""},
-                {"freight": "500", "bid_amount": ""}
-            ]
-
-            # Convert sample data to JSON string
-            sample_data_json = json.dumps(sample_data)
-
-            # Inject the sample data
-            script = """
-            var sampleData = JSON.parse(arguments[0]);
-            var table = document.querySelector('#__xmlview0--idUtclVCVendorAssignmentTable-listUl');
-            if (!table) {
-                throw new Error("Table not found");
-            }
-            var tbody = table.querySelector('tbody');
-            if (!tbody) {
-                throw new Error("Table body not found");
-            }
-            tbody.innerHTML = '';
-            
-            sampleData.forEach(function(row, index) {
-                var tr = document.createElement('tr');
-                tr.id = `__item${index}-__xmlview0--idUtclVCVendorAssignmentTable-${index}`;
-                tr.className = 'sapMLIB sapMLIB-CTX sapMLIBShowSeparator sapMLIBTypeInactive sapMListTblRow';
-                tr.setAttribute('tabindex', '-1');
-
-                // Add placeholder cells for other columns
-                for (var i = 0; i < 13; i++) {
-                    var td = document.createElement('td');
-                    td.className = 'sapMListTblCell';
-                    td.textContent = `Placeholder ${i+1}`;
-                    tr.appendChild(td);
-                }
-
-                // Add freight column
-                var freightTd = document.createElement('td');
-                freightTd.className = 'sapMListTblCell';
-                freightTd.innerHTML = `<span class="sapMText sapMTextMaxWidth sapUiSelectable">${row.freight}</span>`;
-                tr.appendChild(freightTd);
-
-                // Add bid amount column
-                var bidTd = document.createElement('td');
-                bidTd.className = 'sapMListTblCell';
-                bidTd.innerHTML = `<input type="text" value="${row.bid_amount}" disabled class="sapMInputBaseInner">`;
-                tr.appendChild(bidTd);
-
-                // Add placeholder cells for remaining columns
-                for (var i = 0; i < 9; i++) {
-                    var td = document.createElement('td');
-                    td.className = 'sapMListTblCell';
-                    td.textContent = `Placeholder ${i+15}`;
-                    tr.appendChild(td);
-                }
-
-                tbody.appendChild(tr);
-            });
-            return tbody.children.length;
-            """
-            rows_injected = self.driver.execute_script(script, sample_data_json)
-            logging.info(f"Test data injection completed. Rows injected: {rows_injected}")
-
-            # Verify injection
-            table = self.driver.find_element(By.ID, "__xmlview0--idUtclVCVendorAssignmentTable-listUl")
-            rows = table.find_elements(By.XPATH, ".//tbody/tr")
-            logging.info(f"Rows found after injection: {len(rows)}")
-
-            if len(rows) != len(sample_data):
-                logging.warning(f"Mismatch in number of rows. Expected: {len(sample_data)}, Found: {len(rows)}")
-
-            for i, row in enumerate(rows):
-                freight = row.find_element(By.XPATH, ".//td[14]//span").text
-                bid_input = row.find_element(By.XPATH, ".//td[15]//input").get_attribute("value")
-                logging.info(f"Row {i+1}: Freight = {freight}, Bid Amount = {bid_input}")
-
-        except JavascriptException as js_error:
-            logging.error(f"JavaScript error during data injection: {str(js_error)}")
-        except Exception as e:
-            logging.error(f"Error injecting test data: {str(e)}")
-
-    def enable_bid_inputs(self):
-        try:
-            script = """
-            var inputs = document.querySelectorAll('#__xmlview0--idUtclVCVendorAssignmentTable-listUl tbody input');
-            inputs.forEach(function(input) {
-                input.disabled = false;
-            });
-            return inputs.length;
-            """
-            enabled_inputs = self.driver.execute_script(script)
-            logging.info(f"Bid input fields enabled. Total enabled inputs: {enabled_inputs}")
-        except Exception as e:
-            logging.error(f"Error enabling bid input fields: {str(e)}")
-
-
-    def navigate_to_ebidding(self):
-        try:
-            ebidding_link = self.wait.until(EC.presence_of_element_located((By.XPATH, "//a[@href='/sap/bc/ui5_ui5/sap/zvc_vendor_app/index.html#/ebidding']")))
+            ebidding_link = wait.until(EC.presence_of_element_located((By.XPATH, "//a[@href='/sap/bc/ui5_ui5/sap/zvc_vendor_app/index.html#/ebidding']")))
             if not ebidding_link:
                 raise Exception("eBidding link not found")
             ebidding_url = ebidding_link.get_attribute('href')
             
-            self.driver.get(ebidding_url)
-            self.wait_for_page_load()
+            driver.get(ebidding_url)
+            self.wait_for_page_load(driver)
             
-            current_url = self.driver.current_url
-            logging.info(f"Opened eBidding URL: {current_url}")
+            current_url = driver.current_url
+            logging.info(f"Driver {id(driver)} opened eBidding URL: {current_url}")
             
-            self.handle_error_dialog()
+            self.handle_error_dialog(driver, wait)
             
             return current_url
         except Exception as e:
-            logging.error(f"Failed to navigate to eBidding tab: {str(e)}")
+            logging.error(f"Failed to navigate to eBidding tab for driver {id(driver)}: {str(e)}")
             raise
 
-    def click_show_search(self):
+    def click_show_search_all(self):
+        for i, driver in enumerate(self.drivers):
+            self.click_show_search(driver, self.waits[i], i)
+
+    def click_show_search(self, driver, wait, index):
         try:
-            show_search_button = self.wait.until(EC.element_to_be_clickable((By.XPATH, "//bdi[@id='__button0-BDI-content' and text()='Show Search']")))
+            self.handle_error_dialog(driver, self.waits[index])
+            show_search_button = wait.until(EC.element_to_be_clickable((By.XPATH, "//bdi[@id='__button0-BDI-content' and text()='Show Search']")))
             show_search_button.click()
-            logging.info("'Show Search' button clicked successfully")
+            logging.info(f"'Show Search' button clicked successfully for driver {id(driver)}")
         except Exception as e:
-            logging.error(f"Failed to click 'Show Search' button: {str(e)}")
+            logging.error(f"Failed to click 'Show Search' button for driver {id(driver)}: {str(e)}")
             raise
 
-    def handle_error_dialog(self):
+    def handle_error_dialog_all(self):
+        for i, driver in enumerate(self.drivers):
+            self.handle_error_dialog(driver, self.waits[i])
+
+    def handle_error_dialog(self, driver, wait):
         try:
-            error_dialog = WebDriverWait(self.driver, 5).until(
+            error_dialog = WebDriverWait(driver, 5).until(
                 EC.presence_of_element_located((By.XPATH, "//div[@role='alertdialog']//span[contains(text(), 'There are currently two active sessions')]"))
             )
             if error_dialog:
-                logging.info("Error dialog detected. Attempting to dismiss it.")
-                ok_button = self.wait.until(EC.element_to_be_clickable((By.XPATH, "//bdi[text()='OK']")))
+                logging.info(f"Error dialog detected for driver {id(driver)}. Attempting to dismiss it.")
+                ok_button = wait.until(EC.element_to_be_clickable((By.XPATH, "//bdi[text()='OK']")))
                 if ok_button:
                     ok_button.click()
-                    logging.info("Error dialog dismissed.")
-                    WebDriverWait(self.driver, 10).until(
+                    logging.info(f"Error dialog dismissed for driver {id(driver)}.")
+                    WebDriverWait(driver, 10).until(
                         EC.invisibility_of_element_located((By.XPATH, "//div[@role='alertdialog']"))
                     )
                 else:
-                    logging.error("Failed to find OK button in error dialog")
+                    logging.error(f"Failed to find OK button in error dialog for driver {id(driver)}")
         except TimeoutException:
-            logging.info("No error dialog detected")
-            
+            logging.info(f"No error dialog detected for driver {id(driver)}")
 
-    def select_dropdown_option(self, dropdown_id, option_text):
+    def select_dropdown_option(self, driver, wait, dropdown_id, option_text):
         try:
-            # Click to open the dropdown
-            dropdown_arrow = self.wait.until(EC.element_to_be_clickable((By.ID, f"{dropdown_id}-arrow")))
-            self.driver.execute_script("arguments[0].click();", dropdown_arrow)
-            logging.info(f"Clicked dropdown arrow for {dropdown_id}")
+            dropdown_arrow = wait.until(EC.element_to_be_clickable((By.ID, f"{dropdown_id}-arrow")))
+            driver.execute_script("arguments[0].click();", dropdown_arrow)
+            logging.info(f"Clicked dropdown arrow for {dropdown_id} in driver {id(driver)}")
 
-            # Wait for the dropdown list to appear
             dropdown_list_id = "__list0" if "Ship" in dropdown_id else "__list2"
-            dropdown_list = self.wait.until(EC.visibility_of_element_located((By.ID, dropdown_list_id)))
-            logging.info(f"Dropdown list visible for {dropdown_id}")
+            dropdown_list = wait.until(EC.visibility_of_element_located((By.ID, dropdown_list_id)))
+            logging.info(f"Dropdown list visible for {dropdown_id} in driver {id(driver)}")
 
-            # Find all options
             options = dropdown_list.find_elements(By.TAG_NAME, "li")
-            logging.info(f"Found {len(options)} options for {dropdown_id}")
+            logging.info(f"Found {len(options)} options for {dropdown_id} in driver {id(driver)}")
 
-            # Find the option with the matching text
             target_option = next((opt for opt in options if option_text in opt.text), None)
 
             if target_option:
-                # Scroll the option into view
-                self.driver.execute_script("arguments[0].scrollIntoView(true);", target_option)
-                time.sleep(0.5)  # Short pause after scrolling
+                driver.execute_script("arguments[0].scrollIntoView(true);", target_option)
+                time.sleep(0.5)
 
-                # Try to click using different methods
                 try:
-                    # Method 1: Direct click
                     target_option.click()
                 except ElementClickInterceptedException:
                     try:
-                        # Method 2: JavaScript click
-                        self.driver.execute_script("arguments[0].click();", target_option)
+                        driver.execute_script("arguments[0].click();", target_option)
                     except:
-                        # Method 3: Action chains
-                        ActionChains(self.driver).move_to_element(target_option).click().perform()
+                        ActionChains(driver).move_to_element(target_option).click().perform()
 
-                logging.info(f"Option '{option_text}' selected successfully for {dropdown_id}")
+                logging.info(f"Option '{option_text}' selected successfully for {dropdown_id} in driver {id(driver)}")
 
-                # Wait for the dropdown to close
-                self.wait.until(EC.invisibility_of_element_located((By.ID, dropdown_list_id)))
-                logging.info(f"Dropdown closed after selection for {dropdown_id}")
+                wait.until(EC.invisibility_of_element_located((By.ID, dropdown_list_id)))
+                logging.info(f"Dropdown closed after selection for {dropdown_id} in driver {id(driver)}")
             else:
-                logging.error(f"Option '{option_text}' not found in {dropdown_id}")
-                # Capture screenshot for debugging
-                self.driver.save_screenshot(f"{dropdown_id}_selection_error.png")
+                logging.error(f"Option '{option_text}' not found in {dropdown_id} for driver {id(driver)}")
+                driver.save_screenshot(f"{dropdown_id}_selection_error_driver_{id(driver)}.png")
         except Exception as e:
-            logging.error(f"Failed to select option in {dropdown_id}: {str(e)}")
-            # Capture screenshot for debugging
-            self.driver.save_screenshot(f"{dropdown_id}_selection_error.png")
+            logging.error(f"Failed to select option in {dropdown_id} for driver {id(driver)}: {str(e)}")
+            driver.save_screenshot(f"{dropdown_id}_selection_error_driver_{id(driver)}.png")
 
-    def select_ship_from_plant(self, plant_name="WEST BENGAL CEMENT WORKS"):
-        self.select_dropdown_option("__xmlview0--ididUtclVCShipFromPlant", plant_name)
+    def select_ship_from_plant_all(self, plant_name="WEST BENGAL CEMENT WORKS"):
+        for i, driver in enumerate(self.drivers):
+            self.select_ship_from_plant(driver, self.waits[i], plant_name)
 
-    def select_depot(self, depot_name):
-        self.select_dropdown_option("__xmlview0--idUtclVCDepot", depot_name)
+    def select_ship_from_plant(self, driver, wait, plant_name="WEST BENGAL CEMENT WORKS"):
+        self.select_dropdown_option(driver, wait, "__xmlview0--ididUtclVCShipFromPlant", plant_name)
 
-    def click_search(self):
+    def select_depot_all(self, depot_name):
+        for i, driver in enumerate(self.drivers):
+            self.select_depot(driver, self.waits[i], depot_name)
+
+    def select_depot(self, driver, wait, depot_name):
+        self.select_dropdown_option(driver, wait, "__xmlview0--idUtclVCDepot", depot_name)
+
+    def click_search_all(self):
+        for i, driver in enumerate(self.drivers):
+            self.click_search(driver, self.waits[i])
+
+    def click_search(self, driver, wait):
         try:
-            self.handle_error_dialog()  # Check for error dialog before clicking search
-            search_button = self.wait.until(EC.element_to_be_clickable((By.XPATH, "//bdi[text()='Search']")))
+            self.handle_error_dialog(driver, wait)
+            search_button = wait.until(EC.element_to_be_clickable((By.XPATH, "//bdi[text()='Search']")))
             search_button.click()
-            logging.info("Search button clicked successfully")
-            self.wait_for_page_load()
+            logging.info(f"Search button clicked successfully for driver {id(driver)}")
+            self.wait_for_page_load(driver)
         except Exception as e:
-            logging.error(f"Failed to click Search button: {str(e)}")
+            logging.error(f"Failed to click Search button for driver {id(driver)}: {str(e)}")
 
-    def check_table_data(self):
+
+    def check_table_data_all(self):
+        for i, driver in enumerate(self.drivers):
+            self.check_table_data(driver, self.waits[i])
+
+    def check_table_data(self, driver, wait):
         try:
-            self.wait.until(EC.presence_of_element_located((By.ID, "__xmlview0--idUtclVCVendorAssignmentTable-listUl")))
-            no_data_row = self.driver.find_elements(By.XPATH, "//tr[@id='__xmlview0--idUtclVCVendorAssignmentTable-nodata']")
+            wait.until(EC.presence_of_element_located((By.ID, "__xmlview0--idUtclVCVendorAssignmentTable-listUl")))
+            no_data_row = driver.find_elements(By.XPATH, "//tr[@id='__xmlview0--idUtclVCVendorAssignmentTable-nodata']")
             has_data = len(no_data_row) == 0
-            logging.info(f"Table data check: {'Data found' if has_data else 'No data found'}")
+            logging.info(f"Table data check for driver {id(driver)}: {'Data found' if has_data else 'No data found'}")
             return has_data
         except TimeoutException:
-            logging.error("Table not found or loaded within the timeout period")
+            logging.error(f"Table not found or loaded within the timeout period for driver {id(driver)}")
             return False
 
-    def aggressive_bidding(self, max_duration=300, destinations=None, rapidity=0.1):
+    async def ultra_rapid_bidding(self, max_duration=300, destinations=None, rapidity=0.000000001):
+        start_time = time.time()
+        total_bids_placed = 0
+        all_bid_details = []
+        
+        tasks = [self.ultra_rapid_bidding_for_driver(driver, start_time, max_duration, destinations, rapidity) 
+                 for driver in self.drivers]
+        results = await asyncio.gather(*tasks)
+        
+        for bids_placed, bid_details in results:
+            total_bids_placed += bids_placed
+            all_bid_details.extend(bid_details)
+        
+        logging.info(f"Ultra rapid bidding completed. Total bids placed across all drivers: {total_bids_placed}")
+        return total_bids_placed, all_bid_details
+
+    async def ultra_rapid_bidding_for_driver(self, driver, start_time, max_duration, destinations, rapidity):
+        bids_placed = 0
+        bid_details = []
+        
+        while time.time() - start_time < max_duration:
+            try:
+                table_data = driver.execute_script("""
+                    var table = document.getElementById('__xmlview0--idUtclVCVendorAssignmentTable-listUl');
+                    var rows = table.getElementsByTagName('tbody')[0].getElementsByTagName('tr');
+                    var data = [];
+                    for (var i = 0; i < rows.length; i++) {
+                        var cells = rows[i].getElementsByTagName('td');
+                        data.push({
+                            destination: cells[5].textContent.trim(),
+                            freight: parseInt(cells[13].textContent.trim()),
+                            bidInput: cells[14].getElementsByTagName('input')[0],
+                            rankElement: cells[15].getElementsByTagName('span')[0]
+                        });
+                    }
+                    return data;
+                """)
+                
+                for row in table_data:
+                    try:
+                        if destinations and row['destination'] not in destinations:
+                            continue
+
+                        freight = row['freight']
+                        bid_input = row['bidInput']
+                        current_bid_amount = int(driver.execute_script("return arguments[0].value;", bid_input) or 0)
+                        new_bid_amount = max(current_bid_amount, freight - 1)
+                        
+                        if not driver.execute_script("return arguments[0].disabled;", bid_input):
+                            driver.execute_script("""
+                                arguments[0].value = arguments[1];
+                                arguments[0].dispatchEvent(new Event('change', { bubbles: true }));
+                                var event = new KeyboardEvent('keydown', {
+                                    'key': 'Enter',
+                                    'code': 'Enter',
+                                    'which': 13,
+                                    'keyCode': 13,
+                                    'bubbles': true
+                                });
+                                arguments[0].dispatchEvent(event);
+                            """, bid_input, str(new_bid_amount))
+                            
+                            await asyncio.sleep(rapidity)
+                            
+                            bid_rank = driver.execute_script("return arguments[0].textContent.trim();", row['rankElement'])
+                            bid_details.append({
+                                'freight': freight,
+                                'bid_amount': new_bid_amount,
+                                'rank': bid_rank
+                            })
+                            
+                            if bid_rank == "01":
+                                logging.info(f"Driver {id(driver)}: Achieved rank 1 with bid of {new_bid_amount} for freight {freight}")
+                                bids_placed += 1
+                            elif bid_rank:
+                                while bid_rank != "01" and new_bid_amount > freight - 1:
+                                    new_bid_amount -= 1
+                                    driver.execute_script("""
+                                        arguments[0].value = arguments[1];
+                                        arguments[0].dispatchEvent(new Event('change', { bubbles: true }));
+                                        var event = new KeyboardEvent('keydown', {
+                                            'key': 'Enter',
+                                            'code': 'Enter',
+                                            'which': 13,
+                                            'keyCode': 13,
+                                            'bubbles': true
+                                        });
+                                        arguments[0].dispatchEvent(event);
+                                    """, bid_input, str(new_bid_amount))
+                                    
+                                    await asyncio.sleep(rapidity)
+                                    bid_rank = driver.execute_script("return arguments[0].textContent.trim();", row['rankElement'])
+                                    bid_details[-1] = {
+                                        'freight': freight,
+                                        'bid_amount': new_bid_amount,
+                                        'rank': bid_rank
+                                    }
+                                if bid_rank == "01":
+                                    logging.info(f"Driver {id(driver)}: Achieved rank 1 with bid of {new_bid_amount} for freight {freight}")
+                                    bids_placed += 1
+                                else:
+                                    logging.info(f"Driver {id(driver)}: Could not achieve rank 1. Final bid: {new_bid_amount}, Rank: {bid_rank}")
+                    
+                    except Exception as e:
+                        logging.error(f"Error processing row for driver {id(driver)}: {str(e)}")
+                
+                await asyncio.sleep(rapidity)
+                
+            except Exception as e:
+                logging.error(f"Error during ultra rapid bidding for driver {id(driver)}: {str(e)}")
+            
+            self.click_search(driver, self.waits[self.drivers.index(driver)])
+        
+        return bids_placed, bid_details
+
+    def start_ultra_rapid_bidding(self, max_duration=300, destinations=None, rapidity=0.000000001):
+        try:
+            loop = asyncio.get_event_loop()
+        except RuntimeError:
+            loop = asyncio.new_event_loop()
+            asyncio.set_event_loop(loop)
+    
+        return loop.run_until_complete(self.ultra_rapid_bidding(max_duration, destinations, rapidity))
+
+    def wait_for_page_load(self, driver, timeout=30):
+        try:
+            WebDriverWait(driver, timeout).until(
+                lambda d: d.execute_script('return document.readyState') == 'complete'
+            )
+            WebDriverWait(driver, timeout).until(
+                EC.invisibility_of_element_located((By.CLASS_NAME, "sapUiLocalBusyIndicator"))
+            )
+            logging.info(f"Page loaded completely for driver {id(driver)}")
+        except TimeoutException:
+            logging.warning(f"Timeout waiting for page load after {timeout} seconds for driver {id(driver)}")
+
+    def save_cookies(self, driver):
+        cookies = driver.get_cookies()
+        with open(f"cookies_driver_{id(driver)}.txt", "w") as cookie_file:
+            for cookie in cookies:
+                cookie_file.write(f"{cookie['name']}={cookie['value']}\n")
+        logging.info(f"Cookies saved for driver {id(driver)}")
+
+    def load_cookies(self, driver):
+        try:
+            with open(f"cookies_driver_{id(driver)}.txt", "r") as cookie_file:
+                for line in cookie_file:
+                    name, value = line.strip().split("=", 1)
+                    driver.add_cookie({'name': name, 'value': value})
+            logging.info(f"Cookies loaded successfully for driver {id(driver)}")
+        except Exception as e:
+            logging.error(f"Failed to load cookies for driver {id(driver)}: {str(e)}")
+
+    def cookies_exist(self):
+        return any(os.path.exists(f"cookies_driver_{id(driver)}.txt") for driver in self.drivers)
+
+    def close_all(self):
+        for driver in self.drivers:
+            driver.quit()
+        logging.info("All browsers closed.")
+
+    def aggressive_bidding_all(self, max_duration=300, destinations=None, rapidity=0.1):
+        total_bids_placed = 0
+        all_bid_details = []
+        
+        for i, driver in enumerate(self.drivers):
+            bids_placed, bid_details = self.aggressive_bidding(driver, self.waits[i], max_duration, destinations, rapidity)
+            total_bids_placed += bids_placed
+            all_bid_details.extend(bid_details)
+        
+        return total_bids_placed, all_bid_details
+
+    def aggressive_bidding(self, driver, wait, max_duration=300, destinations=None, rapidity=0.1):
         start_time = time.time()
         bids_placed = 0
         bid_details = []
         
         while time.time() - start_time < max_duration:
             try:
-                table = WebDriverWait(self.driver, 1).until(
+                table = WebDriverWait(driver, 1).until(
                     EC.presence_of_element_located((By.ID, "__xmlview0--idUtclVCVendorAssignmentTable-listUl"))
                 )
                 rows = table.find_elements(By.XPATH, ".//tbody/tr")
@@ -336,7 +442,7 @@ class SAPBiddingAutomation:
                             })
                             
                             if bid_rank == "01":
-                                logging.info(f"Achieved rank 1 with bid of {new_bid_amount} for freight {freight}")
+                                logging.info(f"Driver {id(driver)}: Achieved rank 1 with bid of {new_bid_amount} for freight {freight}")
                                 bids_placed += 1
                             elif bid_rank:
                                 while bid_rank != "01" and new_bid_amount > freight - 1:
@@ -352,34 +458,45 @@ class SAPBiddingAutomation:
                                         'rank': bid_rank
                                     }
                                 if bid_rank == "01":
-                                    logging.info(f"Achieved rank 1 with bid of {new_bid_amount} for freight {freight}")
+                                    logging.info(f"Driver {id(driver)}: Achieved rank 1 with bid of {new_bid_amount} for freight {freight}")
                                     bids_placed += 1
                                 else:
-                                    logging.info(f"Could not achieve rank 1. Final bid: {new_bid_amount}, Rank: {bid_rank}")
+                                    logging.info(f"Driver {id(driver)}: Could not achieve rank 1. Final bid: {new_bid_amount}, Rank: {bid_rank}")
                     
                     except (StaleElementReferenceException, NoSuchElementException):
                         continue
                     except Exception as e:
-                        logging.error(f"Error processing row: {str(e)}")
+                        logging.error(f"Error processing row for driver {id(driver)}: {str(e)}")
                 
                 time.sleep(rapidity)
                 
             except Exception as e:
-                logging.error(f"Error during aggressive bidding: {str(e)}")
+                logging.error(f"Error during aggressive bidding for driver {id(driver)}: {str(e)}")
             
-            self.click_search()
+            self.click_search(driver, wait)
         
-        logging.info(f"Aggressive bidding completed. Total bids placed: {bids_placed}")
+        logging.info(f"Aggressive bidding completed for driver {id(driver)}. Total bids placed: {bids_placed}")
         return bids_placed, bid_details
 
-    def aggressive_bidding2(self, max_duration=300, destinations=None, rapidity=0.1):
+    def aggressive_bidding2_all(self, max_duration=300, destinations=None, rapidity=0.1):
+        total_bids_placed = 0
+        all_bid_details = []
+        
+        for i, driver in enumerate(self.drivers):
+            bids_placed, bid_details = self.aggressive_bidding2(driver, self.waits[i], max_duration, destinations, rapidity)
+            total_bids_placed += bids_placed
+            all_bid_details.extend(bid_details)
+        
+        return total_bids_placed, all_bid_details
+
+    def aggressive_bidding2(self, driver, wait, max_duration=300, destinations=None, rapidity=0.1):
         start_time = time.time()
         bids_placed = 0
         bid_details = []
         
         while time.time() - start_time < max_duration:
             try:
-                table = WebDriverWait(self.driver, 1).until(
+                table = WebDriverWait(driver, 1).until(
                     EC.presence_of_element_located((By.ID, "__xmlview0--idUtclVCVendorAssignmentTable-listUl"))
                 )
                 rows = table.find_elements(By.XPATH, ".//tbody/tr")
@@ -405,7 +522,7 @@ class SAPBiddingAutomation:
                             bid_input.send_keys(str(new_bid_amount))
                             
                             # Use JavaScript to trigger Enter key event
-                            self.driver.execute_script("""
+                            driver.execute_script("""
                                 var event = new KeyboardEvent('keydown', {
                                     'key': 'Enter',
                                     'code': 'Enter',
@@ -426,7 +543,7 @@ class SAPBiddingAutomation:
                             })
                             
                             if bid_rank == "01":
-                                logging.info(f"Achieved rank 1 with bid of {new_bid_amount} for freight {freight}")
+                                logging.info(f"Driver {id(driver)}: Achieved rank 1 with bid of {new_bid_amount} for freight {freight}")
                                 bids_placed += 1
                             elif bid_rank:
                                 while bid_rank != "01" and new_bid_amount > freight - 1:
@@ -435,7 +552,7 @@ class SAPBiddingAutomation:
                                     bid_input.send_keys(str(new_bid_amount))
                                     
                                     # Use JavaScript to trigger Enter key event again
-                                    self.driver.execute_script("""
+                                    driver.execute_script("""
                                         var event = new KeyboardEvent('keydown', {
                                             'key': 'Enter',
                                             'code': 'Enter',
@@ -454,34 +571,45 @@ class SAPBiddingAutomation:
                                         'rank': bid_rank
                                     }
                                 if bid_rank == "01":
-                                    logging.info(f"Achieved rank 1 with bid of {new_bid_amount} for freight {freight}")
+                                    logging.info(f"Driver {id(driver)}: Achieved rank 1 with bid of {new_bid_amount} for freight {freight}")
                                     bids_placed += 1
                                 else:
-                                    logging.info(f"Could not achieve rank 1. Final bid: {new_bid_amount}, Rank: {bid_rank}")
+                                    logging.info(f"Driver {id(driver)}: Could not achieve rank 1. Final bid: {new_bid_amount}, Rank: {bid_rank}")
                     
                     except (StaleElementReferenceException, NoSuchElementException):
                         continue
                     except Exception as e:
-                        logging.error(f"Error processing row: {str(e)}")
+                        logging.error(f"Error processing row for driver {id(driver)}: {str(e)}")
                 
                 time.sleep(rapidity)
                 
             except Exception as e:
-                logging.error(f"Error during aggressive bidding: {str(e)}")
+                logging.error(f"Error during aggressive bidding 2 for driver {id(driver)}: {str(e)}")
             
-            self.click_search()
+            self.click_search(driver, wait)
         
-        logging.info(f"Aggressive bidding completed. Total bids placed: {bids_placed}")
+        logging.info(f"Aggressive bidding 2 completed for driver {id(driver)}. Total bids placed: {bids_placed}")
         return bids_placed, bid_details
 
-    def aggressive_bidding3(self, max_duration=300, destinations=None, rapidity=0.1):
+    def aggressive_bidding3_all(self, max_duration=300, destinations=None, rapidity=0.1):
+        total_bids_placed = 0
+        all_bid_details = []
+        
+        for i, driver in enumerate(self.drivers):
+            bids_placed, bid_details = self.aggressive_bidding3(driver, self.waits[i], max_duration, destinations, rapidity)
+            total_bids_placed += bids_placed
+            all_bid_details.extend(bid_details)
+        
+        return total_bids_placed, all_bid_details
+
+    def aggressive_bidding3(self, driver, wait, max_duration=300, destinations=None, rapidity=0.1):
         start_time = time.time()
         bids_placed = 0
         bid_details = []
         
         while time.time() - start_time < max_duration:
             try:
-                table = WebDriverWait(self.driver, 1).until(
+                table = WebDriverWait(driver, 1).until(
                     EC.presence_of_element_located((By.ID, "__xmlview0--idUtclVCVendorAssignmentTable-listUl"))
                 )
                 rows = table.find_elements(By.XPATH, ".//tbody/tr")
@@ -507,7 +635,7 @@ class SAPBiddingAutomation:
                                 bid_input.send_keys(str(new_bid_amount))
                                 
                                 # Use JavaScript to trigger Enter key event
-                                self.driver.execute_script("""
+                                driver.execute_script("""
                                     var event = new KeyboardEvent('keydown', {
                                         'key': 'Enter',
                                         'code': 'Enter',
@@ -525,135 +653,47 @@ class SAPBiddingAutomation:
                                     'bid_amount': new_bid_amount
                                 })
                                 
-                                logging.info(f"Placed bid of {new_bid_amount} for freight {freight}")
+                                logging.info(f"Driver {id(driver)}: Placed bid of {new_bid_amount} for freight {freight}")
                                 bids_placed += 1
                             else:
-                                logging.info(f"Bid already set to {new_bid_amount} for freight {freight}")
+                                logging.info(f"Driver {id(driver)}: Bid already set to {new_bid_amount} for freight {freight}")
                         else:
-                            logging.info(f"Bid input field not enabled for freight {freight}")
+                            logging.info(f"Driver {id(driver)}: Bid input field not enabled for freight {freight}")
                     
                     except (StaleElementReferenceException, NoSuchElementException):
                         continue
                     except Exception as e:
-                        logging.error(f"Error processing row: {str(e)}")
+                        logging.error(f"Error processing row for driver {id(driver)}: {str(e)}")
                 
                 time.sleep(rapidity)
                 
             except Exception as e:
-                logging.error(f"Error during aggressive bidding: {str(e)}")
+                logging.error(f"Error during aggressive bidding 3 for driver {id(driver)}: {str(e)}")
             
-            self.click_search()
+            self.click_search(driver, wait)
         
-        logging.info(f"Aggressive bidding completed. Total bids placed: {bids_placed}")
+        logging.info(f"Aggressive bidding 3 completed for driver {id(driver)}. Total bids placed: {bids_placed}")
         return bids_placed, bid_details
-    
-    def aggressive_bidding_with_save(self, max_duration=300, destinations=None, rapidity=0.1):
-        start_time = time.time()
+
+    def aggressive_bidding4_all(self, max_duration=300, destinations=None, rapidity=0.1):
         total_bids_placed = 0
         all_bid_details = []
         
-        while time.time() - start_time < max_duration:
-            try:
-                table = WebDriverWait(self.driver, 1).until(
-                    EC.presence_of_element_located((By.ID, "__xmlview0--idUtclVCVendorAssignmentTable-listUl"))
-                )
-                rows = table.find_elements(By.XPATH, ".//tbody/tr")
-                
-                bids_placed_this_round = 0
-                bid_details_this_round = []
-                
-                for row in rows:
-                    try:
-                        if destinations:
-                            destination_element = row.find_element(By.XPATH, ".//td[6]//span")
-                            destination = destination_element.text.strip()
-                            if destination not in destinations:
-                                continue
-
-                        freight_element = row.find_element(By.XPATH, ".//td[contains(@headers, '__text23')]//span")
-                        bid_input = row.find_element(By.XPATH, ".//td[contains(@headers, '__text24')]//input[@class='sapMInputBaseInner']")
-                        
-                        freight = int(freight_element.text.strip())
-                        current_bid_amount = int(bid_input.get_attribute('value') or 0)
-                        new_bid_amount = max(current_bid_amount, freight - 1)
-                        
-                        if not bid_input.get_attribute('disabled'):
-                            bid_input.clear()
-                            bid_input.send_keys(str(new_bid_amount))
-                            
-                            # Use JavaScript to trigger change event
-                            self.driver.execute_script("""
-                                var event = new Event('change', { bubbles: true });
-                                arguments[0].dispatchEvent(event);
-                            """, bid_input)
-                            
-                            time.sleep(rapidity)
-                            
-                            bid_details_this_round.append({
-                                'freight': freight,
-                                'bid_amount': new_bid_amount
-                            })
-                            
-                            logging.info(f"Bid amount set to {new_bid_amount} for freight {freight}")
-                            bids_placed_this_round += 1
-                        else:
-                            logging.info(f"Bid input disabled for freight {freight}, skipping")
-                    
-                    except (StaleElementReferenceException, NoSuchElementException):
-                        logging.warning(f"Element not found, skipping row")
-                    except Exception as e:
-                        logging.error(f"Error processing row: {str(e)}")
-                
-                # After placing all bids for this round, click the Save button
-                if bids_placed_this_round > 0:
-                    try:
-                        save_button = WebDriverWait(self.driver, 10).until(
-                            EC.element_to_be_clickable((By.ID, "__xmlview0--idUtclsaveTxt"))
-                        )
-                        save_button.click()
-                        logging.info("Save button clicked successfully")
-                        
-                        # Wait for save operation to complete
-                        time.sleep(2)
-                        
-                        # Check for any confirmation dialog or message after saving
-                        try:
-                            confirmation = WebDriverWait(self.driver, 5).until(
-                                EC.presence_of_element_located((By.XPATH, "//div[contains(@class, 'sapMMsgBoxText')]"))
-                            )
-                            logging.info(f"Save confirmation: {confirmation.text}")
-                        except:
-                            logging.info("No save confirmation dialog found")
-                        
-                        # Add the bids from this round to the total
-                        total_bids_placed += bids_placed_this_round
-                        all_bid_details.extend(bid_details_this_round)
-                        
-                    except Exception as e:
-                        logging.error(f"Error clicking Save button: {str(e)}")
-                else:
-                    logging.info("No bids placed in this round, skipping save")
-                
-                # Click search to refresh the page for the next round
-                self.click_search()
-                logging.info("Clicked search for next round of bidding")
-                
-                time.sleep(rapidity)
-                
-            except Exception as e:
-                logging.error(f"Error during bidding process: {str(e)}")
+        for i, driver in enumerate(self.drivers):
+            bids_placed, bid_details = self.aggressive_bidding4(driver, self.waits[i], max_duration, destinations, rapidity)
+            total_bids_placed += bids_placed
+            all_bid_details.extend(bid_details)
         
-        logging.info(f"Aggressive bidding with save completed. Total bids placed across all rounds: {total_bids_placed}")
         return total_bids_placed, all_bid_details
-    
-    def aggressive_bidding4(self, max_duration=300, destinations=None, rapidity=0.1):
+
+    def aggressive_bidding4(self, driver, wait, max_duration=300, destinations=None, rapidity=0.1):
         start_time = time.time()
         bids_placed = 0
         bid_details = []
         
         while time.time() - start_time < max_duration:
             try:
-                table = WebDriverWait(self.driver, 1).until(
+                table = WebDriverWait(driver, 1).until(
                     EC.presence_of_element_located((By.ID, "__xmlview0--idUtclVCVendorAssignmentTable-listUl"))
                 )
                 rows = table.find_elements(By.XPATH, ".//tbody/tr")
@@ -682,27 +722,27 @@ class SAPBiddingAutomation:
                             
                             # Attempt to enable the input if it's disabled
                             if bid_input.get_attribute('disabled'):
-                                logging.info(f"Attempting to enable bid input for freight {freight}")
+                                logging.info(f"Driver {id(driver)}: Attempting to enable bid input for freight {freight}")
                                 try:
                                     # Try clicking on the input to enable it
-                                    self.driver.execute_script("arguments[0].click();", bid_input)
+                                    driver.execute_script("arguments[0].click();", bid_input)
                                     
                                     # Try removing the 'disabled' attribute
-                                    self.driver.execute_script("arguments[0].removeAttribute('disabled');", bid_input)
+                                    driver.execute_script("arguments[0].removeAttribute('disabled');", bid_input)
                                     
                                     # Try setting 'disabled' to false
-                                    self.driver.execute_script("arguments[0].disabled = false;", bid_input)
+                                    driver.execute_script("arguments[0].disabled = false;", bid_input)
                                     
                                     time.sleep(rapidity)  # Wait for any changes to take effect
                                 except Exception as e:
-                                    logging.warning(f"Failed to enable bid input: {str(e)}")
+                                    logging.warning(f"Driver {id(driver)}: Failed to enable bid input: {str(e)}")
 
                             if not bid_input.get_attribute('disabled'):
                                 bid_input.clear()
                                 bid_input.send_keys(str(new_bid_amount))
                                 
                                 # Use JavaScript to trigger Enter key event
-                                self.driver.execute_script("""
+                                driver.execute_script("""
                                     var event = new KeyboardEvent('keydown', {
                                         'key': 'Enter',
                                         'code': 'Enter',
@@ -729,216 +769,281 @@ class SAPBiddingAutomation:
                                     })
                                     
                                     if bid_rank == "01":
-                                        logging.info(f"Achieved rank 1 with bid of {new_bid_amount} for freight {freight}")
+                                        logging.info(f"Driver {id(driver)}: Achieved rank 1 with bid of {new_bid_amount} for freight {freight}")
                                         bids_placed += 1
                                     else:
-                                        logging.info(f"Bid placed with rank {bid_rank} for freight {freight}")
+                                        logging.info(f"Driver {id(driver)}: Bid placed with rank {bid_rank} for freight {freight}")
                                 else:
-                                    logging.info(f"Bid not registered, retrying for freight {freight}")
+                                    logging.info(f"Driver {id(driver)}: Bid not registered, retrying for freight {freight}")
                             else:
-                                logging.warning(f"Bid input still disabled for freight {freight} after attempt to enable")
+                                logging.warning(f"Driver {id(driver)}: Bid input still disabled for freight {freight} after attempt to enable")
                         
                         except (StaleElementReferenceException, NoSuchElementException):
-                            logging.warning(f"Element not found, retrying for freight {freight}")
+                            logging.warning(f"Driver {id(driver)}: Element not found, retrying for freight {freight}")
                         except Exception as e:
-                            logging.error(f"Error processing row: {str(e)}")
+                            logging.error(f"Driver {id(driver)}: Error processing row: {str(e)}")
                         
                         attempts += 1
                         if not bid_placed:
                             time.sleep(rapidity)  # Wait before retrying
                     
                     if not bid_placed:
-                        logging.warning(f"Failed to place bid after {max_attempts} attempts for freight {freight}")
+                        logging.warning(f"Driver {id(driver)}: Failed to place bid after {max_attempts} attempts for freight {freight}")
                 
                 time.sleep(rapidity)
                 
             except Exception as e:
-                logging.error(f"Error during aggressive bidding: {str(e)}")
+                logging.error(f"Error during aggressive bidding 4 for driver {id(driver)}: {str(e)}")
             
-            self.click_search()
+            self.click_search(driver, wait)
         
-        logging.info(f"Aggressive bidding 4 completed. Total bids placed: {bids_placed}")
+        logging.info(f"Aggressive bidding 4 completed for driver {id(driver)}. Total bids placed: {bids_placed}")
         return bids_placed, bid_details
-
-    def place_bids(self, destinations=None, max_duration=300):
-        return self.aggressive_bidding(max_duration, destinations)
-
-    def rapid_bidding(self, max_duration=300):
-        return self.aggressive_bidding(max_duration)
     
-    async def ultra_rapid_bidding(self, max_duration=300, destinations=None, rapidity=0.000000001):
+
+    def aggressive_bidding_with_save_all(self, max_duration=300, destinations=None, rapidity=0.1):
+        total_bids_placed = 0
+        all_bid_details = []
+        
+        for i, driver in enumerate(self.drivers):
+            bids_placed, bid_details = self.aggressive_bidding_with_save(driver, self.waits[i], max_duration, destinations, rapidity)
+            total_bids_placed += bids_placed
+            all_bid_details.extend(bid_details)
+        
+        return total_bids_placed, all_bid_details
+
+    def aggressive_bidding_with_save2(self, driver, wait, max_duration=300, destinations=None, rapidity=0.1):
         start_time = time.time()
-        bids_placed = 0
-        bid_details = []
+        total_bids_placed = 0
+        all_bid_details = []
         
         while time.time() - start_time < max_duration:
             try:
-                # Use JavaScript to get table data for faster access
-                table_data = self.driver.execute_script("""
-                    var table = document.getElementById('__xmlview0--idUtclVCVendorAssignmentTable-listUl');
-                    var rows = table.getElementsByTagName('tbody')[0].getElementsByTagName('tr');
-                    var data = [];
-                    for (var i = 0; i < rows.length; i++) {
-                        var cells = rows[i].getElementsByTagName('td');
-                        data.push({
-                            destination: cells[5].textContent.trim(),
-                            freight: parseInt(cells[13].textContent.trim()),
-                            bidInput: cells[14].getElementsByTagName('input')[0],
-                            rankElement: cells[15].getElementsByTagName('span')[0]
-                        });
-                    }
-                    return data;
-                """)
+                table = WebDriverWait(driver, 1).until(
+                    EC.presence_of_element_located((By.ID, "__xmlview0--idUtclVCVendorAssignmentTable-listUl"))
+                )
+                rows = table.find_elements(By.XPATH, ".//tbody/tr")
                 
-                for row in table_data:
+                bids_placed_this_round = 0
+                bid_details_this_round = []
+                
+                for row in rows:
                     try:
-                        if destinations and row['destination'] not in destinations:
-                            continue
+                        if destinations:
+                            destination_element = row.find_element(By.XPATH, ".//td[6]//span")
+                            destination = destination_element.text.strip()
+                            if destination not in destinations:
+                                continue
 
-                        freight = row['freight']
-                        bid_input = row['bidInput']
-                        current_bid_amount = int(self.driver.execute_script("return arguments[0].value;", bid_input) or 0)
+                        freight_element = row.find_element(By.XPATH, ".//td[contains(@headers, '__text23')]//span")
+                        bid_input = row.find_element(By.XPATH, ".//td[contains(@headers, '__text24')]//input[@class='sapMInputBaseInner']")
+                        
+                        freight = int(freight_element.text.strip())
+                        current_bid_amount = int(bid_input.get_attribute('value') or 0)
                         new_bid_amount = max(current_bid_amount, freight - 1)
                         
-                        if not self.driver.execute_script("return arguments[0].disabled;", bid_input):
-                            # Use JavaScript to set the bid amount and trigger the change event
-                            self.driver.execute_script("""
-                                arguments[0].value = arguments[1];
-                                arguments[0].dispatchEvent(new Event('change', { bubbles: true }));
-                                var event = new KeyboardEvent('keydown', {
-                                    'key': 'Enter',
-                                    'code': 'Enter',
-                                    'which': 13,
-                                    'keyCode': 13,
-                                    'bubbles': true
-                                });
+                        if not bid_input.get_attribute('disabled'):
+                            bid_input.clear()
+                            bid_input.send_keys(str(new_bid_amount))
+                            
+                            # Use JavaScript to trigger change event
+                            driver.execute_script("""
+                                var event = new Event('change', { bubbles: true });
                                 arguments[0].dispatchEvent(event);
-                            """, bid_input, str(new_bid_amount))
+                            """, bid_input)
                             
-                            await asyncio.sleep(rapidity)
+                            time.sleep(rapidity)
                             
-                            bid_rank = self.driver.execute_script("return arguments[0].textContent.trim();", row['rankElement'])
-                            bid_details.append({
+                            bid_details_this_round.append({
                                 'freight': freight,
-                                'bid_amount': new_bid_amount,
-                                'rank': bid_rank
+                                'bid_amount': new_bid_amount
                             })
                             
-                            if bid_rank == "01":
-                                logging.info(f"Achieved rank 1 with bid of {new_bid_amount} for freight {freight}")
-                                bids_placed += 1
-                            elif bid_rank:
-                                while bid_rank != "01" and new_bid_amount > freight - 1:
-                                    new_bid_amount -= 1
-                                    self.driver.execute_script("""
-                                        arguments[0].value = arguments[1];
-                                        arguments[0].dispatchEvent(new Event('change', { bubbles: true }));
-                                        var event = new KeyboardEvent('keydown', {
-                                            'key': 'Enter',
-                                            'code': 'Enter',
-                                            'which': 13,
-                                            'keyCode': 13,
-                                            'bubbles': true
-                                        });
-                                        arguments[0].dispatchEvent(event);
-                                    """, bid_input, str(new_bid_amount))
-                                    
-                                    await asyncio.sleep(rapidity)
-                                    bid_rank = self.driver.execute_script("return arguments[0].textContent.trim();", row['rankElement'])
-                                    bid_details[-1] = {
-                                        'freight': freight,
-                                        'bid_amount': new_bid_amount,
-                                        'rank': bid_rank
-                                    }
-                                if bid_rank == "01":
-                                    logging.info(f"Achieved rank 1 with bid of {new_bid_amount} for freight {freight}")
-                                    bids_placed += 1
-                                else:
-                                    logging.info(f"Could not achieve rank 1. Final bid: {new_bid_amount}, Rank: {bid_rank}")
+                            logging.info(f"Driver {id(driver)}: Bid amount set to {new_bid_amount} for freight {freight}")
+                            bids_placed_this_round += 1
+                        else:
+                            logging.info(f"Driver {id(driver)}: Bid input disabled for freight {freight}, skipping")
                     
+                    except (StaleElementReferenceException, NoSuchElementException):
+                        logging.warning(f"Driver {id(driver)}: Element not found, skipping row")
                     except Exception as e:
-                        logging.error(f"Error processing row: {str(e)}")
+                        logging.error(f"Driver {id(driver)}: Error processing row: {str(e)}")
                 
-                await asyncio.sleep(rapidity)
-                
-            except Exception as e:
-                logging.error(f"Error during ultra rapid bidding: {str(e)}")
-            
-            self.click_search()
-        
-        logging.info(f"Ultra rapid bidding completed. Total bids placed: {bids_placed}")
-        return bids_placed, bid_details
-
-    def start_ultra_rapid_bidding(self, max_duration=300, destinations=None, rapidity=0.000000001):
-        try:
-            loop = asyncio.get_event_loop()
-        except RuntimeError:
-            loop = asyncio.new_event_loop()
-            asyncio.set_event_loop(loop)
-    
-        return loop.run_until_complete(self.ultra_rapid_bidding(max_duration, destinations, rapidity))
-    
-    def continuous_bidding(self, update_callback):
-        while True:
-            try:
-                self.place_bids()
-                update_callback("Bids placed. Waiting for 5 seconds before next attempt...")
-                time.sleep(5)
-            except Exception as e:
-                update_callback(f"Error during continuous bidding: {str(e)}")
-                time.sleep(5)
-
-    def continuous_single_depot_search_and_bid(self, depot_name):
-        while True:
-            try:
-                logging.info(f"Selecting depot: {depot_name}")
-                self.select_depot(depot_name)
-                self.click_search()
-                
-                if self.check_table_data():
-                    logging.info(f"Table data found for {depot_name}. Starting bidding process.")
-                    bids_placed = self.rapid_bidding(max_duration=300)  # 5 minutes of rapid bidding
-                    logging.info(f"Placed {bids_placed} bids for {depot_name}.")
+                # After placing all bids for this round, click the Save button
+                if bids_placed_this_round > 0:
+                    try:
+                        save_button = WebDriverWait(driver, 1).until(
+                            EC.element_to_be_clickable((By.ID, "__xmlview0--idUtclsaveTxt"))
+                        )
+                        save_button.click()
+                        logging.info(f"Driver {id(driver)}: Save button clicked successfully")
+                        
+                        # Wait for save operation to complete
+                        time.sleep(2)
+                        
+                        # Check for any confirmation dialog or message after saving
+                        try:
+                            confirmation = WebDriverWait(driver, 5).until(
+                                EC.presence_of_element_located((By.XPATH, "//div[contains(@class, 'sapMMsgBoxText')]"))
+                            )
+                            logging.info(f"Driver {id(driver)}: Save confirmation: {confirmation.text}")
+                        except:
+                            logging.info(f"Driver {id(driver)}: No save confirmation dialog found")
+                        
+                        # Add the bids from this round to the total
+                        total_bids_placed += bids_placed_this_round
+                        all_bid_details.extend(bid_details_this_round)
+                        
+                    except Exception as e:
+                        logging.error(f"Driver {id(driver)}: Error clicking Save button: {str(e)}")
                 else:
-                    logging.info(f"No table data found for {depot_name}. Retrying in 5 seconds.")
-                    time.sleep(5)
+                    logging.info(f"Driver {id(driver)}: No bids placed in this round, skipping save")
+                
+                # Click search to refresh the page for the next round
+                self.click_search(driver, wait)
+                logging.info(f"Driver {id(driver)}: Clicked search for next round of bidding")
+                
+                time.sleep(rapidity)
+                
             except Exception as e:
-                logging.error(f"Error during continuous search and bid for {depot_name}: {str(e)}")
-                time.sleep(5)
-
-    def wait_for_page_load(self, timeout=30):
+                logging.error(f"Driver {id(driver)}: Error during bidding process: {str(e)}")
+        
+        logging.info(f"Driver {id(driver)}: Aggressive bidding with save completed. Total bids placed: {total_bids_placed}")
+        return total_bids_placed, all_bid_details
+    
+def aggressive_bidding_with_save(self, driver, wait, max_duration=300, destinations=None, rapidity=0.00001):
+    start_time = time.time()
+    total_bids_placed = 0
+    all_bid_details = []
+    
+    while time.time() - start_time < max_duration:
         try:
-            WebDriverWait(self.driver, timeout).until(
-                lambda d: d.execute_script('return document.readyState') == 'complete'
-            )
-            WebDriverWait(self.driver, timeout).until(
-                EC.invisibility_of_element_located((By.CLASS_NAME, "sapUiLocalBusyIndicator"))
-            )
-            logging.info("Page loaded completely")
-        except TimeoutException:
-            logging.warning(f"Timeout waiting for page load after {timeout} seconds")
+            table_data = driver.execute_script("""
+                var table = document.getElementById('__xmlview0--idUtclVCVendorAssignmentTable-listUl');
+                var rows = table.getElementsByTagName('tbody')[0].getElementsByTagName('tr');
+                var data = [];
+                for (var i = 0; i < rows.length; i++) {
+                    var cells = rows[i].getElementsByTagName('td');
+                    data.push({
+                        destination: cells[5].textContent.trim(),
+                        freight: parseInt(cells[13].textContent.trim()),
+                        bidInput: cells[14].getElementsByTagName('input')[0],
+                        rankElement: cells[15].getElementsByTagName('span')[0]
+                    });
+                }
+                return data;
+            """)
+            
+            bids_placed_this_round = 0
+            bid_details_this_round = []
+            
+            for row in table_data:
+                try:
+                    if destinations and row['destination'] not in destinations:
+                        continue
 
-    def save_cookies(self):
-        cookies = self.driver.get_cookies()
-        with open("cookies.txt", "w") as cookie_file:
-            for cookie in cookies:
-                cookie_file.write(f"{cookie['name']}={cookie['value']}\n")
-        logging.info("Cookies saved")
-
-    def load_cookies(self):
-        try:
-            with open("cookies.txt", "r") as cookie_file:
-                for line in cookie_file:
-                    name, value = line.strip().split("=", 1)
-                    self.driver.add_cookie({'name': name, 'value': value})
-            logging.info("Cookies loaded successfully")
+                    freight = row['freight']
+                    bid_input = row['bidInput']
+                    rank_element = row['rankElement']
+                    
+                    current_bid_amount = int(driver.execute_script("return arguments[0].value;", bid_input) or 0)
+                    new_bid_amount = max(current_bid_amount, freight - 1)
+                    
+                    # Always try to set the bid amount, even if the input is disabled
+                    driver.execute_script("""
+                        var input = arguments[0];
+                        var newValue = arguments[1];
+                        input.value = newValue;
+                        input.dispatchEvent(new Event('change', { bubbles: true }));
+                        var enterEvent = new KeyboardEvent('keydown', {
+                            key: 'Enter',
+                            code: 'Enter',
+                            which: 13,
+                            keyCode: 13,
+                            bubbles: true
+                        });
+                        input.dispatchEvent(enterEvent);
+                    """, bid_input, str(new_bid_amount))
+                    
+                    # Check if the bid was actually placed (input not disabled)
+                    if not driver.execute_script("return arguments[0].disabled;", bid_input):
+                        bid_rank = driver.execute_script("return arguments[0].textContent.trim();", rank_element)
+                        bid_details_this_round.append({
+                            'freight': freight,
+                            'bid_amount': new_bid_amount,
+                            'rank': bid_rank
+                        })
+                        
+                        if bid_rank == "01":
+                            logging.info(f"Driver {id(driver)}: Achieved rank 1 with bid of {new_bid_amount} for freight {freight}")
+                            bids_placed_this_round += 1
+                        elif bid_rank:
+                            logging.info(f"Driver {id(driver)}: Placed bid of {new_bid_amount} for freight {freight}, current rank: {bid_rank}")
+                            # If not rank 1, immediately try to outbid
+                            while bid_rank != "01" and new_bid_amount > freight - 1:
+                                new_bid_amount -= 1
+                                driver.execute_script("""
+                                    arguments[0].value = arguments[1];
+                                    arguments[0].dispatchEvent(new Event('change', { bubbles: true }));
+                                    var event = new KeyboardEvent('keydown', {
+                                        'key': 'Enter',
+                                        'code': 'Enter',
+                                        'which': 13,
+                                        'keyCode': 13,
+                                        'bubbles': true
+                                    });
+                                    arguments[0].dispatchEvent(event);
+                                """, bid_input, str(new_bid_amount))
+                                
+                                time.sleep(rapidity)
+                                bid_rank = driver.execute_script("return arguments[0].textContent.trim();", rank_element)
+                                bid_details_this_round[-1] = {
+                                    'freight': freight,
+                                    'bid_amount': new_bid_amount,
+                                    'rank': bid_rank
+                                }
+                                if bid_rank == "01":
+                                    logging.info(f"Driver {id(driver)}: Achieved rank 1 with bid of {new_bid_amount} for freight {freight}")
+                                    bids_placed_this_round += 1
+                                    break
+                    
+                    time.sleep(rapidity)
+                    
+                except Exception as e:
+                    logging.error(f"Driver {id(driver)}: Error processing row: {str(e)}")
+            
+            # After placing all bids for this round, click the Save button
+            if bids_placed_this_round > 0:
+                try:
+                    driver.execute_script("""
+                        var saveButton = document.getElementById('__xmlview0--idUtclsaveTxt');
+                        if (saveButton) saveButton.click();
+                    """)
+                    logging.info(f"Driver {id(driver)}: Save button clicked successfully")
+                    
+                    # Wait for save operation to complete
+                    time.sleep(0.5)
+                    
+                    # Add the bids from this round to the total
+                    total_bids_placed += bids_placed_this_round
+                    all_bid_details.extend(bid_details_this_round)
+                    
+                except Exception as e:
+                    logging.error(f"Driver {id(driver)}: Error clicking Save button: {str(e)}")
+            else:
+                logging.info(f"Driver {id(driver)}: No bids placed in this round, skipping save")
+            
+            # Click search to refresh the page for the next round
+            driver.execute_script("""
+                var searchButton = document.querySelector('button[data-sap-ui="__xmlview0--idUtclsearchBtnTxt"]');
+                if (searchButton) searchButton.click();
+            """)
+            logging.info(f"Driver {id(driver)}: Clicked search for next round of bidding")
+            
+            time.sleep(rapidity)
+            
         except Exception as e:
-            logging.error(f"Failed to load cookies: {str(e)}")
-
-    def cookies_exist(self):
-        return os.path.exists("cookies.txt")
-
-    def close(self):
-        if self.driver:
-            self.driver.quit()
-        logging.info("Browser closed.")
+            logging.error(f"Driver {id(driver)}: Error during bidding process: {str(e)}")
+    
+    logging.info(f"Driver {id(driver)}: Aggressive bidding with save completed. Total bids placed: {total_bids_placed}")
+    return total_bids_placed, all_bid_details

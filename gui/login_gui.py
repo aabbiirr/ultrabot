@@ -1,6 +1,6 @@
 # File: gui/login_gui.py
 
-from PyQt5.QtWidgets import QWidget, QVBoxLayout, QHBoxLayout, QLabel, QLineEdit, QPushButton, QTextEdit, QComboBox, QDoubleSpinBox
+from PyQt5.QtWidgets import QWidget, QVBoxLayout, QHBoxLayout, QLabel, QLineEdit, QPushButton, QTextEdit, QComboBox, QDoubleSpinBox, QSpinBox
 from PyQt5.QtCore import QThread, pyqtSignal
 from automation.sap_automation import SAPBiddingAutomation
 import logging
@@ -11,7 +11,7 @@ from PyQt5.QtWidgets import QMessageBox, QInputDialog
 class AutomationThread(QThread):
     update_signal = pyqtSignal(str)
 
-    def __init__(self, username, password, ship_from_plant, selected_depot=None, destinations=None, bidding_strategy="Aggressive1",  rapidity=0.1):
+    def __init__(self, username, password, ship_from_plant, selected_depot=None, destinations=None, bidding_strategy="Aggressive1",  rapidity=0.1, num_drivers=1):
         super().__init__()
         self.username = username
         self.password = password
@@ -20,19 +20,20 @@ class AutomationThread(QThread):
         self.destinations = destinations
         self.bidding_strategy = bidding_strategy
         self.rapidity = rapidity
+        self.num_drivers = num_drivers
         self.stop_flag = False
 
     def run(self):
-        automation = SAPBiddingAutomation()
+        automation = SAPBiddingAutomation(num_drivers=self.num_drivers)
         try:
             self.update_signal.emit("Setting up WebDriver...")
-            automation.setup_driver()
+            automation.setup_drivers()
             
             # Login with retry
             max_login_attempts = 3
             for attempt in range(max_login_attempts):
                 self.update_signal.emit(f"Attempting login... (Attempt {attempt + 1}/{max_login_attempts})")
-                login_success = automation.login(self.username, self.password)
+                login_success = automation.login_all(self.username, self.password)
                 if login_success:
                     break
                 elif attempt < max_login_attempts - 1:
@@ -48,7 +49,7 @@ class AutomationThread(QThread):
             for attempt in range(max_navigation_attempts):
                 try:
                     self.update_signal.emit(f"Navigating to eBidding page... (Attempt {attempt + 1}/{max_navigation_attempts})")
-                    ebidding_url = automation.navigate_to_ebidding()
+                    ebidding_url = automation.navigate_to_ebidding_all()
                     self.update_signal.emit(f"Opened eBidding URL: {ebidding_url}")
                     break
                 except Exception as e:
@@ -68,14 +69,14 @@ class AutomationThread(QThread):
                     # Handle error dialogs
                     max_dialog_attempts = 3
                     for dialog_attempt in range(max_dialog_attempts):
-                        dialog_handled = automation.handle_error_dialog()
+                        dialog_handled = automation.handle_error_dialog_all()
                         if not dialog_handled:
                             break
                         self.update_signal.emit(f"Handled an error dialog. Checking for more... (Attempt {dialog_attempt + 1}/{max_dialog_attempts})")
                         time.sleep(1)  # Short delay before checking for another dialog
                     
                     # Click 'Show Search' button
-                    automation.click_show_search()
+                    automation.click_show_search_all()
                     self.update_signal.emit("Successfully clicked 'Show Search' button.")
                     break
                 except Exception as e:
@@ -87,7 +88,7 @@ class AutomationThread(QThread):
                         return
 
             self.update_signal.emit(f"Selecting Ship From Plant: {self.ship_from_plant}")
-            automation.select_ship_from_plant(self.ship_from_plant)
+            automation.select_ship_from_plant_all(self.ship_from_plant)
             
             depots = ["DEOGARH", "DHANBAD", "BANKURA", "BERHAMPORE", "BURDWAN", "COSSIPORE", 
                       "DANKUNI", "KALIGHAT", "KHARAGPUR", "KRISHNANAGAR", "SAINTHIA", "SHALIMAR", 
@@ -96,7 +97,7 @@ class AutomationThread(QThread):
             
             while not self.stop_flag:
                 self.update_signal.emit("Handling any error dialogs before depot selection...")
-                automation.handle_error_dialog()
+                automation.handle_error_dialog_all()
                 
                 if self.selected_depot:
                     current_depot = self.selected_depot
@@ -105,10 +106,10 @@ class AutomationThread(QThread):
                     depot_index = (depot_index + 1) % len(depots)
 
                 self.update_signal.emit(f"Selecting Depot: {current_depot}")
-                automation.select_depot(current_depot)
+                automation.select_depot_all(current_depot)
                 
                 self.update_signal.emit("Clicking Search...")
-                automation.click_search()
+                automation.click_search_all()
                 
                 # if automation.check_table_data():
                 #     self.update_signal.emit(f"Data found for {current_depot}. Starting aggressive bidding process...")
@@ -122,20 +123,20 @@ class AutomationThread(QThread):
                 # else:
                 #     self.update_signal.emit(f"No data found for {current_depot}.")
                 self.update_signal.emit(f"Rapidity {self.rapidity}.")
-                if automation.check_table_data():
+                if automation.check_table_data_all():
                     self.update_signal.emit(f"Data found for {current_depot}. Starting {self.bidding_strategy} bidding process...")
                     if self.bidding_strategy == "Aggressive1":
-                        bids_placed, bid_details = automation.aggressive_bidding(max_duration=300, destinations=self.destinations)
+                        bids_placed, bid_details = automation.aggressive_bidding_all(max_duration=300, destinations=self.destinations, rapidity=self.rapidity)
                     elif self.bidding_strategy == "Aggressive2":
-                        bids_placed, bid_details = automation.aggressive_bidding2(max_duration=300, destinations=self.destinations)
+                        bids_placed, bid_details = automation.aggressive_bidding2_all(max_duration=300, destinations=self.destinations, rapidity=self.rapidity)
                     elif self.bidding_strategy == "Ultra Rapid":
                         bids_placed, bid_details = automation.start_ultra_rapid_bidding(max_duration=300, destinations=self.destinations, rapidity=self.rapidity)                    
                     elif self.bidding_strategy == "AggressiveWithSave":
-                        bids_placed, bid_details = automation.aggressive_bidding_with_save(max_duration=300, destinations=self.destinations, rapidity=self.rapidity)
+                        bids_placed, bid_details = automation.aggressive_bidding_with_save_all(max_duration=300, destinations=self.destinations, rapidity=self.rapidity)
                     elif self.bidding_strategy == "Aggressive4":
-                        bids_placed, bid_details = automation.aggressive_bidding4(max_duration=300, destinations=self.destinations, rapidity=self.rapidity)
+                        bids_placed, bid_details = automation.aggressive_bidding4_all(max_duration=300, destinations=self.destinations, rapidity=self.rapidity)
                     else:  # No rank
-                        bids_placed, bid_details = automation.aggressive_bidding3(max_duration=300, destinations=self.destinations)
+                        bids_placed, bid_details = automation.aggressive_bidding3_all(max_duration=300, destinations=self.destinations)
                     
                     self.update_signal.emit(f"Bidding session completed for {current_depot}.")
                     self.update_signal.emit(f"Total bids placed: {bids_placed}")
@@ -277,6 +278,17 @@ class SAPLoginGUI(QWidget):
         rapidity_layout.addWidget(self.rapidity_input)
         main_layout.addLayout(rapidity_layout)
 
+
+         # Add Rapidity input
+        instance_layout = QHBoxLayout()
+        instance_layout.addWidget(QLabel("Bidding instance:"))
+        self.instance_input = QSpinBox()
+        # self.instance_input.setDecimals(9)  # Allow up to nanosecond precision
+        self.instance_input.setRange(1, 10)  # From 1 nanosecond to 1 second
+        self.instance_input.setValue(1)  # Default value of 100 milliseconds
+        instance_layout.addWidget(self.instance_input)
+        main_layout.addLayout(instance_layout)
+
         # Start button
         self.start_button = QPushButton("Start Automation")
         self.start_button.clicked.connect(self.start_automation)
@@ -305,11 +317,12 @@ class SAPLoginGUI(QWidget):
         destinations = [dest.strip() for dest in self.destination_input.text().split(',') if dest.strip()]
         bidding_strategy = self.strategy_combo.currentText()
         rapidity = self.rapidity_input.value()
+        instances = self.instance_input.value()
         
         if selected_depot == "All Depots (Rotational)":
             selected_depot = None
 
-        self.thread = AutomationThread(username, password, ship_from_plant, selected_depot, destinations, bidding_strategy, rapidity)
+        self.thread = AutomationThread(username, password, ship_from_plant, selected_depot, destinations, bidding_strategy, rapidity, instances)
         self.thread.update_signal.connect(self.update_log)
         self.thread.start()
         

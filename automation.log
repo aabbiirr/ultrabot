@@ -28512,3 +28512,720 @@ Stacktrace:
 2024-09-26 17:11:12,388 - INFO - No data found for BURDWAN.
 2024-09-26 17:11:12,388 - INFO - Moving to next depot. Next index: 5
 2024-09-26 17:11:14,390 - INFO - Handling any error dialogs before depot selection...
+2024-09-27 00:08:11,892 - INFO - Setting up WebDriver...
+2024-09-27 00:08:11,898 - INFO - Error: 'SAPBiddingAutomation' object has no attribute 'setup_driver'
+2024-09-27 00:08:11,899 - INFO - Automation stopped. Browser remains open.
+2024-09-27 00:11:37,392 - INFO - Setting up WebDriver...
+2024-09-27 00:11:37,393 - INFO - Error: 'SAPBiddingAutomation' object has no attribute 'setup_driver'
+2024-09-27 00:11:37,393 - INFO - Automation stopped. Browser remains open.
+2024-09-27 00:12:42,263 - INFO - ====== WebDriver manager ======
+2024-09-27 00:12:42,265 - INFO - Setting up WebDriver...
+2024-09-27 00:12:42,326 - INFO - Get LATEST chromedriver version for google-chrome
+2024-09-27 00:12:42,726 - INFO - Get LATEST chromedriver version for google-chrome
+2024-09-27 00:12:42,862 - INFO - Get LATEST chromedriver version for google-chrome
+2024-09-27 00:12:43,175 - INFO - WebDriver version 128.0.6613.137 selected
+2024-09-27 00:12:43,176 - INFO - Modern chrome version https://storage.googleapis.com/chrome-for-testing-public/128.0.6613.137/linux64/chromedriver-linux64.zip
+2024-09-27 00:12:43,177 - INFO - About to download new driver from https://storage.googleapis.com/chrome-for-testing-public/128.0.6613.137/linux64/chromedriver-linux64.zip
+2024-09-27 00:12:43,467 - INFO - Driver downloading response is 200
+2024-09-27 00:12:44,676 - INFO - Get LATEST chromedriver version for google-chrome
+2024-09-27 00:12:44,932 - INFO - Driver has been saved in cache [/home/abir/.wdm/drivers/chromedriver/linux64/128.0.6613.137]
+2024-09-27 00:12:46,282 - INFO - Set up 3 drivers
+2024-09-27 00:12:46,283 - INFO - Attempting login... (Attempt 1/3)
+2024-09-27 00:12:49,586 - INFO - Driver 136203586629792 logged in successfully using credentials
+2024-09-27 00:12:49,601 - INFO - Cookies saved for driver 136203586629792
+2024-09-27 00:12:50,369 - ERROR - Failed to load cookies for driver 136203586632144: [Errno 2] No such file or directory: 'cookies_driver_136203586632144.txt'
+2024-09-27 00:13:06,312 - INFO - Driver 136203586632144 logged in successfully using credentials
+2024-09-27 00:13:06,317 - INFO - Cookies saved for driver 136203586632144
+2024-09-27 00:13:08,117 - ERROR - Failed to load cookies for driver 136203586735120: [Errno 2] No such file or directory: 'cookies_driver_136203586735120.txt'
+2024-09-27 00:13:23,680 - INFO - Driver 136203586735120 logged in successfully using credentials
+2024-09-27 00:13:23,683 - INFO - Cookies saved for driver 136203586735120
+2024-09-27 00:13:23,684 - INFO - Login failed. Retrying in 5 seconds...
+2024-09-27 00:13:28,690 - INFO - Attempting login... (Attempt 2/3)
+2024-09-27 00:13:29,329 - INFO - Cookies loaded successfully for driver 136203586629792
+2024-09-27 00:13:30,216 - INFO - Driver 136203586629792 logged in successfully using cookies
+2024-09-27 00:13:31,135 - INFO - Cookies loaded successfully for driver 136203586632144
+2024-09-27 00:13:32,227 - INFO - Driver 136203586632144 logged in successfully using cookies
+2024-09-27 00:13:32,923 - INFO - Cookies loaded successfully for driver 136203586735120
+2024-09-27 00:13:33,761 - INFO - Driver 136203586735120 logged in successfully using cookies
+2024-09-27 00:13:33,762 - INFO - Login failed. Retrying in 5 seconds...
+2024-09-27 00:13:38,768 - INFO - Attempting login... (Attempt 3/3)
+2024-09-27 00:13:39,188 - INFO - Cookies loaded successfully for driver 136203586629792
+2024-09-27 00:13:40,177 - INFO - Driver 136203586629792 logged in successfully using cookies
+2024-09-27 00:13:40,821 - INFO - Cookies loaded successfully for driver 136203586632144
+2024-09-27 00:13:41,820 - INFO - Driver 136203586632144 logged in successfully using cookies
+2024-09-27 00:13:42,318 - INFO - Cookies loaded successfully for driver 136203586735120
+2024-09-27 00:13:43,234 - INFO - Driver 136203586735120 logged in successfully using cookies
+2024-09-27 00:13:43,236 - INFO - Login failed after multiple attempts. Please check your credentials.
+2024-09-27 00:13:43,236 - INFO - Automation stopped. Browser remains open.
+2024-09-27 00:15:49,424 - INFO - ====== WebDriver manager ======
+2024-09-27 00:15:49,425 - INFO - Setting up WebDriver...
+2024-09-27 00:15:49,487 - INFO - Get LATEST chromedriver version for google-chrome
+2024-09-27 00:15:49,612 - INFO - Get LATEST chromedriver version for google-chrome
+2024-09-27 00:15:49,735 - INFO - Driver [/home/abir/.wdm/drivers/chromedriver/linux64/128.0.6613.137/chromedriver-linux64/chromedriver] found in cache
+2024-09-27 00:15:50,625 - INFO - Set up 2 drivers
+2024-09-27 00:15:50,626 - INFO - Attempting login... (Attempt 1/3)
+2024-09-27 00:15:54,143 - INFO - Driver 132453749895424 logged in successfully using credentials
+2024-09-27 00:15:54,146 - INFO - Cookies saved for driver 132453749895424
+2024-09-27 00:15:54,146 - INFO - Login failed. Retrying in 5 seconds...
+2024-09-27 00:15:59,152 - INFO - Attempting login... (Attempt 2/3)
+2024-09-27 00:15:59,823 - INFO - Cookies loaded successfully for driver 132453749895424
+2024-09-27 00:16:00,706 - INFO - Driver 132453749895424 logged in successfully using cookies
+2024-09-27 00:16:00,706 - INFO - Login failed. Retrying in 5 seconds...
+2024-09-27 00:16:05,711 - INFO - Attempting login... (Attempt 3/3)
+2024-09-27 00:16:06,376 - INFO - Cookies loaded successfully for driver 132453749895424
+2024-09-27 00:16:07,415 - INFO - Driver 132453749895424 logged in successfully using cookies
+2024-09-27 00:16:07,416 - INFO - Login failed after multiple attempts. Please check your credentials.
+2024-09-27 00:16:07,417 - INFO - Automation stopped. Browser remains open.
+2024-09-27 00:18:42,137 - INFO - ====== WebDriver manager ======
+2024-09-27 00:18:42,139 - INFO - Setting up WebDriver...
+2024-09-27 00:18:42,194 - INFO - Get LATEST chromedriver version for google-chrome
+2024-09-27 00:18:42,338 - INFO - Get LATEST chromedriver version for google-chrome
+2024-09-27 00:18:42,462 - INFO - Driver [/home/abir/.wdm/drivers/chromedriver/linux64/128.0.6613.137/chromedriver-linux64/chromedriver] found in cache
+2024-09-27 00:18:42,866 - INFO - Set up 2 drivers
+2024-09-27 00:18:42,867 - INFO - Attempting login... (Attempt 1/3)
+2024-09-27 00:18:46,151 - INFO - Driver 133728586592512 logged in successfully using credentials
+2024-09-27 00:18:46,154 - INFO - Cookies saved for driver 133728586592512
+2024-09-27 00:18:46,801 - INFO - Cookies loaded successfully for driver 133728586592512
+2024-09-27 00:18:47,666 - INFO - Driver 133728586592512 logged in successfully using cookies
+2024-09-27 00:18:47,666 - INFO - Login failed. Retrying in 5 seconds...
+2024-09-27 00:18:52,671 - INFO - Attempting login... (Attempt 2/3)
+2024-09-27 00:18:53,245 - INFO - Cookies loaded successfully for driver 133728586592512
+2024-09-27 00:18:54,135 - INFO - Driver 133728586592512 logged in successfully using cookies
+2024-09-27 00:18:54,546 - INFO - Cookies loaded successfully for driver 133728586592512
+2024-09-27 00:18:55,512 - INFO - Driver 133728586592512 logged in successfully using cookies
+2024-09-27 00:18:55,512 - INFO - Login failed. Retrying in 5 seconds...
+2024-09-27 00:20:04,193 - INFO - ====== WebDriver manager ======
+2024-09-27 00:20:04,194 - INFO - Setting up WebDriver...
+2024-09-27 00:20:04,254 - INFO - Get LATEST chromedriver version for google-chrome
+2024-09-27 00:20:04,418 - INFO - Get LATEST chromedriver version for google-chrome
+2024-09-27 00:20:04,543 - INFO - Driver [/home/abir/.wdm/drivers/chromedriver/linux64/128.0.6613.137/chromedriver-linux64/chromedriver] found in cache
+2024-09-27 00:20:05,162 - INFO - Set up 3 drivers
+2024-09-27 00:20:05,163 - INFO - Attempting login... (Attempt 1/3)
+2024-09-27 00:20:07,719 - INFO - Driver 124728909377792 logged in successfully using credentials
+2024-09-27 00:20:07,725 - INFO - Cookies saved for driver 124728909377792
+2024-09-27 00:20:08,222 - ERROR - Failed to load cookies for driver 124728909379616: [Errno 2] No such file or directory: 'cookies_driver_124728909379616.txt'
+2024-09-27 00:20:52,090 - INFO - ====== WebDriver manager ======
+2024-09-27 00:20:52,091 - INFO - Setting up WebDriver...
+2024-09-27 00:20:52,150 - INFO - Get LATEST chromedriver version for google-chrome
+2024-09-27 00:20:52,280 - INFO - Get LATEST chromedriver version for google-chrome
+2024-09-27 00:20:52,425 - INFO - Driver [/home/abir/.wdm/drivers/chromedriver/linux64/128.0.6613.137/chromedriver-linux64/chromedriver] found in cache
+2024-09-27 00:20:53,064 - INFO - Set up 3 drivers
+2024-09-27 00:20:53,064 - INFO - Attempting login... (Attempt 1/3)
+2024-09-27 00:20:56,792 - INFO - Driver 131542900142000 logged in successfully using credentials
+2024-09-27 00:20:56,795 - INFO - Cookies saved for driver 131542900142000
+2024-09-27 00:20:57,592 - ERROR - Failed to load cookies for driver 131542900143824: [Errno 2] No such file or directory: 'cookies_driver_131542900143824.txt'
+2024-09-27 00:21:26,619 - INFO - Driver 131542900143824 logged in successfully using credentials
+2024-09-27 00:21:26,623 - INFO - Cookies saved for driver 131542900143824
+2024-09-27 00:21:29,378 - ERROR - Failed to load cookies for driver 131542900143248: [Errno 2] No such file or directory: 'cookies_driver_131542900143248.txt'
+2024-09-27 00:21:42,692 - INFO - Driver 131542900143248 logged in successfully using credentials
+2024-09-27 00:21:42,697 - INFO - Cookies saved for driver 131542900143248
+2024-09-27 00:21:42,697 - INFO - Navigating to eBidding page... (Attempt 1/3)
+2024-09-27 00:21:44,237 - INFO - Page loaded completely for driver 131542900142000
+2024-09-27 00:21:44,240 - INFO - Driver 131542900142000 opened eBidding URL: https://www.eye2serve.com:9001/sap/bc/ui5_ui5/sap/zvc_vendor_app/index.html#/ebidding
+2024-09-27 00:21:51,091 - INFO - No error dialog detected for driver 131542900142000
+2024-09-27 00:21:53,213 - INFO - Page loaded completely for driver 131542900143824
+2024-09-27 00:21:53,215 - INFO - Driver 131542900143824 opened eBidding URL: https://www.eye2serve.com:9001/sap/bc/ui5_ui5/sap/zvc_vendor_app/index.html#/ebidding
+2024-09-27 00:21:59,900 - INFO - Error dialog detected for driver 131542900143824. Attempting to dismiss it.
+2024-09-27 00:21:59,961 - INFO - Error dialog dismissed for driver 131542900143824.
+2024-09-27 00:22:02,115 - INFO - Page loaded completely for driver 131542900143248
+2024-09-27 00:22:02,118 - INFO - Driver 131542900143248 opened eBidding URL: https://www.eye2serve.com:9001/sap/bc/ui5_ui5/sap/zvc_vendor_app/index.html#/ebidding
+2024-09-27 00:22:08,469 - INFO - Error dialog detected for driver 131542900143248. Attempting to dismiss it.
+2024-09-27 00:22:08,524 - INFO - Error dialog dismissed for driver 131542900143248.
+2024-09-27 00:22:09,064 - INFO - Opened eBidding URL: None
+2024-09-27 00:22:09,064 - INFO - Handling error dialogs and clicking 'Show Search' button... (Attempt 1/3)
+2024-09-27 00:22:14,274 - INFO - No error dialog detected for driver 131542900142000
+2024-09-27 00:22:19,472 - INFO - No error dialog detected for driver 131542900143824
+2024-09-27 00:22:24,694 - INFO - No error dialog detected for driver 131542900143248
+2024-09-27 00:22:24,694 - ERROR - Failed to click 'Show Search' button for driver 131542900142000: SAPBiddingAutomation.handle_error_dialog() missing 2 required positional arguments: 'driver' and 'wait'
+2024-09-27 00:22:24,696 - INFO - Failed to handle dialogs or click 'Show Search' button. Retrying in 5 seconds... Error: SAPBiddingAutomation.handle_error_dialog() missing 2 required positional arguments: 'driver' and 'wait'
+2024-09-27 00:22:29,701 - INFO - Handling error dialogs and clicking 'Show Search' button... (Attempt 2/3)
+2024-09-27 00:22:34,910 - INFO - No error dialog detected for driver 131542900142000
+2024-09-27 00:22:40,118 - INFO - No error dialog detected for driver 131542900143824
+2024-09-27 00:22:45,336 - INFO - No error dialog detected for driver 131542900143248
+2024-09-27 00:22:45,337 - ERROR - Failed to click 'Show Search' button for driver 131542900142000: SAPBiddingAutomation.handle_error_dialog() missing 2 required positional arguments: 'driver' and 'wait'
+2024-09-27 00:22:45,337 - INFO - Failed to handle dialogs or click 'Show Search' button. Retrying in 5 seconds... Error: SAPBiddingAutomation.handle_error_dialog() missing 2 required positional arguments: 'driver' and 'wait'
+2024-09-27 00:22:50,343 - INFO - Handling error dialogs and clicking 'Show Search' button... (Attempt 3/3)
+2024-09-27 00:22:55,553 - INFO - No error dialog detected for driver 131542900142000
+2024-09-27 00:23:00,765 - INFO - No error dialog detected for driver 131542900143824
+2024-09-27 00:23:05,985 - INFO - No error dialog detected for driver 131542900143248
+2024-09-27 00:23:05,985 - ERROR - Failed to click 'Show Search' button for driver 131542900142000: SAPBiddingAutomation.handle_error_dialog() missing 2 required positional arguments: 'driver' and 'wait'
+2024-09-27 00:23:05,986 - INFO - Failed to handle dialogs or click 'Show Search' button after multiple attempts. Error: SAPBiddingAutomation.handle_error_dialog() missing 2 required positional arguments: 'driver' and 'wait'
+2024-09-27 00:23:05,988 - INFO - Automation stopped. Browser remains open.
+2024-09-27 00:24:53,643 - INFO - ====== WebDriver manager ======
+2024-09-27 00:24:53,643 - INFO - Setting up WebDriver...
+2024-09-27 00:24:53,707 - INFO - Get LATEST chromedriver version for google-chrome
+2024-09-27 00:24:53,841 - INFO - Get LATEST chromedriver version for google-chrome
+2024-09-27 00:24:53,965 - INFO - Driver [/home/abir/.wdm/drivers/chromedriver/linux64/128.0.6613.137/chromedriver-linux64/chromedriver] found in cache
+2024-09-27 00:24:54,371 - INFO - Set up 2 drivers
+2024-09-27 00:24:54,372 - INFO - Attempting login... (Attempt 1/3)
+2024-09-27 00:24:57,621 - INFO - Driver 135071159169280 logged in successfully using credentials
+2024-09-27 00:24:57,624 - INFO - Cookies saved for driver 135071159169280
+2024-09-27 00:24:58,892 - ERROR - Failed to load cookies for driver 135071159171056: [Errno 2] No such file or directory: 'cookies_driver_135071159171056.txt'
+2024-09-27 00:25:18,797 - INFO - Driver 135071159171056 logged in successfully using credentials
+2024-09-27 00:25:18,802 - INFO - Cookies saved for driver 135071159171056
+2024-09-27 00:25:18,803 - INFO - Navigating to eBidding page... (Attempt 1/3)
+2024-09-27 00:25:20,451 - INFO - Page loaded completely for driver 135071159169280
+2024-09-27 00:25:20,454 - INFO - Driver 135071159169280 opened eBidding URL: https://www.eye2serve.com:9001/sap/bc/ui5_ui5/sap/zvc_vendor_app/index.html#/ebidding
+2024-09-27 00:25:28,395 - INFO - No error dialog detected for driver 135071159169280
+2024-09-27 00:25:30,894 - INFO - Page loaded completely for driver 135071159171056
+2024-09-27 00:25:30,897 - INFO - Driver 135071159171056 opened eBidding URL: https://www.eye2serve.com:9001/sap/bc/ui5_ui5/sap/zvc_vendor_app/index.html#/ebidding
+2024-09-27 00:25:37,072 - INFO - Error dialog detected for driver 135071159171056. Attempting to dismiss it.
+2024-09-27 00:25:37,133 - INFO - Error dialog dismissed for driver 135071159171056.
+2024-09-27 00:25:37,671 - INFO - Opened eBidding URL: None
+2024-09-27 00:25:37,672 - INFO - Handling error dialogs and clicking 'Show Search' button... (Attempt 1/3)
+2024-09-27 00:25:37,684 - INFO - Error dialog detected for driver 135071159169280. Attempting to dismiss it.
+2024-09-27 00:25:37,733 - INFO - Error dialog dismissed for driver 135071159169280.
+2024-09-27 00:25:43,476 - INFO - No error dialog detected for driver 135071159171056
+2024-09-27 00:25:48,686 - INFO - No error dialog detected for driver 135071159169280
+2024-09-27 00:25:48,762 - INFO - 'Show Search' button clicked successfully for driver 135071159169280
+2024-09-27 00:25:53,958 - INFO - No error dialog detected for driver 135071159171056
+2024-09-27 00:25:54,032 - INFO - 'Show Search' button clicked successfully for driver 135071159171056
+2024-09-27 00:25:54,032 - INFO - Successfully clicked 'Show Search' button.
+2024-09-27 00:25:54,033 - INFO - Selecting Ship From Plant: WEST BENGAL CEMENT WORKS
+2024-09-27 00:25:54,068 - INFO - Clicked dropdown arrow for __xmlview0--ididUtclVCShipFromPlant in driver 135071159169280
+2024-09-27 00:25:54,082 - INFO - Dropdown list visible for __xmlview0--ididUtclVCShipFromPlant in driver 135071159169280
+2024-09-27 00:25:54,089 - INFO - Found 1 options for __xmlview0--ididUtclVCShipFromPlant in driver 135071159169280
+2024-09-27 00:25:54,638 - INFO - Option 'WEST BENGAL CEMENT WORKS' selected successfully for __xmlview0--ididUtclVCShipFromPlant in driver 135071159169280
+2024-09-27 00:25:55,160 - INFO - Dropdown closed after selection for __xmlview0--ididUtclVCShipFromPlant in driver 135071159169280
+2024-09-27 00:25:55,197 - INFO - Clicked dropdown arrow for __xmlview0--ididUtclVCShipFromPlant in driver 135071159171056
+2024-09-27 00:25:55,210 - INFO - Dropdown list visible for __xmlview0--ididUtclVCShipFromPlant in driver 135071159171056
+2024-09-27 00:25:55,218 - INFO - Found 1 options for __xmlview0--ididUtclVCShipFromPlant in driver 135071159171056
+2024-09-27 00:25:55,766 - INFO - Option 'WEST BENGAL CEMENT WORKS' selected successfully for __xmlview0--ididUtclVCShipFromPlant in driver 135071159171056
+2024-09-27 00:25:56,291 - INFO - Dropdown closed after selection for __xmlview0--ididUtclVCShipFromPlant in driver 135071159171056
+2024-09-27 00:25:56,292 - INFO - Handling any error dialogs before depot selection...
+2024-09-27 00:26:01,485 - INFO - No error dialog detected for driver 135071159169280
+2024-09-27 00:26:06,686 - INFO - No error dialog detected for driver 135071159171056
+2024-09-27 00:26:06,688 - INFO - Selecting Depot: DEOGARH
+2024-09-27 00:26:06,725 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot in driver 135071159169280
+2024-09-27 00:26:06,740 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot in driver 135071159169280
+2024-09-27 00:26:06,745 - INFO - Found 14 options for __xmlview0--idUtclVCDepot in driver 135071159169280
+2024-09-27 00:26:07,302 - INFO - Option 'DEOGARH' selected successfully for __xmlview0--idUtclVCDepot in driver 135071159169280
+2024-09-27 00:26:07,829 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot in driver 135071159169280
+2024-09-27 00:26:07,853 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot in driver 135071159171056
+2024-09-27 00:26:07,866 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot in driver 135071159171056
+2024-09-27 00:26:07,872 - INFO - Found 14 options for __xmlview0--idUtclVCDepot in driver 135071159171056
+2024-09-27 00:26:08,415 - INFO - Option 'DEOGARH' selected successfully for __xmlview0--idUtclVCDepot in driver 135071159171056
+2024-09-27 00:26:08,950 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot in driver 135071159171056
+2024-09-27 00:26:08,951 - INFO - Clicking Search...
+2024-09-27 00:26:14,138 - INFO - No error dialog detected for driver 135071159169280
+2024-09-27 00:26:14,201 - INFO - Search button clicked successfully for driver 135071159169280
+2024-09-27 00:26:15,263 - INFO - Page loaded completely for driver 135071159169280
+2024-09-27 00:26:20,464 - INFO - No error dialog detected for driver 135071159171056
+2024-09-27 00:26:20,542 - INFO - Search button clicked successfully for driver 135071159171056
+2024-09-27 00:26:21,591 - INFO - Page loaded completely for driver 135071159171056
+2024-09-27 00:26:21,591 - INFO - Rapidity 0.1.
+2024-09-27 00:26:21,593 - INFO - Error: SAPBiddingAutomation.check_table_data() missing 2 required positional arguments: 'driver' and 'wait'
+2024-09-27 00:26:21,593 - INFO - Automation stopped. Browser remains open.
+2024-09-27 00:28:59,299 - INFO - ====== WebDriver manager ======
+2024-09-27 00:28:59,300 - INFO - Setting up WebDriver...
+2024-09-27 00:28:59,361 - INFO - Get LATEST chromedriver version for google-chrome
+2024-09-27 00:28:59,507 - INFO - Get LATEST chromedriver version for google-chrome
+2024-09-27 00:28:59,645 - INFO - Driver [/home/abir/.wdm/drivers/chromedriver/linux64/128.0.6613.137/chromedriver-linux64/chromedriver] found in cache
+2024-09-27 00:29:00,054 - INFO - Set up 2 drivers
+2024-09-27 00:29:00,054 - INFO - Attempting login... (Attempt 1/3)
+2024-09-27 00:29:03,462 - INFO - Driver 126218759795040 logged in successfully using credentials
+2024-09-27 00:29:03,465 - INFO - Cookies saved for driver 126218759795040
+2024-09-27 00:29:04,417 - ERROR - Failed to load cookies for driver 126218759796864: [Errno 2] No such file or directory: 'cookies_driver_126218759796864.txt'
+2024-09-27 00:29:27,749 - INFO - Driver 126218759796864 logged in successfully using credentials
+2024-09-27 00:29:27,754 - INFO - Cookies saved for driver 126218759796864
+2024-09-27 00:29:27,754 - INFO - Navigating to eBidding page... (Attempt 1/3)
+2024-09-27 00:29:34,493 - INFO - Page loaded completely for driver 126218759795040
+2024-09-27 00:29:34,496 - INFO - Driver 126218759795040 opened eBidding URL: https://www.eye2serve.com:9001/sap/bc/ui5_ui5/sap/zvc_vendor_app/index.html#/ebidding
+2024-09-27 00:29:41,454 - INFO - Error dialog detected for driver 126218759795040. Attempting to dismiss it.
+2024-09-27 00:29:41,505 - INFO - Error dialog dismissed for driver 126218759795040.
+2024-09-27 00:29:44,069 - INFO - Page loaded completely for driver 126218759796864
+2024-09-27 00:29:44,071 - INFO - Driver 126218759796864 opened eBidding URL: https://www.eye2serve.com:9001/sap/bc/ui5_ui5/sap/zvc_vendor_app/index.html#/ebidding
+2024-09-27 00:29:50,130 - INFO - Error dialog detected for driver 126218759796864. Attempting to dismiss it.
+2024-09-27 00:29:50,185 - INFO - Error dialog dismissed for driver 126218759796864.
+2024-09-27 00:29:50,725 - INFO - Opened eBidding URL: None
+2024-09-27 00:29:50,726 - INFO - Handling error dialogs and clicking 'Show Search' button... (Attempt 1/3)
+2024-09-27 00:29:55,938 - INFO - No error dialog detected for driver 126218759795040
+2024-09-27 00:30:01,142 - INFO - No error dialog detected for driver 126218759796864
+2024-09-27 00:30:06,308 - INFO - No error dialog detected for driver 126218759795040
+2024-09-27 00:30:06,395 - INFO - 'Show Search' button clicked successfully for driver 126218759795040
+2024-09-27 00:30:11,579 - INFO - No error dialog detected for driver 126218759796864
+2024-09-27 00:30:11,664 - INFO - 'Show Search' button clicked successfully for driver 126218759796864
+2024-09-27 00:30:11,665 - INFO - Successfully clicked 'Show Search' button.
+2024-09-27 00:30:11,666 - INFO - Selecting Ship From Plant: WEST BENGAL CEMENT WORKS
+2024-09-27 00:30:11,704 - INFO - Clicked dropdown arrow for __xmlview0--ididUtclVCShipFromPlant in driver 126218759795040
+2024-09-27 00:30:11,718 - INFO - Dropdown list visible for __xmlview0--ididUtclVCShipFromPlant in driver 126218759795040
+2024-09-27 00:30:11,727 - INFO - Found 1 options for __xmlview0--ididUtclVCShipFromPlant in driver 126218759795040
+2024-09-27 00:30:12,274 - INFO - Option 'WEST BENGAL CEMENT WORKS' selected successfully for __xmlview0--ididUtclVCShipFromPlant in driver 126218759795040
+2024-09-27 00:30:12,809 - INFO - Dropdown closed after selection for __xmlview0--ididUtclVCShipFromPlant in driver 126218759795040
+2024-09-27 00:30:12,842 - INFO - Clicked dropdown arrow for __xmlview0--ididUtclVCShipFromPlant in driver 126218759796864
+2024-09-27 00:30:12,857 - INFO - Dropdown list visible for __xmlview0--ididUtclVCShipFromPlant in driver 126218759796864
+2024-09-27 00:30:12,864 - INFO - Found 1 options for __xmlview0--ididUtclVCShipFromPlant in driver 126218759796864
+2024-09-27 00:30:13,418 - INFO - Option 'WEST BENGAL CEMENT WORKS' selected successfully for __xmlview0--ididUtclVCShipFromPlant in driver 126218759796864
+2024-09-27 00:30:13,954 - INFO - Dropdown closed after selection for __xmlview0--ididUtclVCShipFromPlant in driver 126218759796864
+2024-09-27 00:30:13,955 - INFO - Handling any error dialogs before depot selection...
+2024-09-27 00:30:19,160 - INFO - No error dialog detected for driver 126218759795040
+2024-09-27 00:30:24,389 - INFO - No error dialog detected for driver 126218759796864
+2024-09-27 00:30:24,391 - INFO - Selecting Depot: DEOGARH
+2024-09-27 00:30:24,431 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot in driver 126218759795040
+2024-09-27 00:30:24,446 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot in driver 126218759795040
+2024-09-27 00:30:24,452 - INFO - Found 14 options for __xmlview0--idUtclVCDepot in driver 126218759795040
+2024-09-27 00:30:24,993 - INFO - Option 'DEOGARH' selected successfully for __xmlview0--idUtclVCDepot in driver 126218759795040
+2024-09-27 00:30:25,526 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot in driver 126218759795040
+2024-09-27 00:30:25,551 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot in driver 126218759796864
+2024-09-27 00:30:25,575 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot in driver 126218759796864
+2024-09-27 00:30:25,581 - INFO - Found 14 options for __xmlview0--idUtclVCDepot in driver 126218759796864
+2024-09-27 00:30:26,124 - INFO - Option 'DEOGARH' selected successfully for __xmlview0--idUtclVCDepot in driver 126218759796864
+2024-09-27 00:30:26,659 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot in driver 126218759796864
+2024-09-27 00:30:26,660 - INFO - Clicking Search...
+2024-09-27 00:30:31,869 - INFO - No error dialog detected for driver 126218759795040
+2024-09-27 00:30:31,931 - INFO - Search button clicked successfully for driver 126218759795040
+2024-09-27 00:30:32,988 - INFO - Page loaded completely for driver 126218759795040
+2024-09-27 00:30:38,188 - INFO - No error dialog detected for driver 126218759796864
+2024-09-27 00:30:38,254 - INFO - Search button clicked successfully for driver 126218759796864
+2024-09-27 00:30:38,791 - INFO - Page loaded completely for driver 126218759796864
+2024-09-27 00:30:38,792 - INFO - Rapidity 0.0001.
+2024-09-27 00:30:38,807 - INFO - Table data check for driver 126218759795040: No data found
+2024-09-27 00:30:38,822 - INFO - Table data check for driver 126218759796864: No data found
+2024-09-27 00:30:38,822 - INFO - No data found for DEOGARH.
+2024-09-27 00:30:38,823 - INFO - Moving to next depot. Next index: 1
+2024-09-27 00:30:40,826 - INFO - Handling any error dialogs before depot selection...
+2024-09-27 00:30:40,838 - INFO - Error dialog detected for driver 126218759795040. Attempting to dismiss it.
+2024-09-27 00:30:40,870 - INFO - Error dialog dismissed for driver 126218759795040.
+2024-09-27 00:30:41,412 - INFO - Error dialog detected for driver 126218759796864. Attempting to dismiss it.
+2024-09-27 00:30:41,440 - INFO - Error dialog dismissed for driver 126218759796864.
+2024-09-27 00:30:41,977 - INFO - Selecting Depot: DHANBAD
+2024-09-27 00:30:41,999 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot in driver 126218759795040
+2024-09-27 00:30:42,010 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot in driver 126218759795040
+2024-09-27 00:30:42,016 - INFO - Found 14 options for __xmlview0--idUtclVCDepot in driver 126218759795040
+2024-09-27 00:30:42,560 - INFO - Option 'DHANBAD' selected successfully for __xmlview0--idUtclVCDepot in driver 126218759795040
+2024-09-27 00:30:43,090 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot in driver 126218759795040
+2024-09-27 00:30:43,110 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot in driver 126218759796864
+2024-09-27 00:30:43,123 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot in driver 126218759796864
+2024-09-27 00:30:43,128 - INFO - Found 14 options for __xmlview0--idUtclVCDepot in driver 126218759796864
+2024-09-27 00:30:43,670 - INFO - Option 'DHANBAD' selected successfully for __xmlview0--idUtclVCDepot in driver 126218759796864
+2024-09-27 00:30:44,203 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot in driver 126218759796864
+2024-09-27 00:30:44,204 - INFO - Clicking Search...
+2024-09-27 00:30:49,411 - INFO - No error dialog detected for driver 126218759795040
+2024-09-27 00:30:49,466 - INFO - Search button clicked successfully for driver 126218759795040
+2024-09-27 00:30:58,808 - INFO - Page loaded completely for driver 126218759795040
+2024-09-27 02:14:25,180 - INFO - ====== WebDriver manager ======
+2024-09-27 02:14:25,180 - INFO - Setting up WebDriver...
+2024-09-27 02:14:25,239 - INFO - Get LATEST chromedriver version for google-chrome
+2024-09-27 02:14:25,402 - INFO - Get LATEST chromedriver version for google-chrome
+2024-09-27 02:14:25,524 - INFO - Driver [/home/abir/.wdm/drivers/chromedriver/linux64/128.0.6613.137/chromedriver-linux64/chromedriver] found in cache
+2024-09-27 02:14:25,934 - INFO - Set up 2 drivers
+2024-09-27 02:14:25,935 - INFO - Attempting login... (Attempt 1/3)
+2024-09-27 02:14:29,713 - INFO - Driver 126126523855104 logged in successfully using credentials
+2024-09-27 02:14:29,716 - INFO - Cookies saved for driver 126126523855104
+2024-09-27 02:14:30,221 - ERROR - Failed to load cookies for driver 126126523856880: [Errno 2] No such file or directory: 'cookies_driver_126126523856880.txt'
+2024-09-27 02:14:34,094 - INFO - Driver 126126523856880 logged in successfully using credentials
+2024-09-27 02:14:34,098 - INFO - Cookies saved for driver 126126523856880
+2024-09-27 02:14:34,098 - INFO - Navigating to eBidding page... (Attempt 1/3)
+2024-09-27 02:14:35,638 - INFO - Page loaded completely for driver 126126523855104
+2024-09-27 02:14:35,641 - INFO - Driver 126126523855104 opened eBidding URL: https://www.eye2serve.com:9001/sap/bc/ui5_ui5/sap/zvc_vendor_app/index.html#/ebidding
+2024-09-27 02:14:43,328 - INFO - Error dialog detected for driver 126126523855104. Attempting to dismiss it.
+2024-09-27 02:14:43,385 - INFO - Error dialog dismissed for driver 126126523855104.
+2024-09-27 02:14:46,376 - INFO - Page loaded completely for driver 126126523856880
+2024-09-27 02:14:46,378 - INFO - Driver 126126523856880 opened eBidding URL: https://www.eye2serve.com:9001/sap/bc/ui5_ui5/sap/zvc_vendor_app/index.html#/ebidding
+2024-09-27 02:14:53,528 - INFO - Error dialog detected for driver 126126523856880. Attempting to dismiss it.
+2024-09-27 02:14:53,573 - INFO - Error dialog dismissed for driver 126126523856880.
+2024-09-27 02:14:54,120 - INFO - Opened eBidding URL: None
+2024-09-27 02:14:54,120 - INFO - Handling error dialogs and clicking 'Show Search' button... (Attempt 1/3)
+2024-09-27 02:14:59,330 - INFO - No error dialog detected for driver 126126523855104
+2024-09-27 02:15:04,549 - INFO - No error dialog detected for driver 126126523856880
+2024-09-27 02:15:09,769 - INFO - No error dialog detected for driver 126126523855104
+2024-09-27 02:15:09,851 - INFO - 'Show Search' button clicked successfully for driver 126126523855104
+2024-09-27 02:15:15,052 - INFO - No error dialog detected for driver 126126523856880
+2024-09-27 02:15:15,130 - INFO - 'Show Search' button clicked successfully for driver 126126523856880
+2024-09-27 02:15:15,131 - INFO - Successfully clicked 'Show Search' button.
+2024-09-27 02:15:15,132 - INFO - Selecting Ship From Plant: WEST BENGAL CEMENT WORKS
+2024-09-27 02:15:15,167 - INFO - Clicked dropdown arrow for __xmlview0--ididUtclVCShipFromPlant in driver 126126523855104
+2024-09-27 02:15:15,178 - INFO - Dropdown list visible for __xmlview0--ididUtclVCShipFromPlant in driver 126126523855104
+2024-09-27 02:15:15,186 - INFO - Found 1 options for __xmlview0--ididUtclVCShipFromPlant in driver 126126523855104
+2024-09-27 02:15:15,741 - INFO - Option 'WEST BENGAL CEMENT WORKS' selected successfully for __xmlview0--ididUtclVCShipFromPlant in driver 126126523855104
+2024-09-27 02:15:16,277 - INFO - Dropdown closed after selection for __xmlview0--ididUtclVCShipFromPlant in driver 126126523855104
+2024-09-27 02:15:16,309 - INFO - Clicked dropdown arrow for __xmlview0--ididUtclVCShipFromPlant in driver 126126523856880
+2024-09-27 02:15:16,322 - INFO - Dropdown list visible for __xmlview0--ididUtclVCShipFromPlant in driver 126126523856880
+2024-09-27 02:15:16,329 - INFO - Found 1 options for __xmlview0--ididUtclVCShipFromPlant in driver 126126523856880
+2024-09-27 02:15:16,887 - INFO - Option 'WEST BENGAL CEMENT WORKS' selected successfully for __xmlview0--ididUtclVCShipFromPlant in driver 126126523856880
+2024-09-27 02:15:17,422 - INFO - Dropdown closed after selection for __xmlview0--ididUtclVCShipFromPlant in driver 126126523856880
+2024-09-27 02:15:17,424 - INFO - Handling any error dialogs before depot selection...
+2024-09-27 02:15:22,630 - INFO - No error dialog detected for driver 126126523855104
+2024-09-27 02:15:27,827 - INFO - No error dialog detected for driver 126126523856880
+2024-09-27 02:15:27,829 - INFO - Selecting Depot: DEOGARH
+2024-09-27 02:15:27,868 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot in driver 126126523855104
+2024-09-27 02:15:27,882 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot in driver 126126523855104
+2024-09-27 02:15:27,888 - INFO - Found 14 options for __xmlview0--idUtclVCDepot in driver 126126523855104
+2024-09-27 02:15:28,463 - INFO - Option 'DEOGARH' selected successfully for __xmlview0--idUtclVCDepot in driver 126126523855104
+2024-09-27 02:15:29,008 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot in driver 126126523855104
+2024-09-27 02:15:29,031 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot in driver 126126523856880
+2024-09-27 02:15:29,046 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot in driver 126126523856880
+2024-09-27 02:15:29,051 - INFO - Found 14 options for __xmlview0--idUtclVCDepot in driver 126126523856880
+2024-09-27 02:15:29,588 - INFO - Option 'DEOGARH' selected successfully for __xmlview0--idUtclVCDepot in driver 126126523856880
+2024-09-27 02:15:30,132 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot in driver 126126523856880
+2024-09-27 02:15:30,133 - INFO - Clicking Search...
+2024-09-27 02:15:35,332 - INFO - No error dialog detected for driver 126126523855104
+2024-09-27 02:15:35,393 - INFO - Search button clicked successfully for driver 126126523855104
+2024-09-27 02:15:36,445 - INFO - Page loaded completely for driver 126126523855104
+2024-09-27 02:15:41,633 - INFO - No error dialog detected for driver 126126523856880
+2024-09-27 02:15:41,693 - INFO - Search button clicked successfully for driver 126126523856880
+2024-09-27 02:15:42,748 - INFO - Page loaded completely for driver 126126523856880
+2024-09-27 02:15:42,749 - INFO - Rapidity 0.1.
+2024-09-27 02:15:42,779 - INFO - Table data check for driver 126126523855104: No data found
+2024-09-27 02:15:42,794 - INFO - Table data check for driver 126126523856880: No data found
+2024-09-27 02:15:42,794 - INFO - No data found for DEOGARH.
+2024-09-27 02:15:42,795 - INFO - Moving to next depot. Next index: 1
+2024-09-27 02:15:44,797 - INFO - Handling any error dialogs before depot selection...
+2024-09-27 02:15:44,809 - INFO - Error dialog detected for driver 126126523855104. Attempting to dismiss it.
+2024-09-27 02:15:44,848 - INFO - Error dialog dismissed for driver 126126523855104.
+2024-09-27 02:15:45,397 - INFO - Error dialog detected for driver 126126523856880. Attempting to dismiss it.
+2024-09-27 02:15:45,438 - INFO - Error dialog dismissed for driver 126126523856880.
+2024-09-27 02:15:45,975 - INFO - Selecting Depot: DHANBAD
+2024-09-27 02:15:45,997 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot in driver 126126523855104
+2024-09-27 02:15:46,009 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot in driver 126126523855104
+2024-09-27 02:15:46,015 - INFO - Found 14 options for __xmlview0--idUtclVCDepot in driver 126126523855104
+2024-09-27 02:15:46,560 - INFO - Option 'DHANBAD' selected successfully for __xmlview0--idUtclVCDepot in driver 126126523855104
+2024-09-27 02:15:47,090 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot in driver 126126523855104
+2024-09-27 02:15:47,109 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot in driver 126126523856880
+2024-09-27 02:15:47,121 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot in driver 126126523856880
+2024-09-27 02:15:47,125 - INFO - Found 14 options for __xmlview0--idUtclVCDepot in driver 126126523856880
+2024-09-27 02:15:47,667 - INFO - Option 'DHANBAD' selected successfully for __xmlview0--idUtclVCDepot in driver 126126523856880
+2024-09-27 02:15:48,193 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot in driver 126126523856880
+2024-09-27 02:15:48,193 - INFO - Clicking Search...
+2024-09-27 02:15:53,396 - INFO - No error dialog detected for driver 126126523855104
+2024-09-27 02:15:53,449 - INFO - Search button clicked successfully for driver 126126523855104
+2024-09-27 02:15:54,511 - INFO - Page loaded completely for driver 126126523855104
+2024-09-27 02:15:59,717 - INFO - No error dialog detected for driver 126126523856880
+2024-09-27 02:15:59,771 - INFO - Search button clicked successfully for driver 126126523856880
+2024-09-27 02:16:00,308 - INFO - Page loaded completely for driver 126126523856880
+2024-09-27 02:16:00,309 - INFO - Rapidity 0.1.
+2024-09-27 02:16:00,317 - INFO - Table data check for driver 126126523855104: No data found
+2024-09-27 02:16:00,326 - INFO - Table data check for driver 126126523856880: No data found
+2024-09-27 02:16:00,326 - INFO - No data found for DHANBAD.
+2024-09-27 02:16:00,327 - INFO - Moving to next depot. Next index: 2
+2024-09-27 02:16:02,330 - INFO - Handling any error dialogs before depot selection...
+2024-09-27 02:16:02,342 - INFO - Error dialog detected for driver 126126523855104. Attempting to dismiss it.
+2024-09-27 02:16:02,374 - INFO - Error dialog dismissed for driver 126126523855104.
+2024-09-27 02:16:02,920 - INFO - Error dialog detected for driver 126126523856880. Attempting to dismiss it.
+2024-09-27 02:16:02,953 - INFO - Error dialog dismissed for driver 126126523856880.
+2024-09-27 02:16:03,491 - INFO - Selecting Depot: BANKURA
+2024-09-27 02:16:03,513 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot in driver 126126523855104
+2024-09-27 02:16:03,526 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot in driver 126126523855104
+2024-09-27 02:16:03,531 - INFO - Found 14 options for __xmlview0--idUtclVCDepot in driver 126126523855104
+2024-09-27 02:16:04,080 - INFO - Option 'BANKURA' selected successfully for __xmlview0--idUtclVCDepot in driver 126126523855104
+2024-09-27 02:16:04,607 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot in driver 126126523855104
+2024-09-27 02:16:04,628 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot in driver 126126523856880
+2024-09-27 02:16:04,641 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot in driver 126126523856880
+2024-09-27 02:16:04,647 - INFO - Found 14 options for __xmlview0--idUtclVCDepot in driver 126126523856880
+2024-09-27 02:16:05,193 - INFO - Option 'BANKURA' selected successfully for __xmlview0--idUtclVCDepot in driver 126126523856880
+2024-09-27 02:16:05,726 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot in driver 126126523856880
+2024-09-27 02:16:05,727 - INFO - Clicking Search...
+2024-09-27 02:16:10,946 - INFO - No error dialog detected for driver 126126523855104
+2024-09-27 02:16:10,998 - INFO - Search button clicked successfully for driver 126126523855104
+2024-09-27 02:16:11,557 - INFO - Page loaded completely for driver 126126523855104
+2024-09-27 02:16:16,775 - INFO - No error dialog detected for driver 126126523856880
+2024-09-27 02:16:16,832 - INFO - Search button clicked successfully for driver 126126523856880
+2024-09-27 02:16:17,888 - INFO - Page loaded completely for driver 126126523856880
+2024-09-27 02:16:17,889 - INFO - Rapidity 0.1.
+2024-09-27 02:16:17,898 - INFO - Table data check for driver 126126523855104: No data found
+2024-09-27 02:16:17,907 - INFO - Table data check for driver 126126523856880: No data found
+2024-09-27 02:16:17,907 - INFO - No data found for BANKURA.
+2024-09-27 02:16:17,907 - INFO - Moving to next depot. Next index: 3
+2024-09-27 02:16:19,911 - INFO - Handling any error dialogs before depot selection...
+2024-09-27 02:16:19,922 - INFO - Error dialog detected for driver 126126523855104. Attempting to dismiss it.
+2024-09-27 02:16:19,953 - INFO - Error dialog dismissed for driver 126126523855104.
+2024-09-27 02:16:20,497 - INFO - Error dialog detected for driver 126126523856880. Attempting to dismiss it.
+2024-09-27 02:16:20,525 - INFO - Error dialog dismissed for driver 126126523856880.
+2024-09-27 02:16:21,057 - INFO - Selecting Depot: BERHAMPORE
+2024-09-27 02:16:21,078 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot in driver 126126523855104
+2024-09-27 02:16:21,089 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot in driver 126126523855104
+2024-09-27 02:16:21,094 - INFO - Found 14 options for __xmlview0--idUtclVCDepot in driver 126126523855104
+2024-09-27 02:16:21,649 - INFO - Option 'BERHAMPORE' selected successfully for __xmlview0--idUtclVCDepot in driver 126126523855104
+2024-09-27 02:16:22,173 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot in driver 126126523855104
+2024-09-27 02:16:22,198 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot in driver 126126523856880
+2024-09-27 02:16:22,209 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot in driver 126126523856880
+2024-09-27 02:16:22,215 - INFO - Found 14 options for __xmlview0--idUtclVCDepot in driver 126126523856880
+2024-09-27 02:16:22,773 - INFO - Option 'BERHAMPORE' selected successfully for __xmlview0--idUtclVCDepot in driver 126126523856880
+2024-09-27 02:16:23,306 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot in driver 126126523856880
+2024-09-27 02:16:23,307 - INFO - Clicking Search...
+2024-09-27 02:16:36,293 - INFO - ====== WebDriver manager ======
+2024-09-27 02:16:36,294 - INFO - Setting up WebDriver...
+2024-09-27 02:16:36,368 - INFO - Get LATEST chromedriver version for google-chrome
+2024-09-27 02:16:36,491 - INFO - Get LATEST chromedriver version for google-chrome
+2024-09-27 02:16:36,619 - INFO - Driver [/home/abir/.wdm/drivers/chromedriver/linux64/128.0.6613.137/chromedriver-linux64/chromedriver] found in cache
+2024-09-27 02:16:36,827 - INFO - Set up 1 drivers
+2024-09-27 02:16:36,828 - INFO - Attempting login... (Attempt 1/3)
+2024-09-27 02:16:39,083 - INFO - Driver 140562392297392 logged in successfully using credentials
+2024-09-27 02:16:39,087 - INFO - Cookies saved for driver 140562392297392
+2024-09-27 02:16:39,087 - INFO - Navigating to eBidding page... (Attempt 1/3)
+2024-09-27 02:16:40,989 - INFO - Page loaded completely for driver 140562392297392
+2024-09-27 02:16:40,992 - INFO - Driver 140562392297392 opened eBidding URL: https://www.eye2serve.com:9001/sap/bc/ui5_ui5/sap/zvc_vendor_app/index.html#/ebidding
+2024-09-27 02:16:47,298 - INFO - Error dialog detected for driver 140562392297392. Attempting to dismiss it.
+2024-09-27 02:16:47,352 - INFO - Error dialog dismissed for driver 140562392297392.
+2024-09-27 02:16:47,909 - INFO - Opened eBidding URL: None
+2024-09-27 02:16:47,910 - INFO - Handling error dialogs and clicking 'Show Search' button... (Attempt 1/3)
+2024-09-27 02:16:53,035 - INFO - No error dialog detected for driver 140562392297392
+2024-09-27 02:16:58,135 - INFO - No error dialog detected for driver 140562392297392
+2024-09-27 02:16:58,216 - INFO - 'Show Search' button clicked successfully for driver 140562392297392
+2024-09-27 02:16:58,217 - INFO - Successfully clicked 'Show Search' button.
+2024-09-27 02:16:58,217 - INFO - Selecting Ship From Plant: WEST BENGAL CEMENT WORKS
+2024-09-27 02:16:58,254 - INFO - Clicked dropdown arrow for __xmlview0--ididUtclVCShipFromPlant in driver 140562392297392
+2024-09-27 02:16:58,268 - INFO - Dropdown list visible for __xmlview0--ididUtclVCShipFromPlant in driver 140562392297392
+2024-09-27 02:16:58,276 - INFO - Found 1 options for __xmlview0--ididUtclVCShipFromPlant in driver 140562392297392
+2024-09-27 02:16:58,835 - INFO - Option 'WEST BENGAL CEMENT WORKS' selected successfully for __xmlview0--ididUtclVCShipFromPlant in driver 140562392297392
+2024-09-27 02:16:59,380 - INFO - Dropdown closed after selection for __xmlview0--ididUtclVCShipFromPlant in driver 140562392297392
+2024-09-27 02:16:59,381 - INFO - Handling any error dialogs before depot selection...
+2024-09-27 02:17:04,579 - INFO - No error dialog detected for driver 140562392297392
+2024-09-27 02:17:04,581 - INFO - Selecting Depot: DEOGARH
+2024-09-27 02:17:04,619 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot in driver 140562392297392
+2024-09-27 02:17:04,632 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot in driver 140562392297392
+2024-09-27 02:17:04,636 - INFO - Found 14 options for __xmlview0--idUtclVCDepot in driver 140562392297392
+2024-09-27 02:17:05,179 - INFO - Option 'DEOGARH' selected successfully for __xmlview0--idUtclVCDepot in driver 140562392297392
+2024-09-27 02:17:05,716 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot in driver 140562392297392
+2024-09-27 02:17:05,717 - INFO - Clicking Search...
+2024-09-27 02:17:10,927 - INFO - No error dialog detected for driver 140562392297392
+2024-09-27 02:17:10,999 - INFO - Search button clicked successfully for driver 140562392297392
+2024-09-27 02:17:12,049 - INFO - Page loaded completely for driver 140562392297392
+2024-09-27 02:17:12,050 - INFO - Rapidity 0.1.
+2024-09-27 02:17:12,065 - INFO - Table data check for driver 140562392297392: No data found
+2024-09-27 02:17:12,065 - INFO - No data found for DEOGARH.
+2024-09-27 02:17:12,066 - INFO - Moving to next depot. Next index: 1
+2024-09-27 02:17:14,069 - INFO - Handling any error dialogs before depot selection...
+2024-09-27 02:17:14,081 - INFO - Error dialog detected for driver 140562392297392. Attempting to dismiss it.
+2024-09-27 02:17:14,112 - INFO - Error dialog dismissed for driver 140562392297392.
+2024-09-27 02:17:14,646 - INFO - Selecting Depot: DHANBAD
+2024-09-27 02:17:14,667 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot in driver 140562392297392
+2024-09-27 02:17:14,680 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot in driver 140562392297392
+2024-09-27 02:17:14,686 - INFO - Found 14 options for __xmlview0--idUtclVCDepot in driver 140562392297392
+2024-09-27 02:17:15,227 - INFO - Option 'DHANBAD' selected successfully for __xmlview0--idUtclVCDepot in driver 140562392297392
+2024-09-27 02:17:15,757 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot in driver 140562392297392
+2024-09-27 02:17:15,758 - INFO - Clicking Search...
+2024-09-27 02:18:52,527 - INFO - ====== WebDriver manager ======
+2024-09-27 02:18:52,528 - INFO - Setting up WebDriver...
+2024-09-27 02:18:52,588 - INFO - Get LATEST chromedriver version for google-chrome
+2024-09-27 02:18:52,712 - INFO - Get LATEST chromedriver version for google-chrome
+2024-09-27 02:18:52,839 - INFO - Driver [/home/abir/.wdm/drivers/chromedriver/linux64/128.0.6613.137/chromedriver-linux64/chromedriver] found in cache
+2024-09-27 02:18:53,449 - INFO - Set up 3 drivers
+2024-09-27 02:18:53,450 - INFO - Attempting login... (Attempt 1/3)
+2024-09-27 02:18:56,657 - INFO - Driver 132510222004144 logged in successfully using credentials
+2024-09-27 02:18:56,660 - INFO - Cookies saved for driver 132510222004144
+2024-09-27 02:18:57,341 - ERROR - Failed to load cookies for driver 132510222005968: [Errno 2] No such file or directory: 'cookies_driver_132510222005968.txt'
+2024-09-27 02:19:01,047 - ERROR - Login failed for driver 132510222005968
+2024-09-27 02:19:01,047 - INFO - Login failed. Retrying in 5 seconds...
+2024-09-27 02:19:06,052 - INFO - Attempting login... (Attempt 2/3)
+2024-09-27 02:19:06,595 - INFO - Cookies loaded successfully for driver 132510222004144
+2024-09-27 02:19:08,547 - INFO - Driver 132510222004144 logged in successfully using cookies
+2024-09-27 02:19:09,110 - ERROR - Failed to load cookies for driver 132510222005968: [Errno 2] No such file or directory: 'cookies_driver_132510222005968.txt'
+2024-09-27 02:19:10,203 - INFO - Driver 132510222005968 logged in successfully using cookies
+2024-09-27 02:19:15,542 - ERROR - Failed to load cookies for driver 132510222005392: [Errno 2] No such file or directory: 'cookies_driver_132510222005392.txt'
+2024-09-27 02:19:28,600 - ERROR - Login failed for driver 132510222005392
+2024-09-27 02:19:28,600 - INFO - Login failed. Retrying in 5 seconds...
+2024-09-27 02:19:33,605 - INFO - Attempting login... (Attempt 3/3)
+2024-09-27 02:19:34,157 - INFO - Cookies loaded successfully for driver 132510222004144
+2024-09-27 02:19:35,068 - INFO - Driver 132510222004144 logged in successfully using cookies
+2024-09-27 02:19:35,442 - ERROR - Failed to load cookies for driver 132510222005968: [Errno 2] No such file or directory: 'cookies_driver_132510222005968.txt'
+2024-09-27 02:19:36,405 - INFO - Driver 132510222005968 logged in successfully using cookies
+2024-09-27 02:19:36,776 - ERROR - Failed to load cookies for driver 132510222005392: [Errno 2] No such file or directory: 'cookies_driver_132510222005392.txt'
+2024-09-27 02:19:37,758 - INFO - Driver 132510222005392 logged in successfully using cookies
+2024-09-27 02:19:37,759 - INFO - Navigating to eBidding page... (Attempt 1/3)
+2024-09-27 02:19:40,344 - INFO - Page loaded completely for driver 132510222004144
+2024-09-27 02:19:40,347 - INFO - Driver 132510222004144 opened eBidding URL: https://www.eye2serve.com:9001/sap/bc/ui5_ui5/sap/zvc_vendor_app/index.html#/ebidding
+2024-09-27 02:21:21,823 - INFO - ====== WebDriver manager ======
+2024-09-27 02:21:21,824 - INFO - Setting up WebDriver...
+2024-09-27 02:21:21,886 - INFO - Get LATEST chromedriver version for google-chrome
+2024-09-27 02:21:22,012 - INFO - Get LATEST chromedriver version for google-chrome
+2024-09-27 02:21:22,136 - INFO - Driver [/home/abir/.wdm/drivers/chromedriver/linux64/128.0.6613.137/chromedriver-linux64/chromedriver] found in cache
+2024-09-27 02:21:22,337 - INFO - Set up 1 drivers
+2024-09-27 02:21:22,337 - INFO - Attempting login... (Attempt 1/3)
+2024-09-27 02:21:25,577 - INFO - Driver 135040441118880 logged in successfully using credentials
+2024-09-27 02:21:25,580 - INFO - Cookies saved for driver 135040441118880
+2024-09-27 02:21:25,581 - INFO - Navigating to eBidding page... (Attempt 1/3)
+2024-09-27 02:21:27,150 - INFO - Page loaded completely for driver 135040441118880
+2024-09-27 02:21:27,151 - INFO - Driver 135040441118880 opened eBidding URL: https://www.eye2serve.com:9001/sap/bc/ui5_ui5/sap/zvc_vendor_app/index.html#/ebidding
+2024-09-27 02:21:33,392 - INFO - Error dialog detected for driver 135040441118880. Attempting to dismiss it.
+2024-09-27 02:21:33,449 - INFO - Error dialog dismissed for driver 135040441118880.
+2024-09-27 02:21:34,012 - INFO - Opened eBidding URL: None
+2024-09-27 02:21:34,013 - INFO - Handling error dialogs and clicking 'Show Search' button... (Attempt 1/3)
+2024-09-27 02:21:39,092 - INFO - No error dialog detected for driver 135040441118880
+2024-09-27 02:21:44,220 - INFO - No error dialog detected for driver 135040441118880
+2024-09-27 02:21:44,292 - INFO - 'Show Search' button clicked successfully for driver 135040441118880
+2024-09-27 02:21:44,293 - INFO - Successfully clicked 'Show Search' button.
+2024-09-27 02:21:44,293 - INFO - Selecting Ship From Plant: WEST BENGAL CEMENT WORKS
+2024-09-27 02:21:44,328 - INFO - Clicked dropdown arrow for __xmlview0--ididUtclVCShipFromPlant in driver 135040441118880
+2024-09-27 02:21:44,340 - INFO - Dropdown list visible for __xmlview0--ididUtclVCShipFromPlant in driver 135040441118880
+2024-09-27 02:21:44,348 - INFO - Found 1 options for __xmlview0--ididUtclVCShipFromPlant in driver 135040441118880
+2024-09-27 02:21:44,898 - INFO - Option 'WEST BENGAL CEMENT WORKS' selected successfully for __xmlview0--ididUtclVCShipFromPlant in driver 135040441118880
+2024-09-27 02:21:45,432 - INFO - Dropdown closed after selection for __xmlview0--ididUtclVCShipFromPlant in driver 135040441118880
+2024-09-27 02:21:45,433 - INFO - Handling any error dialogs before depot selection...
+2024-09-27 02:21:50,643 - INFO - No error dialog detected for driver 135040441118880
+2024-09-27 02:21:50,644 - INFO - Selecting Depot: DEOGARH
+2024-09-27 02:21:50,677 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot in driver 135040441118880
+2024-09-27 02:21:50,698 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot in driver 135040441118880
+2024-09-27 02:21:50,710 - INFO - Found 14 options for __xmlview0--idUtclVCDepot in driver 135040441118880
+2024-09-27 02:21:51,251 - INFO - Option 'DEOGARH' selected successfully for __xmlview0--idUtclVCDepot in driver 135040441118880
+2024-09-27 02:21:51,788 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot in driver 135040441118880
+2024-09-27 02:21:51,789 - INFO - Clicking Search...
+2024-09-27 02:21:56,990 - INFO - No error dialog detected for driver 135040441118880
+2024-09-27 02:21:57,055 - INFO - Search button clicked successfully for driver 135040441118880
+2024-09-27 02:21:57,588 - INFO - Page loaded completely for driver 135040441118880
+2024-09-27 02:21:57,588 - INFO - Rapidity 0.0001.
+2024-09-27 02:21:57,601 - INFO - Table data check for driver 135040441118880: No data found
+2024-09-27 02:21:57,602 - INFO - No data found for DEOGARH.
+2024-09-27 02:21:57,602 - INFO - Waiting 1 second before searching again...
+2024-09-27 02:21:58,604 - INFO - Handling any error dialogs before depot selection...
+2024-09-27 02:21:58,616 - INFO - Error dialog detected for driver 135040441118880. Attempting to dismiss it.
+2024-09-27 02:21:58,654 - INFO - Error dialog dismissed for driver 135040441118880.
+2024-09-27 02:21:59,191 - INFO - Selecting Depot: DEOGARH
+2024-09-27 02:21:59,214 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot in driver 135040441118880
+2024-09-27 02:21:59,226 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot in driver 135040441118880
+2024-09-27 02:21:59,232 - INFO - Found 14 options for __xmlview0--idUtclVCDepot in driver 135040441118880
+2024-09-27 02:21:59,769 - INFO - Option 'DEOGARH' selected successfully for __xmlview0--idUtclVCDepot in driver 135040441118880
+2024-09-27 02:22:00,299 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot in driver 135040441118880
+2024-09-27 02:22:00,299 - INFO - Clicking Search...
+2024-09-27 02:22:05,499 - INFO - No error dialog detected for driver 135040441118880
+2024-09-27 02:22:05,550 - INFO - Search button clicked successfully for driver 135040441118880
+2024-09-27 02:22:06,086 - INFO - Page loaded completely for driver 135040441118880
+2024-09-27 02:22:06,087 - INFO - Rapidity 0.0001.
+2024-09-27 02:22:06,094 - INFO - Table data check for driver 135040441118880: No data found
+2024-09-27 02:22:06,095 - INFO - No data found for DEOGARH.
+2024-09-27 02:22:06,095 - INFO - Waiting 1 second before searching again...
+2024-09-27 02:22:07,097 - INFO - Handling any error dialogs before depot selection...
+2024-09-27 02:22:07,111 - INFO - Error dialog detected for driver 135040441118880. Attempting to dismiss it.
+2024-09-27 02:22:07,141 - INFO - Error dialog dismissed for driver 135040441118880.
+2024-09-27 02:22:07,674 - INFO - Selecting Depot: DEOGARH
+2024-09-27 02:22:07,696 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot in driver 135040441118880
+2024-09-27 02:22:07,706 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot in driver 135040441118880
+2024-09-27 02:22:07,712 - INFO - Found 14 options for __xmlview0--idUtclVCDepot in driver 135040441118880
+2024-09-27 02:22:08,248 - INFO - Option 'DEOGARH' selected successfully for __xmlview0--idUtclVCDepot in driver 135040441118880
+2024-09-27 02:22:08,778 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot in driver 135040441118880
+2024-09-27 02:22:08,780 - INFO - Clicking Search...
+2024-09-27 02:22:13,986 - INFO - No error dialog detected for driver 135040441118880
+2024-09-27 02:22:14,037 - INFO - Search button clicked successfully for driver 135040441118880
+2024-09-27 02:22:15,088 - INFO - Page loaded completely for driver 135040441118880
+2024-09-27 02:22:15,090 - INFO - Rapidity 0.0001.
+2024-09-27 02:22:15,103 - INFO - Table data check for driver 135040441118880: No data found
+2024-09-27 02:22:15,103 - INFO - No data found for DEOGARH.
+2024-09-27 02:22:15,103 - INFO - Waiting 1 second before searching again...
+2024-09-27 02:22:16,105 - INFO - Automation stopped. Browser remains open.
+2024-09-27 02:41:26,924 - INFO - ====== WebDriver manager ======
+2024-09-27 02:41:26,925 - INFO - Setting up WebDriver...
+2024-09-27 02:41:26,986 - INFO - Get LATEST chromedriver version for google-chrome
+2024-09-27 02:41:27,175 - INFO - Get LATEST chromedriver version for google-chrome
+2024-09-27 02:41:27,304 - INFO - Driver [/home/abir/.wdm/drivers/chromedriver/linux64/128.0.6613.137/chromedriver-linux64/chromedriver] found in cache
+2024-09-27 02:41:27,510 - INFO - Set up 1 drivers
+2024-09-27 02:41:27,511 - INFO - Attempting login... (Attempt 1/3)
+2024-09-27 02:41:30,739 - INFO - Driver 128043423527264 logged in successfully using credentials
+2024-09-27 02:41:30,743 - INFO - Cookies saved for driver 128043423527264
+2024-09-27 02:41:30,743 - INFO - Navigating to eBidding page... (Attempt 1/3)
+2024-09-27 02:41:32,109 - INFO - Page loaded completely for driver 128043423527264
+2024-09-27 02:41:32,110 - INFO - Driver 128043423527264 opened eBidding URL: https://www.eye2serve.com:9001/sap/bc/ui5_ui5/sap/zvc_vendor_app/index.html#/ebidding
+2024-09-27 02:41:37,891 - INFO - Error dialog detected for driver 128043423527264. Attempting to dismiss it.
+2024-09-27 02:41:38,526 - INFO - Error dialog dismissed for driver 128043423527264.
+2024-09-27 02:41:39,049 - INFO - Opened eBidding URL: None
+2024-09-27 02:41:39,049 - INFO - Handling error dialogs and clicking 'Show Search' button... (Attempt 1/3)
+2024-09-27 02:41:44,171 - INFO - No error dialog detected for driver 128043423527264
+2024-09-27 02:41:49,267 - INFO - No error dialog detected for driver 128043423527264
+2024-09-27 02:41:49,338 - INFO - 'Show Search' button clicked successfully for driver 128043423527264
+2024-09-27 02:41:49,339 - INFO - Successfully clicked 'Show Search' button.
+2024-09-27 02:41:49,340 - INFO - Selecting Ship From Plant: WEST BENGAL CEMENT WORKS
+2024-09-27 02:41:49,378 - INFO - Clicked dropdown arrow for __xmlview0--ididUtclVCShipFromPlant in driver 128043423527264
+2024-09-27 02:41:49,393 - INFO - Dropdown list visible for __xmlview0--ididUtclVCShipFromPlant in driver 128043423527264
+2024-09-27 02:41:49,403 - INFO - Found 1 options for __xmlview0--ididUtclVCShipFromPlant in driver 128043423527264
+2024-09-27 02:41:49,957 - INFO - Option 'WEST BENGAL CEMENT WORKS' selected successfully for __xmlview0--ididUtclVCShipFromPlant in driver 128043423527264
+2024-09-27 02:41:50,492 - INFO - Dropdown closed after selection for __xmlview0--ididUtclVCShipFromPlant in driver 128043423527264
+2024-09-27 02:41:50,493 - INFO - Handling any error dialogs before depot selection...
+2024-09-27 02:41:55,690 - INFO - No error dialog detected for driver 128043423527264
+2024-09-27 02:41:55,692 - INFO - Selecting Depot: DEOGARH
+2024-09-27 02:41:55,726 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot in driver 128043423527264
+2024-09-27 02:41:55,742 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot in driver 128043423527264
+2024-09-27 02:41:55,748 - INFO - Found 14 options for __xmlview0--idUtclVCDepot in driver 128043423527264
+2024-09-27 02:41:56,290 - INFO - Option 'DEOGARH' selected successfully for __xmlview0--idUtclVCDepot in driver 128043423527264
+2024-09-27 02:41:56,830 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot in driver 128043423527264
+2024-09-27 02:41:56,831 - INFO - Clicking Search...
+2024-09-27 02:42:02,034 - INFO - No error dialog detected for driver 128043423527264
+2024-09-27 02:42:02,110 - INFO - Search button clicked successfully for driver 128043423527264
+2024-09-27 02:42:02,649 - INFO - Page loaded completely for driver 128043423527264
+2024-09-27 02:42:02,651 - INFO - Rapidity 1e-05.
+2024-09-27 02:42:02,665 - INFO - Table data check for driver 128043423527264: No data found
+2024-09-27 02:42:02,665 - INFO - No data found for DEOGARH.
+2024-09-27 02:42:02,666 - INFO - Moving to next depot. Next index: 1
+2024-09-27 02:42:04,669 - INFO - Handling any error dialogs before depot selection...
+2024-09-27 02:42:04,680 - INFO - Error dialog detected for driver 128043423527264. Attempting to dismiss it.
+2024-09-27 02:42:04,720 - INFO - Error dialog dismissed for driver 128043423527264.
+2024-09-27 02:42:05,257 - INFO - Selecting Depot: DHANBAD
+2024-09-27 02:42:05,279 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot in driver 128043423527264
+2024-09-27 02:42:05,292 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot in driver 128043423527264
+2024-09-27 02:42:05,297 - INFO - Found 14 options for __xmlview0--idUtclVCDepot in driver 128043423527264
+2024-09-27 02:42:05,844 - INFO - Option 'DHANBAD' selected successfully for __xmlview0--idUtclVCDepot in driver 128043423527264
+2024-09-27 02:42:06,375 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot in driver 128043423527264
+2024-09-27 02:42:06,375 - INFO - Clicking Search...
+2024-09-27 02:42:11,578 - INFO - No error dialog detected for driver 128043423527264
+2024-09-27 02:42:11,630 - INFO - Search button clicked successfully for driver 128043423527264
+2024-09-27 02:42:12,171 - INFO - Page loaded completely for driver 128043423527264
+2024-09-27 02:42:12,172 - INFO - Rapidity 1e-05.
+2024-09-27 02:42:12,179 - INFO - Table data check for driver 128043423527264: No data found
+2024-09-27 02:42:12,180 - INFO - No data found for DHANBAD.
+2024-09-27 02:42:12,180 - INFO - Moving to next depot. Next index: 2
+2024-09-27 02:42:14,183 - INFO - Handling any error dialogs before depot selection...
+2024-09-27 02:42:14,196 - INFO - Error dialog detected for driver 128043423527264. Attempting to dismiss it.
+2024-09-27 02:42:14,228 - INFO - Error dialog dismissed for driver 128043423527264.
+2024-09-27 02:42:14,764 - INFO - Selecting Depot: BANKURA
+2024-09-27 02:42:14,801 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot in driver 128043423527264
+2024-09-27 02:42:14,817 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot in driver 128043423527264
+2024-09-27 02:42:14,822 - INFO - Found 14 options for __xmlview0--idUtclVCDepot in driver 128043423527264
+2024-09-27 02:42:15,373 - INFO - Option 'BANKURA' selected successfully for __xmlview0--idUtclVCDepot in driver 128043423527264
+2024-09-27 02:42:15,905 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot in driver 128043423527264
+2024-09-27 02:42:15,906 - INFO - Clicking Search...
+2024-09-27 02:42:21,101 - INFO - No error dialog detected for driver 128043423527264
+2024-09-27 02:42:21,162 - INFO - Search button clicked successfully for driver 128043423527264
+2024-09-27 02:42:22,225 - INFO - Page loaded completely for driver 128043423527264
+2024-09-27 02:42:22,226 - INFO - Rapidity 1e-05.
+2024-09-27 02:42:22,236 - INFO - Table data check for driver 128043423527264: No data found
+2024-09-27 02:42:22,236 - INFO - No data found for BANKURA.
+2024-09-27 02:42:22,236 - INFO - Moving to next depot. Next index: 3
+2024-09-27 02:42:24,239 - INFO - Handling any error dialogs before depot selection...
+2024-09-27 02:42:24,251 - INFO - Error dialog detected for driver 128043423527264. Attempting to dismiss it.
+2024-09-27 02:42:24,283 - INFO - Error dialog dismissed for driver 128043423527264.
+2024-09-27 02:42:24,808 - INFO - Selecting Depot: BERHAMPORE
+2024-09-27 02:42:24,833 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot in driver 128043423527264
+2024-09-27 02:42:24,858 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot in driver 128043423527264
+2024-09-27 02:42:24,869 - INFO - Found 14 options for __xmlview0--idUtclVCDepot in driver 128043423527264
+2024-09-27 02:42:25,429 - INFO - Option 'BERHAMPORE' selected successfully for __xmlview0--idUtclVCDepot in driver 128043423527264
+2024-09-27 02:42:25,952 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot in driver 128043423527264
+2024-09-27 02:42:25,953 - INFO - Clicking Search...
+2024-09-27 02:42:31,100 - INFO - No error dialog detected for driver 128043423527264
+2024-09-27 02:42:31,196 - INFO - Search button clicked successfully for driver 128043423527264
+2024-09-27 02:42:31,744 - INFO - Page loaded completely for driver 128043423527264
+2024-09-27 02:42:31,745 - INFO - Rapidity 1e-05.
+2024-09-27 02:42:31,756 - INFO - Table data check for driver 128043423527264: No data found
+2024-09-27 02:42:31,757 - INFO - No data found for BERHAMPORE.
+2024-09-27 02:42:31,757 - INFO - Moving to next depot. Next index: 4
+2024-09-27 02:42:33,759 - INFO - Handling any error dialogs before depot selection...
+2024-09-27 02:42:33,764 - INFO - Error dialog detected for driver 128043423527264. Attempting to dismiss it.
+2024-09-27 02:42:33,795 - INFO - Error dialog dismissed for driver 128043423527264.
+2024-09-27 02:42:34,346 - INFO - Selecting Depot: BURDWAN
+2024-09-27 02:42:34,375 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot in driver 128043423527264
+2024-09-27 02:42:34,386 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot in driver 128043423527264
+2024-09-27 02:42:34,393 - INFO - Found 14 options for __xmlview0--idUtclVCDepot in driver 128043423527264
+2024-09-27 02:42:34,961 - INFO - Option 'BURDWAN' selected successfully for __xmlview0--idUtclVCDepot in driver 128043423527264
+2024-09-27 02:42:35,487 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot in driver 128043423527264
+2024-09-27 02:42:35,488 - INFO - Clicking Search...
+2024-09-27 02:42:40,676 - INFO - No error dialog detected for driver 128043423527264
+2024-09-27 02:42:40,736 - INFO - Search button clicked successfully for driver 128043423527264
+2024-09-27 02:42:41,783 - INFO - Page loaded completely for driver 128043423527264
+2024-09-27 02:42:41,785 - INFO - Rapidity 1e-05.
+2024-09-27 02:42:41,794 - INFO - Table data check for driver 128043423527264: No data found
+2024-09-27 02:42:41,794 - INFO - No data found for BURDWAN.
+2024-09-27 02:42:41,794 - INFO - Moving to next depot. Next index: 5
+2024-09-27 02:42:43,797 - INFO - Handling any error dialogs before depot selection...
+2024-09-27 02:42:43,811 - INFO - Error dialog detected for driver 128043423527264. Attempting to dismiss it.
+2024-09-27 02:42:43,841 - INFO - Error dialog dismissed for driver 128043423527264.
+2024-09-27 02:42:44,375 - INFO - Selecting Depot: COSSIPORE
+2024-09-27 02:42:44,396 - INFO - Clicked dropdown arrow for __xmlview0--idUtclVCDepot in driver 128043423527264
+2024-09-27 02:42:44,407 - INFO - Dropdown list visible for __xmlview0--idUtclVCDepot in driver 128043423527264
+2024-09-27 02:42:44,413 - INFO - Found 14 options for __xmlview0--idUtclVCDepot in driver 128043423527264
+2024-09-27 02:42:44,983 - INFO - Option 'COSSIPORE' selected successfully for __xmlview0--idUtclVCDepot in driver 128043423527264
+2024-09-27 02:42:45,510 - INFO - Dropdown closed after selection for __xmlview0--idUtclVCDepot in driver 128043423527264
+2024-09-27 02:42:45,510 - INFO - Clicking Search...
+2024-09-27 02:42:50,688 - INFO - No error dialog detected for driver 128043423527264
+2024-09-27 02:42:50,748 - INFO - Search button clicked successfully for driver 128043423527264
+2024-09-27 02:42:51,808 - INFO - Page loaded completely for driver 128043423527264
+2024-09-27 02:42:51,809 - INFO - Rapidity 1e-05.
+2024-09-27 02:42:51,820 - INFO - Table data check for driver 128043423527264: No data found
+2024-09-27 02:42:51,821 - INFO - No data found for COSSIPORE.
+2024-09-27 02:42:51,821 - INFO - Moving to next depot. Next index: 6
